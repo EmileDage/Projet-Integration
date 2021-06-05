@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c53497acc2f6d34fa287f1b6efb55b5, type: 3}
+  m_Name: SuspiciousFruit
+  m_EditorClassIdentifier: 
+  nom: Sus Fruit
+  maxStack: 10
+  icon_Inventory: {fileID: 8972987722779579306, guid: bf9f155e68921c3479654e290200f34c, type: 3}
+  description: It's weird
+  valeur: 5
+  iD: 99
+  interactionBonusRange: 0
+  yieldModifier: 1
+  itemWorldObject: {fileID: 8350010051335179319, guid: 1d9ca6c2faeb2c74cb414d80e995f8b3, type: 3}
+  funct: 3
+  speed: 15

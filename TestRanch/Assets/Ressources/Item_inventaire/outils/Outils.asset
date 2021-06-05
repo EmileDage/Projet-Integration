@@ -1,0 +1,38 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 88a6e879e1d5b524c99a6e2a105c8aae, type: 3}
+  m_Name: Outils
+  m_EditorClassIdentifier: 
+  nom: OutilsTest
+  maxStack: 1
+  icon_Inventory: {fileID: 21300000, guid: 668b9f28b61aa08468aacbf45daa99e4, type: 3}
+  description: testing
+  valeur: -1
+  iD: -1
+  interactionBonusRange: 0
+  yieldModifier: 1
+  itemWorldObject: {fileID: 9177839786296023837, guid: f3968b5fd68aa3e47a826e76de861e0d, type: 3}
+  toolMethod:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 11400000}
+        m_TargetAssemblyTypeName: Outils, Assembly-CSharp
+        m_MethodName: MiningTool
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
