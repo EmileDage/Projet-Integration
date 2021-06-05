@@ -72,7 +72,7 @@ public class Player : MonoBehaviour
             barreInventaire.ScrollItembar(1);
         }
 
-        if (Input.GetButtonDown("F"))
+        if (Input.GetButtonDown("Lampe"))
         {
             lampe.SetActive(!lampe.activeSelf);
         }

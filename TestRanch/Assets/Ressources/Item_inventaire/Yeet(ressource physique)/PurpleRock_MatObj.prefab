@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 3224994957970821763}
   - component: {fileID: 87356763363543792}
   m_Layer: 0
-  m_Name: PurpleRock
+  m_Name: PurpleRock_MatObj
   m_TagString: produit
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

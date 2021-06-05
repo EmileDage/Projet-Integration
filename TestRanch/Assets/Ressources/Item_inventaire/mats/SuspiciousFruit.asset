@@ -20,6 +20,6 @@ MonoBehaviour:
   iD: 99
   interactionBonusRange: 0
   yieldModifier: 1
-  itemWorldObject: {fileID: 8350010051335179319, guid: 1d9ca6c2faeb2c74cb414d80e995f8b3, type: 3}
+  itemWorldObject: {fileID: 150753865428504986, guid: c8062069f638029438d0ab4f49c8f4f7, type: 3}
   funct: 3
   speed: 15
