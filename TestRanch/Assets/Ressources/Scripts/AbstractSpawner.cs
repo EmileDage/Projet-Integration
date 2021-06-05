@@ -35,6 +35,7 @@ public abstract class AbstractSpawner : MonoBehaviour
 
     public abstract void OnGHourPassed(object source);
 
+
     public abstract void SpawnProduce();
 
     //exemple arbre est malade dont tous ces fruits pourrissent/roche rot idk

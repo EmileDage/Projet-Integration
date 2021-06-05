@@ -48,17 +48,17 @@ public abstract class PlanterParent : MonoBehaviour
         if (Info == true)
         { // pour veirifer que l'obj est actif
             if (info_Pannel.activeSelf ==true) {
-                Debug.Log("OnHourPassed in planterparent about to initiate updateinfopannel()");
                 UpdateInfoPannel();
             }
         }
     }
     public abstract void UpdateInfoPannel();
 
-    protected virtual void AssignSpawnerRessource(Materiaux inObj) 
+    protected virtual void AssignSpawnerRessource(GameObject inObj) 
     {
+
         SpawnerInstance = Instantiate(spawnerRef, spawn);
-        SpawnerInstance.GetComponent<AbstractSpawner>().SpawnSpawner(inObj);
+        SpawnerInstance.GetComponent<AbstractSpawner>().SpawnSpawner(inObj.GetComponent<WorldObjectMateriaux>().Item()) ;
 
 
     }
@@ -71,9 +71,9 @@ public abstract class PlanterParent : MonoBehaviour
             Materiaux inObj = collision.gameObject.GetComponent<WorldObjectMateriaux>().Item();
 
             if (inObj != null) {
-                if (inObj.Funct.Equals(type_product)) {
+                if (inObj.Funct.Equals(type_product)) {//arrete une erreur
                     Debug.Log("The type is correct spawning spawner");
-                    AssignSpawnerRessource(inObj);
+                    AssignSpawnerRessource(collision.gameObject);
 
                 }else
                     Debug.Log("The type is incorrect not spawning spawner");

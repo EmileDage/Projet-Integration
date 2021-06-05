@@ -17,7 +17,6 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     //le jour doit au moins arrose la plantation adulte au moins une fois apr recolte
     //sinon moins de ressources produites
     //+ de chance de maladie
-    [SerializeField] [Range(0, 100)] private int hydration;//en %
     [SerializeField] [Range(5, 50)] private int hydration_hour;//for baby and adult plant
     [SerializeField] private Abreuvoir water_container;
 
@@ -38,9 +37,12 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
     public bool Upgrade { get => upgrade_fertilizer; set => upgrade_fertilizer = value; }//rich fertilizer upgrade 
 
+    public bool GetGrown { get => IsGrown; }
+
     protected override void Start()
     {
         sicknessLvl = 0;
+        IsGrown = false;
         base.Start();
         upgrade_produit = new GameObject[upgrade_slot.Length];
 
@@ -50,6 +52,13 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
     }
 
+    public void AssignRef(Abreuvoir agua, GameObject fruit)//on pourrait mettre une fonction plus detailler ssi on veut
+    {
+        water_container = agua;
+        produit_reference = fruit;
+    }
+
+
     public void CrystalCure(int strenght) {
         //utlise un crystal pour baisser la maladie
         sicknessLvl -= strenght;
@@ -57,6 +66,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     }
 
     public void GrowthCheck() {//verifie que la plante peut grandir
+        Debug.Log("Growing");
         if (sicknessLvl < sickness_resistance)
         { //check si plante est PAS malade
             if (water_container.Qte_level >= hydration_hour)//est ce que la plante est assez hydrate
@@ -93,17 +103,21 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
     public override void OnGHourPassed(object source)
     {
+        Debug.Log("HourPassed SpawnerAgriculture");
         if (sickness_resistance < sicknessLvl)
         { //si la plante est malade
             sicknessLvl += 5;
+            //destroy one at random ?
 
-            if (sicknessLvl >=  100) {
+            if (sicknessLvl >=  100) {//la plante est morte big f
                 DestroyAll();
             }
         }
         else {
             if (!IsGrown)
             {
+                Debug.Log("HourPassed SpawnerAgriculture");
+
                 GrowthCheck();
             }
             else
@@ -231,4 +245,6 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
         //  x////x
 
     }
+
+
 }

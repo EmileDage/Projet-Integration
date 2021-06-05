@@ -152,44 +152,49 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_Delete_Confirmed()//Revert back to Empty
     {
-        switch (field_ref.F_type)
-        {
-            case field_possibilities.agriculture:
-                {
-                    foreach (Button btn in btn_up_terre)
-                        btn.interactable = true;
-                }
-                break;
-            case field_possibilities.enclos:
-                {
-                    foreach (Button btn in btn_up_enclos)
-                        btn.interactable = true;
-                }
-                break;
-            case field_possibilities.entrepot:
-                {
-                    foreach (Button btn in btn_up_entrepot)
-                        btn.interactable = true;
-                }
-                break;
-            case field_possibilities.mine:
-                {
-                    foreach (Button btn in btn_up_mine)
-                        btn.interactable = true;
-                }
-                break;
+
+        if (field_ref != null) {
+            switch (field_ref.F_type)
+            {
+                case field_possibilities.agriculture:
+                    {
+                        foreach (Button btn in btn_up_terre)
+                            btn.interactable = true;
+                    }
+                    break;
+                case field_possibilities.enclos:
+                    {
+                        foreach (Button btn in btn_up_enclos)
+                            btn.interactable = true;
+                    }
+                    break;
+                case field_possibilities.entrepot:
+                    {
+                        foreach (Button btn in btn_up_entrepot)
+                            btn.interactable = true;
+                    }
+                    break;
+                case field_possibilities.mine:
+                    {
+                        foreach (Button btn in btn_up_mine)
+                            btn.interactable = true;
+                    }
+                    break;
+            }
+            field_ref.Deactivate_type();
+            field_ref.F_type = field_possibilities.empty;
+            pannel_delete_plot.SetActive(false);
+            pannel_empty.SetActive(true);
         }
-        field_ref.Deactivate_type();
-        field_ref.F_type = field_possibilities.empty;
-        pannel_delete_plot.SetActive(false);
-        pannel_empty.SetActive(true);
+     
     }
 
     public void Btn_Delete_Denied()//Revert back to Empty
     {
         pannel_delete_plot.SetActive(false);
 
-        switch (field_ref.F_type)
+        if (field_ref != null) { 
+            switch (field_ref.F_type)
         {
             case field_possibilities.agriculture:
                 {
@@ -211,6 +216,8 @@ public class Field_UI : MonoBehaviour
                     pannel_mine.SetActive(true);
                 }
                 break;
+        }
+
         }
 
     }

@@ -11,6 +11,8 @@ public class SpawnerNature : AbstractSpawner
         base.Start();
     }
 
+
+
     public override void OnGHourPassed(object source)
     {
         if(disponibleStart == time.Hour)
