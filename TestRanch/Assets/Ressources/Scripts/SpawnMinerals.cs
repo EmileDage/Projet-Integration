@@ -17,15 +17,24 @@ public class SpawnMinerals : AbstractSpawner
     //cest pour le pannel info
     private Text text;
 
-    public bool Upgrade_soil { get => upgrade_soil; set => upgrade_soil = value; }
 
     protected override void Start()
     {
         base.Start();
     }
 
+    public void AssignRef(PlanterParent OwO)
+    {
+
+    }
+
     public void OnUpgradeRR() { //RR = rare rock
         rareRockChance += 25;
+    }
+
+    public void OnUpgradeSoil() {
+        upgrade_soil = true;
+        //check spawner instance
     }
 
 

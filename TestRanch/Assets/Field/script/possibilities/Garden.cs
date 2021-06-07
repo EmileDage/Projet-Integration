@@ -32,9 +32,16 @@ public class Garden : PlanterParent, IFarmable
     {
         if (SpawnerInstance != null)
         {
-            pannel_info_txt.text = "Product : " + SpawnerInstance.GetComponent<SpawnerAgriculture>().Produit_reference.name +
-                "\nAucune idée pour l'instant d'afficher quoi d'autre." +
-                "\nBlah Blah Blah";
+            if (SpawnerInstance.GetComponent<SpawnerAgriculture>().GetGrown)
+            {
+                pannel_info_txt.text = "Product : " + SpawnerInstance.GetComponent<SpawnerAgriculture>().Produit_reference.name +
+                    "\nAucune idée pour l'instant d'afficher quoi d'autre." +
+                    "\nBlah Blah Blah";
+            }
+            else
+                pannel_info_txt.text = "ITS GROWING :)";
+
+
         }
         else
         {
@@ -53,12 +60,14 @@ public class Garden : PlanterParent, IFarmable
         //add random minerals to player
     }
 
-    protected override void AssignSpawnerRessource(Materiaux obj)
+    protected override void AssignSpawnerRessource(GameObject obj)
     {
         if (tilled)
         {
+            spawnerRef.GetComponent<SpawnerAgriculture>().AssignRef(Water_container, obj);
+
             base.AssignSpawnerRessource(obj);
-            this.gameObject.GetComponent<Agriculture_UI>().CheckPendingUpgrades();
+            this.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();
             UpdateInfoPannel();
         }
         else

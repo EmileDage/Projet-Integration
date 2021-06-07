@@ -4,7 +4,7 @@ using UnityEngine;
 
 public abstract class AbstractSpawner : MonoBehaviour
 {
-    protected GameObject produit_reference; //la reference au prefab de la ressource
+    [SerializeField]protected GameObject produit_reference; //IL FAUT GARDER SERIALIZED POUR ASSIGNER LA RESSOURCES POUR  LES SPAWNER SAUVAGES
     protected GameObject[] produits;
 
     [SerializeField] [Range(0, 23)] protected int timeToRespawn;
@@ -34,6 +34,7 @@ public abstract class AbstractSpawner : MonoBehaviour
     }
 
     public abstract void OnGHourPassed(object source);
+
 
     public abstract void SpawnProduce();
 

@@ -89,8 +89,8 @@ public class Field : MonoBehaviour
                     jardin.SetActive(true);
                     jardin.GetComponent<Garden>().Info = true;
                     jardin.GetComponent<Garden>().Info_Pannel = pannelInfo;
-                    jardin.AddComponent<Agriculture_UI>();
-                    jardin.GetComponent<Agriculture_UI>().Set_ref(jardin.GetComponent<Garden>()); ;
+                    jardin.AddComponent<Garden_UI>();
+                    jardin.GetComponent<Garden_UI>().Set_ref(jardin.GetComponent<Garden>()); ;
 
 
                 }
@@ -127,7 +127,7 @@ public class Field : MonoBehaviour
         {
             case field_possibilities.agriculture:
                 {                   
-                    Destroy(jardin.GetComponent<Agriculture_UI>());
+                    Destroy(jardin.GetComponent<Garden_UI>());
                     jardin.GetComponent<Garden>().Destroy_planter();
                    jardin.SetActive(false);
                 }

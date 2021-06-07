@@ -34,7 +34,7 @@ public class Mine : PlanterParent
 
 
 
-    protected override void AssignSpawnerRessource(Materiaux obj)
+    protected override void AssignSpawnerRessource(GameObject obj)
     {
         base.AssignSpawnerRessource(obj);
         this.gameObject.GetComponent<Mine_UI>().CheckPendingUpgrades();
