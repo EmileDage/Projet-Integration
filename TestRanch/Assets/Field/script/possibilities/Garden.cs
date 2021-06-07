@@ -76,7 +76,7 @@ public class Garden : PlanterParent, IFarmable
 
     public void FarmIt()
     {
-        throw new NotImplementedException();
+        //OwO
     }
 
 

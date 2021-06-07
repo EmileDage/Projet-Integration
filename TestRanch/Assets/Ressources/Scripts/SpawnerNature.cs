@@ -13,7 +13,9 @@ public class SpawnerNature : AbstractSpawner
 
     public override void OnGHourPassed(object source)
     {
-        if(disponibleStart == time.Hour)
+        Debug.Log("HourPassed SpawnerNature");
+
+        if (disponibleStart == time.Hour)
         {
             foreach (GameObject produit in produits)
             {

@@ -40,6 +40,8 @@ public class SpawnMinerals : AbstractSpawner
 
     public override void OnGHourPassed(object source)
     {
+        Debug.Log("HourPassed SpawnerMine");
+
         if (disponibleStart == time.Hour)
         {
             foreach (GameObject produit in produits)

@@ -6,7 +6,6 @@ using UnityEngine.UI;
 
 public class Mine : PlanterParent
 {
-
     //stalactite upgrades
     [SerializeField] private Transform spawn_stalactite;
     private GameObject second_producer;

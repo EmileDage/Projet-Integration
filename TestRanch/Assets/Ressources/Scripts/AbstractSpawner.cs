@@ -12,13 +12,16 @@ public abstract class AbstractSpawner : MonoBehaviour
     [SerializeField] [Range(0, 23)] protected int disponibleEnd;
     [SerializeField] protected Transform[] produit_spawn;
 
+
+
     protected MyTimeManager time;
     public GameObject Produit_reference { get => produit_reference; set => produit_reference = value; }
 
-
+    public int TimeToRespawnRef{ get => timeToRespawn; }
 
     protected virtual void Start() {//a mettre dans start set up les trucs de base
-        if(produit_reference != null) { 
+
+        if (produit_reference != null) { 
             produits = new GameObject[produit_spawn.Length];
             time = MyTimeManager.timeInstance;
             time.GHourPassed += OnGHourPassed;
@@ -41,9 +44,15 @@ public abstract class AbstractSpawner : MonoBehaviour
     //exemple arbre est malade dont tous ces fruits pourrissent/roche rot idk
     public abstract void DestroyAll();
 
-    public void OnChronoUpgrade()
+    public virtual void OnChronoUpgrade()
     {
-        timeToRespawn = timeToRespawn / 2;
+        timeToRespawn = timeToRespawn / 2;//on peut le changer plus tard si cest pas balancer ou whatever
+
+        for (int i = 0; i < produit_spawn.Length; i++)
+        {
+            produits[i].GetComponent<RessourceNode>().OnChronoUpgrade(timeToRespawn);
+        }
+
     }
 
     //change destroy 1 pour destroy1atrandom, destroyone deplace vers le ressourcenode
