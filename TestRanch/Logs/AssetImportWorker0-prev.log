@@ -15,11 +15,11 @@ C:/Users/court/AppData/Local/GitHubDesktop/GitHubTEST/test2/TestRanch
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-63802
+53877
 Successfully changed project path to: C:/Users/court/AppData/Local/GitHubDesktop/GitHubTEST/test2/TestRanch
 C:/Users/court/AppData/Local/GitHubDesktop/GitHubTEST/test2/TestRanch
 Using Asset Import Pipeline V2.
-Refreshing native plugins compatible for Editor in 30.00 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 28.62 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 2020.3.11f1 (99c7afb366b3)
 [Subsystems] Discovering subsystems at path C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Resources/UnitySubsystems
@@ -35,25 +35,25 @@ Initialize mono
 Mono path[0] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit'
 Mono config path = 'C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56372
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56364
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Program Files/Unity/Hub/Editor/2020.3.11f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.001548 seconds.
+Registered in 0.001520 seconds.
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 27.77 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 27.43 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.919 seconds
+- Completed reload, in  0.918 seconds
 Platform modules already initialized, skipping
 Registering precompiled user dll's ...
-Registered in 0.003530 seconds.
+Registered in 0.003405 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.872 seconds
+- Completed reload, in  0.870 seconds
 Platform modules already initialized, skipping
 ========================================================================
 Worker process is ready to serve import requests
@@ -61,29 +61,37 @@ Launched and connected shader compiler UnityShaderCompiler.exe after 0.07 second
 Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 1610 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 73.4 MB.
+System memory in use before: 73.5 MB.
 System memory in use after: 73.5 MB.
 
 Unloading 19 unused Assets to reduce memory usage. Loaded Objects now: 2047.
-Total: 1.675600 ms (FindLiveObjects: 0.137600 ms CreateObjectMapping: 0.048500 ms MarkObjects: 1.420800 ms  DeleteObjects: 0.067800 ms)
+Total: 1.626000 ms (FindLiveObjects: 0.141100 ms CreateObjectMapping: 0.049600 ms MarkObjects: 1.384400 ms  DeleteObjects: 0.050200 ms)
 
 ========================================================================
 Received Import Request.
-  path: Assets/Field/script/other/Garden.cs
+  path: Assets/Field/script/possibilities/Enclos.cs
+  artifactKey: Guid(a1009ae23e2e2cd49b21c35a0be117ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Field/script/possibilities/Enclos.cs using Guid(a1009ae23e2e2cd49b21c35a0be117ae) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4a24dfc44df838b73704f3edf2e36d1f') in 0.020515 seconds
+  Import took 0.022672 seconds .
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.293465 seconds.
+  path: Assets/Field/script/possibilities/Garden.cs
   artifactKey: Guid(2db6c027398c7294fbee3678cc16602d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Field/script/other/Garden.cs using Guid(2db6c027398c7294fbee3678cc16602d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6bb17fbbb5cef5e91b95e6f949e7bb98') in 0.020741 seconds
-  Import took 0.022900 seconds .
+Start importing Assets/Field/script/possibilities/Garden.cs using Guid(2db6c027398c7294fbee3678cc16602d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd52d09d848ea0c1abe10279a8f7ed676') in 0.005771 seconds
+  Import took 0.010043 seconds .
 
 ========================================================================
 Received Prepare
 Registering precompiled user dll's ...
-Registered in 0.003094 seconds.
+Registered in 0.003294 seconds.
 Begin MonoManager ReloadAssembly
 Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
+Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Mono: successfully reloaded assembly
-- Completed reload, in  0.841 seconds
+- Completed reload, in  0.810 seconds
 Platform modules already initialized, skipping
 Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
@@ -92,382 +100,6 @@ System memory in use before: 72.9 MB.
 System memory in use after: 73.0 MB.
 
 Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2050.
-Total: 1.529600 ms (FindLiveObjects: 0.140200 ms CreateObjectMapping: 0.048400 ms MarkObjects: 1.324700 ms  DeleteObjects: 0.015500 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 22.190682 seconds.
-  path: Assets/Field/script/possibilities/Agriculture_UI.cs
-  artifactKey: Guid(3fd90488646f2054492b4a2e1f4ca9ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Field/script/possibilities/Agriculture_UI.cs using Guid(3fd90488646f2054492b4a2e1f4ca9ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '84a46722c4607f333944dbbd28b3865d') in 0.009070 seconds
-  Import took 0.011593 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003158 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.60 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.884 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.35 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1600 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 72.9 MB.
-System memory in use after: 73.0 MB.
-
-Unloading 14 unused Assets to reduce memory usage. Loaded Objects now: 2053.
-Total: 1.588500 ms (FindLiveObjects: 0.141400 ms CreateObjectMapping: 0.046900 ms MarkObjects: 1.385500 ms  DeleteObjects: 0.013800 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 525.372997 seconds.
-  path: Assets/Field/script/possibilities/Garden_UI.cs
-  artifactKey: Guid(3fd90488646f2054492b4a2e1f4ca9ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Field/script/possibilities/Garden_UI.cs using Guid(3fd90488646f2054492b4a2e1f4ca9ce) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3a17a6729001d26571605a2a6677aab6') in 0.008426 seconds
-  Import took 0.010866 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 14.922204 seconds.
-  path: Assets/Ressources/Spawner_Prefab/Agriculture.prefab
-  artifactKey: Guid(c68edcbc1f3786041a465cba6e692743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/Agriculture.prefab using Guid(c68edcbc1f3786041a465cba6e692743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'e8241ac8def1e2237e90ef333b8973e1') in 0.070526 seconds
-  Import took 0.072891 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000135 seconds.
-  path: Assets/Ressources/Spawner_Prefab/Mineraux.prefab
-  artifactKey: Guid(10483a6b0ff5dd94798341954d5c90bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/Mineraux.prefab using Guid(10483a6b0ff5dd94798341954d5c90bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '82b78229c96ea72cc654fa08f0198e42') in 0.008046 seconds
-  Import took 0.010316 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000184 seconds.
-  path: Assets/Ressources/Spawner_Prefab/Nature.prefab
-  artifactKey: Guid(acde302cb7660b849b26680b97ec5809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/Nature.prefab using Guid(acde302cb7660b849b26680b97ec5809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd6a85d7f1aa015d0f078febd79f34b49') in 0.011769 seconds
-  Import took 0.014007 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.953631 seconds.
-  path: Assets/Ressources/Spawner_Prefab/variants
-  artifactKey: Guid(339b91948389c2a41a114d6a80e98a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/variants using Guid(339b91948389c2a41a114d6a80e98a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '9a045099485bd9fc1c3fb0878f9f0e44') in 0.005769 seconds
-  Import took 0.008101 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 29.713099 seconds.
-  path: Assets/Ressources/Spawner_Prefab/PurpleRock_Spawner.prefab
-  artifactKey: Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/PurpleRock_Spawner.prefab using Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3278df689921a7005830bbb26108a564') in 0.011010 seconds
-  Import took 0.013687 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.007091 seconds.
-  path: Assets/Ressources/Spawner_Prefab/PurpleRock_Spawner.prefab
-  artifactKey: Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/PurpleRock_Spawner.prefab using Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3278df689921a7005830bbb26108a564') in 0.006770 seconds
-  Import took 0.009165 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.183123 seconds.
-  path: Assets/Ressources/Spawner_Prefab/Mineraux.prefab
-  artifactKey: Guid(10483a6b0ff5dd94798341954d5c90bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/Mineraux.prefab using Guid(10483a6b0ff5dd94798341954d5c90bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22c2ec26a4a52b65dbe46b04819f17da') in 0.005526 seconds
-  Import took 0.007927 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.015968 seconds.
-  path: Assets/Ressources/Spawner_Prefab/Mineraux.prefab
-  artifactKey: Guid(10483a6b0ff5dd94798341954d5c90bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/Mineraux.prefab using Guid(10483a6b0ff5dd94798341954d5c90bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '22c2ec26a4a52b65dbe46b04819f17da') in 0.005656 seconds
-  Import took 0.008087 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.786902 seconds.
-  path: Assets/Ressources/Spawner_Prefab/Mineraux.prefab
-  artifactKey: Guid(10483a6b0ff5dd94798341954d5c90bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/Mineraux.prefab using Guid(10483a6b0ff5dd94798341954d5c90bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1aad8052658573199f2914a02dd6d50') in 0.005631 seconds
-  Import took 0.008013 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.006054 seconds.
-  path: Assets/Ressources/Spawner_Prefab/Mineraux.prefab
-  artifactKey: Guid(10483a6b0ff5dd94798341954d5c90bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/Mineraux.prefab using Guid(10483a6b0ff5dd94798341954d5c90bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd1aad8052658573199f2914a02dd6d50') in 0.006387 seconds
-  Import took 0.008740 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 1.592958 seconds.
-  path: Assets/Ressources/Spawner_Prefab/variants/PurpleRock_Spawner.prefab
-  artifactKey: Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/variants/PurpleRock_Spawner.prefab using Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '993ec7a41542dd2df7f1617ab11ebb50') in 0.006628 seconds
-  Import took 0.009037 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.004670 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.34 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.832 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1600 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 76.1 MB.
-System memory in use after: 76.2 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2065.
-Total: 1.537000 ms (FindLiveObjects: 0.138300 ms CreateObjectMapping: 0.047500 ms MarkObjects: 1.334400 ms  DeleteObjects: 0.015900 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 172.598893 seconds.
-  path: Assets/Ressources/Spawner_Prefab/variants/PurpleRock_Spawner.prefab
-  artifactKey: Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/variants/PurpleRock_Spawner.prefab using Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '3edad0e812c020cf0e9618ef3d5e7c21') in 0.059797 seconds
-  Import took 0.062120 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 18.679610 seconds.
-  path: Assets/Ressources/Item_inventaire/mats/PurpleRock.asset
-  artifactKey: Guid(ac37bee0d5c0df04c99e1a089a465748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Item_inventaire/mats/PurpleRock.asset using Guid(ac37bee0d5c0df04c99e1a089a465748) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'b577bbee72ae24cb792daac87e98a20a') in 0.008169 seconds
-  Import took 0.010642 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000253 seconds.
-  path: Assets/Ressources/Item_inventaire/mats/SuspiciousFruit.asset
-  artifactKey: Guid(7ea88e38f357868498b88c77bc4946c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Item_inventaire/mats/SuspiciousFruit.asset using Guid(7ea88e38f357868498b88c77bc4946c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '730187d7add5cab90cded2a8d06fc4bd') in 0.007118 seconds
-  Import took 0.009389 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.339368 seconds.
-  path: Assets/Ressources/Item_inventaire/Yeet(ressource physique)/PurpleRock_MatObj.prefab
-  artifactKey: Guid(334f4e9b305cd9f488925dc4beae5e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Item_inventaire/Yeet(ressource physique)/PurpleRock_MatObj.prefab using Guid(334f4e9b305cd9f488925dc4beae5e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3a9fa3b7951ec75aabaafac8f7bbb8b') in 0.010519 seconds
-  Import took 0.013256 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000175 seconds.
-  path: Assets/Ressources/Item_inventaire/Yeet(ressource physique)/SusFruit_MatObj.prefab
-  artifactKey: Guid(c8062069f638029438d0ab4f49c8f4f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Item_inventaire/Yeet(ressource physique)/SusFruit_MatObj.prefab using Guid(c8062069f638029438d0ab4f49c8f4f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12ec96fc45b1e95c0bbc278a14ec4ce8') in 0.015424 seconds
-  Import took 0.017844 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000243 seconds.
-  path: Assets/Ressources/Item_inventaire/Yeet(ressource physique)/PurpleRock_MatObj.prefab
-  artifactKey: Guid(334f4e9b305cd9f488925dc4beae5e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Item_inventaire/Yeet(ressource physique)/PurpleRock_MatObj.prefab using Guid(334f4e9b305cd9f488925dc4beae5e91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'a3a9fa3b7951ec75aabaafac8f7bbb8b') in 0.006784 seconds
-  Import took 0.009018 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.004732 seconds.
-  path: Assets/Ressources/Item_inventaire/Yeet(ressource physique)/SusFruit_MatObj.prefab
-  artifactKey: Guid(c8062069f638029438d0ab4f49c8f4f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Item_inventaire/Yeet(ressource physique)/SusFruit_MatObj.prefab using Guid(c8062069f638029438d0ab4f49c8f4f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '12ec96fc45b1e95c0bbc278a14ec4ce8') in 0.008845 seconds
-  Import took 0.011231 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.210382 seconds.
-  path: Assets/Ressources/Spawner_Prefab/Agriculture.prefab
-  artifactKey: Guid(c68edcbc1f3786041a465cba6e692743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/Agriculture.prefab using Guid(c68edcbc1f3786041a465cba6e692743) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '487913713399761d833e19c0ad449604') in 0.007367 seconds
-  Import took 0.011358 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000214 seconds.
-  path: Assets/Ressources/Spawner_Prefab/Mineraux.prefab
-  artifactKey: Guid(10483a6b0ff5dd94798341954d5c90bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/Mineraux.prefab using Guid(10483a6b0ff5dd94798341954d5c90bf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'ad18a15f26e5cdd97d1da3246bc80a33') in 0.006927 seconds
-  Import took 0.009348 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000157 seconds.
-  path: Assets/Ressources/Spawner_Prefab/Nature.prefab
-  artifactKey: Guid(acde302cb7660b849b26680b97ec5809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/Nature.prefab using Guid(acde302cb7660b849b26680b97ec5809) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '2e7a37c217c51a84fcf361e8c1083c1f') in 0.010380 seconds
-  Import took 0.012873 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 20.161389 seconds.
-  path: Assets/Ressources/Spawner_Prefab/variants/PurpleRock_Spawner.prefab
-  artifactKey: Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/variants/PurpleRock_Spawner.prefab using Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b2807383b9587397f128ffed465e886') in 0.007822 seconds
-  Import took 0.010420 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.012305 seconds.
-  path: Assets/Ressources/Spawner_Prefab/variants/PurpleRock_Spawner.prefab
-  artifactKey: Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/variants/PurpleRock_Spawner.prefab using Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '6b2807383b9587397f128ffed465e886') in 0.008456 seconds
-  Import took 0.010950 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003228 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.792 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.32 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1600 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 76.2 MB.
-System memory in use after: 76.3 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2070.
-Total: 1.547500 ms (FindLiveObjects: 0.141400 ms CreateObjectMapping: 0.052800 ms MarkObjects: 1.336500 ms  DeleteObjects: 0.016100 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 157.115634 seconds.
-  path: Assets/Ressources/Spawner_Prefab/SusFruit.prefab
-  artifactKey: Guid(9e9404e901a8dda45aa0761b43f08686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/SusFruit.prefab using Guid(9e9404e901a8dda45aa0761b43f08686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: 'd0590c26ff71a6c2f358c6f2d71775b8') in 0.048062 seconds
-  Import took 0.050489 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.527255 seconds.
-  path: Assets/Ressources/Spawner_Prefab/variants/SusFruit.prefab
-  artifactKey: Guid(9e9404e901a8dda45aa0761b43f08686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/variants/SusFruit.prefab using Guid(9e9404e901a8dda45aa0761b43f08686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a46fb1b0cf38b141e50006e16e4c202') in 0.006449 seconds
-  Import took 0.009100 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.012267 seconds.
-  path: Assets/Ressources/Spawner_Prefab/variants/SusFruit.prefab
-  artifactKey: Guid(9e9404e901a8dda45aa0761b43f08686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/variants/SusFruit.prefab using Guid(9e9404e901a8dda45aa0761b43f08686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8a46fb1b0cf38b141e50006e16e4c202') in 0.006416 seconds
-  Import took 0.008829 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 63.284999 seconds.
-  path: Assets/Ressources/Spawner_Prefab/WILD_susfruit_spawner.prefab
-  artifactKey: Guid(acfc00f918c2a7d4c9e451988fe3168f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/WILD_susfruit_spawner.prefab using Guid(acfc00f918c2a7d4c9e451988fe3168f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74517904bbae785a3c261867920413a0') in 0.010285 seconds
-  Import took 0.012653 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000585 seconds.
-  path: Assets/Ressources/Spawner_Prefab/WILD_susfruit_spawner.prefab
-  artifactKey: Guid(acfc00f918c2a7d4c9e451988fe3168f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/WILD_susfruit_spawner.prefab using Guid(acfc00f918c2a7d4c9e451988fe3168f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74517904bbae785a3c261867920413a0') in 0.005672 seconds
-  Import took 0.007851 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 10.926872 seconds.
-  path: Assets/Ressources/Spawner_Prefab/variants/WILD_susfruit_spawner.prefab
-  artifactKey: Guid(acfc00f918c2a7d4c9e451988fe3168f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/variants/WILD_susfruit_spawner.prefab using Guid(acfc00f918c2a7d4c9e451988fe3168f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fa815d9bfef7c2ba62ca211961a8e78') in 0.005856 seconds
-  Import took 0.008212 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.014304 seconds.
-  path: Assets/Ressources/Spawner_Prefab/variants/WILD_susfruit_spawner.prefab
-  artifactKey: Guid(acfc00f918c2a7d4c9e451988fe3168f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/variants/WILD_susfruit_spawner.prefab using Guid(acfc00f918c2a7d4c9e451988fe3168f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '8fa815d9bfef7c2ba62ca211961a8e78') in 0.006271 seconds
-  Import took 0.008681 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 99.804548 seconds.
-  path: Assets/Field/water_Container (1).prefab
-  artifactKey: Guid(7adde619e24dcdf41bebe776ef75c054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Field/water_Container (1).prefab using Guid(7adde619e24dcdf41bebe776ef75c054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41908fcefa86bcb7cbb26e4eaa19dba9') in 0.011257 seconds
-  Import took 0.013888 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.017167 seconds.
-  path: Assets/Field/water_Container (1).prefab
-  artifactKey: Guid(7adde619e24dcdf41bebe776ef75c054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Field/water_Container (1).prefab using Guid(7adde619e24dcdf41bebe776ef75c054) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '41908fcefa86bcb7cbb26e4eaa19dba9') in 0.006690 seconds
-  Import took 0.009099 seconds .
-
-========================================================================
-Received Prepare
-Registering precompiled user dll's ...
-Registered in 0.003237 seconds.
-Begin MonoManager ReloadAssembly
-Native extension for WindowsStandalone target not found
-Refreshing native plugins compatible for Editor in 0.33 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Mono: successfully reloaded assembly
-- Completed reload, in  0.798 seconds
-Platform modules already initialized, skipping
-Refreshing native plugins compatible for Editor in 0.36 ms, found 2 plugins.
-Preloading 0 native plugins for Editor in 0.00 ms.
-Unloading 1600 Unused Serialized files (Serialized files now loaded: 0)
-System memory in use before: 76.2 MB.
-System memory in use after: 76.3 MB.
-
-Unloading 15 unused Assets to reduce memory usage. Loaded Objects now: 2074.
-Total: 1.583800 ms (FindLiveObjects: 0.137500 ms CreateObjectMapping: 0.047600 ms MarkObjects: 1.380500 ms  DeleteObjects: 0.017200 ms)
-
-========================================================================
-Received Import Request.
-  Time since last request: 104.565268 seconds.
-  path: Assets/Ressources/Spawner_Prefab/variants/PurpleRock_Spawner.prefab
-  artifactKey: Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/variants/PurpleRock_Spawner.prefab using Guid(d15396e096fb75b4eaac4b53fa1c859f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '4f48076206e36a90b4be37976214fea4') in 0.063765 seconds
-  Import took 0.066396 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000268 seconds.
-  path: Assets/Ressources/Spawner_Prefab/variants/SusFruit.prefab
-  artifactKey: Guid(9e9404e901a8dda45aa0761b43f08686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/variants/SusFruit.prefab using Guid(9e9404e901a8dda45aa0761b43f08686) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '74c1e20e2c09901f2ae3b66454dc3275') in 0.010065 seconds
-  Import took 0.012368 seconds .
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000244 seconds.
-  path: Assets/Ressources/Spawner_Prefab/variants/WILD_susfruit_spawner.prefab
-  artifactKey: Guid(acfc00f918c2a7d4c9e451988fe3168f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Ressources/Spawner_Prefab/variants/WILD_susfruit_spawner.prefab using Guid(acfc00f918c2a7d4c9e451988fe3168f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)  -> (artifact id: '852acae70a277616013d20c0c226bfd3') in 0.009661 seconds
-  Import took 0.011941 seconds .
+Total: 1.598000 ms (FindLiveObjects: 0.137600 ms CreateObjectMapping: 0.047300 ms MarkObjects: 1.397200 ms  DeleteObjects: 0.015000 ms)
 
 AssetImportWorkerClient::OnTransportError - code=2 error=End of file

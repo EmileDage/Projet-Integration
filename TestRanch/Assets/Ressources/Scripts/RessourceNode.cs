@@ -75,7 +75,7 @@ public class RessourceNode : MonoBehaviour
         isDead = true;
     }
 
-    public void SetupNode(AbstractSpawner motherRef, int placeRef, int countdown)
+    public void SetupNode(AbstractSpawner motherRef)
     {
         mother = motherRef;
         respawnTime = motherRef.TimeToRespawnRef;

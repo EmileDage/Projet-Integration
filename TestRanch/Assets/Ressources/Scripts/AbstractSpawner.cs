@@ -31,18 +31,67 @@ public abstract class AbstractSpawner : MonoBehaviour
                 produits[i] = Instantiate(Produit_reference, produit_spawn[i]);
                 produits[i].tag = "produit";
                 produits[i].AddComponent<RessourceNode>();
-                produits[i].GetComponent<RessourceNode>().SetupNode(this, i, timeToRespawn);
+                produits[i].GetComponent<RessourceNode>().SetupNode(this);
             }
         }
     }
 
-    public abstract void OnGHourPassed(object source);
+    public virtual void OnGHourPassed(object source) {
+        if (disponibleStart == time.Hour)
+        {
+            Spawn();
+        }
+        else if (disponibleEnd == time.Hour)
+        {
+            Debug.Log("Products aren't available setting all products to false;");
+
+            Despawn();
+        }
+    }
+
+    protected virtual void Spawn() {
+        foreach (GameObject produit in produits)
+        {
+            if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
+            { //note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
+                produit.SetActive(true);
+            }
+        }
+    }
+
+    protected virtual void Despawn()
+    {
+        foreach (GameObject produit in produits)
+        {
+            if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
+            { //note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
+                produit.SetActive(false);
+            }
+        }
+    }
 
 
-    public abstract void SpawnProduce();
+
+
+    public virtual void SpawnProduce() {
+        for (int a = 0; a < produit_spawn.Length; a++)
+        {
+            if (produits[a] == null)
+            {
+                produits[a].GetComponent<RessourceNode>().SetSpawnedTrue();
+            }
+        }
+    }
 
     //exemple arbre est malade dont tous ces fruits pourrissent/roche rot idk
-    public abstract void DestroyAll();
+    public virtual  void DestroyAll()
+    {
+        for (int a = 0; a < produits.Length; a++)
+        {
+            produits[a].GetComponent<RessourceNode>().KillNode();
+        }
+        
+    }
 
     public virtual void OnChronoUpgrade()
     {
@@ -73,7 +122,7 @@ public abstract class AbstractSpawner : MonoBehaviour
             produits[i] = Instantiate(Produit_reference, produit_spawn[i]);
             produits[i].tag = "produit";
             produits[i].AddComponent<RessourceNode>();
-            produits[i].GetComponent<RessourceNode>().SetupNode(this, i, timeToRespawn);
+            produits[i].GetComponent<RessourceNode>().SetupNode(this);
         }
     }
 
