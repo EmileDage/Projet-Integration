@@ -14,7 +14,10 @@ public class NaturePlantSpawner : AbstractSpawner, IFarmable
 
     private void OnDestroy()
     {
-        time.GHourPassed -= OnGHourPassed;
+        if (time != null) 
+        { 
+            time.GHourPassed -= OnGHourPassed;
+        }
     }
 
     public void FarmIt()

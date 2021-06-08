@@ -31,7 +31,9 @@ public class RessourceNode : MonoBehaviour
 
     private void OnDestroy()
     {
+        if(time != null) { 
         time.GHourPassed -= OnGHourPassed;//unsubscribe a l'event
+        }
     }
 
     private void OnGHourPassed(object source)

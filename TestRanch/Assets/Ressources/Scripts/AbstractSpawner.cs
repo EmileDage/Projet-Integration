@@ -33,7 +33,7 @@ public abstract class AbstractSpawner : MonoBehaviour
                 produits[i].tag = "produit";
                 produits[i].AddComponent<RessourceNode>();
                 produits[i].GetComponent<RessourceNode>().SetupNode(this);
-                produits[i].GetComponent<WorldObjectMateriaux>().collectible = false;//empeche de les ramasser avec e
+                
             }
         }
 

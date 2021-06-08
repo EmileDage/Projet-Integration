@@ -6,7 +6,7 @@ using UnityEngine;
 public class WorldObjectMateriaux : WorldObject, IInteractible
 {
     private Materiaux materiaux;
-    public bool collectible;
+
 
     public Materiaux Materiaux { get => materiaux; set => materiaux = value;}
 
@@ -28,7 +28,7 @@ public class WorldObjectMateriaux : WorldObject, IInteractible
     new public void Interact(Player joueur)
     {
 
-        if (collectible) {
+
             Debug.Log("mat interact " + Qte);
             ItemStack temp = new ItemStack(materiaux, Qte);
             joueur.BarreInventaire.MergeOnExisting(temp);
@@ -41,7 +41,7 @@ public class WorldObjectMateriaux : WorldObject, IInteractible
             {
                 Destroy(this.gameObject);
             }
-        }
+        
        
         
     }
