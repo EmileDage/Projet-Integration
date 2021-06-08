@@ -38,11 +38,6 @@ public class Field : MonoBehaviour
 
     private void Start()
     {
-        if (PannelInfo != null) {
-            Debug.Log("the first iteration of pannel info isnt null" + PannelInfo);
-        }else
-            Debug.Log("the first iteration of pannel info IS null");
-
 
         f_Type = field_possibilities.empty;
 

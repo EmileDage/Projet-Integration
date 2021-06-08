@@ -44,7 +44,7 @@ public class SpawnerAgriculture : MotherSpawner, IFarmable
         sicknessLvl = 0;
         IsGrown = false;
 
-        //base.Start();
+        base.Start();
 
         upgrade_produit = new GameObject[upgrade_slot.Length];
 

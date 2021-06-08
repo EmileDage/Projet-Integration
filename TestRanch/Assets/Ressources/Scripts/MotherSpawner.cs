@@ -34,12 +34,17 @@ public class MotherSpawner : MonoBehaviour
                 produits[i].GetComponent<RessourceNode>().SetupNode(this);
             }
         }
+
+        Despawn();
     }
 
     public virtual void OnGHourPassed(object source) {
+        Debug.Log("MOTHER SPAWNER" + time.Hour);
         if (disponibleStart == time.Hour)
         {
+            Debug.Log("Products are available");
             Spawn();
+
         }
         else if (disponibleEnd == time.Hour)
         {
@@ -50,6 +55,9 @@ public class MotherSpawner : MonoBehaviour
     }
 
     protected virtual void Spawn() {
+
+        Debug.Log("Spawning");
+
         foreach (GameObject produit in produits)
         {
             if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
@@ -61,6 +69,7 @@ public class MotherSpawner : MonoBehaviour
 
     protected virtual void Despawn()
     {
+        Debug.Log("Despawning");
         foreach (GameObject produit in produits)
         {
             if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn

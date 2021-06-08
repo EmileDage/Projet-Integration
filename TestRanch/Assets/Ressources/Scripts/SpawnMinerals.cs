@@ -67,8 +67,11 @@ public class SpawnMinerals : MotherSpawner
     {
         base.Spawn();
 
-        if (UnityEngine.Random.Range(0, 100) <= rareRockChance)
+        int random = UnityEngine.Random.Range(0, 100);
+
+        if ( random <= rareRockChance)
         {//si la chance de random est plus grande rare rock spawn
+            Debug.Log("Rare rock has spawn !" +random+"<="+rareRockChance);
             rareRock.SetActive(true);
         }
 

@@ -15,6 +15,8 @@ public class Mine : PlanterParent
     {
         base.Start();
         type_product = Fonctions.mineraux;
+
+        defaultRareRock.SetActive(false);
     }
     public override void UpdateInfoPannel()
     {

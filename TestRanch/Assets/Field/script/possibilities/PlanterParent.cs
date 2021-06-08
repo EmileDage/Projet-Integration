@@ -58,11 +58,8 @@ public abstract class PlanterParent : MonoBehaviour
 
     protected virtual void AssignSpawnerRessource(GameObject inObj) 
     {
-
         SpawnerInstance = Instantiate(spawnerRef, spawn);
         SpawnerInstance.GetComponent<MotherSpawner>().SpawnSpawner(inObj.GetComponent<WorldObjectMateriaux>().Item()) ;
-
-
     }
 
     private void OnCollisionEnter(Collision collision)//erreur quand fruit est lancer sur mine
@@ -84,7 +81,7 @@ public abstract class PlanterParent : MonoBehaviour
 
     public void InformationPannel_Activate()
     {
-        Debug.Log("CHECKING info pannel status " );
+
         if (info_Pannel != null)
         {
             info_Pannel.SetActive(true);
