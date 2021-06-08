@@ -118,12 +118,15 @@ public class CoffreUI : AbstractInventoryUI
 
     public override void QuickSendStack(ItemStack stack, DragItem drag)
     {
+        Debug.Log("QuickSendStack : CoffreUI");
         PlayerInventory  inv= GM.Joueur.BarreInventaire;
         inv.MergeOnExisting(stack);
         Debug.Log(drag);
         Slot temp = inv.GetFirstEmptySlot();
-        if (temp != null) { 
-            temp.SwapItems(drag);}
+        if (temp != null) 
+        { 
+            temp.SwapItems(drag);
+        }
     }
 
     public Slot GetFirstEmptySlot()

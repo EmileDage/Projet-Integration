@@ -34,9 +34,11 @@ public class Slot : MonoBehaviour, IDropHandler
         DragItem.ParentSlot = this;
         slotImg = this.GetComponent<Image>();
         ItemStack = new ItemStack(emptyItem, 0);
+        //UpdateSlot();
+        DeSelect();
     }
 
-
+    
     public void OnDrop(PointerEventData eventData)
     {
        GameObject dragged= eventData.pointerDrag;

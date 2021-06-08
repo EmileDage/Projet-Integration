@@ -13,6 +13,8 @@ public class PlayerInventory : AbstractInventoryUI
     GameManager GM;
     Player joueur;
 
+
+
     private void Start()
     {
         slots = GetComponentsInChildren<Slot>();
@@ -181,6 +183,7 @@ public class PlayerInventory : AbstractInventoryUI
     public override void QuickSendStack(ItemStack stack, DragItem drag)
     {
         Coffre  c=  GM.Joueur.OpenChest;
+        if(c != null) { 
         c.GetCoffreUI().TryMergeOnExisting(stack);
         if (c.GetCoffreUI().GetFirstEmptySlot() != null) 
         {
@@ -188,7 +191,7 @@ public class PlayerInventory : AbstractInventoryUI
             c.GetCoffreUI().GetFirstEmptySlot().SwapItems(drag);
             //inv.GetFirstEmptySlot().SwapItems(drag);
         }
-        
+        }
     }
 //ça marche de l'inventaire vers le player mais pas du player vers l'inventaire?
 
