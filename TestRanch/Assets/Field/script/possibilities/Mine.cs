@@ -6,10 +6,10 @@ using UnityEngine.UI;
 
 public class Mine : PlanterParent
 {
-
     //stalactite upgrades
     [SerializeField] private Transform spawn_stalactite;
     private GameObject second_producer;
+    [SerializeField] private GameObject defaultRareRock;
 
     protected override  void Start()
     {
@@ -36,6 +36,7 @@ public class Mine : PlanterParent
 
     protected override void AssignSpawnerRessource(GameObject obj)
     {
+        spawnerRef.GetComponent<SpawnMinerals>().AssignRR(defaultRareRock);
         base.AssignSpawnerRessource(obj);
         this.gameObject.GetComponent<Mine_UI>().CheckPendingUpgrades();
         UpdateInfoPannel();

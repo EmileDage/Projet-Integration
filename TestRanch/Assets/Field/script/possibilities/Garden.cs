@@ -67,7 +67,7 @@ public class Garden : PlanterParent, IFarmable
             spawnerRef.GetComponent<SpawnerAgriculture>().AssignRef(Water_container, obj);
 
             base.AssignSpawnerRessource(obj);
-            this.gameObject.GetComponent<Agriculture_UI>().CheckPendingUpgrades();
+            this.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();
             UpdateInfoPannel();
         }
         else
@@ -76,7 +76,7 @@ public class Garden : PlanterParent, IFarmable
 
     public void FarmIt()
     {
-        throw new NotImplementedException();
+        //OwO
     }
 
 

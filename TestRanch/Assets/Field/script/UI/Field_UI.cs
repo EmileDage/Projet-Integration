@@ -16,7 +16,6 @@ public class Field_UI : MonoBehaviour
     private Player joueur;
     private GameObject cam_joueur;
 
-    [SerializeField] private Item banane;
 
     //pannels with upgrade options
    [SerializeField] private GameObject pannel_empty;
@@ -311,7 +310,7 @@ public class Field_UI : MonoBehaviour
     {
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[1].GetComponent<ShowPrice>().Liste_prix))
         {
-            field_ref.jardin.GetComponent<Agriculture_UI>().Irr_sys_Activate();
+            field_ref.jardin.GetComponent<Garden_UI>().Irr_sys_Activate();
             btn_up_terre[1].interactable = false;
             btn_up_terre[3].interactable = false;//disable autre options du choix
         }
@@ -326,7 +325,7 @@ public class Field_UI : MonoBehaviour
     {
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[2].GetComponent<ShowPrice>().Liste_prix))
         {
-            field_ref.jardin.GetComponent<Agriculture_UI>().Rich_fer_Activate();
+            field_ref.jardin.GetComponent<Garden_UI>().Rich_fer_Activate();
             btn_up_terre[2].interactable = false;
             btn_up_terre[4].interactable = false;//disable autre options du choix
         }
@@ -340,7 +339,7 @@ public class Field_UI : MonoBehaviour
     {
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[3].GetComponent<ShowPrice>().Liste_prix))
         {
-            field_ref.jardin.GetComponent<Agriculture_UI>().Chrono_Activate();
+            field_ref.jardin.GetComponent<Garden_UI>().Chrono_Activate();
             btn_up_terre[3].interactable = false;
             btn_up_terre[1].interactable = false;//disable autre options du choix
         }
@@ -354,7 +353,7 @@ public class Field_UI : MonoBehaviour
     {
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[4].GetComponent<ShowPrice>().Liste_prix))
         {
-            field_ref.jardin.GetComponent<Agriculture_UI>().Crystal_Activate();
+            field_ref.jardin.GetComponent<Garden_UI>().Crystal_Activate();
             btn_up_terre[4].interactable = false;
             btn_up_terre[2].interactable = false;//disable autre options du choix
         }
@@ -371,7 +370,7 @@ public class Field_UI : MonoBehaviour
 
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_mine[0].GetComponent<ShowPrice>().Liste_prix))
         {
-            field_ref.jardin.GetComponent<Garden>().InformationPannel_Activate();
+            field_ref.Mine.GetComponent<Mine>().InformationPannel_Activate();
             btn_up_mine[0].interactable = false;
         }
         else
@@ -385,7 +384,7 @@ public class Field_UI : MonoBehaviour
     {
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_mine[1].GetComponent<ShowPrice>().Liste_prix))
         {
-            field_ref.jardin.GetComponent<Mine_UI>().Stalactite_Activate();
+            field_ref.Mine.GetComponent<Mine_UI>().Stalactite_Activate();
             btn_up_mine[1].interactable = false;
             btn_up_mine[3].interactable = false;//disable l'autre option mecanique
         }
@@ -399,7 +398,7 @@ public class Field_UI : MonoBehaviour
     {
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_mine[2].GetComponent<ShowPrice>().Liste_prix))
         {
-            field_ref.jardin.GetComponent<Mine_UI>().Rich_soil_Activate();
+            field_ref.Mine.GetComponent<Mine_UI>().Rich_soil_Activate();
             btn_up_mine[2].interactable = false;
             btn_up_mine[4].interactable = false;//disable l'autre upgrade terrain
         }
@@ -415,7 +414,7 @@ public class Field_UI : MonoBehaviour
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_mine[3].GetComponent<ShowPrice>().Liste_prix))
         {
         
-        field_ref.jardin.GetComponent<Mine_UI>().Chrono_Activate();
+        field_ref.Mine.GetComponent<Mine_UI>().Chrono_Activate();
         btn_up_mine[3].interactable = false;
         btn_up_mine[1].interactable = false;//disable l'autre option mecanique
         }
@@ -430,7 +429,7 @@ public class Field_UI : MonoBehaviour
     {
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_mine[4].GetComponent<ShowPrice>().Liste_prix))
         {
-            field_ref.jardin.GetComponent<Mine_UI>().Rare_rock_Activate();
+            field_ref.Mine.GetComponent<Mine_UI>().Rare_rock_Activate();
             btn_up_mine[4].interactable = false;
             btn_up_mine[2].interactable = false;//disable l'autre upgrade terrain
         }

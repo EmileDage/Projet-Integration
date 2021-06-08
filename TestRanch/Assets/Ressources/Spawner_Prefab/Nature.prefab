@@ -203,7 +203,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 247230ae27076ea4da65e5c965b20ea7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToRespawn: 0
+  timeToRespawn: 5
   disponibleStart: 0
   disponibleEnd: 15
   produit_spawn:

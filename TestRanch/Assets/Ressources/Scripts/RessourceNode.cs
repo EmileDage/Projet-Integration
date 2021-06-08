@@ -25,6 +25,10 @@ public class RessourceNode : MonoBehaviour
         time.GHourPassed += OnGHourPassed;
     }
 
+    public void OnChronoUpgrade(int newRespawnTime) {
+        respawnTime = newRespawnTime;
+    }
+
     private void OnDestroy()
     {
         time.GHourPassed -= OnGHourPassed;//unsubscribe a l'event
@@ -62,7 +66,7 @@ public class RessourceNode : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         spawned = false;
-        cd = respawnTime;
+        cd = respawnTime; 
     }
 
     public void KillNode()
@@ -71,10 +75,10 @@ public class RessourceNode : MonoBehaviour
         isDead = true;
     }
 
-    public void SetupNode(AbstractSpawner motherRef, int placeRef, int countdown)
+    public void SetupNode(AbstractSpawner motherRef)
     {
-
-        respawnTime = countdown;
+        mother = motherRef;
+        respawnTime = motherRef.TimeToRespawnRef;
         cd = respawnTime;
         this.SetSpawnedTrue();
         this.gameObject.SetActive(true);
@@ -85,7 +89,7 @@ public class RessourceNode : MonoBehaviour
     {
         //int x = Mathf.FloorToInt(ParentSpawner.Yield * joueur.Selected.ItemStack.GetYieldModifier());
         //joueur.BarreInventaire.QuickAddItem(new ItemStack(GetComponent<WorldObjectMateriaux>().RessourceType, x));
-        //this.DeSpawnNode();
+        this.DeSpawnNode();
     }
 
 }

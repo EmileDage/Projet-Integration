@@ -114,7 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f55a625945fa7cb4886c608749deabd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToRespawn: 0
+  timeToRespawn: 5
   disponibleStart: 0
   disponibleEnd: 12
   produit_spawn:
@@ -122,11 +122,11 @@ MonoBehaviour:
   - {fileID: 354383383463959771}
   - {fileID: 6076519791802196379}
   - {fileID: 3083094747045800557}
-  hydration: 0
-  hydration_hour: 0
+  hydration: 10
+  hydration_hour: 10
   water_container: {fileID: 0}
-  health: 0
-  sickness_resistance: 0
+  health: 50
+  sickness_resistance: 20
   upgrade_fertilizer: 0
   upgrade_slot:
   - {fileID: 7430965230228493665}

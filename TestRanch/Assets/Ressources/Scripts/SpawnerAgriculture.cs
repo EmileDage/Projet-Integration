@@ -35,7 +35,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     //cest pour le pannel info
     private Text text;
 
-    public bool Upgrade { get => upgrade_fertilizer; set => upgrade_fertilizer = value; }//rich fertilizer upgrade 
+    public bool Upgrade_fertilizer { get => upgrade_fertilizer; set => upgrade_fertilizer = value; }//rich fertilizer upgrade 
 
     public bool GetGrown { get => IsGrown; }
 
@@ -43,7 +43,9 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     {
         sicknessLvl = 0;
         IsGrown = false;
-        base.Start();
+
+        //base.Start();
+
         upgrade_produit = new GameObject[upgrade_slot.Length];
 
         if (timeToGrowHour <= 0) {
@@ -150,14 +152,8 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
        
     }
 
-    private void Spawn() {//pour faciliter la lecture du code jai mis ça en fonction
-        foreach (GameObject produit in produits)
-        {
-            if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
-            {//note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
-                produit.SetActive(true);
-            }
-        }
+    protected override  void Spawn() {//pour faciliter la lecture du code jai mis ça en fonction
+        base.Spawn();
 
         if (upgrade_fertilizer)
         {
@@ -171,12 +167,9 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
         }
     }
 
-    private void Despawn()
+    protected override void Despawn()
     {
-        foreach (GameObject produit in produits)
-        {
-            produit.SetActive(false);
-        }
+        base.Despawn();
 
         if (upgrade_fertilizer)
         {
@@ -192,28 +185,22 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
     public override void SpawnProduce()
     {
-        for (int a = 0; a < produit_spawn.Length; a++)
-        {
-            if (produits[a] == null)
-            {
-                produits[a].GetComponent<RessourceNode>().SetSpawnedTrue();
-            }
+        base.SpawnProduce();
 
-            if (upgrade_fertilizer) {
+        if (upgrade_fertilizer) {
+            for (int a = 0; a < upgrade_produit.Length; a++)
+            {//on ne sait pas si dans le futur le nmbr de slot sur upgrade seront egal a ceux regulier so on fait une boucle separe
                 if (upgrade_produit[a] == null)
                 {
                     upgrade_produit[a].GetComponent<RessourceNode>().SetSpawnedTrue();
                 }
-            }
+            }  
         }
     }
 
     public override void DestroyAll()
     {
-        for (int a = 0; a < produits.Length; a++)
-        {
-            produits[a].GetComponent<RessourceNode>().KillNode();
-        }
+        base.DestroyAll();
 
         if (upgrade_fertilizer) {
             for (int a = 0; a < upgrade_produit.Length; a++)
@@ -234,10 +221,10 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
     public override void SpawnSpawner(Materiaux toSpawn)
     {
-        if (toSpawn.Funct.Equals(Fonctions.plantes))
-        {
-            base.SpawnSpawner(toSpawn);
-        }
+        //if (toSpawn.Funct.Equals(Fonctions.plantes))//on check avant dans la collision sinon bug and dats sad
+
+        base.SpawnSpawner(toSpawn);
+        
     }
 
     public void FarmIt()

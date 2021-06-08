@@ -34,9 +34,16 @@ public class Field : MonoBehaviour
     public GameObject Enclos { get => enclos;}
     public GameObject Entrepot { get => entrepot; }
     public GameObject Mine { get => mine; }
+    public GameObject PannelInfo { get => pannelInfo; set => pannelInfo = value; }
 
     private void Start()
     {
+        if (PannelInfo != null) {
+            Debug.Log("the first iteration of pannel info isnt null" + PannelInfo);
+        }else
+            Debug.Log("the first iteration of pannel info IS null");
+
+
         f_Type = field_possibilities.empty;
 
         //Desactive les objets so ils apparaissent pas
@@ -44,7 +51,7 @@ public class Field : MonoBehaviour
         Enclos.SetActive(false);
         Entrepot.SetActive(false);
         Mine.SetActive(false);
-        pannelInfo.SetActive(false);
+        PannelInfo.SetActive(false);
         //for testing; fait pop le menu_ui sans interaction
         //Interact();
     }    
@@ -88,9 +95,9 @@ public class Field : MonoBehaviour
                 {
                     jardin.SetActive(true);
                     jardin.GetComponent<Garden>().Info = true;
-                    jardin.GetComponent<Garden>().Info_Pannel = pannelInfo;
-                    jardin.AddComponent<Agriculture_UI>();
-                    jardin.GetComponent<Agriculture_UI>().Set_ref(jardin.GetComponent<Garden>()); ;
+                    jardin.GetComponent<Garden>().Info_Pannel = PannelInfo;
+                    jardin.AddComponent<Garden_UI>();
+                    jardin.GetComponent<Garden_UI>().Set_ref(jardin.GetComponent<Garden>()); ;
 
 
                 }
@@ -99,7 +106,7 @@ public class Field : MonoBehaviour
                 {
                     Enclos.SetActive(true);
                     Enclos.GetComponent<Enclos>().Info = true;
-                    Enclos.GetComponent<Enclos>().Info_pannel = pannelInfo;
+                    Enclos.GetComponent<Enclos>().Info_pannel = PannelInfo;
                 }
                 break;
             case field_possibilities.entrepot:
@@ -112,7 +119,7 @@ public class Field : MonoBehaviour
                     Mine.SetActive(true);
 
                     Mine.GetComponent<Mine>().Info = true;
-                    Mine.GetComponent<Mine>().Info_Pannel = pannelInfo;
+                    Mine.GetComponent<Mine>().Info_Pannel = PannelInfo;//Info_Pannel de mine != null
                     Mine.AddComponent<Mine_UI>();
                     Mine.GetComponent<Mine_UI>().Set_ref(Mine.GetComponent<Mine>()); ;
                 }
@@ -127,7 +134,7 @@ public class Field : MonoBehaviour
         {
             case field_possibilities.agriculture:
                 {                   
-                    Destroy(jardin.GetComponent<Agriculture_UI>());
+                    Destroy(jardin.GetComponent<Garden_UI>());
                     jardin.GetComponent<Garden>().Destroy_planter();
                    jardin.SetActive(false);
                 }
