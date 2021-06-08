@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpawnerAgriculture : AbstractSpawner, IFarmable
+public class SpawnerAgriculture : MotherSpawner, IFarmable
 {
     //very important :)
     //https://twitter.com/RabbitEveryHour/status/1397930644143960066?s=20

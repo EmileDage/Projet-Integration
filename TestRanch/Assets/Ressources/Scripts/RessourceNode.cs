@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class RessourceNode : MonoBehaviour
 {
-    private AbstractSpawner mother;
+    private MotherSpawner mother;
     private int place;
     private int cd;//cooldown
     private int respawnTime;
@@ -75,7 +75,7 @@ public class RessourceNode : MonoBehaviour
         isDead = true;
     }
 
-    public void SetupNode(AbstractSpawner motherRef)
+    public void SetupNode(MotherSpawner motherRef)
     {
         mother = motherRef;
         respawnTime = motherRef.TimeToRespawnRef;

@@ -60,7 +60,7 @@ public abstract class PlanterParent : MonoBehaviour
     {
 
         SpawnerInstance = Instantiate(spawnerRef, spawn);
-        SpawnerInstance.GetComponent<AbstractSpawner>().SpawnSpawner(inObj.GetComponent<WorldObjectMateriaux>().Item()) ;
+        SpawnerInstance.GetComponent<MotherSpawner>().SpawnSpawner(inObj.GetComponent<WorldObjectMateriaux>().Item()) ;
 
 
     }
