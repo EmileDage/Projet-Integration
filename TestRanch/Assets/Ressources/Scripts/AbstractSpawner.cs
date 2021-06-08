@@ -22,21 +22,23 @@ public abstract class AbstractSpawner : MonoBehaviour
 
     protected virtual void Start() {//a mettre dans start set up les trucs de base
 
-        if (produit_reference != null) { 
+        if (produit_reference != null) 
+        { 
             produits = new GameObject[produit_spawn.Length];
             time = MyTimeManager.timeInstance;
             time.GHourPassed += OnGHourPassed;
 
             for (int i = 0; i < produit_spawn.Length; i++)
             {
+                Debug.Log(i);
                 produits[i] = Instantiate(Produit_reference, produit_spawn[i]);
                 produits[i].tag = "produit";
                 produits[i].AddComponent<RessourceNode>();
                 produits[i].GetComponent<RessourceNode>().SetupNode(this);
+                produits[i].name = "Node" + i;
                 
             }
         }
-
         Despawn();
     }
 
