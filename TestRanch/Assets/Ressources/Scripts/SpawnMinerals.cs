@@ -33,6 +33,11 @@ public class SpawnMinerals : AbstractSpawner
        
     }
 
+    public void AssignRR(GameObject RR)//pour si plus tard selon le type de roche tu obtient une variante rare quand tu assigne
+    {
+        rareRock = RR;
+    }
+
     public void OnUpgradeRR() { //RR = rare rock
         rareRockChance += 25;
     }
