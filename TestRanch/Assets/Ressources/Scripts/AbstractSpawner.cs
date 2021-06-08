@@ -2,7 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MotherSpawner : MonoBehaviour
+
+public abstract class AbstractSpawner : MonoBehaviour
 {
     [SerializeField]protected GameObject produit_reference; //IL FAUT GARDER SERIALIZED POUR ASSIGNER LA RESSOURCES POUR  LES SPAWNER SAUVAGES
     protected GameObject[] produits;
@@ -32,10 +33,15 @@ public class MotherSpawner : MonoBehaviour
                 produits[i].tag = "produit";
                 produits[i].AddComponent<RessourceNode>();
                 produits[i].GetComponent<RessourceNode>().SetupNode(this);
+                produits[i].GetComponent<WorldObjectMateriaux>().collectible = false;//empeche de les ramasser avec e
             }
         }
 
         Despawn();
+    }
+
+    public Materiaux SpawnedMat() {
+        return this.produit_reference.GetComponent<WorldObjectMateriaux>().Item();
     }
 
     public virtual void OnGHourPassed(object source) {
@@ -46,6 +52,7 @@ public class MotherSpawner : MonoBehaviour
         }
         else if (disponibleEnd == time.Hour)
         {
+            Debug.Log("Despawn because time is out");
             Despawn();
         }
     }
@@ -58,7 +65,7 @@ public class MotherSpawner : MonoBehaviour
         {
             if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
             { //note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
-                produit.gameObject.SetActive(true);
+                produit.SetActive(true);
             }
         }
     }
@@ -66,15 +73,12 @@ public class MotherSpawner : MonoBehaviour
     protected virtual void Despawn()
     {
         Debug.Log("Despawning");
+
         foreach (GameObject produit in produits)
         {
-            produit.gameObject.SetActive(false);
-
+            produit.SetActive(false);
         }
     }
-
-
-
 
     public virtual void SpawnProduce() {
         for (int a = 0; a < produit_spawn.Length; a++)

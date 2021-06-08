@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpawnMinerals : MotherSpawner
+public class SpawnMinerals : AbstractSpawner
 {
     [SerializeField] [Range(0,100)]private int rareRockChance;//en % idelament il est set a 100 juste pour testing
     [SerializeField]private GameObject rareRock;
