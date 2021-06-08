@@ -175,12 +175,17 @@ public class SpawnerAgriculture : MotherSpawner, IFarmable
         {
             foreach (GameObject produit in upgrade_produit)
             {
-                if (produit.GetComponent<RessourceNode>().GetSpawned())
-                {
-                    produit.SetActive(false);
+                if (produit != null) {
+                    if (produit.GetComponent<RessourceNode>().GetSpawned())
+                    {
+                        produit.SetActive(false);
+                    }
                 }
+               
             }
         }
+
+  
     }
 
     public override void SpawnProduce()

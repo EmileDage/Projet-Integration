@@ -39,17 +39,13 @@ public class MotherSpawner : MonoBehaviour
     }
 
     public virtual void OnGHourPassed(object source) {
-        Debug.Log("MOTHER SPAWNER" + time.Hour);
+
         if (disponibleStart == time.Hour)
         {
-            Debug.Log("Products are available");
             Spawn();
-
         }
         else if (disponibleEnd == time.Hour)
         {
-            Debug.Log("Products aren't available setting all products to false;");
-
             Despawn();
         }
     }
@@ -62,7 +58,7 @@ public class MotherSpawner : MonoBehaviour
         {
             if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
             { //note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
-                produit.SetActive(true);
+                produit.gameObject.SetActive(true);
             }
         }
     }
@@ -72,10 +68,8 @@ public class MotherSpawner : MonoBehaviour
         Debug.Log("Despawning");
         foreach (GameObject produit in produits)
         {
-            if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
-            { //note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
-                produit.SetActive(false);
-            }
+            produit.gameObject.SetActive(false);
+
         }
     }
 

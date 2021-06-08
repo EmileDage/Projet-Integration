@@ -100,7 +100,12 @@ public class SpawnMinerals : MotherSpawner
         {//peut etre dans le futur (upgradeslot != produit spawn), donc je ne les met pas dans la meme boucle pour cela
             foreach (GameObject produit in upgrade_produit)
             {
-                produit.SetActive(false);
+                if (produit != null) {
+                    if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
+                    { //note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
+                        produit.SetActive(false);
+                    }
+                }
             }
         }
     }
