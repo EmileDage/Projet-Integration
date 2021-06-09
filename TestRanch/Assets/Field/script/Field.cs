@@ -13,7 +13,7 @@ public enum field_possibilities
     mine
 }
 
-public class Field : MonoBehaviour
+public class Field : MonoBehaviour, IInteractible
 {
     [SerializeField] private Field_UI ui;
     [SerializeField] private GameObject self;
@@ -49,35 +49,22 @@ public class Field : MonoBehaviour
         PannelInfo.SetActive(false);
         //for testing; fait pop le menu_ui sans interaction
         //Interact();
-    }    
+    }
 
-    public void Interact()
-    { //Cette fonction est call par le joueur lorsqu'il interagit avec le field
-        //au cas ou que vous voulez appeler la fonction directement
+    public void Interact(Player joueur)
+    {
         ui.SetReference(this);
         ui.Interact();
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.tag == "Player") { 
-            ui.Press_u.text = "Press U to access the upgrade menus";
-        }
-    }
-
-    private void OnTriggerStay(Collider other)
-    {
-        if (Input.GetButtonDown("Upgrade"))
-        {
-            Interact();
-        }
-    }
 
     private void OnTriggerExit(Collider other)
     {
-       ui.Btn_DeactivatePannelUpgrade();//empeche le joeuur de regarder l'ui de loin
-       ui.Return_cursor_norm();//s'assure que le curseur revient a la normale
-       ui.Press_u.text = "";
+        if (other.tag == "Player") {
+            ui.Btn_DeactivatePannelUpgrade();//empeche le joeuur de regarder l'ui de loin
+            ui.Return_cursor_norm();//s'assure que le curseur revient a la normale
+
+        }
     }
 
 
@@ -156,4 +143,5 @@ public class Field : MonoBehaviour
                 break;
         }
     }
+
 }

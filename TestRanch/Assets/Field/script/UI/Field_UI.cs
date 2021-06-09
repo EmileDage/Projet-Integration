@@ -27,7 +27,6 @@ public class Field_UI : MonoBehaviour
     [SerializeField] private GameObject pannel_delete_plot;
     [SerializeField] private GameObject pannel_not_enough;
     //button U who need to be pressed in your area
-    [SerializeField] private Text press_u;
     //button list to disable them when upgrade is purchased
     //separer en plusieurs sous categories pour clarté
     //je peux pas faire on click car si le joueur na pas assez de ressource ben le boutton nest plus jamais dispo
@@ -37,9 +36,6 @@ public class Field_UI : MonoBehaviour
     [SerializeField] private Button[] btn_up_mine;
     [SerializeField] private Button[] btn_up_enclos;
     [SerializeField] private Button[] btn_up_entrepot;
-
-
-    public Text Press_u { get => press_u; set => press_u = value; }
 
     private bool test;
 
@@ -55,7 +51,6 @@ public class Field_UI : MonoBehaviour
         pannel_delete_plot.SetActive(false);
         pannel_not_enough.SetActive(false);
 
-        Press_u.text = "";
         gm = GameManager.gmInstance;
         joueur = gm.Joueur;
         cam_joueur = gm.Joueur.playerCam;
@@ -73,7 +68,6 @@ public class Field_UI : MonoBehaviour
     public void Interact() {
         Cursor.visible = true;
         cam_joueur.GetComponent<CameraControl>().LockMouse();
-        press_u.text = "";
         switch (field_ref.F_type) {
             case field_possibilities.empty: {
                     pannel_empty.SetActive(true);
@@ -108,7 +102,6 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_DeactivatePannelUpgrade()
     {
-        press_u.text = "Press U to access the upgrade menus";
         Btn_Deactivate_pannel_not_enough();
         Btn_Delete_Denied();
         if (field_ref != null) {
@@ -147,7 +140,6 @@ public class Field_UI : MonoBehaviour
     public void Btn_Delete_pannel()//Ask for confirmation
     {
         Btn_DeactivatePannelUpgrade();
-        press_u.text = "";
         pannel_delete_plot.SetActive(true);
     }
 
