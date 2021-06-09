@@ -38,7 +38,7 @@ public class Mine : PlanterParent
 
     protected override void AssignSpawnerRessource(GameObject obj)
     {
-        spawnerRef.GetComponent<SpawnMinerals>().AssignRR(defaultRareRock);
+        spawnerRef.GetComponent<SpawnMinerals>().AssignRR_ref(defaultRareRock);
         base.AssignSpawnerRessource(obj);
         this.gameObject.GetComponent<Mine_UI>().CheckPendingUpgrades();
         UpdateInfoPannel();

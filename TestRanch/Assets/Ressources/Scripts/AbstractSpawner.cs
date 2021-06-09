@@ -30,7 +30,6 @@ public abstract class AbstractSpawner : MonoBehaviour
 
             for (int i = 0; i < produit_spawn.Length; i++)
             {
-                Debug.Log(i);
                 produits[i] = Instantiate(Produit_reference, produit_spawn[i]);
                 produits[i].tag = "produit";
                 produits[i].AddComponent<RessourceNode>();
@@ -39,7 +38,25 @@ public abstract class AbstractSpawner : MonoBehaviour
                 
             }
         }
-        Despawn();
+        //si les produit spawn a 0h mais le jeux commence a 5h
+        //ce code marche pas me semble si le produit commence a 20h pis finit a 5h
+        //so tant que le jeux commence a 5h cest chill
+        if (time.Hour >= disponibleStart)
+        {//start = 2h currentH = 5h
+            if (time.Hour >= disponibleEnd)//end = 4h currentH = 5h
+            {
+                Despawn();
+
+            }
+            else
+            {
+                Spawn();
+            }
+        }
+        else
+        {
+            Despawn();
+        }
     }
 
     public Materiaux SpawnedMat() {
@@ -54,14 +71,11 @@ public abstract class AbstractSpawner : MonoBehaviour
         }
         else if (disponibleEnd == time.Hour)
         {
-            Debug.Log("Despawn because time is out");
             Despawn();
         }
     }
 
     protected virtual void Spawn() {
-
-        Debug.Log("Spawning");
 
         foreach (GameObject produit in produits)
         {
@@ -74,8 +88,6 @@ public abstract class AbstractSpawner : MonoBehaviour
 
     protected virtual void Despawn()
     {
-        Debug.Log("Despawning");
-
         foreach (GameObject produit in produits)
         {
             produit.SetActive(false);

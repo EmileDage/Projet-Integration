@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 482911957918599474}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4770286637777227793}
@@ -114,6 +114,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f55a625945fa7cb4886c608749deabd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  produit_reference: {fileID: 0}
   timeToRespawn: 5
   disponibleStart: 0
   disponibleEnd: 12
@@ -122,7 +123,6 @@ MonoBehaviour:
   - {fileID: 354383383463959771}
   - {fileID: 6076519791802196379}
   - {fileID: 3083094747045800557}
-  hydration: 10
   hydration_hour: 10
   water_container: {fileID: 0}
   health: 50

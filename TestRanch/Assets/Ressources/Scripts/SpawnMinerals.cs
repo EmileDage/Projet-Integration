@@ -6,7 +6,8 @@ using UnityEngine.UI;
 public class SpawnMinerals : AbstractSpawner
 {
     [SerializeField] [Range(0,100)]private int rareRockChance;//en % idelament il est set a 100 juste pour testing
-    [SerializeField]private GameObject rareRock;
+    [SerializeField]private GameObject rareRock_ref;//reference a ce quon veut comme rare rock
+    private GameObject rareRock;//Cest l'instance qui est dans la scene
     [SerializeField] private Transform rareRock_spawn;//it seems easier to just add a special spot for the rare rock
 
     //je prefere creer un autre array pour q'on puisse changer plus facilement les upgrades si on chnage d'idée pour le nombre
@@ -21,21 +22,73 @@ public class SpawnMinerals : AbstractSpawner
 
     protected override void Start()
     {
-        base.Start();
+        upgrade_produit = new GameObject[upgrade_slot.Length];
+
+        if (produit_reference != null)
+        {
+            produits = new GameObject[produit_spawn.Length];
+            time = MyTimeManager.timeInstance;
+            time.GHourPassed += OnGHourPassed;
+
+            for (int i = 0; i < produit_spawn.Length; i++)
+            {
+                produits[i] = Instantiate(Produit_reference, produit_spawn[i]);
+                produits[i].tag = "produit";
+                produits[i].AddComponent<RessourceNode>();
+                produits[i].GetComponent<RessourceNode>().SetupNode(this);
+                produits[i].name = "Node" + i;
+
+            }
+
+            if (upgrade_soil) {
+                for (int i = 0; i < upgrade_produit.Length; i++)
+                {//J'utilise pas la même boucle que pour les produits regulier cuz maybe on changera le nmbr de spawn pour les upgrades avec l'upgrade
+                    upgrade_produit[i] = Instantiate(Produit_reference, upgrade_slot[i]);
+                    upgrade_produit[i].tag = "produit";
+                    upgrade_produit[i].AddComponent<RessourceNode>();
+                    upgrade_produit[i].GetComponent<RessourceNode>().SetupNode(this);
+                    upgrade_produit[i].name = "Node" + i;
+
+                }
+            }
+        }
 
         //this is the setup for rare rock
-        if (rareRock != null) {
-            rareRock = Instantiate(rareRock, rareRock_spawn);
+        if (rareRock_ref != null) {
+            rareRock = Instantiate(rareRock_ref, rareRock_spawn);
             rareRock.tag = "produit";
             rareRock.AddComponent<RessourceNode>();
             rareRock.GetComponent<RessourceNode>().SetupNode(this);
+
         }
-       
+
+
+
+        
+        //si les produit spawn a 0h mais le jeux commence a 5h
+        //ce code marche pas me semble si le produit commence a 20h pis finit a 5h
+        //so tant que le jeux commence a 5h cest chill
+        if (time.Hour >= disponibleStart){//start = 2h currentH = 5h
+            if (time.Hour >= disponibleEnd)//end = 4h currentH = 5h
+            {
+                Despawn();
+
+            }
+            else
+            {
+                Spawn();
+            }
+        }else { 
+                Despawn();
+        }
+
+
+
     }
 
-    public void AssignRR(GameObject RR)//pour si plus tard selon le type de roche tu obtient une variante rare quand tu assigne
+    public void AssignRR_ref(GameObject RR)//pour si plus tard selon le type de roche tu obtient une variante rare quand tu assigne
     {
-        rareRock = RR;
+        rareRock_ref = RR;
     }
 
     public void OnUpgradeRR() { //RR = rare rock
@@ -51,29 +104,13 @@ public class SpawnMinerals : AbstractSpawner
 
     public override void OnGHourPassed(object source)
     {
-        Debug.Log("HourPassed SpawnerMine");
 
-        if (disponibleStart == time.Hour)
-        {
-            Spawn();        
-        }
-        else if (disponibleEnd == time.Hour)
-        {
-            Despawn();         
-        }
+        base.OnGHourPassed(source);
     }
 
     protected override void Spawn()
     {
         base.Spawn();
-
-        int random = UnityEngine.Random.Range(0, 100);
-
-        if ( random <= rareRockChance)
-        {//si la chance de random est plus grande rare rock spawn
-            Debug.Log("Rare rock has spawn !" +random+"<="+rareRockChance);
-            rareRock.SetActive(true);
-        }
 
         if (upgrade_soil)
         {
@@ -86,15 +123,22 @@ public class SpawnMinerals : AbstractSpawner
             }
         }
 
+        int random = UnityEngine.Random.Range(0, 100);
+
+        if (random <= rareRockChance)
+        {//si la chance de random est plus grande rare rock spawn
+            Debug.Log("Rare rock has spawned !\n " + random + "<=" + rareRockChance);
+            rareRock.SetActive(true);
+        }
+        else
+            Debug.Log("Rare rock didnt spawn\n " + random + "<=" + rareRockChance);
 
     }
 
     protected override void Despawn()
     {
         base.Despawn();
-
         rareRock.SetActive(false);
-
 
         if (upgrade_soil)
         {//peut etre dans le futur (upgradeslot != produit spawn), donc je ne les met pas dans la meme boucle pour cela
@@ -116,7 +160,7 @@ public class SpawnMinerals : AbstractSpawner
         base.SpawnProduce();
 
         if (UnityEngine.Random.Range(0, 100) <= rareRockChance) {//si la chance de random est plus grande rare rock spawn
-          rareRock.GetComponent<RessourceNode>().SetSpawnedTrue();
+            rareRock.GetComponent<RessourceNode>().SetSpawnedTrue();
         }
 
         if (upgrade_soil)

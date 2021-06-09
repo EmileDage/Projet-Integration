@@ -45,8 +45,6 @@ public abstract class PlanterParent : MonoBehaviour
 
     private void OnGHourPassed(object source)
     {
-        Debug.Log("HourPassed PlanterParent");
-
         if (Info == true)
         { // pour veirifer que l'obj est actif
             if (info_Pannel.activeSelf ==true) {
