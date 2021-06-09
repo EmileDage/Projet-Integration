@@ -19,7 +19,6 @@ public class DragItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,IE
         recT = GetComponent<RectTransform>();
         initPos = recT.anchoredPosition;
         cGroup = GetComponent<CanvasGroup>();
-
     }
 
     public void OnBeginDrag(PointerEventData eventData)
@@ -44,6 +43,7 @@ public class DragItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,IE
 
     public void ResetPosition()
     {
+        Debug.Log(parentSlot);
         recT.SetParent(parentSlot.gameObject.transform);
         recT.anchoredPosition = initPos;
         cGroup.blocksRaycasts = true;
