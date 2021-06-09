@@ -111,35 +111,37 @@ public class Field_UI : MonoBehaviour
         press_u.text = "Press U to access the upgrade menus";
         Btn_Deactivate_pannel_not_enough();
         Btn_Delete_Denied();
-
-        switch (field_ref.F_type)
-        {
-            case field_possibilities.empty:
-                {
-                    pannel_empty.SetActive(false);
-                }
-                break;
-            case field_possibilities.agriculture:
-                {
-                    pannel_agriculture.SetActive(false);
-                }
-                break;
-            case field_possibilities.enclos:
-                {
-                    pannel_enclos.SetActive(false);
-                }
-                break;
-            case field_possibilities.entrepot:
-                {
-                    pannel_entrepot.SetActive(false);
-                }
-                break;
-            case field_possibilities.mine:
-                {
-                    pannel_mine.SetActive(false);
-                }
-                break;
+        if (field_ref != null) {
+            switch (field_ref.F_type)
+            {
+                case field_possibilities.empty:
+                    {
+                        pannel_empty.SetActive(false);
+                    }
+                    break;
+                case field_possibilities.agriculture:
+                    {
+                        pannel_agriculture.SetActive(false);
+                    }
+                    break;
+                case field_possibilities.enclos:
+                    {
+                        pannel_enclos.SetActive(false);
+                    }
+                    break;
+                case field_possibilities.entrepot:
+                    {
+                        pannel_entrepot.SetActive(false);
+                    }
+                    break;
+                case field_possibilities.mine:
+                    {
+                        pannel_mine.SetActive(false);
+                    }
+                    break;
+            }
         }
+       
     }//desactive le pannel upgrade approprié basically faiut pour tous les return
 
     public void Btn_Delete_pannel()//Ask for confirmation
