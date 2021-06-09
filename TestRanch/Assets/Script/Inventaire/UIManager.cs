@@ -8,6 +8,7 @@ public class UIManager : MonoBehaviour
     private static UIManager instance;
     public CoffreUI coffreUI;
     [SerializeField] private GameObject stationPanel;
+    [SerializeField] private GameObject sellPanel;
 
     private void Awake()
     {
@@ -15,6 +16,7 @@ public class UIManager : MonoBehaviour
     }
     public static UIManager Instance { get => instance;}
     public GameObject StationPanel { get => stationPanel; }
+    public GameObject SellPanel { get => sellPanel;}
 
     public void ExitPanel(GameObject panel)
     { 

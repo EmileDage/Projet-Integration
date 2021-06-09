@@ -21,7 +21,7 @@ public class MyTimeManager : MonoBehaviour
 
     
 
-    public int GetHourDay()
+    public int GetNbHourDay()
     {
         return nbHourinDay;
     }

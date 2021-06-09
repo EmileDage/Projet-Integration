@@ -13,12 +13,13 @@ public abstract class AbstractSpawner : MonoBehaviour
     [SerializeField] [Range(0, 23)] protected int disponibleEnd;
     [SerializeField] protected Transform[] produit_spawn;
 
-
+    private bool available;
 
     protected MyTimeManager time;
     public GameObject Produit_reference { get => produit_reference; set => produit_reference = value; }
 
     public int TimeToRespawnRef{ get => timeToRespawn; }
+    public bool Available { get => available; set => available = value; }
 
     protected virtual void Start() {//a mettre dans start set up les trucs de base
 
@@ -51,11 +52,13 @@ public abstract class AbstractSpawner : MonoBehaviour
         if (disponibleStart == time.Hour)
         {
             Spawn();
+            Available = true;
         }
         else if (disponibleEnd == time.Hour)
         {
             Debug.Log("Despawn because time is out");
             Despawn();
+            Available = false;
         }
     }
 
@@ -67,7 +70,7 @@ public abstract class AbstractSpawner : MonoBehaviour
         {
             if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
             { //note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
-                produit.SetActive(true);
+                produit.GetComponent<RessourceNode>().SetSpawnedTrue();
             }
         }
     }

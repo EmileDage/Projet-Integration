@@ -38,10 +38,9 @@ public class RessourceNode : MonoBehaviour
 
     private void OnGHourPassed(object source)
     {
-        if (!isDead) {
-            
+        if (!isDead) {            
             cd--;
-            if (cd <= 0)
+            if (cd <= 0 && mother.Available)
             {
                 this.gameObject.SetActive(true);
                 SetSpawnedTrue();
