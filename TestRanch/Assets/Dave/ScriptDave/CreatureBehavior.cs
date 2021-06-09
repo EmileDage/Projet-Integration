@@ -60,8 +60,8 @@ public class CreatureBehavior : StateMachine, ICapturable
 		base.Awake();
 		agent = GetComponent<IAstarAI>();
 		timeManager = MyTimeManager.timeInstance;
-		timeManager.GHourPassed += OnGHourPassedHunger;
-		timeManager.GHourPassed += OnGHourPassedHappiness;
+		//timeManager.GHourPassed += OnGHourPassedHunger;
+		//timeManager.GHourPassed += OnGHourPassedHappiness;
 		creatureInfoPanel.SetActive(false);
 		interactionPanel.SetActive(false);
 	}
