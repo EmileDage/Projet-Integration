@@ -60,7 +60,9 @@ public class Field : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ui.Press_u.text = "Press U to access the upgrade menus";
+        if (other.tag == "Player") { 
+            ui.Press_u.text = "Press U to access the upgrade menus";
+        }
     }
 
     private void OnTriggerStay(Collider other)
