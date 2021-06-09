@@ -43,15 +43,64 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     {
         sicknessLvl = 0;
         IsGrown = false;
-
-        //base.Start();
-
         upgrade_produit = new GameObject[upgrade_slot.Length];
 
-        if (timeToGrowHour <= 0) {
+        if (timeToGrowHour <= 0)
+        {
             timeToGrowHour = 10;
         }
 
+        if (produit_reference != null)
+        {
+            produits = new GameObject[produit_spawn.Length];
+            time = MyTimeManager.timeInstance;
+            time.GHourPassed += OnGHourPassed;
+
+            for (int i = 0; i < produit_spawn.Length; i++)
+            {
+                produits[i] = Instantiate(Produit_reference, produit_spawn[i]);
+                produits[i].tag = "produit";
+                produits[i].AddComponent<RessourceNode>();
+                produits[i].GetComponent<RessourceNode>().SetupNode(this);
+                produits[i].name = "Node" + i;
+
+            }
+
+            if (upgrade_fertilizer)
+            {
+                for (int i = 0; i < upgrade_produit.Length; i++)
+                {
+                    upgrade_produit[i] = Instantiate(Produit_reference, upgrade_slot[i]);
+                    upgrade_produit[i].tag = "produit";
+                    upgrade_produit[i].AddComponent<RessourceNode>();
+                    upgrade_produit[i].GetComponent<RessourceNode>().SetupNode(this);
+                    upgrade_produit[i].name = "Node" + i;
+
+                }
+            }
+        }
+
+
+
+        //si les produit spawn a 0h mais le jeux commence a 5h
+        //ce code marche pas me semble si le produit commence a 20h pis finit a 5h
+        //so tant que le jeux commence a 5h cest chill
+        if (time.Hour >= disponibleStart)
+        {//start = 2h currentH = 5h
+            if (time.Hour >= disponibleEnd)//end = 4h currentH = 5h
+            {
+                Despawn();
+
+            }
+            else
+            {
+                Spawn();
+            }
+        }
+        else
+        {
+            Despawn();
+        }
     }
 
     public void AssignRef(Abreuvoir agua, GameObject fruit)//on pourrait mettre une fonction plus detailler ssi on veut
@@ -175,12 +224,17 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
         {
             foreach (GameObject produit in upgrade_produit)
             {
-                if (produit.GetComponent<RessourceNode>().GetSpawned())
-                {
-                    produit.SetActive(false);
+                if (produit != null) {
+                    if (produit.GetComponent<RessourceNode>().GetSpawned())
+                    {
+                        produit.SetActive(false);
+                    }
                 }
+               
             }
         }
+
+  
     }
 
     public override void SpawnProduce()

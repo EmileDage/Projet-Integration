@@ -45,8 +45,6 @@ public abstract class PlanterParent : MonoBehaviour
 
     private void OnGHourPassed(object source)
     {
-        Debug.Log("HourPassed PlanterParent");
-
         if (Info == true)
         { // pour veirifer que l'obj est actif
             if (info_Pannel.activeSelf ==true) {
@@ -58,11 +56,8 @@ public abstract class PlanterParent : MonoBehaviour
 
     protected virtual void AssignSpawnerRessource(GameObject inObj) 
     {
-
         SpawnerInstance = Instantiate(spawnerRef, spawn);
         SpawnerInstance.GetComponent<AbstractSpawner>().SpawnSpawner(inObj.GetComponent<WorldObjectMateriaux>().Item()) ;
-
-
     }
 
     private void OnCollisionEnter(Collision collision)//erreur quand fruit est lancer sur mine
@@ -84,7 +79,7 @@ public abstract class PlanterParent : MonoBehaviour
 
     public void InformationPannel_Activate()
     {
-        Debug.Log("CHECKING info pannel status " );
+
         if (info_Pannel != null)
         {
             info_Pannel.SetActive(true);

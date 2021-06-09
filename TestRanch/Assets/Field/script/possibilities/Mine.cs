@@ -15,6 +15,8 @@ public class Mine : PlanterParent
     {
         base.Start();
         type_product = Fonctions.mineraux;
+
+        defaultRareRock.SetActive(false);
     }
     public override void UpdateInfoPannel()
     {
@@ -36,7 +38,7 @@ public class Mine : PlanterParent
 
     protected override void AssignSpawnerRessource(GameObject obj)
     {
-        spawnerRef.GetComponent<SpawnMinerals>().AssignRR(defaultRareRock);
+        spawnerRef.GetComponent<SpawnMinerals>().AssignRR_ref(defaultRareRock);
         base.AssignSpawnerRessource(obj);
         this.gameObject.GetComponent<Mine_UI>().CheckPendingUpgrades();
         UpdateInfoPannel();

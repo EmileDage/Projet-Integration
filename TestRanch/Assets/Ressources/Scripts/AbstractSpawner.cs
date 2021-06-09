@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+
 public abstract class AbstractSpawner : MonoBehaviour
 {
     [SerializeField]protected GameObject produit_reference; //IL FAUT GARDER SERIALIZED POUR ASSIGNER LA RESSOURCES POUR  LES SPAWNER SAUVAGES
@@ -21,7 +22,8 @@ public abstract class AbstractSpawner : MonoBehaviour
 
     protected virtual void Start() {//a mettre dans start set up les trucs de base
 
-        if (produit_reference != null) { 
+        if (produit_reference != null) 
+        { 
             produits = new GameObject[produit_spawn.Length];
             time = MyTimeManager.timeInstance;
             time.GHourPassed += OnGHourPassed;
@@ -32,24 +34,49 @@ public abstract class AbstractSpawner : MonoBehaviour
                 produits[i].tag = "produit";
                 produits[i].AddComponent<RessourceNode>();
                 produits[i].GetComponent<RessourceNode>().SetupNode(this);
+                produits[i].name = "Node" + i;
+                
             }
+        }
+        //si les produit spawn a 0h mais le jeux commence a 5h
+        //ce code marche pas me semble si le produit commence a 20h pis finit a 5h
+        //so tant que le jeux commence a 5h cest chill
+        if (time.Hour >= disponibleStart)
+        {//start = 2h currentH = 5h
+            if (time.Hour >= disponibleEnd)//end = 4h currentH = 5h
+            {
+                Despawn();
+
+            }
+            else
+            {
+                Spawn();
+            }
+        }
+        else
+        {
+            Despawn();
         }
     }
 
+    public Materiaux SpawnedMat() {
+        return this.produit_reference.GetComponent<WorldObjectMateriaux>().Item();
+    }
+
     public virtual void OnGHourPassed(object source) {
+
         if (disponibleStart == time.Hour)
         {
             Spawn();
         }
         else if (disponibleEnd == time.Hour)
         {
-            Debug.Log("Products aren't available setting all products to false;");
-
             Despawn();
         }
     }
 
     protected virtual void Spawn() {
+
         foreach (GameObject produit in produits)
         {
             if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
@@ -63,15 +90,9 @@ public abstract class AbstractSpawner : MonoBehaviour
     {
         foreach (GameObject produit in produits)
         {
-            if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
-            { //note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
-                produit.SetActive(false);
-            }
+            produit.SetActive(false);
         }
     }
-
-
-
 
     public virtual void SpawnProduce() {
         for (int a = 0; a < produit_spawn.Length; a++)

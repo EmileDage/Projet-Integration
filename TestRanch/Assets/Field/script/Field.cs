@@ -38,11 +38,6 @@ public class Field : MonoBehaviour
 
     private void Start()
     {
-        if (PannelInfo != null) {
-            Debug.Log("the first iteration of pannel info isnt null" + PannelInfo);
-        }else
-            Debug.Log("the first iteration of pannel info IS null");
-
 
         f_Type = field_possibilities.empty;
 
@@ -65,7 +60,9 @@ public class Field : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ui.Press_u.text = "Press U to access the upgrade menus";
+        if (other.tag == "Player") { 
+            ui.Press_u.text = "Press U to access the upgrade menus";
+        }
     }
 
     private void OnTriggerStay(Collider other)
