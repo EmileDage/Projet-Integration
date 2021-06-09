@@ -7,6 +7,7 @@ public class WorldObjectMateriaux : WorldObject, IInteractible
 {
     private Materiaux materiaux;
 
+
     public Materiaux Materiaux { get => materiaux; set => materiaux = value;}
 
     private void Awake()
@@ -26,18 +27,22 @@ public class WorldObjectMateriaux : WorldObject, IInteractible
     }
     new public void Interact(Player joueur)
     {
-        Debug.Log("mat interact " + Qte);       
-        ItemStack temp = new ItemStack(materiaux, Qte);
-        joueur.BarreInventaire.MergeOnExisting(temp);
-        Qte = temp.Qte;
-        if (joueur.BarreInventaire.TryAddOnEmptySlot(temp))
-        {
-            Destroy(this.gameObject);
-        }
-        if(Qte == 0)
-        {
-            Destroy(this.gameObject);
-        }
+
+
+            Debug.Log("mat interact " + Qte);
+            ItemStack temp = new ItemStack(materiaux, Qte);
+            joueur.BarreInventaire.MergeOnExisting(temp);
+            Qte = temp.Qte;
+            if (joueur.BarreInventaire.TryAddOnEmptySlot(temp))
+            {
+                Destroy(this.gameObject);
+            }
+            if (Qte == 0)
+            {
+                Destroy(this.gameObject);
+            }
+        
+       
         
     }
 

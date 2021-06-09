@@ -15,7 +15,7 @@ public abstract class PlanterParent : MonoBehaviour
 
 
 
-    protected GameObject info_Pannel;//recoit ref in field
+    protected GameObject info_Pannel;//recoit ref in field 
     protected bool info;//pour eviter que les pannels affichent les mauvaises informations
     protected MyTimeManager thyme;
     [SerializeField] private Transform spawn;
@@ -45,35 +45,32 @@ public abstract class PlanterParent : MonoBehaviour
 
     private void OnGHourPassed(object source)
     {
+        Debug.Log("HourPassed PlanterParent");
+
         if (Info == true)
         { // pour veirifer que l'obj est actif
             if (info_Pannel.activeSelf ==true) {
-                Debug.Log("OnHourPassed in planterparent about to initiate updateinfopannel()");
                 UpdateInfoPannel();
             }
         }
     }
     public abstract void UpdateInfoPannel();
 
-    protected virtual void AssignSpawnerRessource(Materiaux inObj) 
+    protected virtual void AssignSpawnerRessource(GameObject inObj) 
     {
         SpawnerInstance = Instantiate(spawnerRef, spawn);
-        SpawnerInstance.GetComponent<AbstractSpawner>().SpawnSpawner(inObj);
-
-
+        SpawnerInstance.GetComponent<AbstractSpawner>().SpawnSpawner(inObj.GetComponent<WorldObjectMateriaux>().Item()) ;
     }
 
     private void OnCollisionEnter(Collision collision)//erreur quand fruit est lancer sur mine
     {
         if (collision.gameObject.CompareTag("produit")) 
-        {
-            Debug.Log("Collision detected with object with the tag product");
+        {           
             Materiaux inObj = collision.gameObject.GetComponent<WorldObjectMateriaux>().Item();
 
             if (inObj != null) {
-                if (inObj.Funct.Equals(type_product)) {
-                    Debug.Log("The type is correct spawning spawner");
-                    AssignSpawnerRessource(inObj);
+                if (inObj.Funct.Equals(type_product)) {//arrete une erreur dont remove 
+                    AssignSpawnerRessource(collision.gameObject);
 
                 }else
                     Debug.Log("The type is incorrect not spawning spawner");
@@ -84,8 +81,17 @@ public abstract class PlanterParent : MonoBehaviour
 
     public void InformationPannel_Activate()
     {
-        Info_Pannel.SetActive(true);
-        UpdateInfoPannel();
+
+        if (info_Pannel != null)
+        {
+            info_Pannel.SetActive(true);
+            UpdateInfoPannel();
+        }
+        else { 
+            Debug.Log("nope");
+
+        }
+
 
     }
 }

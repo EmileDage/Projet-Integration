@@ -16,7 +16,6 @@ public class Field_UI : MonoBehaviour
     private Player joueur;
     private GameObject cam_joueur;
 
-    [SerializeField] private Item banane;
 
     //pannels with upgrade options
    [SerializeField] private GameObject pannel_empty;
@@ -152,44 +151,49 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_Delete_Confirmed()//Revert back to Empty
     {
-        switch (field_ref.F_type)
-        {
-            case field_possibilities.agriculture:
-                {
-                    foreach (Button btn in btn_up_terre)
-                        btn.interactable = true;
-                }
-                break;
-            case field_possibilities.enclos:
-                {
-                    foreach (Button btn in btn_up_enclos)
-                        btn.interactable = true;
-                }
-                break;
-            case field_possibilities.entrepot:
-                {
-                    foreach (Button btn in btn_up_entrepot)
-                        btn.interactable = true;
-                }
-                break;
-            case field_possibilities.mine:
-                {
-                    foreach (Button btn in btn_up_mine)
-                        btn.interactable = true;
-                }
-                break;
+
+        if (field_ref != null) {
+            switch (field_ref.F_type)
+            {
+                case field_possibilities.agriculture:
+                    {
+                        foreach (Button btn in btn_up_terre)
+                            btn.interactable = true;
+                    }
+                    break;
+                case field_possibilities.enclos:
+                    {
+                        foreach (Button btn in btn_up_enclos)
+                            btn.interactable = true;
+                    }
+                    break;
+                case field_possibilities.entrepot:
+                    {
+                        foreach (Button btn in btn_up_entrepot)
+                            btn.interactable = true;
+                    }
+                    break;
+                case field_possibilities.mine:
+                    {
+                        foreach (Button btn in btn_up_mine)
+                            btn.interactable = true;
+                    }
+                    break;
+            }
+            field_ref.Deactivate_type();
+            field_ref.F_type = field_possibilities.empty;
+            pannel_delete_plot.SetActive(false);
+            pannel_empty.SetActive(true);
         }
-        field_ref.Deactivate_type();
-        field_ref.F_type = field_possibilities.empty;
-        pannel_delete_plot.SetActive(false);
-        pannel_empty.SetActive(true);
+     
     }
 
     public void Btn_Delete_Denied()//Revert back to Empty
     {
         pannel_delete_plot.SetActive(false);
 
-        switch (field_ref.F_type)
+        if (field_ref != null) { 
+            switch (field_ref.F_type)
         {
             case field_possibilities.agriculture:
                 {
@@ -211,6 +215,8 @@ public class Field_UI : MonoBehaviour
                     pannel_mine.SetActive(true);
                 }
                 break;
+        }
+
         }
 
     }
@@ -304,7 +310,7 @@ public class Field_UI : MonoBehaviour
     {
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[1].GetComponent<ShowPrice>().Liste_prix))
         {
-            field_ref.jardin.GetComponent<Agriculture_UI>().Irr_sys_Activate();
+            field_ref.jardin.GetComponent<Garden_UI>().Irr_sys_Activate();
             btn_up_terre[1].interactable = false;
             btn_up_terre[3].interactable = false;//disable autre options du choix
         }
@@ -319,7 +325,7 @@ public class Field_UI : MonoBehaviour
     {
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[2].GetComponent<ShowPrice>().Liste_prix))
         {
-            field_ref.jardin.GetComponent<Agriculture_UI>().Rich_fer_Activate();
+            field_ref.jardin.GetComponent<Garden_UI>().Rich_fer_Activate();
             btn_up_terre[2].interactable = false;
             btn_up_terre[4].interactable = false;//disable autre options du choix
         }
@@ -333,7 +339,7 @@ public class Field_UI : MonoBehaviour
     {
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[3].GetComponent<ShowPrice>().Liste_prix))
         {
-            field_ref.jardin.GetComponent<Agriculture_UI>().Chrono_Activate();
+            field_ref.jardin.GetComponent<Garden_UI>().Chrono_Activate();
             btn_up_terre[3].interactable = false;
             btn_up_terre[1].interactable = false;//disable autre options du choix
         }
@@ -347,7 +353,7 @@ public class Field_UI : MonoBehaviour
     {
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[4].GetComponent<ShowPrice>().Liste_prix))
         {
-            field_ref.jardin.GetComponent<Agriculture_UI>().Crystal_Activate();
+            field_ref.jardin.GetComponent<Garden_UI>().Crystal_Activate();
             btn_up_terre[4].interactable = false;
             btn_up_terre[2].interactable = false;//disable autre options du choix
         }

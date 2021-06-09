@@ -69,7 +69,7 @@ public class Mine_UI : MonoBehaviour
 
         if (mine_.SpawnerInstance != null)
         {
-            mine_.SpawnerInstance.GetComponent<SpawnMinerals>().Upgrade_soil = true;
+            mine_.SpawnerInstance.GetComponent<SpawnMinerals>().OnUpgradeSoil();
 
             soil = false;
         }

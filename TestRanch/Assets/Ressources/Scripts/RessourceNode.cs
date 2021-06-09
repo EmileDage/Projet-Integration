@@ -11,13 +11,13 @@ public class RessourceNode : MonoBehaviour
     private int respawnTime;
     private bool spawned = true;
     private bool isDead = false;
-    private SpawnerNature parentSpawner;
+
 
     private MyTimeManager time;
 
     public bool Spawned { get => spawned;}
     public bool IsDead { get => isDead; set => isDead = value; }
-    public SpawnerNature ParentSpawner { get => parentSpawner; set => parentSpawner = value; }
+ 
 
     private void Start()
     {
@@ -25,9 +25,15 @@ public class RessourceNode : MonoBehaviour
         time.GHourPassed += OnGHourPassed;
     }
 
+    public void OnChronoUpgrade(int newRespawnTime) {
+        respawnTime = newRespawnTime;
+    }
+
     private void OnDestroy()
     {
+        if(time != null) { 
         time.GHourPassed -= OnGHourPassed;//unsubscribe a l'event
+        }
     }
 
     private void OnGHourPassed(object source)
@@ -51,7 +57,7 @@ public class RessourceNode : MonoBehaviour
 
     public Fonctions GetNodeItemFunction()
     {
-        return parentSpawner.Produit_reference.GetComponent<WorldObjectMateriaux>().Materiaux.Funct;
+        return mother.Produit_reference.GetComponent<WorldObjectMateriaux>().Materiaux.Funct;
     }
 
     public bool GetSpawned() {
@@ -62,7 +68,7 @@ public class RessourceNode : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         spawned = false;
-        cd = respawnTime;
+        cd = respawnTime; 
     }
 
     public void KillNode()
@@ -71,10 +77,10 @@ public class RessourceNode : MonoBehaviour
         isDead = true;
     }
 
-    public void SetupNode(AbstractSpawner motherRef, int placeRef, int countdown)
+    public void SetupNode(AbstractSpawner motherRef)
     {
-
-        respawnTime = countdown;
+        mother = motherRef;
+        respawnTime = motherRef.TimeToRespawnRef;
         cd = respawnTime;
         this.SetSpawnedTrue();
         this.gameObject.SetActive(true);
@@ -84,8 +90,8 @@ public class RessourceNode : MonoBehaviour
     public void Collect(Player joueur)
     {
         //int x = Mathf.FloorToInt(ParentSpawner.Yield * joueur.Selected.ItemStack.GetYieldModifier());
-        //joueur.BarreInventaire.QuickAddItem(new ItemStack(GetComponent<WorldObjectMateriaux>().RessourceType, x));
-        //this.DeSpawnNode();
+        joueur.BarreInventaire.QuickAddItem(new ItemStack(mother.SpawnedMat(), 1));
+        this.DeSpawnNode();
     }
 
 }

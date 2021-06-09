@@ -102,7 +102,7 @@ GameObject:
   - component: {fileID: 6587070341367505508}
   - component: {fileID: 3063173892383167470}
   - component: {fileID: 7497939824628677740}
-  - component: {fileID: 984669658934413906}
+  - component: {fileID: 2410695796141608071}
   m_Layer: 0
   m_Name: Nature
   m_TagString: Untagged
@@ -155,7 +155,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: e69af49f0dfa52b4f8aed3c6bf19c00f, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -191,7 +191,7 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
---- !u!114 &984669658934413906
+--- !u!114 &2410695796141608071
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -200,12 +200,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 7092497963410095391}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 247230ae27076ea4da65e5c965b20ea7, type: 3}
+  m_Script: {fileID: 11500000, guid: 974d4aee6daebac40b415a34aaa12229, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timeToRespawn: 5
-  disponibleStart: 0
-  disponibleEnd: 15
+  produit_reference: {fileID: 150753865428504986, guid: c8062069f638029438d0ab4f49c8f4f7, type: 3}
+  timeToRespawn: 3
+  disponibleStart: 7
+  disponibleEnd: 10
   produit_spawn:
   - {fileID: 1644251432236702698}
   - {fileID: 7383263652715803139}

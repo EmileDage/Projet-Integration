@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Agriculture_UI : MonoBehaviour
+public class Garden_UI : MonoBehaviour
 {
     //garde les fonctions appeler par field_ui qui activent les upgrades specifiques
     //some stuff to keep track of upgrades and whatnot
@@ -56,7 +56,7 @@ public class Agriculture_UI : MonoBehaviour
         //activate visual ?
         if (planter.SpawnerInstance != null)
         {
-            planter.SpawnerInstance.GetComponent<SpawnerAgriculture>().Upgrade = true;
+            planter.SpawnerInstance.GetComponent<SpawnerAgriculture>().Upgrade_fertilizer = true;
             fertilizer = false;
         }
         else {
