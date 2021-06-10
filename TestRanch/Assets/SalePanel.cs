@@ -22,6 +22,7 @@ public class SalePanel : AbstractInventoryUI
             SetSlotsParent(slot);
             slot.UpdateSlot(false);
         }
+        gameObject.SetActive(false);
     }
 
     public void SellAll()

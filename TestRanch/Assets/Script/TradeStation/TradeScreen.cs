@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class TradeScreen : MonoBehaviour, IInteractible
 {
-    [SerializeField] GameObject TradePanel;
+
 
     //private List<Slot> slots;
 
@@ -13,7 +13,7 @@ public class TradeScreen : MonoBehaviour, IInteractible
 
     public void Interact(Player joueur)
     {
-        UI.OpenPanel(TradePanel);
+        UI.OpenPanel(UI.StationPanel);
     }
 
 
@@ -22,13 +22,14 @@ public class TradeScreen : MonoBehaviour, IInteractible
     {
         UI = UIManager.Instance;
         GM = GameManager.gmInstance;
-      /*  slots = new List<Slot>();
-        Slot[] temp = TradePanel.GetComponentsInChildren<Slot>();
-        foreach (var item in temp)
-        {
-            slots.Add(item);
-        }
-      */
+        /*  slots = new List<Slot>();
+          Slot[] temp = TradePanel.GetComponentsInChildren<Slot>();
+          foreach (var item in temp)
+          {
+              slots.Add(item);
+          }
+        */
+        UI.StationPanel.SetActive(false);
     }
 
     
