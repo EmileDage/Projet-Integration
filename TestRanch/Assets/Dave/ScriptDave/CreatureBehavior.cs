@@ -7,11 +7,16 @@ using UnityEngine;
 public class CreatureBehavior : StateMachine, ICapturable
 {
 	#region Variable
+
+	[Header("bool Variable")]
 	public bool playerFound = false;
 	public bool foodFound = false;
 	[SerializeField] private bool isCaptured = false;
+	[SerializeField] private bool isPokeBall = false;
+
 	public Transform player;
 	public GameObject creatureInfoPanel;
+	public GameObject creatureInfoPanelExtra;
 	public GameObject interactionPanel;
 	public float followdistance;
 	public float distance;
@@ -20,13 +25,18 @@ public class CreatureBehavior : StateMachine, ICapturable
 	[SerializeField] private double happiness;
 
 	public string state = null;
-	[Header("Food Stuff")]
 
+	[Header("Food Stuff")]
 	public float hungryTimer;
 	public Collider targetCollider;
 	public GameObject dropRessources;
 
+	[Header("Time Stuff")]
 	private MyTimeManager timeManager;
+	[SerializeField] private int cooldownDropRessource = 10;
+	[SerializeField] private int maxCooldownDropRessource = 10;
+
+
 	private GameManager GM;
 
 	// variable pour le projectile de la creature state Agressif
@@ -39,8 +49,9 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	// Variable pour Deplacement de la creature Captured
 
-	[Header("Captured Creature movement")]
+	[Header("Captured Creature")]
 	public Transform[] randomTarget;
+	public Transform pokeballTransform;
 
 	[Header("Variable pour le patrol")]
 	public Transform[] targets;
@@ -53,29 +64,33 @@ public class CreatureBehavior : StateMachine, ICapturable
 	public double Happiness { get => happiness; set => happiness = value; }
 	public bool IsCaptured { get => isCaptured; set => isCaptured = value; }
 
-	#endregion
+    #endregion
 
-	protected override void Awake()
+    protected override void Awake()
 	{
 		base.Awake();
 		agent = GetComponent<IAstarAI>();
-		timeManager = MyTimeManager.timeInstance;
-		timeManager.GHourPassed += OnGHourPassedHunger;
-		timeManager.GHourPassed += OnGHourPassedHappiness;
-		creatureInfoPanel.SetActive(false);
-		interactionPanel.SetActive(false);
 	}
+
 
     private void Start()
     {
 		GM = GameManager.gmInstance;
-    }
+		timeManager = MyTimeManager.timeInstance;
+		timeManager.GHourPassed += OnGHourPassed;
+		creatureInfoPanel.SetActive(false);
+		interactionPanel.SetActive(false);
+		creatureInfoPanelExtra.SetActive(false);
+	}
 
     void Update()
 	{
 		if(!IsCaptured)
         {
-			SetState(new NeutreState(this));
+			if (!isPokeBall)
+				SetState(new NeutreState(this));
+			else
+				SetState(new SlotCapturedState(this));
 		}
 		else
         {
@@ -96,7 +111,18 @@ public class CreatureBehavior : StateMachine, ICapturable
 		}		
 	}
 
-	private void OnGHourPassedHunger(object source)
+	private void OnGHourPassed(object source)
+    {
+		cooldownDropRessource--;
+		if(cooldownDropRessource == 0)
+        {
+			cooldownDropRessource = maxCooldownDropRessource;
+			RessourceDrop();
+        }
+		HourPassedHunger();
+    }
+
+	private void HourPassedHunger()
     {
 		if(creatureInfo.hungry == "No")
         {
@@ -109,18 +135,35 @@ public class CreatureBehavior : StateMachine, ICapturable
 		}
     }
 
-	private void OnGHourPassedHappiness(object source)
+	private void RessourceDrop()
 	{
-		if (creatureInfo.hungry == "Yes" && isCaptured)
+		if (isCaptured)
 		{
-			if (happiness == 0)
-			{
-				
-			}
-			else
-            {
-				happiness--;
-			}
+			if(happiness <= 0) {
+		  
+		  }
+		  
+		  if(happiness > 0 && happiness < 30) {
+				DropRessourceAnimalCaptured();
+		  }
+		  
+		  if(happiness >= 30 && happiness < 60) {
+		 		for(int i =0; i < 2; i++) {
+					DropRessourceAnimalCaptured();
+		 		}
+		  }
+		  
+		  if(happiness >= 60 && happiness < 90) {
+		 		for(int i =0; i < 3; i++) {
+		 			DropRessourceAnimalCaptured();
+		 		}
+		  }
+		  
+		  if(happiness >= 90) {
+		 		for(int i =0; i < 4; i++) {
+		 			DropRessourceAnimalCaptured();
+		 		}
+		  }
 		}
 	}
 
@@ -149,14 +192,21 @@ public class CreatureBehavior : StateMachine, ICapturable
 
     public void Capture()
     {
-        //GM.Joueur.
-    }
+		//GM.Joueur.
+		isPokeBall = true;
+		SetState(new SlotCapturedState(this));
+	}
 
-	public void DropRessource()
+	public void DropRessourceAnimalSauvage()
 	{
 		if (state == "Pacifique")
 		{
-			Instantiate(dropRessources, transform.position, transform.rotation);
+			Instantiate(dropRessources, creatureFace.transform.position, transform.rotation);
 		}
+	}
+
+	public void DropRessourceAnimalCaptured()
+	{
+		Instantiate(dropRessources, creatureFace.transform.position, transform.rotation);
 	}
 }

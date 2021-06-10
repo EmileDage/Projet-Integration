@@ -5,6 +5,8 @@ using UnityEngine;
 public class Projectile : MonoBehaviour
 {
     public HealthModule playerHealth;
+    public int attack;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -22,7 +24,7 @@ public class Projectile : MonoBehaviour
     {
         if(other.gameObject.tag == "Player")
         {
-            playerHealth.DecreaseHealth(20f);
+            playerHealth.DecreaseHealth(attack);
             Destroy(gameObject);
         }
     }

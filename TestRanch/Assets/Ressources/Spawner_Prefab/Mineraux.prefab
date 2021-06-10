@@ -85,7 +85,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3473209675036785614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3473209675756368739}
@@ -110,17 +110,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7aa2a6696169105448a2a347b1d4f548, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  produit_reference: {fileID: 0}
+  produit_reference: {fileID: 304180290132081830, guid: 334f4e9b305cd9f488925dc4beae5e91, type: 3}
   timeToRespawn: 5
-  disponibleStart: 0
-  disponibleEnd: 10
+  disponibleStart: 14
+  disponibleEnd: 20
   produit_spawn:
   - {fileID: 3473209675506574574}
   - {fileID: 3473209675002734106}
   - {fileID: 3473209675039687942}
   - {fileID: 3473209675092575918}
   rareRockChance: 10
-  rareRock: {fileID: 2522282084908263041, guid: 7a694dd57b592104db46ecc84b3c14d0, type: 3}
+  rareRock_ref: {fileID: 2522282084908263041, guid: 7a694dd57b592104db46ecc84b3c14d0, type: 3}
   rareRock_spawn: {fileID: 9005062544853473766}
   upgrade_soil: 0
   upgrade_slot:
@@ -278,7 +278,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 54ef2e555bd911c46b53bcff3dc543d5, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

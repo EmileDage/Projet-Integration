@@ -18,7 +18,7 @@ internal class FoodSearchState : State
         if (CreatureBehavior.creatureInfo.hungry == "No")
         {
             //Drop Ressources
-            CreatureBehavior.DropRessource();
+            CreatureBehavior.DropRessourceAnimalSauvage();
             CreatureBehavior.foodFound = false;
         }
 

@@ -53,6 +53,7 @@ public class Enclos : MonoBehaviour
 
         if (animaux.Length > 0)
         {
+            happiness_moy_ani = 0; // reset le calcul bonheur
             //creature behavior is the script with happiness
             foreach (GameObject animal in animaux)
             {
@@ -79,9 +80,11 @@ public class Enclos : MonoBehaviour
         //a mettre dans un loop
 
         //Check water
+
         if (eau.Qte_level >= 10)//sil y a au moins assez d'eau pour 1 animal
         { //chaque animal a beosin de 10% d'eau
             eau.Consumme();
+            Debug.Log(eau.Qte_level);
             animal.ModifyHappiness(0.05);
 
 
@@ -95,6 +98,7 @@ public class Enclos : MonoBehaviour
         if (bouffe.Qte_level >= 10)//sil y a au moins assez d'eau pour 1 animal
         { //chaque animal a beosin de 10% de bouffe
             bouffe.Consumme();
+            Debug.Log(bouffe.Qte_level);
             animal.ModifyHappiness(0.05);
         }
         else
@@ -141,7 +145,7 @@ public class Enclos : MonoBehaviour
     { //utiliser cette fonction idealement pour updater le txt
 
         pannel_info.text = "Animals : " + animaux.Length +
-                           "\nHappiness : " + happiness +
+                           "\nHappiness : " + happiness_moy_ani +
                            "\nWater : " + eau.Qte_level +
                            "\nFood : " + bouffe.Qte_level;
 
