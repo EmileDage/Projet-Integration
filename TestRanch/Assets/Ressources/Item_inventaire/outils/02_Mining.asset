@@ -20,7 +20,7 @@ MonoBehaviour:
   iD: 2
   interactionBonusRange: 1
   yieldModifier: 1
-  itemWorldObject: {fileID: 9177839786296023837, guid: f3968b5fd68aa3e47a826e76de861e0d, type: 3}
+  itemWorldObject: {fileID: 7596003946293411447, guid: 724e996181f2e274ebb187ee0775156c, type: 3}
   toolMethod:
     m_PersistentCalls:
       m_Calls:

@@ -40,8 +40,10 @@ public class Slot : MonoBehaviour, IDropHandler
     {
        GameObject dragged= eventData.pointerDrag;
        DragItem drag = dragged.GetComponent<DragItem>();
+        Debug.Log(drag);
        if( dragged != imgDrag.gameObject && dragged != null)
         {
+            Debug.Log("merging drag");
             DraggedItemMerge(drag);
         }
         drag.ParentSlot.UpdateSlot();
