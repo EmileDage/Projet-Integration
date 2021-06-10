@@ -29,7 +29,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	[Header("Food Stuff")]
 	public float hungryTimer;
 	public Collider targetCollider;
-	public GameObject dropRessources;
+	public Materiaux dropRessources;
 
 	[Header("Time Stuff")]
 	private MyTimeManager timeManager;
@@ -201,12 +201,12 @@ public class CreatureBehavior : StateMachine, ICapturable
 	{
 		if (state == "Pacifique")
 		{
-			Instantiate(dropRessources, creatureFace.transform.position, transform.rotation);
+			dropRessources.SpawnAsObject(new ItemStack(dropRessources, 1), transform);
 		}
 	}
 
 	public void DropRessourceAnimalCaptured()
 	{
-		Instantiate(dropRessources, creatureFace.transform.position, transform.rotation);
+		dropRessources.SpawnAsObject(new ItemStack(dropRessources, 1), transform);
 	}
 }
