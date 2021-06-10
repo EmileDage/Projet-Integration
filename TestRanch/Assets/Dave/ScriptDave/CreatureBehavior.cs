@@ -52,6 +52,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	[Header("Captured Creature")]
 	public Transform[] randomTarget;
 	public Transform pokeballTransform;
+	public Enclos enclos;
 
 	[Header("Variable pour le patrol")]
 	public Transform[] targets;
@@ -94,8 +95,16 @@ public class CreatureBehavior : StateMachine, ICapturable
 		}
 		else
         {
-			SetState(new CapturedState(this));
-        }
+			if(isPokeBall)
+            {
+
+				SetState(new SlotCapturedState(this));
+			}
+			else
+			{
+				SetState(new CapturedState(this));
+			}
+		}
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -113,13 +122,16 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	private void OnGHourPassed(object source)
     {
-		cooldownDropRessource--;
-		if(cooldownDropRessource == 0)
+		if(!isPokeBall)
         {
-			cooldownDropRessource = maxCooldownDropRessource;
-			RessourceDrop();
-        }
-		HourPassedHunger();
+			cooldownDropRessource--;
+			if (cooldownDropRessource == 0)
+			{
+				cooldownDropRessource = maxCooldownDropRessource;
+				RessourceDrop();
+			}
+			HourPassedHunger();
+		}
     }
 
 	private void HourPassedHunger()

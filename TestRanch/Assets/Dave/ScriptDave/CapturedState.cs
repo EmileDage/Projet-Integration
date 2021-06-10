@@ -11,7 +11,10 @@ internal class CapturedState : State
 		CreatureBehavior.state = "Captured";
 		CreatureBehavior.distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.player.position);
 
-        // Comportement d'interaction avec l'enclos a cath
+		// Comportement d'interaction avec l'enclos a cath
+
+		//Faire l'assignation des animaux a lenclos variable Animaux d'enclos
+
         #region Movement
 
         if (CreatureBehavior.randomTarget.Length == 0) return;

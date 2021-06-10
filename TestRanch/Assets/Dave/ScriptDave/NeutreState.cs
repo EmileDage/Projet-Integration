@@ -15,6 +15,7 @@ namespace Assets.Dave.ScriptDave
 
         public override void Neutre()
         {
+
 			if(!CreatureBehavior.foodFound) // Si la creature trouve de la nourriture elle va changer de state et arreter les autres state
             {
 				if (!CreatureBehavior.playerFound) // Si la creature trouve le joueur elle va changer de state et arreter les autres state
