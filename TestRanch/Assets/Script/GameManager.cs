@@ -24,17 +24,7 @@ public class GameManager : MonoBehaviour
         emptyItemItemStack = new ItemStack(emptyItem, 0);
     }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-    
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+
 
     public void ModifyChronoCoin(int value, bool RemoveValue = false)
     {

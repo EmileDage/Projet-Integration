@@ -94,6 +94,11 @@ public class ItemStack//iventaire
         return retour;
     }
 
+    public int GetValue()
+    {
+        return (item.Valeur * Qte);
+    }
+
     public void ModifyItem()
     {
 
