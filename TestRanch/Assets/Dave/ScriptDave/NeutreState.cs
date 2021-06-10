@@ -19,6 +19,7 @@ namespace Assets.Dave.ScriptDave
             {
 				if (!CreatureBehavior.playerFound) // Si la creature trouve le joueur elle va changer de state et arreter les autres state
 				{
+					#region Movement
 					if (CreatureBehavior.targets.Length == 0) return;
 
 					bool search = false;
@@ -41,8 +42,10 @@ namespace Assets.Dave.ScriptDave
 					CreatureBehavior.agent.destination = CreatureBehavior.targets[CreatureBehavior.index].position;
 
 					if (search) CreatureBehavior.agent.SearchPath();
-				}
-				if(CreatureBehavior.playerFound)
+
+                    #endregion
+                }
+                if (CreatureBehavior.playerFound)
                 {
 					if (CreatureBehavior.Happiness >= 30 && CreatureBehavior.Happiness <= 70) // Creature est chill donc en state Neutre
 					{

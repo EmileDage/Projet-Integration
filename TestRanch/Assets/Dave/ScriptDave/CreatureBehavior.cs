@@ -16,6 +16,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	public Transform player;
 	public GameObject creatureInfoPanel;
+	public GameObject creatureInfoPanelExtra;
 	public GameObject interactionPanel;
 	public float followdistance;
 	public float distance;
@@ -69,27 +70,28 @@ public class CreatureBehavior : StateMachine, ICapturable
 	{
 		base.Awake();
 		agent = GetComponent<IAstarAI>();
-		timeManager = MyTimeManager.timeInstance;
-		timeManager.GHourPassed += OnGHourPassed;
-		creatureInfoPanel.SetActive(false);
-		interactionPanel.SetActive(false);
 	}
+
 
     private void Start()
     {
 		GM = GameManager.gmInstance;
-    }
+		timeManager = MyTimeManager.timeInstance;
+		timeManager.GHourPassed += OnGHourPassed;
+		creatureInfoPanel.SetActive(false);
+		interactionPanel.SetActive(false);
+		creatureInfoPanelExtra.SetActive(false);
+	}
 
     void Update()
 	{
 		if(!IsCaptured)
         {
-			SetState(new NeutreState(this));
+			if (!isPokeBall)
+				SetState(new NeutreState(this));
+			else
+				SetState(new SlotCapturedState(this));
 		}
-		else if(isPokeBall)
-        {
-
-        }
 		else
         {
 			SetState(new CapturedState(this));
