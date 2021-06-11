@@ -90,6 +90,7 @@ public class Slot : MonoBehaviour, IDropHandler
 
         if (this.itemStack.TryMergeItemStack(stack)) 
         {
+            Debug.Log("Trymerge = true");
             UpdateSlot();
             return true;
         }

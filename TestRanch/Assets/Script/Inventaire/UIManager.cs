@@ -9,7 +9,7 @@ public class UIManager : MonoBehaviour
     public CoffreUI coffreUI;
     [SerializeField] private GameObject stationPanel;
     [SerializeField] private GameObject sellPanel;
-
+    [SerializeField] private GameObject screenMsg;
     private void Awake()
     {
         instance = this;
@@ -17,12 +17,14 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance { get => instance;}
     public GameObject StationPanel { get => stationPanel; }
     public GameObject SellPanel { get => sellPanel;}
+    public GameObject ScreenMsg { get => screenMsg; set => screenMsg = value; }
 
     public void ExitPanel(GameObject panel)
     { 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         panel.SetActive(false);
+        Debug.Log("exit panel");
     }
 
     public void CloseChest(GameObject panel)
