@@ -12,6 +12,7 @@ public class PlayerInventory : AbstractInventoryUI
     private Image slotImg;
     GameManager GM;
     Player joueur;
+    
 
 
 
@@ -184,16 +185,22 @@ public class PlayerInventory : AbstractInventoryUI
     {
         Coffre  c=  GM.Joueur.OpenChest;
         if(c != null) { 
-        c.GetCoffreUI().TryMergeOnExisting(stack);
-        if (c.GetCoffreUI().GetFirstEmptySlot() != null) 
+            c.GetCoffreUI().TryMergeOnExisting(stack);
+            if (c.GetCoffreUI().GetFirstEmptySlot() != null) 
+            {
+                Debug.Log("empty slot dispo");
+                c.GetCoffreUI().GetFirstEmptySlot().SwapItems(drag);
+                //inv.GetFirstEmptySlot().SwapItems(drag);
+            }
+        }
+        else
         {
-            Debug.Log("empty slot dispo");
-            c.GetCoffreUI().GetFirstEmptySlot().SwapItems(drag);
-            //inv.GetFirstEmptySlot().SwapItems(drag);
+
         }
-        }
+
     }
-//ça marche de l'inventaire vers le player mais pas du player vers l'inventaire?
+
+    //ça marche de l'inventaire vers le player mais pas du player vers l'inventaire?
 
     #region test
     private void Update()

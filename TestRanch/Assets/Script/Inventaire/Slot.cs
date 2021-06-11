@@ -114,7 +114,7 @@ public class Slot : MonoBehaviour, IDropHandler
         parentUI.UpdatePanel();
     }
 
-    public void UpdateSlot(bool dontUpdatePanel)
+    public void UpdateSlotWithoutPanel()
     {
         if (ItemStack.Qte > 0)
         {

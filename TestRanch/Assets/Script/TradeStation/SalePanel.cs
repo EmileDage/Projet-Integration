@@ -11,6 +11,16 @@ public class SalePanel : AbstractInventoryUI
     private Slot[] slots;
     UIManager UI;
     GameManager gm;
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            UI.ExitPanel(this.gameObject);
+            gm.Joueur.OpenedNonChestInventory = null;
+        }
+    }
+
     private void Start()
     {
         slots = this.GetComponentsInChildren<Slot>();
@@ -20,7 +30,7 @@ public class SalePanel : AbstractInventoryUI
         foreach (Slot slot in slots)
         {
             SetSlotsParent(slot);
-            slot.UpdateSlot(false);
+            slot.UpdateSlotWithoutPanel();
         }
         gameObject.SetActive(false);
     }
@@ -31,9 +41,11 @@ public class SalePanel : AbstractInventoryUI
         foreach (Slot slot in slots)
         {
             slot.RemoveItem();
+            slot.UpdateSlotWithoutPanel();
         }
         UpdatePanel();
         UI.ExitPanel(this.gameObject);
+        gm.Joueur.OpenedNonChestInventory = null;
     }
 
     public override void UpdatePanel()
