@@ -144,7 +144,7 @@ public class PlayerInventory : AbstractInventoryUI
     {
         int work = GetFirstEmptySlotIndex();
         if (work > -1 && work < joueur.InventaireTaille)
-        {
+        {        
             slots[work].AddItemInSlot(stack);
             return true;
         }
@@ -154,9 +154,27 @@ public class PlayerInventory : AbstractInventoryUI
     public int QuickAddItem(ItemStack stack)
     {
         MergeOnExisting(stack);
-        AddOnFirstEmptySlot(stack);
+        if(stack.Qte> 0) { 
+            AddOnFirstEmptySlot(stack);
+        }
         Debug.Log(stack.Qte);
         return stack.Qte;
+    }
+
+    public bool TryMergeOnExisting(ItemStack stack)
+    {
+        bool ret;
+        foreach (Slot slot in slots)
+        {
+          ret =  slot.TryMerge(stack);
+            if (ret)
+            {
+
+                return ret;
+            }
+        }
+        Debug.Log(stack.Qte);
+        return false;
     }
    
     public bool TryPayWithItemStack(ItemStack price)

@@ -268,6 +268,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bed58a1741676b545aed906f088738c0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  txt: {fileID: 0}
 --- !u!1 &930192941
 GameObject:
   m_ObjectHideFlags: 0
@@ -1509,6 +1510,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 6277993322811519781, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1492400997383781174}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &3367538618704933859 stripped
@@ -2300,6 +2305,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 6277993322811519781, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1492400997383781174}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &4149599395573814345 stripped
@@ -2402,6 +2411,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 6277993322811519781, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1492400997383781174}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &338721163569034906 stripped
@@ -2504,6 +2517,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 6277993322811519781, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1492400997383781174}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &1749230656792016601 stripped
@@ -2606,6 +2623,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 6277993322811519781, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1492400997383781174}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &6945516073589231595 stripped
@@ -2708,6 +2729,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 6277993322811519781, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1492400997383781174}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &7417071775303310752 stripped
@@ -2935,6 +2960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 6277993322811519781, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1492400997383781174}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &5866656695857804912 stripped
@@ -3037,6 +3066,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space
       objectReference: {fileID: 0}
+    - target: {fileID: 6277993322811519781, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1492400997383781174}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &6502569680453224965 stripped
@@ -3139,6 +3172,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 6277993322811519781, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: canvas
+      value: 
+      objectReference: {fileID: 1492400997383781174}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &6360018534295519787 stripped

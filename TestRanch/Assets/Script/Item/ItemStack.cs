@@ -7,6 +7,7 @@ public class ItemStack//iventaire
 {
     private readonly Item item;
     int qte;
+    private int ID;
     private List<Modifier> mods;
 
     #region constructeurs
@@ -14,16 +15,19 @@ public class ItemStack//iventaire
     {
         this.item = item;
         this.qte = qte;
+        ID = item.ID;
     }
     public ItemStack(Item item)
     {
         this.item = item;
         this.qte = 0;
+        ID = item.ID;
     }
     public ItemStack(ItemStack stack)
     {
         this.item = stack.item;
         this.qte = stack.qte;
+        ID = item.ID;
     }
     #endregion
 
@@ -44,7 +48,7 @@ public class ItemStack//iventaire
 
     public bool isFull()
     {
-        if (this.qte > this.item.MaxStack)
+        if (this.qte >= this.item.MaxStack)
         {
             return true;
         }
@@ -67,6 +71,7 @@ public class ItemStack//iventaire
     //appelé lors d'un drag and drop //le update du slot est fait après
     public bool TryMergeItemStack(ItemStack stackAdd)
     {
+
         if(this.item.ID == stackAdd.Item.ID && !isFull()) { 
             this.Qte += stackAdd.Qte;
             if (isFull())

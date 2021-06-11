@@ -11,7 +11,6 @@ public class SaleBox : MonoBehaviour, IInteractible
     {
         UI = UIManager.Instance;
         gm = GameManager.gmInstance;
-        this.gameObject.SetActive(false);
     }
     public void Interact(Player joueur)
     {

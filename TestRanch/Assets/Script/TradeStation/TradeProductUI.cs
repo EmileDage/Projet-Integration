@@ -24,7 +24,7 @@ public class TradeProductUI : MonoBehaviour
         ui = UIManager.Instance;
         msg = ui.ScreenMsg.GetComponent<OnScreenMessage>();
         this.item = item;
-        nameTxt.text = item.name;
+        nameTxt.text = item.Nom;
         priceTxt.text = item.Valeur.ToString() + "$";
         itemImage.sprite = item.Icon_Inventory;
     }
@@ -35,18 +35,27 @@ public class TradeProductUI : MonoBehaviour
         if(gm.GetChronoCoin() >= item.Valeur ) { 
 
             Debug.Log("enough coin");
-            Debug.Log(gm.Joueur.BarreInventaire.GetFirstEmptySlotIndex());
-            if (gm.Joueur.BarreInventaire.GetFirstEmptySlotIndex() >= 0) 
+
+            ItemStack stack = new ItemStack(item, 1);
+            bool edbug = gm.Joueur.BarreInventaire.TryMergeOnExisting(stack);
+            Debug.Log(edbug + "merge");
+            if (edbug)
             {
-                Debug.Log("enough space");
-                gm.Joueur.BarreInventaire.QuickAddItem(new ItemStack(item, 1));
+                Debug.Log("merging");
                 gm.ModifyChronoCoin(item.Valeur, true);
-            }
-            else
+            }else
             {
-                
-                msg.StartCounter(inventoryFullMsg);
+                if (gm.Joueur.BarreInventaire.GetFirstEmptySlotIndex() >= 0 && stack.Qte > 0) 
+                {
+                    gm.Joueur.BarreInventaire.AddOnFirstEmptySlot(stack);
+                    gm.ModifyChronoCoin(item.Valeur, true);
+                }  else
+                {   
+                    msg.StartCounter(inventoryFullMsg);
+                }
             }
+            
+          
         }
         else
         {

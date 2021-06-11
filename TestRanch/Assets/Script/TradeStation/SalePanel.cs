@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class SalePanel : AbstractInventoryUI
 {
     [SerializeField] private Text value;
+    [SerializeField] private float sellPriceModif = 0.5f;
     private int saleValue;
 
     private Slot[] slots;
@@ -17,6 +18,7 @@ public class SalePanel : AbstractInventoryUI
         if (Input.GetButtonDown("Cancel"))
         {
             UI.ExitPanel(this.gameObject);
+            CancelSell();
             gm.Joueur.OpenedNonChestInventory = null;
         }
     }
@@ -53,8 +55,23 @@ public class SalePanel : AbstractInventoryUI
         saleValue = 0;
         foreach (Slot slot in slots)
         {
-            saleValue += slot.ItemStack.GetValue();
+            float t = slot.ItemStack.GetValue() * 0.5f;
+            saleValue += Mathf.FloorToInt(t);
         }
         value.text = saleValue.ToString()+ "$";
+    }
+
+    private void CancelSell()
+    {
+        foreach (Slot slot in slots)
+        {
+            if(slot.ItemStack.Qte > 0)
+            {
+                gm.GetPlayerInventory().QuickAddItem(slot.ItemStack);
+                slot.RemoveItem();
+                slot.UpdateSlotWithoutPanel();
+            }
+        }
+        
     }
 }
