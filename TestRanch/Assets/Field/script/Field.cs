@@ -13,7 +13,7 @@ public enum field_possibilities
     mine
 }
 
-public class Field : MonoBehaviour, IInteractible
+public class Field : MonoBehaviour, IBuildable
 {
     [SerializeField] private Field_UI ui;
     [SerializeField] private GameObject self;
@@ -51,11 +51,7 @@ public class Field : MonoBehaviour, IInteractible
         //Interact();
     }
 
-    public void Interact(Player joueur)
-    {
-        ui.SetReference(this);
-        ui.Interact();
-    }
+
 
 
     private void OnTriggerExit(Collider other)
@@ -144,4 +140,9 @@ public class Field : MonoBehaviour, IInteractible
         }
     }
 
+    public void Build()
+    {
+        ui.SetReference(this);
+        ui.Interact();
+    }
 }

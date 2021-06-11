@@ -4,6 +4,10 @@ using UnityEngine;
 public abstract class AbstractInventoryUI : MonoBehaviour
 {
 
+    public virtual void UpdatePanel()
+    {
+
+    }
 
     public virtual void QuickSendStack(ItemStack stack, DragItem drag)
     {

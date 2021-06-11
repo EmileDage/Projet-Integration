@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 1262965789390366216}
   - component: {fileID: 8478741813778631540}
   - component: {fileID: 1373166943222338553}
+  - component: {fileID: 1341006903103977134}
   m_Layer: 0
   m_Name: AI Neutre
   m_TagString: Untagged
@@ -209,8 +210,10 @@ MonoBehaviour:
   playerFound: 0
   foodFound: 0
   isCaptured: 0
+  isPokeBall: 0
   player: {fileID: 0}
   creatureInfoPanel: {fileID: 0}
+  creatureInfoPanelExtra: {fileID: 0}
   interactionPanel: {fileID: 0}
   followdistance: 0
   distance: 0
@@ -220,12 +223,15 @@ MonoBehaviour:
   hungryTimer: 15
   targetCollider: {fileID: 0}
   dropRessources: {fileID: 0}
+  cooldownDropRessource: 10
+  maxCooldownDropRessource: 10
   projectile: {fileID: 7575423351658430532, guid: 2ad159fb6fdd71944bd4cf87f07c3966, type: 3}
   creatureFace: {fileID: 3609884621916762709}
   constant: 1
   NextFire: 0
   FireRate: 4
   randomTarget: []
+  pokeballTransform: {fileID: 0}
   targets: []
   delay: 2
   index: 0
@@ -327,6 +333,36 @@ MonoBehaviour:
   slowWhenNotFacingTarget: 1
   whenCloseToDestination: 0
   constrainInsideGraph: 0
+--- !u!114 &1341006903103977134
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312149026987213566}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 087e43e1787be6048a557eeb0e510a79, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creature: {fileID: 1312149026987213564}
+  projectile: {fileID: 8439944144794469962, guid: 2ad159fb6fdd71944bd4cf87f07c3966, type: 3}
+  speed: {fileID: 1373166943222338553}
+  creatureName: 
+  CreatureNameTxtPanel: {fileID: 0}
+  stateTxtPanel: {fileID: 0}
+  hungry: 
+  hungryTxtPanel: {fileID: 0}
+  foodLikes: 
+  foodLikesTxtPanel: {fileID: 0}
+  creaturePortrait: {fileID: 0}
+  creaturePortraitImage: {fileID: 0}
+  creatureHappinessTxtPanel: {fileID: 0}
+  creatureAttackPowerTxtPanel: {fileID: 0}
+  creatureSpeedTxtPanel: {fileID: 0}
+  creatureBiome: 
+  creatureBiomeTxtPanel: {fileID: 0}
+  creatureDropRessourceTxtPanel: {fileID: 0}
 --- !u!1 &1312149028803396837
 GameObject:
   m_ObjectHideFlags: 0

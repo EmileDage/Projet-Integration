@@ -4,9 +4,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.EventSystems;
-
-[RequireComponent(typeof(Image))]
-
 public class Slot : MonoBehaviour, IDropHandler
 {
     private ItemStack itemStack;
@@ -43,8 +40,10 @@ public class Slot : MonoBehaviour, IDropHandler
     {
        GameObject dragged= eventData.pointerDrag;
        DragItem drag = dragged.GetComponent<DragItem>();
+        Debug.Log(drag);
        if( dragged != imgDrag.gameObject && dragged != null)
         {
+            Debug.Log("merging drag");
             DraggedItemMerge(drag);
         }
         drag.ParentSlot.UpdateSlot();
@@ -100,7 +99,6 @@ public class Slot : MonoBehaviour, IDropHandler
     }
     public void UpdateSlot()
     {
-
         if(ItemStack.Qte > 0) {
             qteText.transform.parent.gameObject.SetActive(true);
             qteText.text = ItemStack.Qte.ToString();
@@ -112,10 +110,32 @@ public class Slot : MonoBehaviour, IDropHandler
         {
             qteText.transform.parent.gameObject.SetActive(false);
             imgDrag.gameObject.SetActive(false);
-            DragItem.ResetPosition();
-            
+            DragItem.ResetPosition();            
         }
+
+        parentUI.UpdatePanel();
     }
+
+    public void UpdateSlot(bool dontUpdatePanel)
+    {
+        if (ItemStack.Qte > 0)
+        {
+            qteText.transform.parent.gameObject.SetActive(true);
+            qteText.text = ItemStack.Qte.ToString();
+            imgDrag.gameObject.SetActive(true);
+            imgDrag.sprite = ItemStack.Item.Icon_Inventory;
+
+        }
+        else
+        {
+            qteText.transform.parent.gameObject.SetActive(false);
+            imgDrag.gameObject.SetActive(false);
+            DragItem.ResetPosition();
+        }
+
+        
+    }
+
     public void QuickTransfer(DragItem drag)
     {
         Debug.Log("QuickTransfer");
@@ -125,6 +145,7 @@ public class Slot : MonoBehaviour, IDropHandler
     public void RemoveItem()
     {
         this.itemStack = new ItemStack(emptyItem);
+
     }
     public bool PayInItem(ItemStack price)
     {

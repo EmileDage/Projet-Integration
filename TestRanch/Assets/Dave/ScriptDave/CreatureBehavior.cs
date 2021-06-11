@@ -16,6 +16,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	public Transform player;
 	public GameObject creatureInfoPanel;
+	public GameObject creatureInfoPanelExtra;
 	public GameObject interactionPanel;
 	public float followdistance;
 	public float distance;
@@ -28,7 +29,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	[Header("Food Stuff")]
 	public float hungryTimer;
 	public Collider targetCollider;
-	public GameObject dropRessources;
+	public Materiaux dropRessources;
 
 	[Header("Time Stuff")]
 	private MyTimeManager timeManager;
@@ -51,6 +52,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	[Header("Captured Creature")]
 	public Transform[] randomTarget;
 	public Transform pokeballTransform;
+	public Enclos enclos;
 
 	[Header("Variable pour le patrol")]
 	public Transform[] targets;
@@ -69,31 +71,40 @@ public class CreatureBehavior : StateMachine, ICapturable
 	{
 		base.Awake();
 		agent = GetComponent<IAstarAI>();
-		timeManager = MyTimeManager.timeInstance;
-		timeManager.GHourPassed += OnGHourPassed;
-		creatureInfoPanel.SetActive(false);
-		interactionPanel.SetActive(false);
 	}
+
 
     private void Start()
     {
 		GM = GameManager.gmInstance;
-    }
+		timeManager = MyTimeManager.timeInstance;
+		timeManager.GHourPassed += OnGHourPassed;
+		creatureInfoPanel.SetActive(false);
+		interactionPanel.SetActive(false);
+		creatureInfoPanelExtra.SetActive(false);
+	}
 
     void Update()
 	{
 		if(!IsCaptured)
         {
-			SetState(new NeutreState(this));
+			if (!isPokeBall)
+				SetState(new NeutreState(this));
+			else
+				SetState(new SlotCapturedState(this));
 		}
-		else if(isPokeBall)
-        {
-
-        }
 		else
         {
-			SetState(new CapturedState(this));
-        }
+			if(isPokeBall)
+            {
+
+				SetState(new SlotCapturedState(this));
+			}
+			else
+			{
+				SetState(new CapturedState(this));
+			}
+		}
 	}
 
 	private void OnTriggerEnter(Collider other)
@@ -111,13 +122,16 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	private void OnGHourPassed(object source)
     {
-		cooldownDropRessource--;
-		if(cooldownDropRessource == 0)
+		if(!isPokeBall)
         {
-			cooldownDropRessource = maxCooldownDropRessource;
-			RessourceDrop();
-        }
-		HourPassedHunger();
+			cooldownDropRessource--;
+			if (cooldownDropRessource == 0)
+			{
+				cooldownDropRessource = maxCooldownDropRessource;
+				RessourceDrop();
+			}
+			HourPassedHunger();
+		}
     }
 
 	private void HourPassedHunger()
@@ -199,12 +213,12 @@ public class CreatureBehavior : StateMachine, ICapturable
 	{
 		if (state == "Pacifique")
 		{
-			Instantiate(dropRessources, creatureFace.transform.position, transform.rotation);
+			dropRessources.SpawnAsObject(new ItemStack(dropRessources, 1), transform);
 		}
 	}
 
 	public void DropRessourceAnimalCaptured()
 	{
-		Instantiate(dropRessources, creatureFace.transform.position, transform.rotation);
+		dropRessources.SpawnAsObject(new ItemStack(dropRessources, 1), transform);
 	}
 }

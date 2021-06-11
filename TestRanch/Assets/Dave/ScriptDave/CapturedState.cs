@@ -5,36 +5,19 @@ internal class CapturedState : State
 {
     public CapturedState(CreatureBehavior creatureBehavior) : base(creatureBehavior)
 	{
+		CreatureBehavior.agent.canMove = true;
+		CreatureBehavior.agent.canSearch = true;
 		CreatureBehavior.IsCaptured = true;
 		CreatureBehavior.state = "Captured";
 		CreatureBehavior.distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.player.position);
 
-		if(CreatureBehavior.playerFound)
-        {
-			if (CreatureBehavior.distance <= 5)
-			{
-				if (!CreatureBehavior.creatureInfoPanel.activeInHierarchy)
-				{
-					CreatureBehavior.interactionPanel.SetActive(true);
-				}
-				if (Input.GetButtonDown("Interact"))
-				{
-					CreatureBehavior.agent.isStopped = true;
-					CreatureBehavior.interactionPanel.SetActive(false);
-					CreatureBehavior.creatureInfoPanel.SetActive(true);
-				}
-			}
-			if (CreatureBehavior.distance > 8)
-			{
-				CreatureBehavior.playerFound = false;
-				CreatureBehavior.agent.isStopped = false;
-				CreatureBehavior.interactionPanel.SetActive(false);
-				CreatureBehavior.creatureInfoPanel.SetActive(false);
-			}
-		}
-
 		// Comportement d'interaction avec l'enclos a cath
-		if (CreatureBehavior.randomTarget.Length == 0) return;
+
+		//Faire l'assignation des animaux a lenclos variable Animaux d'enclos
+
+        #region Movement
+
+        if (CreatureBehavior.randomTarget.Length == 0) return;
 
 		bool search = false;
 
@@ -55,6 +38,31 @@ internal class CapturedState : State
 
 		if (search) CreatureBehavior.agent.SearchPath();
 
+        #endregion
+
+        if (CreatureBehavior.playerFound)
+		{
+			if (CreatureBehavior.distance <= 5)
+			{
+				if (!CreatureBehavior.creatureInfoPanel.activeInHierarchy)
+				{
+					CreatureBehavior.interactionPanel.SetActive(true);
+				}
+				if (Input.GetButtonDown("Interact"))
+				{
+					CreatureBehavior.agent.isStopped = true;
+					CreatureBehavior.interactionPanel.SetActive(false);
+					CreatureBehavior.creatureInfoPanelExtra.SetActive(true);
+				}
+			}
+			if (CreatureBehavior.distance > 8)
+			{
+				CreatureBehavior.playerFound = false;
+				CreatureBehavior.agent.isStopped = false;
+				CreatureBehavior.interactionPanel.SetActive(false);
+				CreatureBehavior.creatureInfoPanelExtra.SetActive(false);
+			}
+		}
 
 	}
 }

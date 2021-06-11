@@ -67,6 +67,7 @@ public class ItemStack//iventaire
     //appelé lors d'un drag and drop //le update du slot est fait après
     public bool TryMergeItemStack(ItemStack stackAdd)
     {
+
         if(this.item.ID == stackAdd.Item.ID && !isFull()) { 
             this.Qte += stackAdd.Qte;
             if (isFull())
@@ -92,6 +93,11 @@ public class ItemStack//iventaire
         
         this.qte += qte;
         return retour;
+    }
+
+    public int GetValue()
+    {
+        return (item.Valeur * Qte);
     }
 
     public void ModifyItem()

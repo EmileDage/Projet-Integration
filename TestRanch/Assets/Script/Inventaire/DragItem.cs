@@ -43,7 +43,7 @@ public class DragItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,IE
 
     public void ResetPosition()
     {
-        Debug.Log(parentSlot);
+        //Debug.Log(parentSlot);
         recT.SetParent(parentSlot.gameObject.transform);
         recT.anchoredPosition = initPos;
         cGroup.blocksRaycasts = true;
