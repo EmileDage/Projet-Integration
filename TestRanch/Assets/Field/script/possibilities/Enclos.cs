@@ -20,7 +20,6 @@ public class Enclos : MonoBehaviour
     [SerializeField] private GameObject[] animaux;
     //S'assurer qu'une seule espece par enclos pour food et diete
     [SerializeField][Range(1, 10)] private int max_animal; //nombre maximal d'animaux avant que le happiness soit iompacte
-    private int happiness;//happiness overall in enclos //affected by number of animals
     private int happiness_moy_ani; //happinesss moyenne des animaux
 
     private MyTimeManager thyme;//pour updater le bonheur and other
@@ -33,8 +32,6 @@ public class Enclos : MonoBehaviour
     {
         thyme = MyTimeManager.timeInstance;
         thyme.GHourPassed += OnGHourPassed;
-
-        happiness = 60;//starting value ?
         
         //just to be safe
         boosted_grass = false;

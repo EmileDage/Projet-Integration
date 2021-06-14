@@ -130,8 +130,10 @@ public class SpawnMinerals : AbstractSpawner
             Debug.Log("Rare rock has spawned !\n " + random + "<=" + rareRockChance);
             rareRock.SetActive(true);
         }
-        else
+        else { 
             Debug.Log("Rare rock didnt spawn\n " + random + "<=" + rareRockChance);
+            rareRock.SetActive(false);
+        }
 
     }
 
