@@ -117,28 +117,7 @@ public class Enclos : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        //check comment les animaux sont fait pour voir comment les identifier
-        //en ce moment il y a pas de tag animal
-        //dans le if ca pourrait etre autre chose
-        if (other.tag == "animal")
-        {
-            // yeet
-
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {//animal be escaping
-        if (other.tag == "animal")
-        {
-            //yeet
-            //check si animal a script CreatureBehavior
-            //Change bool IsCaptured to false
-        }
-    }
-
+ 
     public void InfoPannelTxt_enclos()//lorsqu'il est appeler il regarde et inscrit des informations                                     
     { //utiliser cette fonction idealement pour updater le txt
 
@@ -182,7 +161,7 @@ public class Enclos : MonoBehaviour
     }
 
     public void Grass_b_Activate()//boosted grass
-    {//double les resosurces animaux
+    {//double les ressources animaux
         boosted_grass = true;
     }
 

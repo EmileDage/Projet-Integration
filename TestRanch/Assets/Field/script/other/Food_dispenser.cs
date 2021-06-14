@@ -17,6 +17,7 @@ public class Food_dispenser : Dispenser
         base.Start();
 
         chest = container.GetComponent<Coffre>();
+       
     }
 
     public void FetchFromChest( ) {//appeler dans le OnHourChange de enclos
