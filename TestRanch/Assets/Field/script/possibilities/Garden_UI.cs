@@ -56,6 +56,7 @@ public class Garden_UI : MonoBehaviour
         //activate visual ?
         if (planter.SpawnerInstance != null)
         {
+            planter.Upgrades[3].SetActive(true);
             planter.SpawnerInstance.GetComponent<SpawnerAgriculture>().Upgrade_fertilizer = true;
             fertilizer = false;
         }

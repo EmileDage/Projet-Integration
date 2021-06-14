@@ -167,22 +167,22 @@ public class Enclos : MonoBehaviour
     }
 
     public void Auto_feeder_Activate()
-    {
+    {//more place on container
         bouffe.OnUpgrade();
     }
 
     public void Grass_d_Activate()//deluxe grass
-    {
+    {//comfy grass moar happy
         deluxe_grass = true;
     }
 
     public void Water_Activate()//auto-refill water
-    {
+    {//infinite water
         eau.OnUpgrade();
     }
 
     public void Grass_b_Activate()//boosted grass
-    {
+    {//double les resosurces animaux
         boosted_grass = true;
     }
 
