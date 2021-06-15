@@ -62,19 +62,25 @@ public abstract class PlanterParent : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)//erreur quand fruit est lancer sur mine
     {
-        if (collision.gameObject.CompareTag("produit")) 
-        {           
-            Materiaux inObj = collision.gameObject.GetComponent<WorldObjectMateriaux>().Item();
+        if (spawnerInstance == null) {//permet eviter une erreur
+            if (collision.gameObject.CompareTag("produit"))
+            {
+                Materiaux inObj = collision.gameObject.GetComponent<WorldObjectMateriaux>().Item();
 
-            if (inObj != null) {
-                if (inObj.Funct.Equals(type_product)) {//arrete une erreur dont remove 
-                    AssignSpawnerRessource(collision.gameObject);
+                if (inObj != null)
+                {
+                    if (inObj.Funct.Equals(type_product))
+                    {//arrete une erreur dont remove 
+                        AssignSpawnerRessource(collision.gameObject);
 
-                }else
-                    Debug.Log("The type is incorrect not spawning spawner");
+                    }
+                    else
+                        Debug.Log("The type is incorrect not spawning spawner");
 
+                }
             }
         }
+       
     }
 
     public void InformationPannel_Activate()
