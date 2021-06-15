@@ -40,6 +40,7 @@ public class RessourceNode : MonoBehaviour
     {
         if (!isDead) {            
             cd--;
+            Debug.Log(mother);
             if (cd <= 0 && mother.Available)
             {
                 this.gameObject.SetActive(true);
@@ -78,6 +79,7 @@ public class RessourceNode : MonoBehaviour
 
     public void SetupNode(AbstractSpawner motherRef)
     {
+
         mother = motherRef;
         respawnTime = motherRef.TimeToRespawnRef;
         cd = respawnTime;

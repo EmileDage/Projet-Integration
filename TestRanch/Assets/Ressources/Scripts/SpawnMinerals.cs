@@ -127,11 +127,9 @@ public class SpawnMinerals : AbstractSpawner
 
         if (random <= rareRockChance)
         {//si la chance de random est plus grande rare rock spawn
-            Debug.Log("Spawn fnct : Rare rock has spawned !\n " + random + "<=" + rareRockChance);
             rareRock.SetActive(true);
         }
         else { 
-            Debug.Log("Spawn Fnct: Rare rock didnt spawn\n " + random + "<=" + rareRockChance);
             rareRock.SetActive(false);
         }
 

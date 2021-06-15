@@ -136,6 +136,7 @@ public abstract class AbstractSpawner : MonoBehaviour
 
     public virtual void SpawnSpawner(Materiaux toSpawn)
     {
+        Debug.Log(toSpawn);
         produit_reference = toSpawn.ItemWorldObject;
         produits = new GameObject[produit_spawn.Length];
         time = MyTimeManager.timeInstance;
