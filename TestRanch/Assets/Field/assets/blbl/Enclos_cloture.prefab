@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1303616824191440616}
   - component: {fileID: 6162722545680041118}
   - component: {fileID: 355484501092582185}
+  - component: {fileID: 7888186772433970012}
   m_Layer: 0
   m_Name: Enclos_cloture
   m_TagString: Untagged
@@ -82,6 +83,20 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &7888186772433970012
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867269827710528233}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -286634027444019302, guid: e412acb2501700e43a0cea780c6a6dc2, type: 3}
 --- !u!1 &8042899667002965647
 GameObject:
   m_ObjectHideFlags: 0
@@ -93,6 +108,7 @@ GameObject:
   - component: {fileID: 7944614078178417528}
   - component: {fileID: 4437883465764577356}
   - component: {fileID: 1363702497666890294}
+  - component: {fileID: 6614226745888961729}
   m_Layer: 0
   m_Name: Enclos_cloture_inside
   m_TagString: Untagged
@@ -163,3 +179,17 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
+--- !u!64 &6614226745888961729
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8042899667002965647}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -33989302112868440, guid: e412acb2501700e43a0cea780c6a6dc2, type: 3}
