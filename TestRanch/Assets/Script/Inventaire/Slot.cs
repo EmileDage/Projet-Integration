@@ -38,13 +38,15 @@ public class Slot : MonoBehaviour, IDropHandler
     
     public void OnDrop(PointerEventData eventData)
     {
+        
        GameObject dragged= eventData.pointerDrag;
        DragItem drag = dragged.GetComponent<DragItem>();
-       if( dragged != imgDrag.gameObject && dragged != null)
+       if( dragged != imgDrag.gameObject && drag != null)
         {
             DraggedItemMerge(drag);
+            drag.ParentSlot.UpdateSlot();
         }
-        drag.ParentSlot.UpdateSlot();
+        
     }
     public void Select()
     {
@@ -56,14 +58,15 @@ public class Slot : MonoBehaviour, IDropHandler
     }
     public void DraggedItemMerge(DragItem dragged)
     {
-
-        if(dragged.ParentSlot.ItemStack.Item.ID == this.itemStack.Item.ID ) 
-        {
-            this.TryMerge(dragged.ParentSlot.itemStack);
-        } else
-        {
-            SwapItems(dragged);          
-        }
+        
+            if(dragged.ParentSlot.ItemStack.Item.ID == this.itemStack.Item.ID ) 
+            {
+                this.TryMerge(dragged.ParentSlot.itemStack);
+            } else
+            {
+                SwapItems(dragged);          
+            } 
+        
     }
     public void SwapItems(DragItem dragged)
     {
