@@ -8,7 +8,10 @@ public class OnScreenMessage : MonoBehaviour
 {
     private float timeAlive = 1;
     private float counter;
-    public Text txt;
+    [HideInInspector]public Text txt;
+    Color colr;
+
+
    /* private float maxAlpha = 1;
     private float targetAlpha = 0;
     private float currentAlpha = 1;*/
@@ -19,12 +22,14 @@ public class OnScreenMessage : MonoBehaviour
         counter = timeAlive;
         this.gameObject.SetActive(false);
         txt = GetComponent<Text>();
+        colr = txt.color;
     }
     // Update is called once per frame
     void Update()
     {
         counter -= Time.deltaTime;
-        if(counter <= 0)
+        txt.CrossFadeAlpha(0, 0.5f, false);
+        if (counter <= 0)
         {
             gameObject.SetActive(false);
         }
@@ -34,6 +39,7 @@ public class OnScreenMessage : MonoBehaviour
     {
         counter = timeAlive;
         txt.text = msg;
+        
         gameObject.SetActive(true);
     }
 }
