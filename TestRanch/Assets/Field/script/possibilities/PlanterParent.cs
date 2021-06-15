@@ -13,7 +13,7 @@ public abstract class PlanterParent : MonoBehaviour
     private GameObject spawnerInstance;
     [SerializeField] protected Fonctions type_product;
 
-
+    protected Materiaux produit;
 
     protected GameObject info_Pannel;//recoit ref in field 
     protected bool info;//pour eviter que les pannels affichent les mauvaises informations
@@ -65,14 +65,13 @@ public abstract class PlanterParent : MonoBehaviour
         if (spawnerInstance == null) {//permet eviter une erreur
             if (collision.gameObject.CompareTag("produit"))
             {
-                Materiaux inObj = collision.gameObject.GetComponent<WorldObjectMateriaux>().Item();
+                produit = collision.gameObject.GetComponent<WorldObjectMateriaux>().Item();
 
-                if (inObj != null)
+                if (produit != null)
                 {
-                    if (inObj.Funct.Equals(type_product))
+                    if (produit.Funct.Equals(type_product))
                     {//arrete une erreur dont remove 
-                        AssignSpawnerRessource(collision.gameObject);
-
+                        AssignSpawnerRessource(collision.gameObject);                       
                     }
                     else
                         Debug.Log("The type is incorrect not spawning spawner");

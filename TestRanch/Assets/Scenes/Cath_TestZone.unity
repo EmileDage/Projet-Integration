@@ -354,6 +354,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6758759033437166378, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6758759033437166379, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
 --- !u!114 &242831421 stripped
@@ -361,7 +369,7 @@ MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 893230747876246820, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
   m_PrefabInstance: {fileID: 242831420}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
+  m_GameObject: {fileID: 511303840}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eea9e74c81215f84283d6369631e57ef, type: 3}
@@ -479,6 +487,24 @@ MonoBehaviour:
   joueur: {fileID: 242831421}
   emptyItem: {fileID: 11400000, guid: 69949359ba80d8544a67b335259fb62e, type: 2}
   chronoCoin: 0
+--- !u!1 &511303840 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6758759033437166368, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
+  m_PrefabInstance: {fileID: 242831420}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &511303841
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 511303840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7e209c10134b86a49848e9e3bd006fac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sprintSpeed: 30
 --- !u!1001 &573750118
 PrefabInstance:
   m_ObjectHideFlags: 0

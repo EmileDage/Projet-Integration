@@ -10,7 +10,7 @@ public class Mine : PlanterParent
     [SerializeField] private Transform spawn_stalactite;
     private GameObject second_producer;
     [SerializeField] private GameObject defaultRareRock;
-    private Materiaux produit;
+
 
     protected override  void Start()
     {
@@ -42,9 +42,8 @@ public class Mine : PlanterParent
         spawnerRef.GetComponent<SpawnMinerals>().AssignRR_ref(defaultRareRock);
         base.AssignSpawnerRessource(obj);
         this.gameObject.GetComponent<Mine_UI>().CheckPendingUpgrades();
-        UpdateInfoPannel();
-        produit = obj.GetComponent<WorldObjectMateriaux>().Item();
-        Debug.Log(produit);
+        UpdateInfoPannel();      
+        Debug.Log(produit  + " assignspawnerressource mine");
     }
 
     public void OnStalactiteUpgrade() {
@@ -52,7 +51,8 @@ public class Mine : PlanterParent
         //le ui check deja si spawnerinstance est null
 
         second_producer = Instantiate(spawnerRef, spawn_stalactite);
-        SpawnerInstance.GetComponent<AbstractSpawner>().SpawnSpawner(produit) ;
+        Debug.Log(produit);
+        second_producer.GetComponent<AbstractSpawner>().SpawnSpawner(produit) ;
 
     }
 
