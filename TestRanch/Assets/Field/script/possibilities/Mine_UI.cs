@@ -51,6 +51,7 @@ public class Mine_UI : MonoBehaviour
     public void Stalactite_Activate()
     {//crée un plafond 
      //double spawner
+     //le second spawner ne peut pas recevoir lupgrade rich soil sinon cest ben trop peter les ressources obtenut
         mine_.Upgrades[1].SetActive(true);
 
         if (mine_.SpawnerInstance != null)
@@ -67,9 +68,10 @@ public class Mine_UI : MonoBehaviour
     public void Rich_soil_Activate()
     {//augmente qte de ressources reçu
 
+        mine_.Upgrades[3].SetActive(true);
+
         if (mine_.SpawnerInstance != null)
-        {
-            mine_.Upgrades[3].SetActive(true);
+        {            
             mine_.SpawnerInstance.GetComponent<SpawnMinerals>().OnUpgradeSoil();
 
             soil = false;
@@ -81,10 +83,10 @@ public class Mine_UI : MonoBehaviour
 
     public void Chrono_Activate()//chrono system
     {//augmente vitesse
+        mine_.Upgrades[0].SetActive(true);
 
         if (mine_.SpawnerInstance != null)
-        {
-            mine_.Upgrades[0].SetActive(true);
+        {         
             mine_.SpawnerInstance.GetComponent<SpawnMinerals>().OnChronoUpgrade();
 
             chrono = false;
@@ -97,10 +99,10 @@ public class Mine_UI : MonoBehaviour
 
     public void Rare_rock_Activate()
     {//augmente la chance d'avoir un minerai rare
+        mine_.Upgrades[2].SetActive(true);
 
         if (mine_.SpawnerInstance != null)
-        {
-            mine_.Upgrades[2].SetActive(true);
+        {         
             mine_.SpawnerInstance.GetComponent<SpawnMinerals>().OnUpgradeRR();
 
             rarerock = false;

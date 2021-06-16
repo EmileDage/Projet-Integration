@@ -23,9 +23,8 @@ public class Mine : PlanterParent
     {
         if (SpawnerInstance != null)
         {
-            pannel_info_txt.text = "Product : "+SpawnerInstance.GetComponent<SpawnMinerals>().Produit_reference.name+
-                "\nAucune idée pour l'instant d'afficher quoi d'autre."+
-                "\nBlah Blah Blah";
+            pannel_info_txt.text = "Product : " + produit.Nom +
+                "\nChance de roche rare :" + SpawnerInstance.GetComponent<SpawnMinerals>().RRChance+ "%";
         }
         else
         {

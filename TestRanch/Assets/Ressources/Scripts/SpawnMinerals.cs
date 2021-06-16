@@ -19,6 +19,7 @@ public class SpawnMinerals : AbstractSpawner
     //cest pour le pannel info
     private Text text;
 
+    public int RRChance { get => rareRockChance; }
 
     protected override void Start()
     {
@@ -98,7 +99,15 @@ public class SpawnMinerals : AbstractSpawner
     public void OnUpgradeSoil() {
        
         upgrade_soil = true;
-
+        if (Available) {
+            foreach (GameObject produit in upgrade_produit)
+            {
+                if (produit.GetComponent<RessourceNode>().GetSpawned()) 
+                {//note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
+                    produit.SetActive(true);
+                }
+            }
+        }
     }
 
 
