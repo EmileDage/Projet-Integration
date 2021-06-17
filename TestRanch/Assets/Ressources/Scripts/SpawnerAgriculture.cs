@@ -32,7 +32,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     [SerializeField] private Transform[] upgrade_slot;//si l'upgrade est acheter l'arbre donne plus de ressources
     private GameObject[] upgrade_produit;
 
-    private PlanterParent jardin;
+    [SerializeField] private Garden jardin;//for some FUCKING reason quand cest serialisez la reference reste apres avoir ete assigner 
 
     public bool Upgrade_fertilizer { get => upgrade_fertilizer; set => upgrade_fertilizer = value; }//rich fertilizer upgrade 
 
@@ -89,14 +89,12 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
     }
 
-    public void AssignRef(Abreuvoir agua, GameObject fruit, PlanterParent jar)//on pourrait mettre une fonction plus detailler ssi on veut
+    public void AssignRef(Abreuvoir agua, GameObject fruit, Garden jardin_)//on pourrait mettre une fonction plus detailler ssi on veut
     {//exemple on pourrait envoyer le mesh selon le fruit ou whatever
         water_container = agua;
         produit_reference = fruit;
-        jardin = jar;
-
-        Debug.Log("Testing "+jardin);
-
+        jardin = jardin_;
+        Debug.Log(jardin);
     }
 
     public void CrystalCure(int strenght) {
@@ -107,6 +105,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
     public void GrowthCheck() {//verifie que la plante peut grandir
         Debug.Log("Current growth : " + timeToGrowHour);
+
         if (sicknessLvl < sickness_resistance)
         { //check si plante est PAS malade
             if (water_container.Qte_level >= hydration_hour)//est ce que la plante est assez hydrate
@@ -147,7 +146,6 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
             timeToGrowHour++;
             sicknessLvl += 5;
         }
-       
     }
 
   
@@ -204,19 +202,11 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
             }
         }
 
+        jardin.UpdateInfoPannel();
 
-        if (jardin != null)
-        {
-            Debug.Log("AAA JARDIN good ref");
-            jardin.UpdateInfoPannel();
 
-        }
-        else
-        {
-            Debug.Log("AAA jardin bad ref "+ jardin);
-
-        }
     }
+
 
     protected override  void Spawn() {//pour faciliter la lecture du code jai mis ça en fonction       
         Debug.Log("Spawn Fnct");
