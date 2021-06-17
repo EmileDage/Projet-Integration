@@ -32,6 +32,8 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     [SerializeField] private Transform[] upgrade_slot;//si l'upgrade est acheter l'arbre donne plus de ressources
     private GameObject[] upgrade_produit;
 
+    private PlanterParent jardin;
+
     public bool Upgrade_fertilizer { get => upgrade_fertilizer; set => upgrade_fertilizer = value; }//rich fertilizer upgrade 
 
     public bool GrownYet { get => IsGrown; }
@@ -87,10 +89,14 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
     }
 
-    public void AssignRef(Abreuvoir agua, GameObject fruit)//on pourrait mettre une fonction plus detailler ssi on veut
+    public void AssignRef(Abreuvoir agua, GameObject fruit, PlanterParent jar)//on pourrait mettre une fonction plus detailler ssi on veut
     {//exemple on pourrait envoyer le mesh selon le fruit ou whatever
         water_container = agua;
         produit_reference = fruit;
+        jardin = jar;
+
+        Debug.Log("Testing "+jardin);
+
     }
 
     public void CrystalCure(int strenght) {
@@ -100,13 +106,14 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     }
 
     public void GrowthCheck() {//verifie que la plante peut grandir
-        Debug.Log("Growing");
+        Debug.Log("Current growth : " + timeToGrowHour);
         if (sicknessLvl < sickness_resistance)
         { //check si plante est PAS malade
             if (water_container.Qte_level >= hydration_hour)//est ce que la plante est assez hydrate
             {
                 water_container.RemoveWater(hydration_hour);
                 timeToGrowHour -= 1;
+                Debug.Log("Growing : " + timeToGrowHour);
 
                 if ((sicknessLvl - 5) <= 0)
                     sicknessLvl = 0;// 0 = perfect health
@@ -151,9 +158,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     }
 
     public override void OnGHourPassed(object source)
-    {
-      
-        Debug.Log("HourPassed SpawnerAgriculture");
+    {   
 
         if (sickness_resistance < sicknessLvl)
         { //si la plante est malade
@@ -198,7 +203,19 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
                 }
             }
         }
-       
+
+
+        if (jardin != null)
+        {
+            Debug.Log("AAA JARDIN good ref");
+            jardin.UpdateInfoPannel();
+
+        }
+        else
+        {
+            Debug.Log("AAA jardin bad ref "+ jardin);
+
+        }
     }
 
     protected override  void Spawn() {//pour faciliter la lecture du code jai mis ça en fonction       

@@ -12,8 +12,9 @@ public class Garden : PlanterParent, IFarmable
 {
 
     bool tilled = false;
-     //agriculture
+    //agriculture
     [SerializeField] private Abreuvoir water_container;//irrigation
+    [SerializeField] private ParticleSystem[] water_jet;
 
     protected override void Start()
     {
@@ -24,12 +25,28 @@ public class Garden : PlanterParent, IFarmable
 
         //Until tilled is implemented
         tilled = true;
+
+        foreach (ParticleSystem water in water_jet)
+        {
+            water.Stop();
+        }
     }
 
     public Abreuvoir Water_container { get => water_container; set => water_container = value; }
 
+
+    public override void OnGHourPassed(object source)
+    {
+        base.OnGHourPassed(source);
+
+        foreach (ParticleSystem water in water_jet) {
+            water.Play();
+        }
+    }
+
     public override void UpdateInfoPannel()
     {
+        Debug.Log("Updating info pannel");
         if (SpawnerInstance != null)
         {
             if (SpawnerInstance.GetComponent<SpawnerAgriculture>().GrownYet)
@@ -65,7 +82,7 @@ public class Garden : PlanterParent, IFarmable
     {
         if (tilled)
         {
-            spawnerRef.GetComponent<SpawnerAgriculture>().AssignRef(Water_container, obj);
+            spawnerRef.GetComponent<SpawnerAgriculture>().AssignRef(Water_container, obj,this);
 
             base.AssignSpawnerRessource(obj);
             this.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();

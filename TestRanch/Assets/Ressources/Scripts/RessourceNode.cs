@@ -40,8 +40,6 @@ public class RessourceNode : MonoBehaviour
     {
         if (!isDead) {            
             cd--;
-            Debug.Log(mother);
-
             if (mother.GetComponent<SpawnerAgriculture>() != null)
             {
                 if (cd <= 0 && mother.Available && mother.GetComponent<SpawnerAgriculture>().GrownYet)

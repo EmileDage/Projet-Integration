@@ -43,7 +43,7 @@ public abstract class PlanterParent : MonoBehaviour
         Info = false;
     }
 
-    private void OnGHourPassed(object source)
+    public virtual void OnGHourPassed(object source)
     {
         if (Info == true)
         { // pour veirifer que l'obj est actif
