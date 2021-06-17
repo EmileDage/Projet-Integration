@@ -93,7 +93,6 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
         produit_reference = fruit;
     }
 
-
     public void CrystalCure(int strenght) {
         //utlise un crystal pour baisser la maladie
         sicknessLvl -= strenght;
@@ -107,7 +106,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
             if (water_container.Qte_level >= hydration_hour)//est ce que la plante est assez hydrate
             {
                 water_container.RemoveWater(hydration_hour);
-                timeToGrowHour--;
+                timeToGrowHour -= 1;
 
                 if ((sicknessLvl - 5) <= 0)
                     sicknessLvl = 0;// 0 = perfect health
@@ -118,6 +117,16 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
                 {
                     IsGrown = true;
                     Available = true;
+                    //check if hours are correct
+                    if (disponibleStart < time.Hour && disponibleEnd > time.Hour)
+                    {//si exemple dispo start = 2h et end = 12h
+                        Spawn();
+
+                    } else if (disponibleStart > disponibleEnd) { //si exemple dispo start = 20h et end = 5h
+                        if (disponibleStart < time.Hour || disponibleEnd > time.Hour) {
+                            Spawn();
+                        }
+                    }
                 }
             }
             else
@@ -162,6 +171,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
             }
             else
             {
+
                 //produce if time is correct
                 if (disponibleStart == time.Hour)
                 {
@@ -192,6 +202,8 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     }
 
     protected override  void Spawn() {//pour faciliter la lecture du code jai mis ça en fonction       
+        Debug.Log("Spawn Fnct");
+        
         base.Spawn();
 
         if (upgrade_fertilizer)
