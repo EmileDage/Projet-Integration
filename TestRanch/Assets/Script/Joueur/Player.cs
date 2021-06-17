@@ -17,6 +17,7 @@ public class Player : MonoBehaviour
 
     private PlayerInventory barreInventaire;
     private Coffre openChest;
+    private AbstractInventoryUI openedNonChestInventory;
     private Slot selected;
     private GameObject creature;
 
@@ -26,6 +27,7 @@ public class Player : MonoBehaviour
     public Slot Selected { get => selected; set => selected = value; }
     public Coffre OpenChest { get => openChest; set => openChest = value; }
     public Transform Offset { get => offset; set => offset = value; }
+    public AbstractInventoryUI OpenedNonChestInventory { get => openedNonChestInventory; set => openedNonChestInventory = value; }
 
     #endregion
 
