@@ -47,16 +47,16 @@ public class Garden_UI : MonoBehaviour
     {//assure que les plantes ont constantly watered
         planter.Upgrades[1].SetActive(true);
         planter.Water_container.OnUpgrade();
-
+        //maybe add a particule system to imitate water?
     }
 
     public void Rich_fer_Activate()//rich fertilizer
     {//donne plus de ressources 
-
+        planter.Upgrades[3].SetActive(true);
         //activate visual ?
         if (planter.SpawnerInstance != null)
         {
-            planter.Upgrades[3].SetActive(true);
+            
             planter.SpawnerInstance.GetComponent<SpawnerAgriculture>().Upgrade_fertilizer = true;
             fertilizer = false;
         }
@@ -68,17 +68,14 @@ public class Garden_UI : MonoBehaviour
 
     public void Chrono_Activate()//chrono system
     {//pousse plus rapidement
-
+        planter.Upgrades[0].SetActive(true);
         if (planter.SpawnerInstance != null)
-        {
-            planter.Upgrades[0].SetActive(true);
+        {        
             planter.SpawnerInstance.GetComponent<SpawnerAgriculture>().OnChronoUpgrade();
             chrono = false;
-
         }
         else {
             chrono = true;
-
         }
 
 
@@ -87,17 +84,15 @@ public class Garden_UI : MonoBehaviour
     public void Crystal_Activate()//crystal fusion
     {//reduit les chances de maladie
 
-
+        planter.Upgrades[2].SetActive(true);
         if (planter.SpawnerInstance != null)
-        {
-            planter.Upgrades[2].SetActive(true);
+        {          
             planter.SpawnerInstance.GetComponent<SpawnerAgriculture>().OnCrystalUpgrade();
             crystal = false;
         }
         else {
             crystal = true;
         }
-
     }
 
     #endregion

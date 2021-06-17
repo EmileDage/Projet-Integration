@@ -79,7 +79,7 @@ public abstract class AbstractSpawner : MonoBehaviour
     }
 
     protected virtual void Spawn() {
-
+        
         foreach (GameObject produit in produits)
         {
             if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn

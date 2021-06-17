@@ -41,11 +41,24 @@ public class RessourceNode : MonoBehaviour
         if (!isDead) {            
             cd--;
             Debug.Log(mother);
-            if (cd <= 0 && mother.Available)
+
+            if (mother.GetComponent<SpawnerAgriculture>() != null)
             {
-                this.gameObject.SetActive(true);
-                SetSpawnedTrue();
+                if (cd <= 0 && mother.Available && mother.GetComponent<SpawnerAgriculture>().GrownYet)
+                {
+                    this.gameObject.SetActive(true);
+                    SetSpawnedTrue();
+                }
             }
+            else {
+                if (cd <= 0 && mother.Available)
+                {
+                    this.gameObject.SetActive(true);
+                    SetSpawnedTrue();
+                }
+            }
+
+           
         }
     }
 

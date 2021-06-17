@@ -32,16 +32,17 @@ public class Garden : PlanterParent, IFarmable
     {
         if (SpawnerInstance != null)
         {
-            if (SpawnerInstance.GetComponent<SpawnerAgriculture>().GetGrown)
+            if (SpawnerInstance.GetComponent<SpawnerAgriculture>().GrownYet)
             {
                 pannel_info_txt.text = "Product : " + SpawnerInstance.GetComponent<SpawnerAgriculture>().Produit_reference.name +
                     "\nAucune idée pour l'instant d'afficher quoi d'autre." +
                     "\nBlah Blah Blah";
             }
             else
-                pannel_info_txt.text = "ITS GROWING :)";
-
-
+                pannel_info_txt.text = "ITS GROWING :)" +
+                    "\nSickness :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().GetSickness +
+                     "\nSickness Resistance :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().GetSicknessRes +
+                     "\nTime till mature :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().TimeTillGrowed;
         }
         else
         {
