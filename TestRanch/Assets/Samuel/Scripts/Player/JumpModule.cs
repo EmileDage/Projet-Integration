@@ -12,7 +12,7 @@ public class JumpModule : MonoBehaviour
     [SerializeField] private float fallSpeed = -5;
 
     private bool isFlying = false;
-    private float groundDistance = 1.7f;
+    private float groundDistance = 1.8f;
     private bool isGrounded;
     private Vector3 velocity;
     private Rigidbody rig = null;
