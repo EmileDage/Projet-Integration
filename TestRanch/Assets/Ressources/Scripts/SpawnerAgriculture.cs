@@ -204,6 +204,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
         jardin.UpdateInfoPannel();
 
+        Debug.Log("Product are active "+ (produits[0].activeSelf));
 
     }
 

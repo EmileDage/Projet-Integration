@@ -83,7 +83,7 @@ public abstract class AbstractSpawner : MonoBehaviour
         {
             if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
             { //note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
-                produit.GetComponent<RessourceNode>().SetSpawnedTrue();
+                produit.SetActive(true);
             }
         }
     }
