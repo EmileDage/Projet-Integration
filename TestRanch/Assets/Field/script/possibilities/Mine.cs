@@ -11,6 +11,7 @@ public class Mine : PlanterParent
     private GameObject second_producer;
     [SerializeField] private GameObject defaultRareRock;
 
+
     protected override  void Start()
     {
         base.Start();
@@ -22,9 +23,8 @@ public class Mine : PlanterParent
     {
         if (SpawnerInstance != null)
         {
-            pannel_info_txt.text = "Product : "+SpawnerInstance.GetComponent<SpawnMinerals>().Produit_reference.name+
-                "\nAucune idée pour l'instant d'afficher quoi d'autre."+
-                "\nBlah Blah Blah";
+            pannel_info_txt.text = "Product : " + produit.Nom +
+                "\nChance de roche rare :" + SpawnerInstance.GetComponent<SpawnMinerals>().RRChance+ "%";
         }
         else
         {
@@ -41,18 +41,19 @@ public class Mine : PlanterParent
         spawnerRef.GetComponent<SpawnMinerals>().AssignRR_ref(defaultRareRock);
         base.AssignSpawnerRessource(obj);
         this.gameObject.GetComponent<Mine_UI>().CheckPendingUpgrades();
-        UpdateInfoPannel();
-
-
+        UpdateInfoPannel();      
+        Debug.Log(produit  + " assignspawnerressource mine");
     }
 
     public void OnStalactiteUpgrade() {
         //add another spawner on the plafond
         //le ui check deja si spawnerinstance est null
 
-        second_producer = Instantiate(SpawnerInstance, spawn_stalactite);
+        second_producer = Instantiate(spawnerRef, spawn_stalactite);
+        Debug.Log(produit);
+        second_producer.GetComponent<AbstractSpawner>().SpawnSpawner(produit) ;
 
     }
 
-   
+
 }
