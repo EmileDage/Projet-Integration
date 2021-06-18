@@ -44,7 +44,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6552137513733707928}
   m_Layer: 0
-  m_Name: Field_Updated
+  m_Name: FieldV2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13728,7 +13728,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -0.38
+      value: 0.32
       objectReference: {fileID: 0}
     - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
       propertyPath: m_LocalRotation.w
