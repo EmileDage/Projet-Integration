@@ -10,6 +10,7 @@ public class Outils : Item
     //private delegate void toolMethod();
     //public GameObjUnityEvent toolMethod;
     public UnityEvent toolMethod;
+
    // private int tier = 1;
     Player player;
 
@@ -106,5 +107,5 @@ public class Outils : Item
 
     }
 
-
+   
 }
