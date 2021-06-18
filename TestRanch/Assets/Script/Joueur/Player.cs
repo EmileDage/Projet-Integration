@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -79,12 +80,21 @@ public class Player : MonoBehaviour
             lampe.SetActive(!lampe.activeSelf);
         }
 
-        if (Input.GetButtonDown("Creature") && creature != null)
+        if (Input.GetButtonDown("Map"))
+        {
+            MapButtonAction();
+        }
+       /* if (Input.GetButtonDown("Creature") && creature != null)
         {
             ThrowCreature();
-        }
+        }*/
 
         #endregion
+    }
+
+    private void MapButtonAction()
+    {
+        UIManager.Instance.MapOpenClose();
     }
 
     public bool DistanceCheck(RaycastHit hit) => 
