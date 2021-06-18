@@ -40,7 +40,7 @@ public class Garden_UI : MonoBehaviour
         if (crystal)
         {//il y a deja le check pour si cest null dans la fnct
             Debug.Log("Crystal");
-            Chrono_Activate();
+            Crystal_Activate();
         }
 
     }
@@ -98,6 +98,7 @@ public class Garden_UI : MonoBehaviour
     {//reduit les chances de maladie
 
         planter.Upgrades[2].SetActive(true);
+
         if (planter.SpawnerInstance != null)
         {
             Debug.Log("Crystal Upgrade");
