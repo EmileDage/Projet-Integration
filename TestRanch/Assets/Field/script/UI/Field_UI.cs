@@ -347,6 +347,7 @@ public class Field_UI : MonoBehaviour
     {
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[4].GetComponent<ShowPrice>().Liste_prix))
         {
+            Debug.Log("TEST"+field_ref.jardin.GetComponent<Garden_UI>());
             field_ref.jardin.GetComponent<Garden_UI>().Crystal_Activate();
             btn_up_terre[4].interactable = false;
             btn_up_terre[2].interactable = false;//disable autre options du choix

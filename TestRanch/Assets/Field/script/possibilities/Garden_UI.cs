@@ -15,12 +15,19 @@ public class Garden_UI : MonoBehaviour
     private bool chrono;
     private bool crystal;
 
+
     public void Set_ref(Garden plant) {
         planter = plant;
     }
 
     public void CheckPendingUpgrades()
     {
+        Debug.Log("Checking pending upgrades\nChecking spawner instance");
+        Debug.Log(planter.SpawnerInstance);
+
+        if (planter.SpawnerInstance != null) { 
+        
+        }
         if (fertilizer) {//il y a deja le check pour si cest null dans la fnct
             Rich_fer_Activate();
         }
@@ -32,6 +39,7 @@ public class Garden_UI : MonoBehaviour
 
         if (crystal)
         {//il y a deja le check pour si cest null dans la fnct
+            Debug.Log("Crystal");
             Chrono_Activate();
         }
 
@@ -45,6 +53,8 @@ public class Garden_UI : MonoBehaviour
 
     public void Irr_sys_Activate()//irrigation system
     {//assure que les plantes ont constantly watered
+        Debug.Log("irrigation Upgrade");
+
         planter.Upgrades[1].SetActive(true);
         planter.Water_container.OnUpgrade();
         //maybe add a particule system to imitate water?
@@ -56,7 +66,8 @@ public class Garden_UI : MonoBehaviour
         //activate visual ?
         if (planter.SpawnerInstance != null)
         {
-            
+            Debug.Log("fertilizer Upgrade");
+
             planter.SpawnerInstance.GetComponent<SpawnerAgriculture>().Upgrade_fertilizer = true;
             fertilizer = false;
         }
@@ -70,7 +81,9 @@ public class Garden_UI : MonoBehaviour
     {//pousse plus rapidement
         planter.Upgrades[0].SetActive(true);
         if (planter.SpawnerInstance != null)
-        {        
+        {
+            Debug.Log("Chrono Upgrade");
+
             planter.SpawnerInstance.GetComponent<SpawnerAgriculture>().OnChronoUpgrade();
             chrono = false;
         }
@@ -86,11 +99,14 @@ public class Garden_UI : MonoBehaviour
 
         planter.Upgrades[2].SetActive(true);
         if (planter.SpawnerInstance != null)
-        {          
+        {
+            Debug.Log("Crystal Upgrade");
             planter.SpawnerInstance.GetComponent<SpawnerAgriculture>().OnCrystalUpgrade();
             crystal = false;
         }
         else {
+            Debug.Log("Crystal Upgrade spawnerinstance is null" );
+            Debug.Log(planter.SpawnerInstance);
             crystal = true;
         }
     }

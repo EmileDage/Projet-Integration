@@ -46,24 +46,29 @@ public class Garden : PlanterParent, IFarmable
 
     public override void UpdateInfoPannel()
     {
-        Debug.Log("Updating info pannel");
-        if (SpawnerInstance != null)
+        if (!tilled) {
+            pannel_info_txt.text = "This plot of land need to be tilled before anything grows there!"+
+                "\nInstructions here maybe ?...";
+        }
+        else if (SpawnerInstance != null)
         {
             if (SpawnerInstance.GetComponent<SpawnerAgriculture>().GrownYet)
             {
-                pannel_info_txt.text = "Product : " + SpawnerInstance.GetComponent<SpawnerAgriculture>().Produit_reference.name +
-                    "\nAucune idée pour l'instant d'afficher quoi d'autre." +
-                    "\nBlah Blah Blah";
+                pannel_info_txt.text = "Product : " + produit.Nom +
+                    "\nHydratation :" + water_container.Qte_level + "%" +
+                      "\nSickness :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().GetSickness +
+                     "\nSickness Resistance :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().GetSicknessRes;
             }
             else
                 pannel_info_txt.text = "ITS GROWING :)" +
+                     "\nHydratation :" + water_container.Qte_level + "%" +
                     "\nSickness :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().GetSickness +
                      "\nSickness Resistance :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().GetSicknessRes +
                      "\nTime till mature :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().TimeTillGrowed;
         }
         else
         {
-            pannel_info_txt.text = "This is a garden";
+            pannel_info_txt.text = "This is a garden without plants";
 
         }
     }

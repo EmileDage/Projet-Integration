@@ -215,7 +215,6 @@ public class SpawnMinerals : AbstractSpawner
 
     public override void SpawnSpawner(Materiaux toSpawn)
     {
-        //if(toSpawn.Funct.Equals(Fonctions.mineraux)) //on check avant dans la collision sinon bug and dats sad
             base.SpawnSpawner(toSpawn);
     }
 }

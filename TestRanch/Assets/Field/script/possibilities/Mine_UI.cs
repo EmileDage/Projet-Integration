@@ -23,6 +23,8 @@ public class Mine_UI : MonoBehaviour
 
     public void CheckPendingUpgrades()
     {
+        Debug.Log("Checking pending upgrades");
+
         if (soil)
         {//il y a deja le check pour si cest null dans la fnct
             Rich_soil_Activate();
@@ -56,6 +58,8 @@ public class Mine_UI : MonoBehaviour
 
         if (mine_.SpawnerInstance != null)
         {
+            Debug.Log("stalactite Upgrade");
+
             mine_.OnStalactiteUpgrade();
             stalactite = false;
         }
@@ -71,7 +75,9 @@ public class Mine_UI : MonoBehaviour
         mine_.Upgrades[3].SetActive(true);
 
         if (mine_.SpawnerInstance != null)
-        {            
+        {
+            Debug.Log("rich soil Upgrade");
+
             mine_.SpawnerInstance.GetComponent<SpawnMinerals>().OnUpgradeSoil();
 
             soil = false;
@@ -86,7 +92,8 @@ public class Mine_UI : MonoBehaviour
         mine_.Upgrades[0].SetActive(true);
 
         if (mine_.SpawnerInstance != null)
-        {         
+        {
+            Debug.Log("Chrono Upgrade");
             mine_.SpawnerInstance.GetComponent<SpawnMinerals>().OnChronoUpgrade();
 
             chrono = false;
@@ -102,7 +109,9 @@ public class Mine_UI : MonoBehaviour
         mine_.Upgrades[2].SetActive(true);
 
         if (mine_.SpawnerInstance != null)
-        {         
+        {        
+            Debug.Log("Rare rock Upgrade");
+
             mine_.SpawnerInstance.GetComponent<SpawnMinerals>().OnUpgradeRR();
 
             rarerock = false;

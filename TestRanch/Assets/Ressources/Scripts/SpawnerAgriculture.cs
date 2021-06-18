@@ -86,7 +86,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
         }
 
         Despawn();
-
+        jardin.UpdateInfoPannel();
     }
 
     public void AssignRef(Abreuvoir agua, GameObject fruit, Garden jardin_)//on pourrait mettre une fonction plus detailler ssi on veut
@@ -95,6 +95,8 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
         produit_reference = fruit;
         jardin = jardin_;
         Debug.Log(jardin);
+
+
     }
 
     public void CrystalCure(int strenght) {
@@ -104,15 +106,12 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     }
 
     public void GrowthCheck() {//verifie que la plante peut grandir
-        Debug.Log("Current growth : " + timeToGrowHour);
-
         if (sicknessLvl < sickness_resistance)
         { //check si plante est PAS malade
             if (water_container.Qte_level >= hydration_hour)//est ce que la plante est assez hydrate
             {
                 water_container.RemoveWater(hydration_hour);
                 timeToGrowHour -= 1;
-                Debug.Log("Growing : " + timeToGrowHour);
 
                 if ((sicknessLvl - 5) <= 0)
                     sicknessLvl = 0;// 0 = perfect health
@@ -123,6 +122,8 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
                 {
                     IsGrown = true;
                     Available = true;
+                    jardin.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();
+
                     //check if hours are correct
                     if (disponibleStart < time.Hour && disponibleEnd > time.Hour)
                     {//si exemple dispo start = 2h et end = 12h
@@ -153,6 +154,8 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     public void OnCrystalUpgrade()
     {
         sickness_resistance += 30;
+        Debug.Log("SICKNESS RES "+sickness_resistance);
+        jardin.UpdateInfoPannel();
     }
 
     public override void OnGHourPassed(object source)
@@ -203,8 +206,6 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
         }
 
         jardin.UpdateInfoPannel();
-
-        Debug.Log("Product are active "+ (produits[0].activeSelf));
 
     }
 
