@@ -24,6 +24,9 @@ public class DialogueManager : MonoBehaviour
 
     private bool check;//regarde si le text a finit de s'écrire
 
+    private bool fadeIn;
+    private bool fadeOut;
+
     private void Awake()
     {
         if (d_instance != null && d_instance != this)
@@ -41,12 +44,36 @@ public class DialogueManager : MonoBehaviour
     {
         sentences = new Queue<string>();
         dialogueBox.SetActive(false);
+        dialogueBox.GetComponent<CanvasGroup>().alpha = 0;
+    }
+
+    private void Update()
+    {
+        if (fadeIn) {         
+            dialogueBox.GetComponent<CanvasGroup>().alpha += Time.deltaTime /2 ;
+            if (dialogueBox.GetComponent<CanvasGroup>().alpha >= 1) {
+                fadeIn = false;
+
+            }
+        }
+
+        if (fadeOut)
+        {
+            dialogueBox.GetComponent<CanvasGroup>().alpha -= Time.deltaTime / 2;
+            if (dialogueBox.GetComponent<CanvasGroup>().alpha <= 0)
+            {
+                fadeOut = false;
+                dialogueBox.SetActive(false);
+
+            }
+        }
+
     }
 
     public void StartDialogue(Dialogue dialogue)
     {
-        
         dialogueBox.SetActive(true);
+        fadeIn = true;
 
         name_txt.text = dialogue.name;
 
@@ -104,7 +131,7 @@ public class DialogueManager : MonoBehaviour
 
     private void EndOfDialog()
     {
-        dialogueBox.SetActive(false);
+        fadeOut = true;
         Debug.Log("End of convo");
     }
 
