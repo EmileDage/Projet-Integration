@@ -79,6 +79,10 @@ public class PlayerInventory : AbstractInventoryUI
     {
         slots[selectedIndex].DeSelect();
         selectedIndex += difference;
+        if(selectedIndex < 0)
+        {
+            selectedIndex = joueur.InventaireTaille - 1;
+        }
         selectedIndex = selectedIndex % joueur.InventaireTaille;
         slots[selectedIndex].DeSelect();      
         slots[selectedIndex].Select();
@@ -88,10 +92,12 @@ public class PlayerInventory : AbstractInventoryUI
     //pour parcourir avec 12345...
     public void SelectItem(int index)
     {
-        slots[selectedIndex].DeSelect();
-        slots[index].Select();
-        selectedIndex = index;
-        joueur.Selected = slots[index];
+        if (index < joueur.InventaireTaille) { 
+            slots[selectedIndex].DeSelect();
+            slots[index].Select();
+            selectedIndex = index;
+            joueur.Selected = slots[index];
+        }
     }
 
     public void MergeOnExisting(ItemStack stack)

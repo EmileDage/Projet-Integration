@@ -17,7 +17,6 @@ public class SalePanel : AbstractInventoryUI
     {
         if (Input.GetButtonDown("Cancel"))
         {
-            UI.ExitPanel(this.gameObject);
             CancelSell();
             gm.Joueur.OpenedNonChestInventory = null;
         }
@@ -61,7 +60,7 @@ public class SalePanel : AbstractInventoryUI
         value.text = saleValue.ToString()+ "$";
     }
 
-    private void CancelSell()
+    public void CancelSell()
     {
         foreach (Slot slot in slots)
         {
@@ -72,6 +71,7 @@ public class SalePanel : AbstractInventoryUI
                 slot.UpdateSlotWithoutPanel();
             }
         }
+        UI.ExitPanel(this.gameObject);
         
     }
 }
