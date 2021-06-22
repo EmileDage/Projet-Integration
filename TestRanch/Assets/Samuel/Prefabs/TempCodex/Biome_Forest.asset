@@ -9,11 +9,9 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb5b9edae62673d49983005da168d0c6, type: 3}
-  m_Name: Speed_I
+  m_Script: {fileID: 11500000, guid: 5d7e38bbcdcbbc04891011494c1481d7, type: 3}
+  m_Name: Biome_Forest
   m_EditorClassIdentifier: 
-  upgradeName: Speed Module I
-  description: Increase Sprint Speed by 10%.
-  cost: 100
-  icon: {fileID: 21300000, guid: 258a237801ddde741bec3658aef1d221, type: 3}
-  prerequisite: []
+  codexName: The Lush Forest
+  description: 'Full of tree Yeahhh.... '
+  icon: {fileID: 21300000, guid: db188cafbcbd47c4caa03004f0240eb6, type: 3}

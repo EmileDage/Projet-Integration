@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb5b9edae62673d49983005da168d0c6, type: 3}
-  m_Name: Speed_I
+  m_Name: Speed_II
   m_EditorClassIdentifier: 
-  upgradeName: Speed Module I
+  upgradeName: Speed Module II
   description: Increase Sprint Speed by 10%.
-  cost: 100
+  cost: 250
   icon: {fileID: 21300000, guid: 258a237801ddde741bec3658aef1d221, type: 3}
-  prerequisite: []
+  prerequisite:
+  - {fileID: 11400000, guid: 47d69d18d4fba284795f7bc7af7f6971, type: 2}

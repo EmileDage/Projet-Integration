@@ -18,6 +18,14 @@ public class HealthModule : MonoBehaviour
         Health.StartRecovery();
     }
 
+    public void ModifyHealth(float value, bool RemoveValue = false)
+    {
+        if (!RemoveValue)
+            Health.AddModifier(value);
+        else
+            Health.RemoveModifier(value);
+    }
+
     public void DecreaseHealth(float creatureDamage)
     {
         Health.DecreaseCurrentValue(creatureDamage);

@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb5b9edae62673d49983005da168d0c6, type: 3}
-  m_Name: Speed_I
+  m_Name: Health_III
   m_EditorClassIdentifier: 
-  upgradeName: Speed Module I
-  description: Increase Sprint Speed by 10%.
-  cost: 100
-  icon: {fileID: 21300000, guid: 258a237801ddde741bec3658aef1d221, type: 3}
-  prerequisite: []
+  upgradeName: Health Module III
+  description: Increase your maximum health by 150.
+  cost: 250
+  icon: {fileID: 21300000, guid: d69165f22bb3bf846b4fda34b966a9c9, type: 3}
+  prerequisite:
+  - {fileID: 11400000, guid: 88c29c5556c42bf4f8c862da9ef56291, type: 2}

@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb5b9edae62673d49983005da168d0c6, type: 3}
-  m_Name: Speed_I
+  m_Name: Stamina_II
   m_EditorClassIdentifier: 
-  upgradeName: Speed Module I
-  description: Increase Sprint Speed by 10%.
-  cost: 100
-  icon: {fileID: 21300000, guid: 258a237801ddde741bec3658aef1d221, type: 3}
-  prerequisite: []
+  upgradeName: Stamina Module II
+  description: Increase your maximum stamina by 100.
+  cost: 150
+  icon: {fileID: 21300000, guid: 9188df8efadd0ab4ea507e5f4880c50c, type: 3}
+  prerequisite:
+  - {fileID: 11400000, guid: 2031f80812d46be428ed7c796f267a59, type: 2}

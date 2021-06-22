@@ -6,7 +6,6 @@ using UnityEngine.UI;
 [CreateAssetMenu(fileName = "Upgrade", menuName = "ScriptableUpgrade/Upgrade")]
 public class Upgrade : ScriptableObject
 {
-    [SerializeField] private bool isActivated = false;
     [SerializeField] private string upgradeName = "None";
     [TextArea(3,10)]
     [SerializeField] private string description = "Default Description";
@@ -35,13 +34,6 @@ public class Upgrade : ScriptableObject
     {
         return prerequisite;
     }
-    public bool IsActivated()
-    {
-        return isActivated;
-    }
-    public void Activate()
-    {
-        isActivated = true;
-    }
+
 
 }
