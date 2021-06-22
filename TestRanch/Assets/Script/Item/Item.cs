@@ -31,6 +31,12 @@ public class Item : ScriptableObject
         Debug.Log("used " + nom);
     }
 
+    //mouse button 2 - clique droit
+    public virtual void AltUse(Player joueur)
+    {
+
+    }
+
     public virtual void SpawnAsObject(ItemStack stack, Transform location)
     {
         Debug.Log("spawn " + nom);

@@ -12,8 +12,9 @@ public class Garden : PlanterParent, IFarmable
 {
 
     bool tilled = false;
-     //agriculture
+    //agriculture
     [SerializeField] private Abreuvoir water_container;//irrigation
+    [SerializeField] private ParticleSystem[] water_jet;
 
     protected override void Start()
     {
@@ -24,28 +25,50 @@ public class Garden : PlanterParent, IFarmable
 
         //Until tilled is implemented
         tilled = true;
+
+        foreach (ParticleSystem water in water_jet)
+        {
+            water.Stop();
+        }
     }
 
     public Abreuvoir Water_container { get => water_container; set => water_container = value; }
 
+
+    public override void OnGHourPassed(object source)
+    {
+        base.OnGHourPassed(source);
+
+        foreach (ParticleSystem water in water_jet) {
+            water.Play();
+        }
+    }
+
     public override void UpdateInfoPannel()
     {
-        if (SpawnerInstance != null)
+        if (!tilled) {
+            pannel_info_txt.text = "This plot of land need to be tilled before anything grows there!"+
+                "\nInstructions here maybe ?...";
+        }
+        else if (SpawnerInstance != null)
         {
-            if (SpawnerInstance.GetComponent<SpawnerAgriculture>().GetGrown)
+            if (SpawnerInstance.GetComponent<SpawnerAgriculture>().GrownYet)
             {
-                pannel_info_txt.text = "Product : " + SpawnerInstance.GetComponent<SpawnerAgriculture>().Produit_reference.name +
-                    "\nAucune idée pour l'instant d'afficher quoi d'autre." +
-                    "\nBlah Blah Blah";
+                pannel_info_txt.text = "Product : " + produit.Nom +
+                    "\nHydratation :" + water_container.Qte_level + "%" +
+                      "\nSickness :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().GetSickness +
+                     "\nSickness Resistance :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().GetSicknessRes;
             }
             else
-                pannel_info_txt.text = "ITS GROWING :)";
-
-
+                pannel_info_txt.text = "ITS GROWING :)" +
+                     "\nHydratation :" + water_container.Qte_level + "%" +
+                    "\nSickness :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().GetSickness +
+                     "\nSickness Resistance :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().GetSicknessRes +
+                     "\nTime till mature :" + SpawnerInstance.GetComponent<SpawnerAgriculture>().TimeTillGrowed;
         }
         else
         {
-            pannel_info_txt.text = "This is a garden";
+            pannel_info_txt.text = "This is a garden without plants";
 
         }
     }
@@ -64,7 +87,7 @@ public class Garden : PlanterParent, IFarmable
     {
         if (tilled)
         {
-            spawnerRef.GetComponent<SpawnerAgriculture>().AssignRef(Water_container, obj);
+            spawnerRef.GetComponent<SpawnerAgriculture>().AssignRef(Water_container, obj,this);
 
             base.AssignSpawnerRessource(obj);
             this.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();

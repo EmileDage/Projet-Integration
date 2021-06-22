@@ -49,7 +49,7 @@ public class MyTimeManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        internalTimer += Time.deltaTime;
+        internalTimer += Time.deltaTime * Time.timeScale;
         if(internalTimer >= 1)
         {
             internalTimer = 0;

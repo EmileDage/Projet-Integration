@@ -39,23 +39,22 @@ public abstract class AbstractSpawner : MonoBehaviour
                 
             }
         }
-        //si les produit spawn a 0h mais le jeux commence a 5h
-        //ce code marche pas me semble si le produit commence a 20h pis finit a 5h
-        //so tant que le jeux commence a 5h cest chill
-        if (time.Hour >= disponibleStart)
-        {//start = 2h currentH = 5h
-            if (time.Hour >= disponibleEnd)//end = 4h currentH = 5h
-            {
-                Despawn();
-
-            }
-            else
+        //check if hours are correct
+        if (disponibleStart < time.Hour && disponibleEnd > time.Hour)
+        {//si exemple dispo start = 2h et end = 12h
+            Spawn();
+        }
+        else if (disponibleStart > disponibleEnd)
+        { //si exemple dispo start = 20h et end = 5h
+            if (disponibleStart < time.Hour || disponibleEnd > time.Hour)
             {
                 Spawn();
             }
+            else {
+                Despawn();
+            }
         }
-        else
-        {
+        else {
             Despawn();
         }
     }
@@ -79,12 +78,12 @@ public abstract class AbstractSpawner : MonoBehaviour
     }
 
     protected virtual void Spawn() {
-
+        
         foreach (GameObject produit in produits)
         {
             if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
             { //note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
-                produit.GetComponent<RessourceNode>().SetSpawnedTrue();
+                produit.SetActive(true);
             }
         }
     }
@@ -136,6 +135,7 @@ public abstract class AbstractSpawner : MonoBehaviour
 
     public virtual void SpawnSpawner(Materiaux toSpawn)
     {
+        Debug.Log(toSpawn);
         produit_reference = toSpawn.ItemWorldObject;
         produits = new GameObject[produit_spawn.Length];
         time = MyTimeManager.timeInstance;
