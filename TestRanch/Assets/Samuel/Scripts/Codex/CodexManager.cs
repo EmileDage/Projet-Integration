@@ -32,6 +32,7 @@ public class CodexManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.I))
         {
+            Debug.Log("nop");
             Interact(player.GetComponent<Player>());
         }
     }
