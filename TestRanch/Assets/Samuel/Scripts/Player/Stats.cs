@@ -14,6 +14,8 @@ public class Stats
     {
         float finalvalue = baseValue;
         modifiers.ForEach(x => finalvalue += x);
+        if (finalvalue <= 0)
+            return 0;
         return finalvalue;
     }
 
