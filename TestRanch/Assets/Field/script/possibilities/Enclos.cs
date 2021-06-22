@@ -23,7 +23,6 @@ public class Enclos : MonoBehaviour
     [SerializeField] private GameObject[] animaux;
     //S'assurer qu'une seule espece par enclos pour food et diete
     [SerializeField][Range(1, 10)] private int max_animal; //nombre maximal d'animaux avant que le happiness soit iompacte
-    private int happiness;//happiness overall in enclos //affected by number of animals
     private int happiness_moy_ani; //happinesss moyenne des animaux
 
     private MyTimeManager thyme;//pour updater le bonheur and other
@@ -38,8 +37,6 @@ public class Enclos : MonoBehaviour
     {
         thyme = MyTimeManager.timeInstance;
         thyme.GHourPassed += OnGHourPassed;
-
-        happiness = 60;//starting value ?
         
         //just to be safe
         Boosted_grass = false;
@@ -125,28 +122,7 @@ public class Enclos : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        //check comment les animaux sont fait pour voir comment les identifier
-        //en ce moment il y a pas de tag animal
-        //dans le if ca pourrait etre autre chose
-        if (other.tag == "animal")
-        {
-            // yeet
-
-        }
-    }
-
-    private void OnTriggerExit(Collider other)
-    {//animal be escaping
-        if (other.tag == "animal")
-        {
-            //yeet
-            //check si animal a script CreatureBehavior
-            //Change bool IsCaptured to false
-        }
-    }
-
+ 
     public void InfoPannelTxt_enclos()//lorsqu'il est appeler il regarde et inscrit des informations                                     
     { //utiliser cette fonction idealement pour updater le txt
 
@@ -175,23 +151,24 @@ public class Enclos : MonoBehaviour
     }
 
     public void Auto_feeder_Activate()
-    {
+    {//more place on container
         bouffe.OnUpgrade();
     }
 
     public void Grass_d_Activate()//deluxe grass
-    {
+    {//comfy grass moar happy
         deluxe_grass = true;
     }
 
     public void Water_Activate()//auto-refill water
-    {
+    {//infinite water
         eau.OnUpgrade();
     }
 
     public void Grass_b_Activate()//boosted grass
+
     {
-        Boosted_grass = true;
+        Boosted_grass = true; // double ressource
     }
 
     #endregion

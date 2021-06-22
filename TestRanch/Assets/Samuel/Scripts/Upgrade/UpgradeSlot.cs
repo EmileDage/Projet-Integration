@@ -8,61 +8,98 @@ public class UpgradeSlot : MonoBehaviour
     [Header("Upgrade State")]
     [SerializeField] private Upgrade upgrade = null;
     [SerializeField] private bool isUnlocked = false;
+    [SerializeField] private bool isActivated = false;
+
 
     [Header("Upgrade UI")]
     [SerializeField] private Text txtName = null;
     [SerializeField] private Text txtDescription = null;
     [SerializeField] private Text txtCost = null;
+    [SerializeField] private Text txtPrerequisites = null;
     [SerializeField] private Image icon = null;
+
 
     private void Start()
     {
         txtName.text = upgrade.GetName();
         txtDescription.text = upgrade.GetDescription();
         txtCost.text = upgrade.GetCost().ToString() + " $ ";
+        txtPrerequisites.text = PrerequisiteToString();
         icon.sprite = upgrade.GetIcon();
-        UpdateVisuel();
     }
-
-    private void Update()
+    public void Unlock()
     {
-        if (upgrade.IsActivated())
-            GetComponent<Image>().color = Color.red;
+        isUnlocked = true;
+        gameObject.SetActive(true);
     }
     public bool IsUnlocked()
     {
         return isUnlocked;
     }
-    public void Unlock()
+    public bool TryToUpgrade()
     {
-        if (PrerequisiteComplete())
+        if (!CheckChronoCoin(upgrade.GetCost()))
+            return false;
+
+        if (!PrerequisiteComplete())
         {
-            isUnlocked = true;
-            gameObject.SetActive(true);
+            GetComponent<Image>().color = Color.red;
+            return false;
         }
-        else
-        {
-            Debug.Log("Prerequisite not complete");
-            return;
-        }
+
+        if (isActivated)
+            return false;
+
+        return true;
     }
-    public void UpdateVisuel()
+    public void Activate()
     {
-        if (isUnlocked)
-            gameObject.SetActive(true);
-        else
-            gameObject.SetActive(false);
+        isActivated = true;
+        gameObject.SetActive(true);
+        GetComponent<Image>().color = Color.green;
+        GameManager.gmInstance.ModifyChronoCoin(upgrade.GetCost(), true);
+
     }
-    bool PrerequisiteComplete()
+    public bool IsActivated()
+    {
+        return isActivated;
+    }
+
+    public Upgrade GetUpgrade()
+    {
+        return upgrade;
+    }
+
+    private bool CheckChronoCoin(int value)
+    {
+        if ((GameManager.gmInstance.GetChronoCoin() - value) >= 0)
+            return true;
+        else return false;
+    }
+
+    private string PrerequisiteToString()
+    {
+        string text = "Prerequisite : ";
+
+        foreach (Upgrade upgrade in upgrade.GetPrerequisiteList())
+        {
+            text += upgrade.GetName() + ", ";
+        }
+        return text;
+    }
+    private bool PrerequisiteComplete()
     {
         if (upgrade.GetPrerequisiteList().Count != 0)
         {
             foreach (Upgrade upgrade in upgrade.GetPrerequisiteList())
             {
-                if (!upgrade.IsActivated())
+                foreach (UpgradeSlot upgradeSlot in UpgradeManager.upgradeInstance.upgradesList)
                 {
-                    Debug.Log("Upgrade Missing");
-                    return false;
+                    if(upgrade == upgradeSlot.GetUpgrade())
+                    {
+                        if (!upgradeSlot.IsActivated())
+                            return false;
+                    }
                 }
             }
             return true;

@@ -11,6 +11,8 @@ public class GameManager : MonoBehaviour
     [SerializeField] private int chronoCoin = 0;
     public Player Joueur { get => joueur;}
 
+
+
     void Awake()
     {
         if (gmInstance != null && gmInstance != this)
@@ -25,6 +27,10 @@ public class GameManager : MonoBehaviour
     }
 
 
+    public PlayerInventory GetPlayerInventory()
+    {
+        return joueur.BarreInventaire;
+    }
 
     public void ModifyChronoCoin(int value, bool RemoveValue = false)
     {

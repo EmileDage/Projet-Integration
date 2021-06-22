@@ -116,8 +116,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   produit_reference: {fileID: 0}
   timeToRespawn: 5
-  disponibleStart: 0
-  disponibleEnd: 12
+  disponibleStart: 6
+  disponibleEnd: 20
   produit_spawn:
   - {fileID: 4770286637777227793}
   - {fileID: 354383383463959771}

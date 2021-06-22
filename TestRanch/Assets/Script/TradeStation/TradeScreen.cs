@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class TradeScreen : MonoBehaviour, IInteractible
 {
-    [SerializeField] GameObject TradePanel;
+
 
     //private List<Slot> slots;
 
     UIManager UI;
-    GameManager GM;
+
 
     public void Interact(Player joueur)
     {
-        UI.OpenPanel(TradePanel);
+        UI.OpenPanel(UI.StationPanel);
+        UI.StationPanel.GetComponent<TradePanel>().OpenTradePanel();
     }
 
 
@@ -21,14 +22,7 @@ public class TradeScreen : MonoBehaviour, IInteractible
     void Start()
     {
         UI = UIManager.Instance;
-        GM = GameManager.gmInstance;
-      /*  slots = new List<Slot>();
-        Slot[] temp = TradePanel.GetComponentsInChildren<Slot>();
-        foreach (var item in temp)
-        {
-            slots.Add(item);
-        }
-      */
+        UI.StationPanel.SetActive(false);
     }
 
     

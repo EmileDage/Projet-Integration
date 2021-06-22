@@ -44,6 +44,16 @@ public class StaminaModule : MonoBehaviour
             Stamina.canRegen = false;
         }
     }
+
+    public void ModifyStamina(float value, bool RemoveValue = false)
+    {
+        if (!RemoveValue)
+            Stamina.AddModifier(value);
+        else
+            Stamina.RemoveModifier(value);
+
+    }
+
     public void DesactivateStaminaUse()
     {
         Stamina.canRegen = true;

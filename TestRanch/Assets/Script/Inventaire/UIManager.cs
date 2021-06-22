@@ -9,7 +9,9 @@ public class UIManager : MonoBehaviour
     public CoffreUI coffreUI;
     [SerializeField] private GameObject stationPanel;
     [SerializeField] private GameObject sellPanel;
-
+    [SerializeField] private GameObject screenMsg;
+    [SerializeField] private GameObject minimapCamObject;
+    [SerializeField] private GameObject minimapUI;
     private void Awake()
     {
         instance = this;
@@ -17,12 +19,23 @@ public class UIManager : MonoBehaviour
     public static UIManager Instance { get => instance;}
     public GameObject StationPanel { get => stationPanel; }
     public GameObject SellPanel { get => sellPanel;}
+    public GameObject ScreenMsg { get => screenMsg; set => screenMsg = value; }
+
+    private void Start()
+    {
+        stationPanel.SetActive(false);
+        SellPanel.SetActive(false);
+        screenMsg.SetActive(false);
+        minimapCamObject.SetActive(false);
+        minimapUI.SetActive(false);
+    }
 
     public void ExitPanel(GameObject panel)
     { 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
         panel.SetActive(false);
+        Debug.Log("exit panel");
     }
 
     public void CloseChest(GameObject panel)
@@ -48,5 +61,13 @@ public class UIManager : MonoBehaviour
         Panel.SetActive(true);
         ActivateMouse();
     }
+
+    public void MapOpenClose()
+    {
+        minimapUI.SetActive(!minimapUI.activeSelf);
+        minimapCamObject.SetActive(!minimapCamObject.activeSelf);
+    }
+
+    
 
 }

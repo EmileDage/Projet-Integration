@@ -13,7 +13,7 @@ public abstract class PlanterParent : MonoBehaviour
     private GameObject spawnerInstance;
     [SerializeField] protected Fonctions type_product;
 
-
+    protected Materiaux produit;
 
     protected GameObject info_Pannel;//recoit ref in field 
     protected bool info;//pour eviter que les pannels affichent les mauvaises informations
@@ -43,7 +43,7 @@ public abstract class PlanterParent : MonoBehaviour
         Info = false;
     }
 
-    private void OnGHourPassed(object source)
+    public virtual void OnGHourPassed(object source)
     {
         if (Info == true)
         { // pour veirifer que l'obj est actif
@@ -62,19 +62,24 @@ public abstract class PlanterParent : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)//erreur quand fruit est lancer sur mine
     {
-        if (collision.gameObject.CompareTag("produit")) 
-        {           
-            Materiaux inObj = collision.gameObject.GetComponent<WorldObjectMateriaux>().Item();
+        if (spawnerInstance == null) {//permet eviter une erreur
+            if (collision.gameObject.CompareTag("produit"))
+            {
+                produit = collision.gameObject.GetComponent<WorldObjectMateriaux>().Item();
 
-            if (inObj != null) {
-                if (inObj.Funct.Equals(type_product)) {//arrete une erreur dont remove 
-                    AssignSpawnerRessource(collision.gameObject);
+                if (produit != null)
+                {
+                    if (produit.Funct.Equals(type_product))
+                    {//arrete une erreur dont remove 
+                        AssignSpawnerRessource(collision.gameObject);                       
+                    }
+                    else
+                        Debug.Log("The type is incorrect not spawning spawner");
 
-                }else
-                    Debug.Log("The type is incorrect not spawning spawner");
-
+                }
             }
         }
+       
     }
 
     public void InformationPannel_Activate()
