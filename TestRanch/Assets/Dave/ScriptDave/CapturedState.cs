@@ -30,7 +30,7 @@ internal class CapturedState : State
 
 		#region Movement
 
-		//if (CreatureBehavior.randomTarget.Count == 0) return;
+		if (CreatureBehavior.randomTarget.Count == 0) return;
 
 		bool search = false;
 
