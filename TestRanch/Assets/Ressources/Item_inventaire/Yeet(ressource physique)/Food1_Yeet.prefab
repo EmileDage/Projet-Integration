@@ -71,5 +71,9 @@ PrefabInstance:
       propertyPath: m_Name
       value: Food1_Yeet
       objectReference: {fileID: 0}
+    - target: {fileID: 8929102923610934513, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_TagString
+      value: Food
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}

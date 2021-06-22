@@ -16,7 +16,7 @@ public class CameraControl : MonoBehaviour
         UnlockMouse();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         if(!isLocked)
         AxisRotation();

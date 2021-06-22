@@ -15,9 +15,22 @@ internal class CapturedState : State
 
 		//Faire l'assignation des animaux a lenclos variable Animaux d'enclos
 
-        #region Movement
+		#region AssignationEnclos
+		if(CreatureBehavior.randomTarget.Count == 0)
+        {
+			Debug.Log("Yo");
+			for (int i = 0; i < CreatureBehavior.enclos.PatrolPoints.Length; i++)
+			{
+				CreatureBehavior.randomTarget.Add(CreatureBehavior.enclos.PatrolPoints[i]);
+			}
+		}
 
-        if (CreatureBehavior.randomTarget.Length == 0) return;
+
+		#endregion
+
+		#region Movement
+
+		//if (CreatureBehavior.randomTarget.Count == 0) return;
 
 		bool search = false;
 
@@ -28,18 +41,19 @@ internal class CapturedState : State
 
 		if (Time.time >= CreatureBehavior.switchTime)
 		{
-			CreatureBehavior.index = UnityEngine.Random.Range(0, CreatureBehavior.randomTarget.Length);
+			CreatureBehavior.index = UnityEngine.Random.Range(0, CreatureBehavior.randomTarget.Count);
 			search = true;
 			CreatureBehavior.switchTime = float.PositiveInfinity;
 		}
 
-		CreatureBehavior.index = CreatureBehavior.index % CreatureBehavior.randomTarget.Length;
+		CreatureBehavior.index = CreatureBehavior.index % CreatureBehavior.randomTarget.Count;
 		CreatureBehavior.agent.destination = CreatureBehavior.randomTarget[CreatureBehavior.index].position;
 
 		if (search) CreatureBehavior.agent.SearchPath();
 
         #endregion
 
+        #region InteractionInfo
         if (CreatureBehavior.playerFound)
 		{
 			if (CreatureBehavior.distance <= 5)
@@ -63,6 +77,6 @@ internal class CapturedState : State
 				CreatureBehavior.creatureInfoPanelExtra.SetActive(false);
 			}
 		}
-
+		#endregion
 	}
 }

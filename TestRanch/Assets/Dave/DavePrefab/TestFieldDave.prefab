@@ -275,6 +275,38 @@ PrefabInstance:
       propertyPath: m_Layer
       value: 6
       objectReference: {fileID: 0}
+    - target: {fileID: 4319608732978643247, guid: 4122ec6302168f34d98b79e0982b8f5f, type: 3}
+      propertyPath: spawnPoint
+      value: 
+      objectReference: {fileID: 4577865065404211825}
+    - target: {fileID: 4319608732978643247, guid: 4122ec6302168f34d98b79e0982b8f5f, type: 3}
+      propertyPath: patrolPoints.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4319608732978643247, guid: 4122ec6302168f34d98b79e0982b8f5f, type: 3}
+      propertyPath: patrolPoints.Array.data[0]
+      value: 
+      objectReference: {fileID: 1509183926163287440}
+    - target: {fileID: 4319608732978643247, guid: 4122ec6302168f34d98b79e0982b8f5f, type: 3}
+      propertyPath: patrolPoints.Array.data[1]
+      value: 
+      objectReference: {fileID: 3806584596942735634}
+    - target: {fileID: 4319608732978643247, guid: 4122ec6302168f34d98b79e0982b8f5f, type: 3}
+      propertyPath: patrolPoints.Array.data[2]
+      value: 
+      objectReference: {fileID: 8757356439832710709}
+    - target: {fileID: 4319608732978643247, guid: 4122ec6302168f34d98b79e0982b8f5f, type: 3}
+      propertyPath: patrolPoints.Array.data[3]
+      value: 
+      objectReference: {fileID: 4577865065404211825}
+    - target: {fileID: 4319608732978643247, guid: 4122ec6302168f34d98b79e0982b8f5f, type: 3}
+      propertyPath: patrolPoints.Array.data[4]
+      value: 
+      objectReference: {fileID: 3908237096480245224}
+    - target: {fileID: 4319608732978643247, guid: 4122ec6302168f34d98b79e0982b8f5f, type: 3}
+      propertyPath: patrolPoints.Array.data[5]
+      value: 
+      objectReference: {fileID: 5545640527602946009}
     - target: {fileID: 4319608733004850240, guid: 4122ec6302168f34d98b79e0982b8f5f, type: 3}
       propertyPath: m_Mesh
       value: 

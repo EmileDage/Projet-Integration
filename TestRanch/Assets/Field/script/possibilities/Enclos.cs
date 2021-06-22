@@ -17,6 +17,9 @@ public class Enclos : MonoBehaviour
     private bool deluxe_grass;
     private bool boosted_grass;// sujet a changement //double ressources animaux
 
+    [SerializeField] private Transform[] patrolPoints; //Assigner la creature a un enclos
+    [SerializeField] private Transform spawnPoint; // teleporter la creature Captured a l'enclos
+
     [SerializeField] private GameObject[] animaux;
     //S'assurer qu'une seule espece par enclos pour food et diete
     [SerializeField][Range(1, 10)] private int max_animal; //nombre maximal d'animaux avant que le happiness soit iompacte
@@ -27,6 +30,8 @@ public class Enclos : MonoBehaviour
     public bool Info { get => info; set => info = value; }
     public GameObject Info_pannel { get => info_pannel; set => info_pannel = value; }
     public GameObject[] Animaux { get => animaux; set => animaux = value; }
+    public bool Boosted_grass { get => boosted_grass; set => boosted_grass = value; }
+    public Transform[] PatrolPoints { get => patrolPoints; set => patrolPoints = value; }
 
     private void Start()
     {
@@ -34,7 +39,7 @@ public class Enclos : MonoBehaviour
         thyme.GHourPassed += OnGHourPassed;
         
         //just to be safe
-        boosted_grass = false;
+        Boosted_grass = false;
         deluxe_grass = false;
 
         eau = abreuvoir.GetComponent<Abreuvoir>();
@@ -161,8 +166,9 @@ public class Enclos : MonoBehaviour
     }
 
     public void Grass_b_Activate()//boosted grass
-    {//double les ressources animaux
-        boosted_grass = true;
+
+    {
+        Boosted_grass = true; // double ressource
     }
 
     #endregion
