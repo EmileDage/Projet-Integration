@@ -10,8 +10,8 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5d7e38bbcdcbbc04891011494c1481d7, type: 3}
-  m_Name: Creature_Octopadream
+  m_Name: Creature_Octopadune
   m_EditorClassIdentifier: 
   codexName: OctopaDune
   description: Default Description
-  icon: {fileID: 21300000, guid: a29af8cfa2a78c643802348847a6e6bf, type: 3}
+  icon: {fileID: 21300000, guid: d2cb072504f91244c9641fc97cd35b14, type: 3}
