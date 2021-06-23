@@ -18,7 +18,6 @@ internal class CapturedState : State
 		#region AssignationEnclos
 		if(CreatureBehavior.randomTarget.Count == 0)
         {
-			Debug.Log("Yo");
 			for (int i = 0; i < CreatureBehavior.enclos.PatrolPoints.Length; i++)
 			{
 				CreatureBehavior.randomTarget.Add(CreatureBehavior.enclos.PatrolPoints[i]);
