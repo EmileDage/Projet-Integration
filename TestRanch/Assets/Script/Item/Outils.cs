@@ -91,7 +91,6 @@ public class Outils : Item
     public void CaptureTool()
     {
         Debug.Log("Capturing");
-        Debug.Log("builder tool");
         if (player.HitScan(out RaycastHit hit))
         {
 
