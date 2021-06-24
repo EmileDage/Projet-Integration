@@ -10,7 +10,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
     //cycle grandissement
     //doit etre arroser pour grandir donc si hydratation trop low pas de grandissement
-    private int timeToGrowHour;//combien d'heures avant que la plante soit prête a fleurir
+    [SerializeField]private int timeToGrowHour;//combien d'heures avant que la plante soit prête a fleurir
     private bool IsGrown;
 
     //hydration
@@ -24,7 +24,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     //en ce moment la maladie arrete la production de produit on pourra modifier ça plus tard
     [SerializeField] [Range(0, 100)] private int health;//en %
     [SerializeField] [Range(0, 100)] private int sickness_resistance;//en %
-    private int sicknessLvl;//en % si 0 pas sick
+    private int sicknessLvl;//en %  0 = healthy
 
     //je prefere creer un autre array pour q'on puisse changer plus facilement les upgrades si on chnage d'idée pour le nombre
     //ou si chaque ressources a une upgrade différente
@@ -32,12 +32,16 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     [SerializeField] private Transform[] upgrade_slot;//si l'upgrade est acheter l'arbre donne plus de ressources
     private GameObject[] upgrade_produit;
 
-    //cest pour le pannel info
-    private Text text;
+    [SerializeField] private Garden jardin;//for some FUCKING reason quand cest serialisez la reference reste apres avoir ete assigner 
 
     public bool Upgrade_fertilizer { get => upgrade_fertilizer; set => upgrade_fertilizer = value; }//rich fertilizer upgrade 
 
-    public bool GetGrown { get => IsGrown; }
+    public bool GrownYet { get => IsGrown; }
+
+    public int GetSickness { get => sicknessLvl; }
+    public int GetSicknessRes { get => sickness_resistance; }
+
+    public int TimeTillGrowed { get => timeToGrowHour; }
 
     protected override void Start()
     {
@@ -45,8 +49,9 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
         IsGrown = false;
         upgrade_produit = new GameObject[upgrade_slot.Length];
 
+        Available = false;
         if (timeToGrowHour <= 0)
-        {
+        {//we want the plant to grow so never 0
             timeToGrowHour = 10;
         }
 
@@ -80,35 +85,19 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
             }
         }
 
-
-
-        //si les produit spawn a 0h mais le jeux commence a 5h
-        //ce code marche pas me semble si le produit commence a 20h pis finit a 5h
-        //so tant que le jeux commence a 5h cest chill
-        if (time.Hour >= disponibleStart)
-        {//start = 2h currentH = 5h
-            if (time.Hour >= disponibleEnd)//end = 4h currentH = 5h
-            {
-                Despawn();
-
-            }
-            else
-            {
-                Spawn();
-            }
-        }
-        else
-        {
-            Despawn();
-        }
+        Despawn();
+        jardin.UpdateInfoPannel();
     }
 
-    public void AssignRef(Abreuvoir agua, GameObject fruit)//on pourrait mettre une fonction plus detailler ssi on veut
-    {
+    public void AssignRef(Abreuvoir agua, GameObject fruit, Garden jardin_)//on pourrait mettre une fonction plus detailler ssi on veut
+    {//exemple on pourrait envoyer le mesh selon le fruit ou whatever
         water_container = agua;
         produit_reference = fruit;
-    }
+        jardin = jardin_;
+        Debug.Log(jardin);
 
+
+    }
 
     public void CrystalCure(int strenght) {
         //utlise un crystal pour baisser la maladie
@@ -117,24 +106,40 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     }
 
     public void GrowthCheck() {//verifie que la plante peut grandir
-        Debug.Log("Growing");
         if (sicknessLvl < sickness_resistance)
         { //check si plante est PAS malade
             if (water_container.Qte_level >= hydration_hour)//est ce que la plante est assez hydrate
             {
                 water_container.RemoveWater(hydration_hour);
-                timeToGrowHour--;
-                sicknessLvl -= 5;
+                timeToGrowHour -= 1;
+
+                if ((sicknessLvl - 5) <= 0)
+                    sicknessLvl = 0;// 0 = perfect health
+                else
+                    sicknessLvl -= 5;
 
                 if (timeToGrowHour <= 0)
                 {
                     IsGrown = true;
+                    Available = true;
+                    jardin.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();
+
+                    //check if hours are correct
+                    if (disponibleStart < time.Hour && disponibleEnd > time.Hour)
+                    {//si exemple dispo start = 2h et end = 12h
+                        Spawn();
+
+                    } else if (disponibleStart > disponibleEnd) { //si exemple dispo start = 20h et end = 5h
+                        if (disponibleStart < time.Hour || disponibleEnd > time.Hour) {
+                            Spawn();
+                        }
+                    }
                 }
             }
             else
             {
                 Debug.Log("The plant isnt watered so it wont grow");
-                sicknessLvl += 10;
+                sicknessLvl += 5;
             }
         }
         else {
@@ -142,7 +147,6 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
             timeToGrowHour++;
             sicknessLvl += 5;
         }
-       
     }
 
   
@@ -150,11 +154,13 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     public void OnCrystalUpgrade()
     {
         sickness_resistance += 30;
+        Debug.Log("SICKNESS RES "+sickness_resistance);
+        jardin.UpdateInfoPannel();
     }
 
     public override void OnGHourPassed(object source)
-    {
-        Debug.Log("HourPassed SpawnerAgriculture");
+    {   
+
         if (sickness_resistance < sicknessLvl)
         { //si la plante est malade
             sicknessLvl += 5;
@@ -167,12 +173,11 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
         else {
             if (!IsGrown)
             {
-                Debug.Log("HourPassed SpawnerAgriculture");
-
                 GrowthCheck();
             }
             else
             {
+
                 //produce if time is correct
                 if (disponibleStart == time.Hour)
                 {
@@ -182,7 +187,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
                         water_container.RemoveWater(hydration_hour);
                         Spawn();
-
+                        Available = true;
                     }
                     else
                     {
@@ -195,13 +200,19 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
                 else if (disponibleEnd == time.Hour)
                 {
                     Despawn();
+                    Available = false;
                 }
             }
         }
-       
+
+        jardin.UpdateInfoPannel();
+
     }
 
-    protected override  void Spawn() {//pour faciliter la lecture du code jai mis ça en fonction
+
+    protected override  void Spawn() {//pour faciliter la lecture du code jai mis ça en fonction       
+        Debug.Log("Spawn Fnct");
+        
         base.Spawn();
 
         if (upgrade_fertilizer)
@@ -214,6 +225,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
                 }
             }
         }
+
     }
 
     protected override void Despawn()
@@ -239,6 +251,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
     public override void SpawnProduce()
     {
+        Debug.Log("SpawnProduce()");
         base.SpawnProduce();
 
         if (upgrade_fertilizer) {
@@ -250,6 +263,9 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
                 }
             }  
         }
+
+        Despawn();//when you remove this, product spawn at the beguinning even tho its supposed to be growing so no fruit
+
     }
 
     public override void DestroyAll()
@@ -266,19 +282,13 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
         Debug.Log("All products on this spawner are destroyed");
     }
 
-    public Text InfoPannelAgriculture() {
-
-        text.text = "Hello world"; 
-
-        return text;
-    }
 
     public override void SpawnSpawner(Materiaux toSpawn)
-    {
-        //if (toSpawn.Funct.Equals(Fonctions.plantes))//on check avant dans la collision sinon bug and dats sad
+    {     
 
         base.SpawnSpawner(toSpawn);
-        
+        Despawn();//when you remove this, product spawn at the beguinning even tho its supposed to be growing so no fruit
+
     }
 
     public void FarmIt()

@@ -4,16 +4,17 @@ using UnityEngine;
 
 public class UpgradeStation : MonoBehaviour, IInteractible
 {
-  //  [SerializeField] private List<Upgrade> upgradesList = new List<Upgrade>();
     [SerializeField] private Transform upgradePanel = null;
     private bool isOpen = false;
     [SerializeField] private CameraControl cameraControl = null;
-    private GameObject player = null; 
+    [SerializeField] private GameObject player = null;
+
+    [Header("StationModifier")]
+    [SerializeField] float detectionDistance = 7;
 
     private void Start()
     {
         player = GameObject.Find("Player");
-        //cameraControl = player.GetComponent<CameraControl>();
     }
     private void Update()
     {
@@ -24,10 +25,20 @@ public class UpgradeStation : MonoBehaviour, IInteractible
     }
     public void Interact(Player joueur)
     {
-        if (isOpen)
-            ClosePanel();
-        else
-            OpenPanel();
+        float distance = Vector3.Distance(transform.position, joueur.transform.position);
+        if(distance <= detectionDistance)
+        {
+            if (isOpen)
+            {
+                ClosePanel();
+                player.GetComponent<MovementModule>().ModifySpeed(-999,true);
+            }
+            else
+            {
+                OpenPanel();
+                player.GetComponent<MovementModule>().ModifySpeed(-999);
+            }
+        }
     }
     public void OpenPanel()
     {
@@ -40,66 +51,6 @@ public class UpgradeStation : MonoBehaviour, IInteractible
         upgradePanel.gameObject.SetActive(false);
         cameraControl.UnlockMouse();
         isOpen = false;
-    }
-
-    private bool CheckChronoCoin(int value)
-    {
-        if ((GameManager.gmInstance.GetChronoCoin() - value) >= 0)
-            return true;
-        else return false;
-    }
-
-    #region Movement Upgrade
-    public void UpdradeSpeedI(Upgrade upgrade)
-    {
-        if (!CheckChronoCoin(upgrade.GetCost()))
-            return;
-
-        if(!upgrade.IsActivated())
-        {
-            upgrade.Activate();
-            player.GetComponent<MovementModule>().ModifySpeed(20);
-            GameManager.gmInstance.ModifyChronoCoin(upgrade.GetCost(), true);
-        }
-    }
-    public void UpdradeSpeedII(Upgrade upgrade)
-    {
-        if (!CheckChronoCoin(upgrade.GetCost()))
-            return;
-
-        if (!upgrade.IsActivated())
-        {
-            upgrade.Activate();
-            player.GetComponent<MovementModule>().ModifySpeed(20);
-            GameManager.gmInstance.ModifyChronoCoin(upgrade.GetCost(), true);
-        }
-    }
-    public void UpdradeSpeedIII(Upgrade upgrade)
-    {
-        if (!CheckChronoCoin(upgrade.GetCost()))
-            return;
-
-        if (!upgrade.IsActivated())
-        {
-            upgrade.Activate();
-            player.GetComponent<MovementModule>().ModifySpeed(20);
-            GameManager.gmInstance.ModifyChronoCoin(upgrade.GetCost(), true);
-        }
-    }
-    #endregion
-
-    public void UpdradeJetPack(Upgrade upgrade)
-    {
-        if (!CheckChronoCoin(upgrade.GetCost()))
-            return;
-
-        if (!upgrade.IsActivated())
-        {
-            upgrade.Activate();
-            player.AddComponent<JetPackInput>();
-            player.AddComponent<JetPackModule>();
-            GameManager.gmInstance.ModifyChronoCoin(upgrade.GetCost(), true);
-        }
     }
 
 }

@@ -17,6 +17,7 @@ public class Food_dispenser : Dispenser
         base.Start();
 
         chest = container.GetComponent<Coffre>();
+       
     }
 
     public void FetchFromChest( ) {//appeler dans le OnHourChange de enclos
@@ -73,7 +74,7 @@ public class Food_dispenser : Dispenser
     public override void OnUpgrade()
     {
         upgrade = true;
-        chest.IncreaseSize(chest.Size +3);
+        chest.IncreaseSize(chest.Size +2);
     }
 
     public override void Consumme()//Drink/eat

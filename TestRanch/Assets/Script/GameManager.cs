@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     [SerializeField] private Item emptyItem;
     [HideInInspector]public ItemStack emptyItemItemStack;
     [SerializeField] private int chronoCoin = 0;
+    [SerializeField] private int puzzleKey = 0;
     public Player Joueur { get => joueur;}
 
 
@@ -40,9 +41,21 @@ public class GameManager : MonoBehaviour
             chronoCoin += value;
     }
 
+    public void ModifyPuzzleKey(int value, bool RemoveValue = false)
+    {
+        if (RemoveValue)
+            puzzleKey -= value;
+        else
+            puzzleKey += value;
+    }
+
+
     public int GetChronoCoin()
     {
         return chronoCoin;
     }
-
+    public int GetPuzzleKey()
+    {
+        return puzzleKey;
+    }
 }

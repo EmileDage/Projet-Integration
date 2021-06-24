@@ -19,6 +19,7 @@ public class SpawnMinerals : AbstractSpawner
     //cest pour le pannel info
     private Text text;
 
+    public int RRChance { get => rareRockChance; }
 
     protected override void Start()
     {
@@ -64,22 +65,26 @@ public class SpawnMinerals : AbstractSpawner
 
 
 
-        
-        //si les produit spawn a 0h mais le jeux commence a 5h
-        //ce code marche pas me semble si le produit commence a 20h pis finit a 5h
-        //so tant que le jeux commence a 5h cest chill
-        if (time.Hour >= disponibleStart){//start = 2h currentH = 5h
-            if (time.Hour >= disponibleEnd)//end = 4h currentH = 5h
-            {
-                Despawn();
 
-            }
-            else
+        //check if hours are correct
+        if (disponibleStart < time.Hour && disponibleEnd > time.Hour)
+        {//si exemple dispo start = 2h et end = 12h
+            Spawn();
+        }
+        else if (disponibleStart > disponibleEnd)
+        { //si exemple dispo start = 20h et end = 5h
+            if (disponibleStart < time.Hour || disponibleEnd > time.Hour)
             {
                 Spawn();
             }
-        }else { 
+            else
+            {
                 Despawn();
+            }
+        }
+        else
+        {
+            Despawn();
         }
 
 
@@ -98,7 +103,15 @@ public class SpawnMinerals : AbstractSpawner
     public void OnUpgradeSoil() {
        
         upgrade_soil = true;
-
+        if (Available) {
+            foreach (GameObject produit in upgrade_produit)
+            {
+                if (produit.GetComponent<RessourceNode>().GetSpawned()) 
+                {//note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
+                    produit.SetActive(true);
+                }
+            }
+        }
     }
 
 
@@ -127,11 +140,11 @@ public class SpawnMinerals : AbstractSpawner
 
         if (random <= rareRockChance)
         {//si la chance de random est plus grande rare rock spawn
-            Debug.Log("Rare rock has spawned !\n " + random + "<=" + rareRockChance);
             rareRock.SetActive(true);
         }
-        else
-            Debug.Log("Rare rock didnt spawn\n " + random + "<=" + rareRockChance);
+        else { 
+            rareRock.SetActive(false);
+        }
 
     }
 
@@ -202,7 +215,6 @@ public class SpawnMinerals : AbstractSpawner
 
     public override void SpawnSpawner(Materiaux toSpawn)
     {
-        //if(toSpawn.Funct.Equals(Fonctions.mineraux)) //on check avant dans la collision sinon bug and dats sad
             base.SpawnSpawner(toSpawn);
     }
 }

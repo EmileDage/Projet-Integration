@@ -32,11 +32,7 @@ public class Abreuvoir : Dispenser, IWaterable
 
     public void RemoveWater(int removed) { //pour plante pour plus de precision       
                                            //normalement cette fonction ne check pas s'il y a assez d'eau
-        if (upgrade == true)
-        {
-            Debug.Log("Plant do be taking a sip but water aint going down cuz of that upgrade");
-        }
-        else
+        if (!upgrade)
         {
             Qte_level -= removed;
             SetLevel(Qte_level);

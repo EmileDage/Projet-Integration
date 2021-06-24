@@ -37,6 +37,7 @@ public class OnScreenMessage : MonoBehaviour
 
     public void StartCounter(string msg)
     {
+        txt = GetComponent<Text>();
         counter = timeAlive;
         txt.text = msg;
         

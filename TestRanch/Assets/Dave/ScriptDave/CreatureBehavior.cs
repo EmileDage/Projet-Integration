@@ -50,7 +50,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	// Variable pour Deplacement de la creature Captured
 
 	[Header("Captured Creature")]
-	public Transform[] randomTarget;
+	public List <Transform> randomTarget;
 	public Transform pokeballTransform;
 	public Enclos enclos;
 
@@ -128,8 +128,18 @@ public class CreatureBehavior : StateMachine, ICapturable
 			if (cooldownDropRessource == 0)
 			{
 				cooldownDropRessource = maxCooldownDropRessource;
-				RessourceDrop();
+                if ( isCaptured && enclos.Boosted_grass)
+                {
+					RessourceDrop();
+					RessourceDrop();
+					Debug.Log("ressourcve double");
+				}
+				else
+                {
+					RessourceDrop();
+				}
 			}
+			if(!isCaptured)
 			HourPassedHunger();
 		}
     }
@@ -150,7 +160,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	private void RessourceDrop()
 	{
 		if (isCaptured)
-		{
+		{			
 			if(happiness <= 0) {
 		  
 		  }
@@ -205,8 +215,12 @@ public class CreatureBehavior : StateMachine, ICapturable
     public void Capture()
     {
 		//GM.Joueur.
-		isPokeBall = true;
-		SetState(new SlotCapturedState(this));
+		if(state == "Pacifique")
+        {
+			isPokeBall = true;
+			SetState(new SlotCapturedState(this));
+		}
+
 	}
 
 	public void DropRessourceAnimalSauvage()
