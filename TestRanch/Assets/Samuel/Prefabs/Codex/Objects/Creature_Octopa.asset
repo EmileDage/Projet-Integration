@@ -15,3 +15,5 @@ MonoBehaviour:
   codexName: Octopa
   description: Special Happy Boi.
   icon: {fileID: 21300000, guid: 5931ef0322f3ca24abd984b55ac91958, type: 3}
+  upgradeUnlocked:
+  - {fileID: 11400000, guid: 2502fb5ccb2b0c44fb6dd06bf146ec4d, type: 2}

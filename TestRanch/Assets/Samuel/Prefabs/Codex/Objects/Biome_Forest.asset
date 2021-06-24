@@ -15,3 +15,5 @@ MonoBehaviour:
   codexName: The Lush Forest
   description: 'Full of tree Yeahhh.... '
   icon: {fileID: 21300000, guid: db188cafbcbd47c4caa03004f0240eb6, type: 3}
+  upgradeUnlocked:
+  - {fileID: 11400000, guid: 2031f80812d46be428ed7c796f267a59, type: 2}
