@@ -3954,7 +3954,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2135914719, guid: 886a4e56eb8bcae4895ebcf5928cbfe3, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: 0.00012207031
       objectReference: {fileID: 0}
     - target: {fileID: 75407433684927768, guid: 886a4e56eb8bcae4895ebcf5928cbfe3, type: 3}
       propertyPath: m_AnchorMax.y
@@ -4160,6 +4160,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas_UI
       objectReference: {fileID: 0}
+    - target: {fileID: 1492400997383781179, guid: 886a4e56eb8bcae4895ebcf5928cbfe3, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 1591363984193783140, guid: 886a4e56eb8bcae4895ebcf5928cbfe3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4312,6 +4316,10 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4539521481092443309, guid: 886a4e56eb8bcae4895ebcf5928cbfe3, type: 3}
+      propertyPath: pokeBallStation
+      value: 
+      objectReference: {fileID: 149886106}
     - target: {fileID: 4655979318223220115, guid: 886a4e56eb8bcae4895ebcf5928cbfe3, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -4506,6 +4514,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6945516073589231595, guid: 886a4e56eb8bcae4895ebcf5928cbfe3, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6991087931428466908, guid: 886a4e56eb8bcae4895ebcf5928cbfe3, type: 3}
+      propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7061050816631605262, guid: 886a4e56eb8bcae4895ebcf5928cbfe3, type: 3}
@@ -5498,6 +5510,24 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8030778519761602363, guid: 5e0ebbf19224b46468cddfea7454327f, type: 3}
   m_PrefabInstance: {fileID: 149277378}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &149886105 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9093486010044335718, guid: be7de757714982b479e95c3b01a7213c, type: 3}
+  m_PrefabInstance: {fileID: 2079002685}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &149886106
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 149886105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0912c501b101eec4d91f6b404267ea91, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  creature: []
 --- !u!1001 &153954364
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8100,6 +8130,10 @@ PrefabInstance:
     - target: {fileID: 4239473995888203293, guid: 31b568e2955af3c41b1eb1abca0ab998, type: 3}
       propertyPath: m_Name
       value: Canvas_Creature
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239473995888203293, guid: 31b568e2955af3c41b1eb1abca0ab998, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 31b568e2955af3c41b1eb1abca0ab998, type: 3}
@@ -15370,11 +15404,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2988140385850731839, guid: 0b373269f7d49b646baae8841d6b270e, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 14.997269
+      value: 14.14
       objectReference: {fileID: 0}
     - target: {fileID: 2988140385850731839, guid: 0b373269f7d49b646baae8841d6b270e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 263.305
+      value: 263.3
       objectReference: {fileID: 0}
     - target: {fileID: 2988140385850731839, guid: 0b373269f7d49b646baae8841d6b270e, type: 3}
       propertyPath: m_LocalRotation.w
@@ -19631,6 +19665,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6527556310402797084, guid: ed85932c9e1a9f645847975a6f9d4d86, type: 3}
+      propertyPath: pokeBallStation
+      value: 
+      objectReference: {fileID: 149886106}
     - target: {fileID: 6792043692071463632, guid: ed85932c9e1a9f645847975a6f9d4d86, type: 3}
       propertyPath: m_Name
       value: FieldV3 (2)
@@ -34064,6 +34102,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1005315186}
     - target: {fileID: 3253494311390564842, guid: 8edfd4745627292449bb2e479cc04773, type: 3}
+      propertyPath: listCreaturePokeBall
+      value: 
+      objectReference: {fileID: 149886106}
+    - target: {fileID: 3253494311390564842, guid: 8edfd4745627292449bb2e479cc04773, type: 3}
       propertyPath: creatureInfoPanelExtra
       value: 
       objectReference: {fileID: 622283420}
@@ -34191,6 +34233,10 @@ PrefabInstance:
       propertyPath: pokeballTransform
       value: 
       objectReference: {fileID: 1005315186}
+    - target: {fileID: 3875894656577970487, guid: 8edfd4745627292449bb2e479cc04773, type: 3}
+      propertyPath: listCreaturePokeBall
+      value: 
+      objectReference: {fileID: 149886106}
     - target: {fileID: 3875894656577970487, guid: 8edfd4745627292449bb2e479cc04773, type: 3}
       propertyPath: creatureInfoPanelExtra
       value: 

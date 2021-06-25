@@ -13,6 +13,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	public bool foodFound = false;
 	[SerializeField] private bool isCaptured = false;
 	[SerializeField] private bool isPokeBall = false;
+	public bool onlyOnce = false;
 
 	public Transform player;
 	public GameObject creatureInfoPanel;
@@ -53,6 +54,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	public List <Transform> randomTarget;
 	public Transform pokeballTransform;
 	public Enclos enclos;
+	public CreatureCapturedStation listCreaturePokeBall;
 
 	[Header("Variable pour le patrol")]
 	public Transform[] targets;
@@ -64,6 +66,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	public double Happiness { get => happiness; set => happiness = value; }
 	public bool IsCaptured { get => isCaptured; set => isCaptured = value; }
+    public bool IsPokeBall { get => isPokeBall; set => isPokeBall = value; }
 
     #endregion
 
@@ -88,14 +91,14 @@ public class CreatureBehavior : StateMachine, ICapturable
 	{
 		if(!IsCaptured)
         {
-			if (!isPokeBall)
+			if (!IsPokeBall)
 				SetState(new NeutreState(this));
 			else
 				SetState(new SlotCapturedState(this));
 		}
 		else
         {
-			if(isPokeBall)
+			if(IsPokeBall)
             {
 
 				SetState(new SlotCapturedState(this));
@@ -122,7 +125,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	private void OnGHourPassed(object source)
     {
-		if(!isPokeBall)
+		if(!IsPokeBall)
         {
 			cooldownDropRessource--;
 			if (cooldownDropRessource == 0)
@@ -166,24 +169,24 @@ public class CreatureBehavior : StateMachine, ICapturable
 		  }
 		  
 		  if(happiness > 0 && happiness < 30) {
-				DropRessourceAnimalCaptured();
+				DropRessourceAnimal();
 		  }
 		  
 		  if(happiness >= 30 && happiness < 60) {
 		 		for(int i =0; i < 2; i++) {
-					DropRessourceAnimalCaptured();
+					DropRessourceAnimal();
 		 		}
 		  }
 		  
 		  if(happiness >= 60 && happiness < 90) {
 		 		for(int i =0; i < 3; i++) {
-		 			DropRessourceAnimalCaptured();
+		 			DropRessourceAnimal();
 		 		}
 		  }
 		  
 		  if(happiness >= 90) {
 		 		for(int i =0; i < 4; i++) {
-		 			DropRessourceAnimalCaptured();
+		 			DropRessourceAnimal();
 		 		}
 		  }
 		}
@@ -217,21 +220,24 @@ public class CreatureBehavior : StateMachine, ICapturable
 		//GM.Joueur.
 		if(state == "Pacifique")
         {
-			isPokeBall = true;
-			SetState(new SlotCapturedState(this));
+			if(listCreaturePokeBall.creature.Count == 4)
+            {
+				Debug.Log("show message qu'il y deja trop de creature capturer pour l'instant, il est suggerer d'aller les placer dans un enclos ou de les relacher dans la nature a partir du menu creature");
+            }
+			else
+            {
+				IsPokeBall = true;
+				SetState(new SlotCapturedState(this));
+			}
 		}
+		else
+        {
+			Debug.Log("show message que la creature doit etre dans le state pacifique pour etre capturer");
+        }
 
 	}
 
-	public void DropRessourceAnimalSauvage()
-	{
-		if (state == "Pacifique")
-		{
-			dropRessources.SpawnAsObject(new ItemStack(dropRessources, 1), transform);
-		}
-	}
-
-	public void DropRessourceAnimalCaptured()
+	public void DropRessourceAnimal()
 	{
 		dropRessources.SpawnAsObject(new ItemStack(dropRessources, 1), transform);
 	}

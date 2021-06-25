@@ -7,6 +7,7 @@ TagManager:
   - produit
   - Food
   - chest
+  - Creature
   layers:
   - Default
   - TransparentFX
