@@ -770,7 +770,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codexEntry: {fileID: 11400000, guid: f6ce83d895733a44280adb0eca049d8a, type: 2}
   emptyCodex: {fileID: 11400000, guid: 5b0b9a7eeabb94f49af57bbeaad58811, type: 2}
-  isDiscover: 0
   txtNames:
   - {fileID: 3858082274422517265}
   - {fileID: 994837036}
@@ -1752,7 +1751,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codexEntry: {fileID: 11400000, guid: f5763d43b4f0445438d8762978dd8c06, type: 2}
   emptyCodex: {fileID: 11400000, guid: 5b0b9a7eeabb94f49af57bbeaad58811, type: 2}
-  isDiscover: 0
   txtNames:
   - {fileID: 3858082274422517265}
   - {fileID: 1487847743}
@@ -2142,7 +2140,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codexEntry: {fileID: 11400000, guid: ce28256e196795b499dbc0635f85ae8b, type: 2}
   emptyCodex: {fileID: 11400000, guid: 5b0b9a7eeabb94f49af57bbeaad58811, type: 2}
-  isDiscover: 0
   txtNames:
   - {fileID: 3858082274422517265}
   - {fileID: 671967087}
@@ -3415,7 +3412,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codexEntry: {fileID: 11400000, guid: 52d6866712f5bcb438f8c7717f276453, type: 2}
   emptyCodex: {fileID: 11400000, guid: 5b0b9a7eeabb94f49af57bbeaad58811, type: 2}
-  isDiscover: 0
   txtNames:
   - {fileID: 3858082274422517265}
   - {fileID: 1078589898612544817}
@@ -4820,7 +4816,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codexEntry: {fileID: 11400000, guid: dcb922b24027839418f95a2480ba5a27, type: 2}
   emptyCodex: {fileID: 11400000, guid: 5b0b9a7eeabb94f49af57bbeaad58811, type: 2}
-  isDiscover: 0
   txtNames:
   - {fileID: 3858082274422517265}
   - {fileID: 2134168793631809262}
@@ -5689,7 +5684,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codexEntry: {fileID: 0}
   emptyCodex: {fileID: 11400000, guid: 5b0b9a7eeabb94f49af57bbeaad58811, type: 2}
-  isDiscover: 0
   txtNames: []
   txtDescription: {fileID: 0}
   icon: {fileID: 0}
