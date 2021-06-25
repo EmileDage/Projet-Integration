@@ -1,14 +1,18 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class CodexManager : MonoBehaviour
 {
-    public List<CodexObject> codexList = new List<CodexObject>();
     public static CodexManager codexInstance;
-    [SerializeField] private CameraControl cameraControl = null;
-    [SerializeField] private Transform codexInterface = null;
+
     [SerializeField] private GameObject player = null;
+
+    [Header("UI")]
+    public List<CodexObject> codexList = new List<CodexObject>();
+    [SerializeField] private Transform codexInterface = null;
+    [SerializeField] private Transform codexNewDiscoveryInterface = null;
     private bool isOpen = false;
 
 
@@ -46,13 +50,13 @@ public class CodexManager : MonoBehaviour
     public void OpenPanel()
     {
         codexInterface.gameObject.SetActive(true);
-        cameraControl.LockMouse();
+        player.GetComponentInChildren<CameraControl>().LockMouse();
         isOpen = true;
     }
     public void ClosePanel()
     {
         codexInterface.gameObject.SetActive(false);
-        cameraControl.UnlockMouse();
+        player.GetComponentInChildren<CameraControl>().UnlockMouse();
         isOpen = false;
     }
     public void DiscoverCodex(CodexScriptable codexScriptable)
@@ -61,12 +65,20 @@ public class CodexManager : MonoBehaviour
         {
             if(codexScriptable == codex.GetCodex())
             {
+                StartCoroutine(TemporaryVisual(codexScriptable));
                 codex.Discover();
                 break;
             }
         }
     }
+    private IEnumerator TemporaryVisual(CodexScriptable codexScriptable)
+    {
+        codexNewDiscoveryInterface.gameObject.SetActive(true);
+        codexNewDiscoveryInterface.GetComponent<Text>().text = "Discover : " + codexScriptable.GetName() + "\n" + "Upgrade Unlocked : " + codexScriptable.GetListOfUpgrade()[0].GetName();
 
+        yield return new WaitForSeconds(5);
+        codexNewDiscoveryInterface.gameObject.SetActive(false);
 
+    }
 
 }

@@ -69,10 +69,61 @@ public class Player : MonoBehaviour
             Cursor.lockState = CursorLockMode.Confined;
             Cursor.visible = !Cursor.visible;
         }
+        float b = Input.GetAxis("Mouse ScrollWheel") * 10;
+        Debug.Log(b + " B");
+        int a = Mathf.RoundToInt(b);
+        Debug.Log(a);
+        barreInventaire.ScrollItembar(a);
 
-        if (Input.GetButtonDown("Jump"))
+
+        if (Input.GetKeyDown(KeyCode.Alpha1))
         {
-            barreInventaire.ScrollItembar(1);
+            barreInventaire.SelectItem(0);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            barreInventaire.SelectItem(1);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            barreInventaire.SelectItem(2);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha4))
+        {
+            barreInventaire.SelectItem(3);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            barreInventaire.SelectItem(4);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha5))
+        {
+            barreInventaire.SelectItem(4);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha6))
+        {
+            barreInventaire.SelectItem(5);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha7))
+        {
+            barreInventaire.SelectItem(6);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha8))
+        {
+            barreInventaire.SelectItem(7);
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha9))
+        {
+            barreInventaire.SelectItem(8);
         }
 
         if (Input.GetButtonDown("Lampe"))
@@ -132,5 +183,10 @@ public class Player : MonoBehaviour
     public void CaptureAnimal(GameObject animal) 
     {
 
+    }
+
+    public void IncreaseInventorySize(int newSize)
+    {
+        inventaireTaille = newSize;
     }
 }

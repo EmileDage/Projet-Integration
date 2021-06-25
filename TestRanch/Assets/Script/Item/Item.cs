@@ -21,6 +21,7 @@ public class Item : ScriptableObject
     public string Description { get => description;}
     public int Valeur { get => valeur;}
     public int ID { get => iD;}
+
     public  int InteractionBonusRange { get => interactionBonusRange;}
     public  float YieldModifier { get => yieldModifier;}
 

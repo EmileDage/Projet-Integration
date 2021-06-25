@@ -111,7 +111,7 @@ public class ItemStack//iventaire
 
     public float GetYieldModifier()
     {
-        return 1;
+        return item.YieldModifier;
     }
 
     public int GetInteractionRangeBonus()

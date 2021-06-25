@@ -10,6 +10,7 @@ public class CodexScriptable : ScriptableObject
     [TextArea(3, 10)]
     [SerializeField] private string description = "Default Description";
     [SerializeField] private Sprite icon = null;
+    [SerializeField] private List<Upgrade> upgradeUnlocked = null;
 
 
     public string GetName()
@@ -23,5 +24,9 @@ public class CodexScriptable : ScriptableObject
     public Sprite GetIcon()
     {
         return icon;
+    }
+    public List<Upgrade> GetListOfUpgrade()
+    {
+        return upgradeUnlocked;
     }
 }
