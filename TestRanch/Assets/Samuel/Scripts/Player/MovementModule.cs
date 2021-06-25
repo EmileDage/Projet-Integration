@@ -9,7 +9,7 @@ public class MovementModule : MonoBehaviour
     [SerializeField] private Stats speed;
     [SerializeField] private float dragForce = 6f;
 
-
+    private bool isRoot = false;
     private Vector3 velocity;
     private Rigidbody rig = null;
 
@@ -41,17 +41,30 @@ public class MovementModule : MonoBehaviour
     {
         velocity = velocityVector;
     }
+    public void RootMovement()
+    {
+        ModifySpeed(-999);
+        isRoot = true;
+    }
+    public void RemoveRootMovement()
+    {
+        ModifySpeed(-999,true);
+        isRoot = false;
+    }
+    public bool IsRoot()
+    {
+        return isRoot;
+    }
     private void DirectionalMovement()
     {
-        //  controller.Move(velocity * speed.Value() * Time.deltaTime);
         rig.AddForce(velocity.normalized * speed.Value());
     }
 
+    #region Saved
     void Save()
     {
         SaveSystem.Save(transform.position, "PlayerPosition");
     }
-
     void Load()
     {
         if (SaveSystem.SaveExists("PlayerPosition"))
@@ -59,4 +72,5 @@ public class MovementModule : MonoBehaviour
             transform.position = SaveSystem.Load<Vector3>("PlayerPosition");
         }
     }
+    #endregion
 }

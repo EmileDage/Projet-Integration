@@ -1,0 +1,19 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d7e38bbcdcbbc04891011494c1481d7, type: 3}
+  m_Name: Biome_Beach
+  m_EditorClassIdentifier: 
+  codexName: The Coral Beach
+  description: 'Sunlight and coral. '
+  icon: {fileID: 21300000, guid: 9a72f367f46c9fb419ffb87993de0333, type: 3}
+  upgradeUnlocked:
+  - {fileID: 11400000, guid: d9856b6a13030a946a46e260baa6de88, type: 2}

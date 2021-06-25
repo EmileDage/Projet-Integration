@@ -11,7 +11,6 @@ public class PuzzleKey_PickUp : MonoBehaviour
             PickUp();
         }
     }
-
     public void PickUp()
     {
         GameManager.gmInstance.ModifyPuzzleKey(1);

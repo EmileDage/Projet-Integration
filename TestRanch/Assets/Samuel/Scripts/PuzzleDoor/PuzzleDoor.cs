@@ -12,13 +12,11 @@ public class PuzzleDoor : MonoBehaviour
                 ActivateDoor();
         }
     }
-
     public void ActivateDoor()
     {
         GameManager.gmInstance.ModifyPuzzleKey(-1);
         gameObject.SetActive(false);
     }
-
     private bool CheckKeyAmount() 
     {
         if (GameManager.gmInstance.GetPuzzleKey() > 0)

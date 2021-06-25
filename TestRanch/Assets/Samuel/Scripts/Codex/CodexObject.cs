@@ -5,11 +5,11 @@ using UnityEngine.UI;
 
 public class CodexObject : MonoBehaviour
 {
+    [Header("Codex ScriptableObjects")]
     [SerializeField] private CodexScriptable codexEntry = null;
     [SerializeField] private CodexScriptable emptyCodex = null;
 
-    [SerializeField] private List<Upgrade> upgradeUnlocked = null;
-    [SerializeField] private bool isDiscover = false;
+    private bool isDiscover = false;
 
     [Header("Codex UI")]
     [SerializeField] private List<Text> txtNames = null;
@@ -18,10 +18,10 @@ public class CodexObject : MonoBehaviour
 
     public void Discover()
     {
-        Debug.Log("Discover : " + codexEntry.GetName());
+
         if (!isDiscover)
         {
-            foreach (Upgrade upgrade in upgradeUnlocked)
+            foreach (Upgrade upgrade in codexEntry.GetListOfUpgrade())
             {
                 UpgradeManager.upgradeInstance.DiscoverUpgrade(upgrade);
                 isDiscover = true;
@@ -52,4 +52,5 @@ public class CodexObject : MonoBehaviour
             icon.sprite = codex.GetIcon();
         }
     }
+
 }
