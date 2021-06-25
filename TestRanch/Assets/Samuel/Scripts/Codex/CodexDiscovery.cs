@@ -13,7 +13,6 @@ public class CodexDiscovery : MonoBehaviour
             SendDiscovery();
         }
     }
-
     private void SendDiscovery()
     {
         CodexManager.codexInstance.DiscoverCodex(codex);

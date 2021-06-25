@@ -25,7 +25,6 @@ public class CodexScriptable : ScriptableObject
     {
         return icon;
     }
-
     public List<Upgrade> GetListOfUpgrade()
     {
         return upgradeUnlocked;

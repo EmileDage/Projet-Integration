@@ -5,10 +5,11 @@ using UnityEngine.UI;
 
 public class CodexObject : MonoBehaviour
 {
+    [Header("Codex ScriptableObjects")]
     [SerializeField] private CodexScriptable codexEntry = null;
     [SerializeField] private CodexScriptable emptyCodex = null;
 
-    [SerializeField] private bool isDiscover = false;
+    private bool isDiscover = false;
 
     [Header("Codex UI")]
     [SerializeField] private List<Text> txtNames = null;

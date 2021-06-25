@@ -7,7 +7,6 @@ public class CodexManager : MonoBehaviour
 {
     public static CodexManager codexInstance;
 
-  //  [SerializeField] private CameraControl cameraControl = null;
     [SerializeField] private GameObject player = null;
 
     [Header("UI")]
