@@ -46,13 +46,13 @@ public class CodexManager : MonoBehaviour
     public void OpenPanel()
     {
         codexInterface.gameObject.SetActive(true);
-        cameraControl.LockMouse();
+        cameraControl.LockCamera();
         isOpen = true;
     }
     public void ClosePanel()
     {
         codexInterface.gameObject.SetActive(false);
-        cameraControl.UnlockMouse();
+        cameraControl.UnlockCamera();
         isOpen = false;
     }
     public void DiscoverCodex(CodexScriptable codexScriptable)
