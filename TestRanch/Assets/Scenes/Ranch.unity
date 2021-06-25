@@ -4265,6 +4265,14 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 955957704, guid: 886a4e56eb8bcae4895ebcf5928cbfe3, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1395694798, guid: 886a4e56eb8bcae4895ebcf5928cbfe3, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 2135914719, guid: 886a4e56eb8bcae4895ebcf5928cbfe3, type: 3}
       propertyPath: m_AnchoredPosition.y
       value: 0
@@ -21783,9 +21791,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codexEntry: {fileID: 11400000, guid: f6ce83d895733a44280adb0eca049d8a, type: 2}
   emptyCodex: {fileID: 11400000, guid: 5b0b9a7eeabb94f49af57bbeaad58811, type: 2}
-  upgradeUnlocked:
-  - {fileID: 11400000, guid: 2502fb5ccb2b0c44fb6dd06bf146ec4d, type: 2}
-  isDiscover: 0
   txtNames:
   - {fileID: 1535017268}
   - {fileID: 994837036}
@@ -30437,11 +30442,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e3b876ddb8713a41905a56e4c500c56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  delayMin: 0.1
-  delayMax: 0.2
+  delayMin: 0
+  delayMax: 0
   tracks:
-  - {fileID: 8300000, guid: b9f387e093e2e4e45a19cca151084a04, type: 3}
-  - {fileID: 8300000, guid: c5aceab3b939c4a4480da8af77ef5911, type: 3}
+  - {fileID: 8300000, guid: d5541d5d8a0cb8b4e900207d10ad9276, type: 3}
 --- !u!82 &1107356224
 AudioSource:
   m_ObjectHideFlags: 0
@@ -38102,9 +38106,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codexEntry: {fileID: 11400000, guid: f5763d43b4f0445438d8762978dd8c06, type: 2}
   emptyCodex: {fileID: 11400000, guid: 5b0b9a7eeabb94f49af57bbeaad58811, type: 2}
-  upgradeUnlocked:
-  - {fileID: 11400000, guid: 30f834e3d7d23aa4ebe7299b5f55fdc3, type: 2}
-  isDiscover: 0
   txtNames:
   - {fileID: 1535017268}
   - {fileID: 1487847743}
@@ -47580,9 +47581,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codexEntry: {fileID: 11400000, guid: ce28256e196795b499dbc0635f85ae8b, type: 2}
   emptyCodex: {fileID: 11400000, guid: 5b0b9a7eeabb94f49af57bbeaad58811, type: 2}
-  upgradeUnlocked:
-  - {fileID: 11400000, guid: 2031f80812d46be428ed7c796f267a59, type: 2}
-  isDiscover: 0
   txtNames:
   - {fileID: 1535017268}
   - {fileID: 671967087}
