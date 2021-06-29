@@ -5,8 +5,8 @@ using UnityEngine;
 
 public class WildPlantSpawner : SimpleSpawner, IFarmable
 {
-    [SerializeField] private Materiaux plante;
-    [SerializeField] private int hp = 1;
+    [SerializeField] protected Materiaux plante;
+    [SerializeField] protected int hp = 1;
     public void FarmIt()
     {
         GameObject loot = Instantiate(plante.ItemWorldObject);
