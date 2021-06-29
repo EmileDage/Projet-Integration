@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class NaturePlantSpawner : AbstractSpawner, IFarmable
+public class NaturePlantSpawner : SimpleSpawner, IFarmable
 {//on tape le tronc a la place des nodes avec ça
    
     GameManager gm;
@@ -12,26 +12,11 @@ public class NaturePlantSpawner : AbstractSpawner, IFarmable
         gm = GameManager.gmInstance;
     }
 
-    private void OnDestroy()
-    {
-        if (time != null) 
-        { 
-            time.GHourPassed -= OnGHourPassed;
-        }
-    }
 
     public void FarmIt()
     {
-        foreach (var item in produits)
-        {
-            if (item.gameObject.activeSelf)
-            {
-                Debug.LogError("Not Implemented");
-               // item.GetComponent<RessourceNode>().Collect(gm.Joueur);
-                return;
-            }
-        }
-
+        Debug.LogError("Not implemented");
+        //donne un materiaux type plante
     }
 
 }

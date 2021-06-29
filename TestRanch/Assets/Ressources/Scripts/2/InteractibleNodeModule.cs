@@ -13,7 +13,26 @@ public class InteractibleNodeModule : MonoBehaviour, IInteractible
 
     public void Interact(Player joueur)
     {
-        Debug.Log("Interact");
+        
         node.CollectNode(joueur);        
     }
 }
+
+[RequireComponent(typeof(SimpleNode))]
+public class MinableNodeModule : MonoBehaviour, IMinable
+{
+    SimpleNode node;
+
+    public void Mine(Player joueur)
+    {
+        node.CollectNode(joueur);
+    }
+
+    private void Start()
+    {
+        node = GetComponent<SimpleNode>();
+    }
+
+
+}
+

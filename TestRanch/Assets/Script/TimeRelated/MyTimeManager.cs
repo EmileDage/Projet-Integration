@@ -40,7 +40,7 @@ public class MyTimeManager : MonoBehaviour
     void Start()
     {
         gameHourLenght = Mathf.RoundToInt((gameDayLenght * 60)/nbHourinDay);
-        Debug.Log(gameHourLenght + " durée en seconde d'une heure en jeux");
+       // Debug.Log(gameHourLenght + " durée en seconde d'une heure en jeux");
         Invoke(nameof(OnGameHourPassed), 0.01f);
         StartCoroutine(SecondPassCoroutine());
     }

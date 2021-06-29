@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-public abstract class AbstractSpawner : MonoBehaviour
+public class SimpleSpawner : MonoBehaviour
 {
     
     protected List<SimpleNode> produits;
@@ -21,20 +21,22 @@ public abstract class AbstractSpawner : MonoBehaviour
     public List<SimpleNode> Produits { get => produits;}
 
     protected virtual void Start() 
-    {//a mettre dans start set up les trucs de base
+    {
         produits = new List<SimpleNode>();
-        bool active = false;
         time = MyTimeManager.timeInstance;
+        time.GHourPassed += OnGHourPassed;
+
+        bool active = false;
         if(disponibleStart < time.Hour)
         {
             active = true;
         }
-        time.GHourPassed += OnGHourPassed;
+
         foreach (SimpleNode item in this.GetComponentsInChildren<SimpleNode>())
         {
            
             produits.Add(item);
-            item.Cooldown = timeToRespawn;
+            item.Cooldown(timeToRespawn);
             item.MatNode = spawnedMateriaux;
             item.gameObject.SetActive(active);
         }
@@ -95,11 +97,11 @@ public abstract class AbstractSpawner : MonoBehaviour
    
     public virtual void OnChronoUpgrade()
     {
-        timeToRespawn = timeToRespawn / 2;//on peut le changer plus tard si cest pas balancer ou whatever
+        timeToRespawn /= 2;//on peut le changer plus tard si cest pas balancer ou whatever
 
-        for (int i = 0; i < produits.Count; i++)
+        foreach (SimpleNode node in produits)
         {
-           //SimpleNode
+            node.Cooldown(timeToRespawn);
         }
 
     }
@@ -107,22 +109,15 @@ public abstract class AbstractSpawner : MonoBehaviour
 
     public virtual void SpawnSpawner(Materiaux toSpawn)
     {
-        /*Debug.Log(toSpawn);
-        produit_reference = toSpawn.ItemWorldObject;
-        produits = new GameObject[produit_spawn.Length];
-        time = MyTimeManager.timeInstance;
-        time.GHourPassed += OnGHourPassed;
+        Debug.LogWarning("fonction desuette");
+    }
 
-        for (int i = 0; i < produit_spawn.Length; i++)
+
+    private void OnDestroy()
+    {
+        if (time != null)
         {
-            produits[i] = Instantiate(Produit_reference, produit_spawn[i]);
-            produits[i].tag = "produit";
-            produits[i].AddComponent<RessourceNode>();
-            produits[i].GetComponent<RessourceNode>().SetupNode(this);
-        }*/
-        if(toSpawn.Spawner != null) { 
-            Instantiate(toSpawn.Spawner);
+            time.GHourPassed -= OnGHourPassed;
         }
     }
 }
-

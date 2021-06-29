@@ -51,7 +51,7 @@ public class Mine : PlanterParent
 
         second_producer = Instantiate(spawnerRef, spawn_stalactite);
         Debug.Log(produit);
-        second_producer.GetComponent<AbstractSpawner>().SpawnSpawner(produit) ;
+        second_producer.GetComponent<SimpleSpawner>().SpawnSpawner(produit) ;
 
     }
 

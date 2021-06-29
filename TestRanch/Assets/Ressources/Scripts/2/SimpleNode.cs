@@ -34,7 +34,13 @@ public class SimpleNode : MonoBehaviour
 
     private int yield = 1;
 
-    public int Cooldown {set => cooldown = value; }
+    public void Cooldown(int cd)
+    {
+        cooldown = cd;
+        if (workCD > cd)
+            workCD = cd;
+        
+    }
     public int WorkCD { get => workCD;}
     public Materiaux MatNode { get => matNode; set => matNode = value; }
     public int Yield { get => yield; set => yield = value; }
@@ -77,7 +83,8 @@ public class SimpleNode : MonoBehaviour
     {
         this.gameObject.SetActive(false);
         GameObject loot = Instantiate(MatNode.ItemWorldObject);
-        Debug.Log(loot);
+        loot.GetComponent<WorldObjectMateriaux>().Qte += yield;
+        Debug.Log(loot + " loot");
         loot.GetComponent<WorldObjectMateriaux>().Interact(joueur);
         workCD = cooldown;
     }

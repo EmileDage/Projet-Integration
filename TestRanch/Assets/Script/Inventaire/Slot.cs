@@ -107,7 +107,7 @@ public class Slot : MonoBehaviour, IDropHandler
     }
     public void UpdateSlot()
     {
-        Debug.Log(itemStack);
+        //Debug.Log(itemStack);
         if(ItemStack.Qte > 0) {
             qteText.transform.parent.gameObject.SetActive(true);
             qteText.text = ItemStack.Qte.ToString();
