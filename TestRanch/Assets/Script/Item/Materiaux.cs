@@ -7,11 +7,12 @@ public class Materiaux : Item
 {
     [SerializeField] private Fonctions funct;
 
-    [SerializeField]private int speed = 10;    
+    [SerializeField]private int speed = 10;
 
+    [SerializeField] private GameObject spawner;
     public Fonctions Funct { get => funct; }
     public int Speed { get => speed;}
-
+    public GameObject Spawner { get => spawner; set => spawner = value; }
 
     public override void UseThis(ItemStack stack, Player joueur)
     {
@@ -25,7 +26,7 @@ public class Materiaux : Item
             stack.RemoveAmount(1);
             joueur.Selected.UpdateSlot();
             spawn.GetComponent<WorldObjectMateriaux>().Qte = 1;
-            spawn.GetComponent<WorldObjectMateriaux>().SetItem(this);
+            //spawn.GetComponent<WorldObjectMateriaux>().SetItem(this);
             spawn.GetComponent<Rigidbody>().AddForce(joueur.transform.TransformDirection(Vector3.forward) * speed, ForceMode.Impulse);
         }
     }

@@ -25,7 +25,7 @@ public class SpawnMinerals : AbstractSpawner
     {
         upgrade_produit = new GameObject[upgrade_slot.Length];
 
-        if (produit_reference != null)
+        /*if (produit_reference != null)
         {
             produits = new GameObject[produit_spawn.Length];
             time = MyTimeManager.timeInstance;
@@ -61,7 +61,7 @@ public class SpawnMinerals : AbstractSpawner
             rareRock.AddComponent<RessourceNode>();
             rareRock.GetComponent<RessourceNode>().SetupNode(this);
 
-        }
+        }*/
 
 
 
@@ -69,22 +69,22 @@ public class SpawnMinerals : AbstractSpawner
         //check if hours are correct
         if (disponibleStart < time.Hour && disponibleEnd > time.Hour)
         {//si exemple dispo start = 2h et end = 12h
-            Spawn();
+            MakeDisponible();
         }
         else if (disponibleStart > disponibleEnd)
         { //si exemple dispo start = 20h et end = 5h
             if (disponibleStart < time.Hour || disponibleEnd > time.Hour)
             {
-                Spawn();
+                MakeDisponible();
             }
             else
             {
-                Despawn();
+                MakeIndisponible();
             }
         }
         else
         {
-            Despawn();
+            MakeIndisponible();
         }
 
 
@@ -101,17 +101,17 @@ public class SpawnMinerals : AbstractSpawner
     }
 
     public void OnUpgradeSoil() {
-       
+
         upgrade_soil = true;
-        if (Available) {
-            foreach (GameObject produit in upgrade_produit)
-            {
-                if (produit.GetComponent<RessourceNode>().GetSpawned()) 
+
+        foreach (GameObject produit in upgrade_produit)
+        {
+         //       if (produit.GetComponent<RessourceNode>().GetSpawned()) 
                 {//note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
                     produit.SetActive(true);
                 }
             }
-        }
+        
     }
 
 
@@ -121,15 +121,15 @@ public class SpawnMinerals : AbstractSpawner
         base.OnGHourPassed(source);
     }
 
-    protected override void Spawn()
+    protected override void MakeDisponible()
     {
-        base.Spawn();
+        base.MakeDisponible();
 
         if (upgrade_soil)
         {
             foreach (GameObject produit in upgrade_produit)
             {//peut etre dans le futur (upgradeslot != produit spawn), donc je ne les met pas dans la meme boucle pour cela
-                if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
+                //if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
                 {//note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
                     produit.SetActive(true);
                 }
@@ -148,9 +148,9 @@ public class SpawnMinerals : AbstractSpawner
 
     }
 
-    protected override void Despawn()
+    protected override void MakeIndisponible()
     {
-        base.Despawn();
+        base.MakeIndisponible();
         rareRock.SetActive(false);
 
         if (upgrade_soil)
@@ -158,7 +158,7 @@ public class SpawnMinerals : AbstractSpawner
             foreach (GameObject produit in upgrade_produit)
             {
                 if (produit != null) {
-                    if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
+                  //  if (produit.GetComponent<RessourceNode>().GetSpawned()) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
                     { //note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
                         produit.SetActive(false);
                     }
@@ -168,9 +168,9 @@ public class SpawnMinerals : AbstractSpawner
     }
 
 
-    public override void SpawnProduce()
+    /*public override void SpawnProduce()
     {
-        base.SpawnProduce();
+        //base.SpawnProduce();
 
         if (UnityEngine.Random.Range(0, 100) <= rareRockChance) {//si la chance de random est plus grande rare rock spawn
             rareRock.GetComponent<RessourceNode>().SetSpawnedTrue();
@@ -186,13 +186,13 @@ public class SpawnMinerals : AbstractSpawner
                 }
             }
         }
-    }
+    }*/
 
-    public override void DestroyAll()
+    public override void KillAllNode()
     {
-        for (int a = 0; a < produits.Length; a++)
+        for (int a = 0; a < produits.Count; a++)
         {
-            produits[a].GetComponent<RessourceNode>().KillNode();
+           // produits[a].GetComponent<RessourceNode>().KillNode();
         }
 
         if (upgrade_soil)
@@ -201,12 +201,12 @@ public class SpawnMinerals : AbstractSpawner
             {
                 if (upgrade_produit[a] == null)
                 {
-                    upgrade_produit[a].GetComponent<RessourceNode>().KillNode();
+                  //  upgrade_produit[a].GetComponent<RessourceNode>().KillNode();
                 }
             }
         }
 
-        rareRock.GetComponent<RessourceNode>().KillNode();
+       // rareRock.GetComponent<RessourceNode>().KillNode();
         Debug.Log("All products on this spawner are destroyed");
 
 

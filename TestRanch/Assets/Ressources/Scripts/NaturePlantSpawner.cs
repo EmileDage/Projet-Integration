@@ -26,8 +26,9 @@ public class NaturePlantSpawner : AbstractSpawner, IFarmable
         {
             if (item.gameObject.activeSelf)
             {
-                item.GetComponent<RessourceNode>().Collect(gm.Joueur);
-                break;
+                Debug.LogError("Not Implemented");
+               // item.GetComponent<RessourceNode>().Collect(gm.Joueur);
+                return;
             }
         }
 

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class WorldObject : MonoBehaviour, IInteractible
 {
-    private int qte;   
-    protected Item item;
+    [SerializeField]private int qte;   
+    [SerializeField]protected Item item;
     public int Qte { get => qte; set => qte = value; }
     public Item Item { get => item; set => item = value; }
 
