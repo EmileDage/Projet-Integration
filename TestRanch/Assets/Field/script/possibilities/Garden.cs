@@ -75,7 +75,7 @@ public class Garden : PlanterParent, IFarmable
 
  
 
-    private void TillEarth() {
+    private void TillEarth(Player joueur) {
         tilled = true;
         //play animation
         //play sound
@@ -83,12 +83,13 @@ public class Garden : PlanterParent, IFarmable
         //add random minerals to player
     }
 
-    protected override void AssignSpawnerRessource(Materiaux inMat)//ça plante le spawner?
+    protected override void AssignSpawnerRessource(GameObject obj)
     {
         if (tilled)
         {
+            spawnerRef.GetComponent<SpawnerAgriculture>().AssignRef(Water_container, obj,this);
 
-            base.AssignSpawnerRessource(inMat);
+            base.AssignSpawnerRessource(obj);
             this.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();
             UpdateInfoPannel();
         }
@@ -98,7 +99,7 @@ public class Garden : PlanterParent, IFarmable
 
     public void FarmIt()
     {
-        TillEarth();
+        //OwO
     }
 
 

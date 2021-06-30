@@ -19,7 +19,8 @@ MonoBehaviour:
   valeur: 10
   iD: 13
   interactionBonusRange: 0
+  yieldModifier: 1
   itemWorldObject: {fileID: 8929102923610934513, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
-  funct: 2
+  funct: 0
   speed: 10
   spawner: {fileID: 8265559998325149930, guid: 3d3286c5992cc6b4ba1d59d1b5d6557b, type: 3}

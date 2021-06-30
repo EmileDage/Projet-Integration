@@ -78,7 +78,7 @@ public class Mine_UI : MonoBehaviour
         {
             Debug.Log("rich soil Upgrade");
 
-            mine_.SpawnerInstance.GetComponent<SpawnerMinerals>().OnUpgradeSoil();
+            mine_.SpawnerInstance.GetComponent<SpawnMinerals>().OnUpgradeSoil();
 
             soil = false;
         }
@@ -94,7 +94,7 @@ public class Mine_UI : MonoBehaviour
         if (mine_.SpawnerInstance != null)
         {
             Debug.Log("Chrono Upgrade");
-            mine_.SpawnerInstance.GetComponent<SpawnerMinerals>().OnChronoUpgrade();
+            mine_.SpawnerInstance.GetComponent<SpawnMinerals>().OnChronoUpgrade();
 
             chrono = false;
         }
@@ -112,7 +112,7 @@ public class Mine_UI : MonoBehaviour
         {        
             Debug.Log("Rare rock Upgrade");
 
-            mine_.SpawnerInstance.GetComponent<SpawnerMinerals>().OnUpgradeRR();
+            mine_.SpawnerInstance.GetComponent<SpawnMinerals>().OnUpgradeRR();
 
             rarerock = false;
         }

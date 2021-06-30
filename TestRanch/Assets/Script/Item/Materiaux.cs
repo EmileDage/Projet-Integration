@@ -9,7 +9,6 @@ public class Materiaux : Item
 
     [SerializeField]private int speed = 10;
 
-    //seulement les materiaux qui sont utiliser pour setter un spawner dans les carrés on besoin d'un spawner assigner
     [SerializeField] private GameObject spawner;
     public Fonctions Funct { get => funct; }
     public int Speed { get => speed;}

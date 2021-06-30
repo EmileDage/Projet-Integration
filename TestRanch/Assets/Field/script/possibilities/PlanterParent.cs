@@ -7,6 +7,7 @@ using UnityEngine.UI;
 [RequireComponent(typeof(Collider))]
 public abstract class PlanterParent : MonoBehaviour
 {
+    [SerializeField] protected GameObject spawnerRef;
     [SerializeField] private GameObject[] upgrades;
     [SerializeField] protected Text pannel_info_txt;
     private GameObject spawnerInstance;
@@ -53,16 +54,16 @@ public abstract class PlanterParent : MonoBehaviour
     }
     public abstract void UpdateInfoPannel();
 
-    protected virtual void AssignSpawnerRessource(Materiaux inMat) 
+    protected virtual void AssignSpawnerRessource(GameObject inObj) 
     {
-        SpawnerInstance = Instantiate(inMat.Spawner, spawn);
-      
+        SpawnerInstance = Instantiate(spawnerRef, spawn);
+        SpawnerInstance.GetComponent<SimpleSpawner>().SpawnSpawner(inObj.GetComponent<WorldObjectMateriaux>().Item()) ;
     }
 
     private void OnCollisionEnter(Collision collision)//erreur quand fruit est lancer sur mine
     {
         if (spawnerInstance == null) {//permet eviter une erreur
-            if (collision.gameObject.CompareTag("produit"))//worldobject
+            if (collision.gameObject.CompareTag("produit"))
             {
                 produit = collision.gameObject.GetComponent<WorldObjectMateriaux>().Item();
 
@@ -70,7 +71,7 @@ public abstract class PlanterParent : MonoBehaviour
                 {
                     if (produit.Funct.Equals(type_product))
                     {//arrete une erreur dont remove 
-                        AssignSpawnerRessource(produit);                       
+                        AssignSpawnerRessource(collision.gameObject);                       
                     }
                     else
                         Debug.Log("The type is incorrect not spawning spawner");
