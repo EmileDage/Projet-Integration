@@ -43,13 +43,13 @@ public class UpgradeStation : MonoBehaviour, IInteractible
     public void OpenPanel()
     {
         upgradePanel.gameObject.SetActive(true);
-        cameraControl.LockMouse();
+        cameraControl.LockCamera();
         isOpen = true;
     }
     public void ClosePanel()
     {
         upgradePanel.gameObject.SetActive(false);
-        cameraControl.UnlockMouse();
+        cameraControl.UnlockCamera();
         isOpen = false;
     }
 

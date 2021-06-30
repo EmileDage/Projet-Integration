@@ -7,7 +7,7 @@ using UnityEngine;
 public class MyTimeManager : MonoBehaviour
 {
     
-    private float internalTimer = 0;
+
     private int second=0;
     [SerializeField]private int hour = 5;//l'heure à laquelle le jeux commence -1
     private int gameHourLenght;//en secondes
@@ -40,21 +40,18 @@ public class MyTimeManager : MonoBehaviour
     void Start()
     {
         gameHourLenght = Mathf.RoundToInt((gameDayLenght * 60)/nbHourinDay);
-        Debug.Log(gameHourLenght + " durée en seconde d'une heure en jeux");
-        // OnSecondPassed();
+       // Debug.Log(gameHourLenght + " durée en seconde d'une heure en jeux");
         Invoke(nameof(OnGameHourPassed), 0.01f);
-        
+        StartCoroutine(SecondPassCoroutine());
     }
 
-    // Update is called once per frame
-    void Update()
+    private IEnumerator SecondPassCoroutine()
     {
-        internalTimer += Time.deltaTime * Time.timeScale;
-        if(internalTimer >= 1)
-        {
-            internalTimer = 0;
-            OnSecondPassed();
-        }
+        yield return new WaitForSeconds(1);
+
+        OnSecondPassed();
+
+        StartCoroutine(SecondPassCoroutine());
     }
 
     private void OnSecondPassed()

@@ -5,105 +5,103 @@ using UnityEngine;
 
 public class RessourceNode : MonoBehaviour
 {
-    private AbstractSpawner mother;
-    private int place;
-    private int cd;//cooldown
-    private int respawnTime;
-    private bool spawned = true;
-    private bool isDead = false;
-
-
-    private MyTimeManager time;
-
-    public bool Spawned { get => spawned;}
-    public bool IsDead { get => isDead; set => isDead = value; }
- 
-
     private void Start()
     {
-        time = MyTimeManager.timeInstance;
-        time.GHourPassed += OnGHourPassed;
+        Debug.LogError("Mauvais Node, updater avec le SimpleNode");
     }
+    //desuet
+    /* private AbstractSpawner mother;
+     private int place;
+     private int cd;//cooldown
+     private int respawnTime;
+     private bool spawned = true;
+     private bool isDead = false;
 
-    public void OnChronoUpgrade(int newRespawnTime) {
-        respawnTime = newRespawnTime;
-    }
 
-    private void OnDestroy()
-    {
-        if(time != null) { 
-        time.GHourPassed -= OnGHourPassed;//unsubscribe a l'event
-        }
-    }
 
-    private void OnGHourPassed(object source)
-    {
-        if (!isDead) {            
-            cd--;
-            if (mother.GetComponent<SpawnerAgriculture>() != null)
-            {
-                if (cd <= 0 && mother.Available && mother.GetComponent<SpawnerAgriculture>().GrownYet)
-                {
-                    this.gameObject.SetActive(true);
-                    SetSpawnedTrue();
-                }
-            }
-            else {
-                if (cd <= 0 && mother.Available)
-                {
-                    this.gameObject.SetActive(true);
-                    SetSpawnedTrue();
-                }
-            }
+     private MyTimeManager time;
 
-           
-        }
-    }
+     public bool Spawned { get => spawned;}
+     public bool IsDead { get => isDead; set => isDead = value; }
 
-    public void SetSpawnedTrue()
-    {
-        if(!isDead)
-            spawned = true;
-    }
 
-    public Fonctions GetNodeItemFunction()
-    {
-        return mother.Produit_reference.GetComponent<WorldObjectMateriaux>().Materiaux.Funct;
-    }
+     private void Start()
+     {
+         time = MyTimeManager.timeInstance;
+         time.GHourPassed += OnGHourPassed;
+     }
 
-    public bool GetSpawned() {
-        return spawned;
-    }
+     public void OnChronoUpgrade(int newRespawnTime) {
+         respawnTime = newRespawnTime;
+     }
 
-    public void DeSpawnNode()
-    {
-        this.gameObject.SetActive(false);
-        spawned = false;
-        cd = respawnTime; 
-    }
 
-    public void KillNode()
-    {
-        this.DeSpawnNode();
-        isDead = true;
-    }
 
-    public void SetupNode(AbstractSpawner motherRef)
-    {
+     private void OnGHourPassed(object source)
+     {
+         if (!isDead) {            
+             cd--;
+             if (mother.GetComponent<SpawnerAgriculture>() != null)
+             {
+                 if (cd <= 0  && mother.GetComponent<SpawnerAgriculture>().GrownYet)
+                 {
+                     this.gameObject.SetActive(true);
+                     SetSpawnedTrue();
+                 }
+             }
+             else {
+                 if (cd <= 0)
+                 {
+                     this.gameObject.SetActive(true);
+                     SetSpawnedTrue();
+                 }
+             }
 
-        mother = motherRef;
-        respawnTime = motherRef.TimeToRespawnRef;
-        cd = respawnTime;
-        this.SetSpawnedTrue();
-        this.gameObject.SetActive(true);
-        GetComponent<Rigidbody>().isKinematic = true;
-    }
 
-    public void Collect(Player joueur)
-    {
-        //int x = Mathf.FloorToInt(ParentSpawner.Yield * joueur.Selected.ItemStack.GetYieldModifier());
-        joueur.BarreInventaire.QuickAddItem(new ItemStack(mother.SpawnedMat(), 1));
-        this.DeSpawnNode();
-    }
+         }
+     }
+
+     public void SetSpawnedTrue()
+     {
+         if(!isDead)
+             spawned = true;
+     }
+
+
+
+     public bool GetSpawned() {
+         return spawned;
+     }
+
+     public void DeSpawnNode()
+     {
+         this.gameObject.SetActive(false);
+         spawned = false;
+         cd = respawnTime; 
+     }
+
+     public void KillNode()
+     {
+         this.DeSpawnNode();
+         isDead = true;
+     }
+
+     public void SetupNode(AbstractSpawner motherRef)
+     {
+
+         mother = motherRef;
+         respawnTime = motherRef.TimeToRespawnRef;
+         cd = respawnTime;
+         this.SetSpawnedTrue();
+         this.gameObject.SetActive(true);
+         GetComponent<Rigidbody>().isKinematic = true;
+     }
+
+     public void Collect(Player joueur)
+     {
+         //int x = Mathf.FloorToInt(ParentSpawner.Yield * joueur.Selected.ItemStack.GetYieldModifier());
+         //joueur.BarreInventaire.QuickAddItem(new ItemStack(mother.SpawnedMat(), 1));
+         this.DeSpawnNode();
+     }*/
 
 }

@@ -16,7 +16,7 @@ public class Coffre : MonoBehaviour, IInteractible
 
     public void Awake()
     {
-        //UwU
+        
         Contenu = new List<ItemStack>();
 
     }
@@ -26,7 +26,7 @@ public class Coffre : MonoBehaviour, IInteractible
     {
         UI_Instance = UIManager.Instance;
         GM_Instance = GameManager.gmInstance;
-        for (int i = 0; i < size; i++)
+        for (int i = contenu.Count; i < size; i++)
         {
             Contenu.Add(GM_Instance.emptyItemItemStack);
         }
