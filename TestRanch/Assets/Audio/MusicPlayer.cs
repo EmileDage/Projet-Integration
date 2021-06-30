@@ -20,14 +20,14 @@ public class MusicPlayer : MonoBehaviour
     private IEnumerator MusicCoroutine()
     {
         float a = Random.Range(delayMin, delayMax) * 60;
-        Debug.Log(a + " temps à attendre");
+        //Debug.Log(a + " temps à attendre");
         yield return new WaitForSeconds(a);
         source.clip = tracks[currentSong];
         source.Play();
 
       yield return new WaitWhile(IsMusicOn);
         //
-        Debug.Log("new song");
+        //Debug.Log("new song");
         currentSong++;
         currentSong %= (tracks.Count);
         StartCoroutine(MusicCoroutine());
