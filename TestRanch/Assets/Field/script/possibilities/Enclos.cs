@@ -18,7 +18,7 @@ public class Enclos : MonoBehaviour
     private bool boosted_grass;// sujet a changement //double ressources animaux
 
     [SerializeField] private Transform[] patrolPoints; //Assigner la creature a un enclos
-    [SerializeField] private Transform spawnPoint; // teleporter la creature Captured a l'enclos
+    //[SerializeField] private Transform spawnPoint; // teleporter la creature Captured a l'enclos
 
     [SerializeField] private GameObject[] animaux;
     //S'assurer qu'une seule espece par enclos pour food et diete

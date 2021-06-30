@@ -13,7 +13,6 @@ public class GameManager : MonoBehaviour
     public Player Joueur { get => joueur;}
 
 
-
     void Awake()
     {
         if (gmInstance != null && gmInstance != this)
@@ -32,6 +31,8 @@ public class GameManager : MonoBehaviour
     {
         return joueur.BarreInventaire;
     }
+
+    
 
     public void ModifyChronoCoin(int value, bool RemoveValue = false)
     {

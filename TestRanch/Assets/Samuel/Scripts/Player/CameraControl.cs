@@ -7,27 +7,32 @@ public class CameraControl : MonoBehaviour
 
     [SerializeField] private float mouseSensitivity = 100f;
     [SerializeField] private Transform player;
-    private bool isLocked = false;
+    private bool isLocked = true;
 
     private float xRotation = 0f;
 
     void Start()
     {
-        UnlockMouse();
+        UnlockCamera();
     }
 
     void FixedUpdate()
     {
-        if(!isLocked)
-        AxisRotation();
 
-        if (Input.GetKeyDown(KeyCode.Escape))
+    }
+
+    private void Update()
+    {
+        if (!isLocked)
+            AxisRotation();
+
+        /*if (Input.GetKeyDown(KeyCode.Escape))
         {
             if (isLocked)
-                UnlockMouse();
+                UnlockCamera();
             else
-                LockMouse();
-        }
+                LockCamera();
+        }*/
     }
 
     private void AxisRotation()
@@ -42,14 +47,15 @@ public class CameraControl : MonoBehaviour
         player.Rotate(Vector3.up * mouseX);
     }
 
-    public void LockMouse()
+    public void LockCamera()
     {
         Cursor.lockState = CursorLockMode.None;
         isLocked = true;
     }
-    public void UnlockMouse()
+    public void UnlockCamera()
     {
         Cursor.lockState = CursorLockMode.Locked;
         isLocked = false;
     }
+    
 }

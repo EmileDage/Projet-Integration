@@ -37,7 +37,8 @@ public class TradeProductUI : MonoBehaviour
             Debug.Log("enough coin");
 
             ItemStack stack = new ItemStack(item, 1);
-            bool edbug = gm.Joueur.BarreInventaire.TryMergeOnExisting(stack);
+            gm.Joueur.BarreInventaire.QuickAddItem(stack);
+            /*bool edbug = gm.Joueur.BarreInventaire.TryMergeOnExisting(stack);
             Debug.Log(edbug + "merge");
             if (edbug)
             {
@@ -53,7 +54,7 @@ public class TradeProductUI : MonoBehaviour
                 {   
                     msg.StartCounter(inventoryFullMsg);
                 }
-            }
+            }*/
             
           
         }

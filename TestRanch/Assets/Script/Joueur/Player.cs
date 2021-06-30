@@ -70,9 +70,9 @@ public class Player : MonoBehaviour
             Cursor.visible = !Cursor.visible;
         }
         float b = Input.GetAxis("Mouse ScrollWheel") * 10;
-        Debug.Log(b + " B");
+       // Debug.Log(b + " B");
         int a = Mathf.RoundToInt(b);
-        Debug.Log(a);
+      //  Debug.Log(a);
         barreInventaire.ScrollItembar(a);
 
 
@@ -188,5 +188,6 @@ public class Player : MonoBehaviour
     public void IncreaseInventorySize(int newSize)
     {
         inventaireTaille = newSize;
+        barreInventaire.UpdateAllSlots();
     }
 }

@@ -104,19 +104,11 @@ public class ItemStack//iventaire
         return (item.Valeur * Qte);
     }
 
-    public void ModifyItem()
-    {
 
-    }
-
-    public float GetYieldModifier()
-    {
-        return item.YieldModifier;
-    }
 
     public int GetInteractionRangeBonus()
     {
-        return 0;
+        return item.InteractionBonusRange;
     }
 
     public void InstantiateRessourceObject(Transform location)

@@ -23,6 +23,7 @@ internal class CapturedState : State
 				CreatureBehavior.randomTarget.Add(CreatureBehavior.enclos.PatrolPoints[i]);
 			}
 		}
+		
 
 
 		#endregion
