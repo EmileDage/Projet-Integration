@@ -7,10 +7,11 @@ public class GameManager : MonoBehaviour
     public static GameManager gmInstance;
     [SerializeField] private Player joueur;
     [SerializeField] private Item emptyItem;
+    [HideInInspector]public ItemStack emptyItemItemStack;
     [SerializeField] private int chronoCoin = 0;
     [SerializeField] private int puzzleKey = 0;
     public Player Joueur { get => joueur;}
-    public static ItemStack emptyStack;
+
 
     void Awake()
     {
@@ -22,7 +23,7 @@ public class GameManager : MonoBehaviour
         {
             gmInstance = this;
         }
-        emptyStack = new ItemStack(emptyItem, 0);
+        emptyItemItemStack = new ItemStack(emptyItem, 0);
     }
 
 

@@ -6,13 +6,13 @@ using UnityEngine.UI;
 using UnityEngine.EventSystems;
 public class Slot : MonoBehaviour, IDropHandler
 {
-    
     private ItemStack itemStack;
     [SerializeField] private Sprite box;
     [SerializeField] private Sprite lockedBox;
     [SerializeField] private Image selected;
     [SerializeField] private Image imgDrag;
     [SerializeField] private Text qteText;
+    [SerializeField] private Item emptyItem;
 
     private AbstractInventoryUI parentUI;
     private DragItem dragItem;
@@ -29,16 +29,13 @@ public class Slot : MonoBehaviour, IDropHandler
     {
         DragItem = imgDrag.GetComponent<DragItem>();
         DragItem.ParentSlot = this;
-        slotImg = this.GetComponent<Image>();    
+        slotImg = this.GetComponent<Image>();
+        ItemStack = new ItemStack(emptyItem, 0);
         //UpdateSlot();
         DeSelect();
     }
 
-    private void Start()
-    {
-        ItemStack = GameManager.emptyStack;
-    }
-
+    
     public void OnDrop(PointerEventData eventData)
     {
         
@@ -107,7 +104,7 @@ public class Slot : MonoBehaviour, IDropHandler
     }
     public void UpdateSlot()
     {
-        //Debug.Log(itemStack);
+
         if(ItemStack.Qte > 0) {
             qteText.transform.parent.gameObject.SetActive(true);
             qteText.text = ItemStack.Qte.ToString();
@@ -119,8 +116,7 @@ public class Slot : MonoBehaviour, IDropHandler
         {
             qteText.transform.parent.gameObject.SetActive(false);
             imgDrag.gameObject.SetActive(false);
-            DragItem.ResetPosition();
-            itemStack = GameManager.emptyStack;
+            DragItem.ResetPosition();            
         }
 
         parentUI.UpdatePanel();
@@ -154,7 +150,7 @@ public class Slot : MonoBehaviour, IDropHandler
     }
     public void RemoveItem()
     {
-        this.itemStack = GameManager.emptyStack;
+        this.itemStack = new ItemStack(emptyItem);
 
     }
     public bool PayInItem(ItemStack price)

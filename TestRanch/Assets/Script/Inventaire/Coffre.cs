@@ -16,7 +16,9 @@ public class Coffre : MonoBehaviour, IInteractible
 
     public void Awake()
     {
+        //UwU
         Contenu = new List<ItemStack>();
+
     }
 
 
@@ -26,7 +28,7 @@ public class Coffre : MonoBehaviour, IInteractible
         GM_Instance = GameManager.gmInstance;
         for (int i = 0; i < size; i++)
         {
-            Contenu.Add(GameManager.emptyStack);
+            Contenu.Add(GM_Instance.emptyItemItemStack);
         }
         if (true)//pour la sauvegarde
         {
@@ -73,7 +75,7 @@ public class Coffre : MonoBehaviour, IInteractible
 
                         if(contenu[i].Qte == 0)
                         {
-                            contenu[i] = GameManager.emptyStack;
+                            contenu[i] = GM_Instance.emptyItemItemStack;
                         }
                         return Qte;
 
@@ -81,7 +83,7 @@ public class Coffre : MonoBehaviour, IInteractible
                     else
                     {
                         retour += contenu[i].Qte;
-                        contenu[i] = GameManager.emptyStack;//remove item
+                        contenu[i] = GM_Instance.emptyItemItemStack;//remove item
                         qteWork -= contenu[i].Qte;
                     }
                 }
@@ -95,7 +97,7 @@ public class Coffre : MonoBehaviour, IInteractible
     {
         for(int i = 0; i< (newSize-size); i++)
         {
-            contenu.Add(GameManager.emptyStack);
+            contenu.Add(GM_Instance.emptyItemItemStack);
         }
         size = newSize;
     }
