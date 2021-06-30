@@ -9,6 +9,7 @@ public class SimpleSpawner : MonoBehaviour
     protected List<SimpleNode> produits;
     [SerializeField] protected Materiaux spawnedMateriaux;
     [SerializeField] [Range(0, 23)] protected int timeToRespawn;
+    [SerializeField] bool AlwaysAvailable = false;
     [SerializeField] [Range(0, 23)] protected int disponibleStart; //si on veut que l'objet soit collectable seulement pendant une période de la journee
     [SerializeField] [Range(0, 23)] protected int disponibleEnd;
     
@@ -27,7 +28,7 @@ public class SimpleSpawner : MonoBehaviour
         time.GHourPassed += OnGHourPassed;
 
         bool active = false;
-        if(disponibleStart < time.Hour)
+        if(disponibleStart < time.Hour || AlwaysAvailable)
         {
             active = true;
         }
@@ -45,14 +46,15 @@ public class SimpleSpawner : MonoBehaviour
 
 
     public virtual void OnGHourPassed(object source) {
-
-        if (disponibleStart == time.Hour)
-        {
-            MakeDisponible();
-        }
-        else if (disponibleEnd == time.Hour)
-        {
-            MakeIndisponible();          
+        if (!AlwaysAvailable) { 
+            if (disponibleStart == time.Hour)
+            {
+                MakeDisponible();
+            }
+            else if (disponibleEnd == time.Hour)
+            {
+                MakeIndisponible();          
+            }
         }
     }
 
@@ -86,7 +88,7 @@ public class SimpleSpawner : MonoBehaviour
     }*/
 
     
-    public virtual  void KillAllNode()
+    public virtual void KillAllNode()
     {
         for (int a = 0; a < produits.Count; a++)
         {
@@ -114,6 +116,14 @@ public class SimpleSpawner : MonoBehaviour
 
 
     private void OnDestroy()
+    {
+        if (time != null)
+        {
+            time.GHourPassed -= OnGHourPassed;
+        }
+    }
+
+    private void OnDisable()
     {
         if (time != null)
         {
