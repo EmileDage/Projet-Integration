@@ -27,18 +27,18 @@ public class Materiaux : Item
             stack.RemoveAmount(1);
             joueur.Selected.UpdateSlot();
             spawn.GetComponent<WorldObjectMateriaux>().Qte = 1;
-            //spawn.GetComponent<WorldObjectMateriaux>().SetItem(this);
+            spawn.GetComponent<WorldObjectMateriaux>().SetItem(this);
             spawn.GetComponent<Rigidbody>().AddForce(joueur.transform.TransformDirection(Vector3.forward) * speed, ForceMode.Impulse);
         }
     }
 
-    public override void SpawnAsObject(ItemStack stack, Transform location)
+    public override GameObject SpawnAsObject(ItemStack stack, Transform location)
     {
-        base.SpawnAsObject(stack, location);
         if (itemWorldObject.GetComponent<WorldObjectMateriaux>() == null)
         {
             Debug.LogError("les matériaux doivent avoir le scripte WorldObject Materiaux");
         }
+        return base.SpawnAsObject(stack, location);
     }
 
 

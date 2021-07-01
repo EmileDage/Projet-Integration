@@ -17,6 +17,14 @@ public class NodeAlive : NodeState
     }
 }
 
+public class NodeIndispo : NodeState
+{
+    public override void SpawnNode(GameObject obj)
+    {
+        Debug.Log("node is not ready");
+    }
+}
+
 public class NodeDead : NodeState
 {
   public override void SpawnNode(GameObject obj)
@@ -39,15 +47,15 @@ public class SimpleNode : MonoBehaviour
         cooldown = cd;
         if (workCD > cd)
             workCD = cd;
-        
     }
-    public int WorkCD { get => workCD;}
+    public int WorkCD { get => workCD; }
     public Materiaux MatNode { get => matNode; set => matNode = value; }
     public int Yield { get => yield; set => yield = value; }
 
     // Start is called before the first frame update
-    void Start()
+    void Awake()
     {
+        //Debug.Log("Node Start");
         MyTimeManager.timeInstance.GHourPassed += OnGHourPassed;
         nodeState = new NodeAlive();
         workCD = cooldown;
@@ -55,17 +63,28 @@ public class SimpleNode : MonoBehaviour
 
     private void OnGHourPassed(object source)
     {
+        //Debug.Log("SimpleNode GHour");
         if (workCD > 0) {
-            workCD--; 
-        }else if(workCD == 0)
+            workCD--;
+        } else if (workCD == 0)
         {
+            //Debug.Log("Node Respawn, Node OGhourpassed");
             nodeState.SpawnNode(this.gameObject);
+           
         }
     }
 
-    public void RespawnNode()
+    //ref : makeDisponible
+    public void NodeDisponibleSpawn()
     {
+        nodeState = new NodeAlive();
         nodeState.SpawnNode(this.gameObject);
+    }
+
+    public void NodeIndisponible()
+    {
+        gameObject.SetActive(false);
+        nodeState = new NodeIndispo();
     }
 
     public void KillNode()
@@ -82,10 +101,8 @@ public class SimpleNode : MonoBehaviour
     public void CollectNode(Player joueur)
     {
         this.gameObject.SetActive(false);
-        GameObject loot = Instantiate(MatNode.ItemWorldObject);
-        loot.GetComponent<WorldObjectMateriaux>().Qte += yield;
-        Debug.Log(loot + " loot");
-        loot.GetComponent<WorldObjectMateriaux>().Interact(joueur);
+        GameObject G_O = matNode.SpawnAsObject(new ItemStack(MatNode, yield), this.transform);
+        G_O.GetComponent<WorldObjectMateriaux>().Interact(joueur);
         workCD = cooldown;
     }
 

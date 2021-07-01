@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class Garden : PlanterParent, IFarmable
 {
 
-    bool tilled = false;
+    bool tilled = true;
     //agriculture
     [SerializeField] private Abreuvoir water_container;//irrigation
     [SerializeField] private ParticleSystem[] water_jet;
@@ -20,7 +20,7 @@ public class Garden : PlanterParent, IFarmable
     {
         base.Start();
 
-        type_product = Fonctions.produits_vegetaux;
+        type_product = Fonctions.plantes;
 
 
         //Until tilled is implemented
@@ -85,10 +85,11 @@ public class Garden : PlanterParent, IFarmable
 
     protected override void AssignSpawnerRessource(Materiaux inMat)//ça plante le spawner?
     {
+        Debug.Log("Spawenr");
         if (tilled)
         {
-
             base.AssignSpawnerRessource(inMat);
+            SpawnerInstance.GetComponent<SpawnerAgriculture>().AssignRef(Water_container,this);
             this.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();
             UpdateInfoPannel();
         }

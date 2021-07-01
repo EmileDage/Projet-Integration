@@ -55,8 +55,7 @@ public abstract class PlanterParent : MonoBehaviour
 
     protected virtual void AssignSpawnerRessource(Materiaux inMat) 
     {
-        SpawnerInstance = Instantiate(inMat.Spawner, spawn);
-      
+        SpawnerInstance = Instantiate(inMat.Spawner, spawn); 
     }
 
     private void OnCollisionEnter(Collision collision)//erreur quand fruit est lancer sur mine
@@ -70,7 +69,8 @@ public abstract class PlanterParent : MonoBehaviour
                 {
                     if (produit.Funct.Equals(type_product))
                     {//arrete une erreur dont remove 
-                        AssignSpawnerRessource(produit);                       
+                        AssignSpawnerRessource(produit);
+                        collision.gameObject.GetComponent<WorldObject>().DecrementeQte();
                     }
                     else
                         Debug.Log("The type is incorrect not spawning spawner");

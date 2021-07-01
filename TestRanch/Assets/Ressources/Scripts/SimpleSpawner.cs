@@ -9,7 +9,7 @@ public class SimpleSpawner : MonoBehaviour
     protected List<SimpleNode> produits;
     [SerializeField] protected Materiaux spawnedMateriaux;
     [SerializeField] [Range(0, 23)] protected int timeToRespawn;
-    [SerializeField] bool AlwaysAvailable = false;
+    [SerializeField] protected bool AlwaysAvailable = false;
     [SerializeField] [Range(0, 23)] protected int disponibleStart; //si on veut que l'objet soit collectable seulement pendant une période de la journee
     [SerializeField] [Range(0, 23)] protected int disponibleEnd;
     
@@ -23,6 +23,7 @@ public class SimpleSpawner : MonoBehaviour
 
     protected virtual void Start() 
     {
+       // Debug.Log("Start" + this);
         produits = new List<SimpleNode>();
         time = MyTimeManager.timeInstance;
         time.GHourPassed += OnGHourPassed;
@@ -62,18 +63,21 @@ public class SimpleSpawner : MonoBehaviour
         
         foreach (SimpleNode produit in produits)
         {
-            if (produit.WorkCD < 0) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
-            { //note la ressourceNode.GetSpawned ne va jamais retourne vrai si le node est mort
-                produit.RespawnNode();
+           // Debug.Log("make dispo");
+          //  Debug.Log(produit.WorkCD);
+            if (produit.WorkCD <= 0) //on ne veut pas activer le node si il n'a pas eu le temps de respawn
+            { 
+                produit.NodeDisponibleSpawn();
             }
         }
     }
 
     protected virtual void MakeIndisponible()
     {
+       // Debug.Log(produits);
         foreach (SimpleNode produit in produits)
         {
-            produit.gameObject.SetActive(false);
+            produit.NodeIndisponible();
         }
     }
 

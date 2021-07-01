@@ -22,8 +22,8 @@ public class Garden_UI : MonoBehaviour
 
     public void CheckPendingUpgrades()
     {
-        Debug.Log("Checking pending upgrades\nChecking spawner instance");
-        Debug.Log(planter.SpawnerInstance);
+        //Debug.Log("Checking pending upgrades\nChecking spawner instance");
+        //Debug.Log(planter.SpawnerInstance);
 
         if (planter.SpawnerInstance != null) { 
         
