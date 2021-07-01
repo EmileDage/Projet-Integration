@@ -7,25 +7,27 @@ public class FieldCreatureManagement : MonoBehaviour
 {
     public CreatureCapturedStation pokeBallStation;
     public List<CreatureBehavior> creatureInPokeBall;
-    [SerializeField] private Button[] creature;
-    // Start is called before the first frame update
-    void Start()
-    {
-       
-    }
+    [SerializeField] private Button[] creatureBtn;
 
-    // Update is called once per frame
+    public Button[] CreatureBtn { get => creatureBtn; set => creatureBtn = value; }
+
     void Update()
     {
         if(pokeBallStation.creature.Count > creatureInPokeBall.Count)
         {
             for (int i = 0; i < pokeBallStation.creature.Count; i++)
             {
-                creatureInPokeBall.Add(pokeBallStation.creature[i]);
-                Sprite sprite = pokeBallStation.creature[i].GetComponent<CreatureInfoExtra>().creaturePortrait;
-                creature[i].image.sprite = sprite;
+                if(creatureInPokeBall.Contains(pokeBallStation.creature[i]))
+                {
+                    Debug.Log("already in list");
+                }
+                else
+                {
+                    creatureInPokeBall.Add(pokeBallStation.creature[i]);
+                    Sprite sprite = pokeBallStation.creature[i].GetComponent<CreatureInfoExtra>().creaturePortrait;
+                    CreatureBtn[i].image.sprite = sprite;
+                }
             }
         }
     }
-
 }
