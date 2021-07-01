@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 759163094760177707}
   - component: {fileID: -414800005789495863}
   m_Layer: 0
-  m_Name: PommierNature
+  m_Name: PlanteWildBase
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

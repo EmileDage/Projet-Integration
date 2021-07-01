@@ -262,7 +262,7 @@ GameObject:
   - component: {fileID: 8265559998325149929}
   - component: {fileID: -6787316947874060201}
   m_Layer: 0
-  m_Name: PommierAgricole
+  m_Name: BasePlanteAgriculture
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

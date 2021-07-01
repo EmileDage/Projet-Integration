@@ -4,3 +4,11 @@ Pour ne pas se mélanger dans les ID et avoir des dupliques donner les ID selons 
 Les ID de 1-9 sont pour les outils exclusivement
 Les ID des matériaux doivent avoir 2 digit
 etc. pour les autres classes d'item si on en crée
+
+
+
+ÉTAPES
+Pour Plante :
+Créer 2 matériaux :
+	- assigner au premier la fonction enum produits végétaux
+	- au deuxième
