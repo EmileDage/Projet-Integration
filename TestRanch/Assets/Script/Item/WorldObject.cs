@@ -34,6 +34,7 @@ public class WorldObject : MonoBehaviour, IInteractible
 
     public void DecrementeQte()
     {
+        qte--;
         if (qte == 0)
         {
             Destroy(this.gameObject);
