@@ -19,7 +19,7 @@ public class SpawnerAgriculture : WildPlantSpawner, IFarmable
     //sinon moins de ressources produites
     //+ de chance de maladie
     [SerializeField] [Range(5, 50)] private int hydration_hour;//for baby and adult plant
-    [SerializeField] private Abreuvoir water_container;
+    private Abreuvoir water_container;
 
     //Sante/maladie
     //en ce moment la maladie arrete la production de produit on pourra modifier ça plus tard
@@ -33,7 +33,7 @@ public class SpawnerAgriculture : WildPlantSpawner, IFarmable
     [SerializeField] private Transform[] upgrade_slot;//si l'upgrade est acheter l'arbre donne plus de ressources
     private GameObject[] upgrade_produit;
 
-    [SerializeField] private Garden jardin;//for some FUCKING reason quand cest serialisez la reference reste apres avoir ete assigner 
+    private Garden jardin;//for some FUCKING reason quand cest serialisez la reference reste apres avoir ete assigner 
 
     public bool Upgrade_fertilizer { get => upgrade_fertilizer; set => upgrade_fertilizer = value; }//rich fertilizer upgrade 
 
@@ -43,31 +43,29 @@ public class SpawnerAgriculture : WildPlantSpawner, IFarmable
     public int GetSicknessRes { get => sickness_resistance; }
 
     public int TimeTillGrowed { get => timeToGrowHour; }
+    public Garden Jardin { get => jardin; set => jardin = value; }
 
     protected override void Start()
     {
+        base.Start();
         sicknessLvl = 0;
         IsGrown = false;
         upgrade_produit = new GameObject[upgrade_slot.Length];
-
         
         if (timeToGrowHour <= 0)
         {//we want the plant to grow so never 0
             timeToGrowHour = 10;
         }
 
-
-
         MakeIndisponible();
-        jardin.UpdateInfoPannel();
+        Debug.Log(Jardin);
+        Jardin.UpdateInfoPannel();
     }
 
-    public void AssignRef(Abreuvoir agua, GameObject fruit, Garden jardin_)//on pourrait mettre une fonction plus detailler ssi on veut
+    public void AssignRef(Abreuvoir agua, Garden jardin_)//on pourrait mettre une fonction plus detailler ssi on veut
     {//exemple on pourrait envoyer le mesh selon le fruit ou whatever
         water_container = agua;
-       // produit_reference = fruit;
-        jardin = jardin_;
-        Debug.Log(jardin);
+        Jardin = jardin_;
     }
 
     public void CrystalCure(int strenght) 
@@ -83,6 +81,7 @@ public class SpawnerAgriculture : WildPlantSpawner, IFarmable
             {
                 water_container.RemoveWater(hydration_hour);
                 timeToGrowHour -= 1;
+                Debug.Log(timeToGrowHour + "timetogrow");
 
                 if ((sicknessLvl - 5) <= 0)
                     sicknessLvl = 0;// 0 = perfect health
@@ -91,9 +90,13 @@ public class SpawnerAgriculture : WildPlantSpawner, IFarmable
 
                 if (timeToGrowHour <= 0)
                 {
+                    Debug.Log("plant is grown");
                     IsGrown = true;
-                    jardin.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();
-
+                    Jardin.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();
+                    if (AlwaysAvailable)
+                    {
+                        MakeDisponible();
+                    }
                     //check if hours are correct
                     if (disponibleStart < time.Hour && disponibleEnd > time.Hour)
                     {//si exemple dispo start = 2h et end = 12h
@@ -125,7 +128,7 @@ public class SpawnerAgriculture : WildPlantSpawner, IFarmable
     {
         sickness_resistance += 30;
         Debug.Log("SICKNESS RES "+sickness_resistance);
-        jardin.UpdateInfoPannel();
+        Jardin.UpdateInfoPannel();
     }
 
     public override void OnGHourPassed(object source)
@@ -133,6 +136,7 @@ public class SpawnerAgriculture : WildPlantSpawner, IFarmable
 
         if (sickness_resistance < sicknessLvl)
         { //si la plante est malade
+            Debug.Log("plant is sick");
             sicknessLvl += 5;
 
             if (sicknessLvl >=  100) {//la plante est morte big f
@@ -148,7 +152,7 @@ public class SpawnerAgriculture : WildPlantSpawner, IFarmable
             {
 
                 //produce if time is correct
-                if (disponibleStart == time.Hour)
+                if (disponibleStart == time.Hour || AlwaysAvailable)
                 {
                     if (water_container.Qte_level >= hydration_hour)
                     {
@@ -159,20 +163,21 @@ public class SpawnerAgriculture : WildPlantSpawner, IFarmable
                     }
                     else
                     {
+                        Debug.Log("thristy plant goes to horny jail");
                         //la plante est pas hydrate so no produit for u
                         MakeIndisponible();
                         sicknessLvl += 5;
                     }
 
                 }
-                else if (disponibleEnd == time.Hour)
+                else if (disponibleEnd == time.Hour && !AlwaysAvailable)
                 {
                     MakeIndisponible();
                 }
             }
         }
 
-        jardin.UpdateInfoPannel();
+        Jardin.UpdateInfoPannel();
 
     }
 

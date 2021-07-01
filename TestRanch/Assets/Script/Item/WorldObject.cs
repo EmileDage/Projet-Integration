@@ -22,4 +22,21 @@ public class WorldObject : MonoBehaviour, IInteractible
             Qte = temp.Qte;
         }
     }
+
+    public void RemoveQte(int amount)
+    {
+        Qte -= amount;
+        if (qte == 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void DecrementeQte()
+    {
+        if (qte == 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
 }

@@ -107,7 +107,7 @@ public class PlayerInventory : AbstractInventoryUI
         {
             slot.TryMerge(stack);
         }
-        Debug.Log(stack.Qte);
+        //Debug.Log(stack.Qte);
     }
 
 
@@ -164,6 +164,7 @@ public class PlayerInventory : AbstractInventoryUI
             AddOnFirstEmptySlot(stack);
         }
         Debug.Log(stack.Qte);
+        UpdateAllSlots();
         return stack.Qte;
     }
 

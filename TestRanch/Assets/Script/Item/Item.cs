@@ -38,13 +38,14 @@ public class Item : ScriptableObject
 
     }
 
-    public virtual void SpawnAsObject(ItemStack stack, Transform location)
+    public virtual GameObject SpawnAsObject(ItemStack stack, Transform location)
     {
         Debug.Log("spawn " + nom);
         GameObject temp;
         temp = Instantiate(itemWorldObject, location.position, location.rotation);
         temp.GetComponent<WorldObject>().Qte = stack.Qte;
         temp.GetComponent<WorldObject>().Item = this;
+        return temp;
         
     }
 }

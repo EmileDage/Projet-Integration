@@ -10,16 +10,23 @@ public class WorldObjectMateriaux : WorldObject, IInteractible
 
     public Materiaux Materiaux { get => materiaux; set => materiaux = value;}
 
-    private void Awake()
+    private void Start()
     {
+        Debug.Log("Start WOM");
         materiaux = (Materiaux)this.item;
-        Debug.Log("WorldObject Start" + materiaux);
+      //  Debug.Log("WorldObject Start" + materiaux);
     }
 
     public void SetItem(Item item)
     {
         this.item = item;
         this.materiaux = (Materiaux)item;
+    }
+
+    public Materiaux SetItem()
+    {
+        this.materiaux = (Materiaux)this.item;
+        return materiaux;
     }
 
     new public Materiaux Item()
@@ -29,8 +36,9 @@ public class WorldObjectMateriaux : WorldObject, IInteractible
     new public void Interact(Player joueur)
     {
 
-        Debug.Log("mat interact " + Qte);
-        ItemStack temp = new ItemStack(materiaux, Qte);
+        // Debug.Log("mat interact " + Qte);
+       
+        ItemStack temp = new ItemStack(SetItem(), Qte);
         Debug.Log(temp + "temp item stack");
         joueur.BarreInventaire.MergeOnExisting(temp);    
         Qte = temp.Qte;
