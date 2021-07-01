@@ -31,7 +31,7 @@ public class Outils : Item
                 IMinable minable = hit.collider.GetComponent<IMinable>();
                 if (minable != null)
                 {
-                    minable.Mine();
+                    minable.Mine(player);
                 }
             }
         }
@@ -42,7 +42,6 @@ public class Outils : Item
         Debug.Log("bèche");
         if (player.HitScan(out RaycastHit hit))
         {
-
             if (player.DistanceCheck(hit))
             {
                 IFarmable farmable= hit.collider.GetComponent<IFarmable>();

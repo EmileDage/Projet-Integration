@@ -11,7 +11,7 @@ using UnityEngine.UI;
 public class Garden : PlanterParent, IFarmable
 {
 
-    bool tilled = false;
+    bool tilled = true;
     //agriculture
     [SerializeField] private Abreuvoir water_container;//irrigation
     [SerializeField] private ParticleSystem[] water_jet;
@@ -20,7 +20,7 @@ public class Garden : PlanterParent, IFarmable
     {
         base.Start();
 
-        type_product = Fonctions.produits_vegetaux;
+        type_product = Fonctions.plantes;
 
 
         //Until tilled is implemented
@@ -75,7 +75,7 @@ public class Garden : PlanterParent, IFarmable
 
  
 
-    private void TillEarth(Player joueur) {
+    private void TillEarth() {
         tilled = true;
         //play animation
         //play sound
@@ -83,13 +83,13 @@ public class Garden : PlanterParent, IFarmable
         //add random minerals to player
     }
 
-    protected override void AssignSpawnerRessource(GameObject obj)
+    protected override void AssignSpawnerRessource(Materiaux inMat)//ça plante le spawner?
     {
+        Debug.Log("Spawenr");
         if (tilled)
         {
-            spawnerRef.GetComponent<SpawnerAgriculture>().AssignRef(Water_container, obj,this);
-
-            base.AssignSpawnerRessource(obj);
+            base.AssignSpawnerRessource(inMat);
+            SpawnerInstance.GetComponent<SpawnerAgriculture>().AssignRef(Water_container,this);
             this.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();
             UpdateInfoPannel();
         }
@@ -99,7 +99,7 @@ public class Garden : PlanterParent, IFarmable
 
     public void FarmIt()
     {
-        //OwO
+        TillEarth();
     }
 
 

@@ -118,7 +118,7 @@ public class CoffreUI : AbstractInventoryUI
 
     public override void QuickSendStack(ItemStack stack, DragItem drag)
     {
-        Debug.Log("QuickSendStack : CoffreUI");
+        //Debug.Log("QuickSendStack : CoffreUI");
         PlayerInventory  inv= GM.Joueur.BarreInventaire;
         inv.MergeOnExisting(stack);
         Debug.Log(drag);

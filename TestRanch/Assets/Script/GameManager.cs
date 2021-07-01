@@ -32,6 +32,8 @@ public class GameManager : MonoBehaviour
         return joueur.BarreInventaire;
     }
 
+    
+
     public void ModifyChronoCoin(int value, bool RemoveValue = false)
     {
         if (RemoveValue)

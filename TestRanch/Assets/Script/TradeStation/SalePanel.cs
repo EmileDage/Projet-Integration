@@ -54,7 +54,7 @@ public class SalePanel : AbstractInventoryUI
         saleValue = 0;
         foreach (Slot slot in slots)
         {
-            float t = slot.ItemStack.GetValue() * 0.5f;
+            float t = slot.ItemStack.GetValue() * sellPriceModif;
             saleValue += Mathf.FloorToInt(t);
         }
         value.text = saleValue.ToString()+ "$";

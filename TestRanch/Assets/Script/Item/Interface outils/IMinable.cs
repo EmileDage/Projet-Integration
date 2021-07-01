@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IMinable 
 {
-    public void Mine();//its not yours, its mine XD
+    public void Mine(Player joueur);
 }
