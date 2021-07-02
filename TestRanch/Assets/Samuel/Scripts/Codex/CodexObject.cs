@@ -7,7 +7,7 @@ public class CodexObject : MonoBehaviour
 {
     [Header("Codex ScriptableObjects")]
     [SerializeField] private CodexScriptable codexEntry = null;
-    [SerializeField] private CodexScriptable emptyCodex = null;
+  //  [SerializeField] private CodexScriptable emptyCodex = null;
 
     private bool isDiscover = false;
 

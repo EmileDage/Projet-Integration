@@ -26,12 +26,12 @@ public class JetPackModule : MonoBehaviour
         if (staminaModule.GetStamina().Value() >= 0 && !staminaModule.IsExhaust())
         {
             rig.AddForce(transform.up * jumpHeight, ForceMode.VelocityChange);
-            jumpModule.ActivateFlying();
+            jumpModule.DesactivateGravity();
         }
     }
     public void DesactivateFlight()
     {
-        jumpModule.DesactivateFlying();
+        jumpModule.ActivateGravity();
     }
 
     private void CheckIfExhausted()

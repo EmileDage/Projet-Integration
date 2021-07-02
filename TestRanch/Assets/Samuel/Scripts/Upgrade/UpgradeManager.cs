@@ -181,6 +181,82 @@ public class UpgradeManager : MonoBehaviour
         }
     }
     #endregion
+    #region InventoryUpgrade
+    public void UpdradeInventoryI(Upgrade upgrade)
+    {
+        foreach (UpgradeSlot upgradeSlot in upgradesList)
+        {
+            if (upgradeSlot.GetUpgrade() == upgrade)
+            {
+                if (upgradeSlot.TryToUpgrade())
+                {
+                    player.GetComponent<Player>().IncreaseInventorySize(5);
+                    upgradeSlot.Activate();
+                }
+                break;
+            }
+        }
+    }
+    public void UpdradeInventoryII(Upgrade upgrade)
+    {
+        foreach (UpgradeSlot upgradeSlot in upgradesList)
+        {
+            if (upgradeSlot.GetUpgrade() == upgrade)
+            {
+                if (upgradeSlot.TryToUpgrade())
+                {
+                    player.GetComponent<Player>().IncreaseInventorySize(7);
+                    upgradeSlot.Activate();
+                }
+                break;
+            }
+        }
+    }
+    public void UpdradeInventoryIII(Upgrade upgrade)
+    {
+        foreach (UpgradeSlot upgradeSlot in upgradesList)
+        {
+            if (upgradeSlot.GetUpgrade() == upgrade)
+            {
+                if (upgradeSlot.TryToUpgrade())
+                {
+                    player.GetComponent<Player>().IncreaseInventorySize(9);
+                    upgradeSlot.Activate();
+                }
+                break;
+            }
+        }
+    }
+    #endregion
+    public void UpdradeUltraLight(Upgrade upgrade)
+    {
+        foreach (UpgradeSlot upgradeSlot in upgradesList)
+        {
+            if (upgradeSlot.GetUpgrade() == upgrade)
+            {
+                if (upgradeSlot.TryToUpgrade())
+                {
+                    upgradeSlot.Activate();
+                }
+                break;
+            }
+        }
+    }
+    public void UpdradeWarpStone(Upgrade upgrade)
+    {
+        foreach (UpgradeSlot upgradeSlot in upgradesList)
+        {
+            if (upgradeSlot.GetUpgrade() == upgrade)
+            {
+                if (upgradeSlot.TryToUpgrade())
+                {
+                    WaypointsManager.waypointManagerInstance.UnlockWarpStone();
+                    upgradeSlot.Activate();
+                }
+                break;
+            }
+        }
+    }
     public void UpdradeJetPack(Upgrade upgrade)
     {
         foreach (UpgradeSlot upgradeSlot in upgradesList)
@@ -197,5 +273,4 @@ public class UpgradeManager : MonoBehaviour
             }
         }
     }
-
 }

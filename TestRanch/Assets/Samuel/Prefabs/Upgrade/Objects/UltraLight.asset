@@ -10,12 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb5b9edae62673d49983005da168d0c6, type: 3}
-  m_Name: JetPack
+  m_Name: UltraLight
   m_EditorClassIdentifier: 
-  upgradeName: Jet Pack Module
-  description: 'The Player can now fly. '
-  cost: 850
-  icon: {fileID: 21300000, guid: 0fa772488837fb54eb13f9820c08fad7, type: 3}
+  upgradeName: Ultra Light Module
+  description: This Module allow the player to see in the dark.
+  cost: 1200
+  icon: {fileID: 21300000, guid: 54dba3f350c777f459daf6527b897dad, type: 3}
   prerequisite:
-  - {fileID: 11400000, guid: 47d69d18d4fba284795f7bc7af7f6971, type: 2}
-  - {fileID: 11400000, guid: 2502fb5ccb2b0c44fb6dd06bf146ec4d, type: 2}
+  - {fileID: 11400000, guid: 30f834e3d7d23aa4ebe7299b5f55fdc3, type: 2}
