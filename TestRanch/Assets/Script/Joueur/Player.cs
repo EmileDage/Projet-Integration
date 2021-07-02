@@ -188,5 +188,6 @@ public class Player : MonoBehaviour
     public void IncreaseInventorySize(int newSize)
     {
         inventaireTaille = newSize;
+        barreInventaire.UpdateAllSlots();
     }
 }

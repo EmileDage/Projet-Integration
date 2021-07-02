@@ -104,6 +104,7 @@ public class Slot : MonoBehaviour, IDropHandler
     }
     public void UpdateSlot()
     {
+
         if(ItemStack.Qte > 0) {
             qteText.transform.parent.gameObject.SetActive(true);
             qteText.text = ItemStack.Qte.ToString();
@@ -113,6 +114,7 @@ public class Slot : MonoBehaviour, IDropHandler
         }
         else
         {
+            itemStack = new ItemStack(emptyItem, 0);
             qteText.transform.parent.gameObject.SetActive(false);
             imgDrag.gameObject.SetActive(false);
             DragItem.ResetPosition();            
@@ -143,7 +145,7 @@ public class Slot : MonoBehaviour, IDropHandler
 
     public void QuickTransfer(DragItem drag)
     {
-        Debug.Log("QuickTransfer");
+       // Debug.Log("QuickTransfer");
         parentUI.QuickSendStack(this.itemStack, drag);
         this.UpdateSlot();
     }

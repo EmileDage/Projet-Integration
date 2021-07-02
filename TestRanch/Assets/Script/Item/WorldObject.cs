@@ -5,7 +5,7 @@ using UnityEngine;
 public class WorldObject : MonoBehaviour, IInteractible
 {
     private int qte;   
-    protected Item item;
+    [SerializeField]protected Item item;
     public int Qte { get => qte; set => qte = value; }
     public Item Item { get => item; set => item = value; }
 
@@ -20,6 +20,24 @@ public class WorldObject : MonoBehaviour, IInteractible
         else
         {
             Qte = temp.Qte;
+        }
+    }
+
+    public void RemoveQte(int amount)
+    {
+        Qte -= amount;
+        if (qte == 0)
+        {
+            Destroy(this.gameObject);
+        }
+    }
+
+    public void DecrementeQte()
+    {
+        qte--;
+        if (qte == 0)
+        {
+            Destroy(this.gameObject);
         }
     }
 }

@@ -56,7 +56,7 @@ public class DragItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,IE
 
         if (Input.GetButton("QuickAdd"))
         {
-            Debug.Log("shift click");
+           // Debug.Log("shift click");
             parentSlot.QuickTransfer(this);
         }
     }

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class SpawnerAgriculture : AbstractSpawner, IFarmable
+//[RequireComponent(typeof(Collider))] "on verra" - Legault
+public class SpawnerAgriculture : WildPlantSpawner, IFarmable
 {
     //very important :)
     //https://twitter.com/RabbitEveryHour/status/1397930644143960066?s=20
@@ -18,7 +19,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     //sinon moins de ressources produites
     //+ de chance de maladie
     [SerializeField] [Range(5, 50)] private int hydration_hour;//for baby and adult plant
-    [SerializeField] private Abreuvoir water_container;
+    private Abreuvoir water_container;
 
     //Sante/maladie
     //en ce moment la maladie arrete la production de produit on pourra modifier ça plus tard
@@ -32,7 +33,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     [SerializeField] private Transform[] upgrade_slot;//si l'upgrade est acheter l'arbre donne plus de ressources
     private GameObject[] upgrade_produit;
 
-    [SerializeField] private Garden jardin;//for some FUCKING reason quand cest serialisez la reference reste apres avoir ete assigner 
+    private Garden jardin;//for some FUCKING reason quand cest serialisez la reference reste apres avoir ete assigner 
 
     public bool Upgrade_fertilizer { get => upgrade_fertilizer; set => upgrade_fertilizer = value; }//rich fertilizer upgrade 
 
@@ -42,67 +43,35 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     public int GetSicknessRes { get => sickness_resistance; }
 
     public int TimeTillGrowed { get => timeToGrowHour; }
+    public Garden Jardin { get => jardin; set => jardin = value; }
 
     protected override void Start()
     {
+        base.Start();
         sicknessLvl = 0;
         IsGrown = false;
         upgrade_produit = new GameObject[upgrade_slot.Length];
-
-        Available = false;
+        
         if (timeToGrowHour <= 0)
         {//we want the plant to grow so never 0
             timeToGrowHour = 10;
         }
 
-        if (produit_reference != null)
-        {
-            produits = new GameObject[produit_spawn.Length];
-            time = MyTimeManager.timeInstance;
-            time.GHourPassed += OnGHourPassed;
-
-            for (int i = 0; i < produit_spawn.Length; i++)
-            {
-                produits[i] = Instantiate(Produit_reference, produit_spawn[i]);
-                produits[i].tag = "produit";
-                produits[i].AddComponent<RessourceNode>();
-                produits[i].GetComponent<RessourceNode>().SetupNode(this);
-                produits[i].name = "Node" + i;
-
-            }
-
-            if (upgrade_fertilizer)
-            {
-                for (int i = 0; i < upgrade_produit.Length; i++)
-                {
-                    upgrade_produit[i] = Instantiate(Produit_reference, upgrade_slot[i]);
-                    upgrade_produit[i].tag = "produit";
-                    upgrade_produit[i].AddComponent<RessourceNode>();
-                    upgrade_produit[i].GetComponent<RessourceNode>().SetupNode(this);
-                    upgrade_produit[i].name = "Node" + i;
-
-                }
-            }
-        }
-
-        Despawn();
-        jardin.UpdateInfoPannel();
+        MakeIndisponible();
+        Debug.Log(Jardin);
+        Jardin.UpdateInfoPannel();
     }
 
-    public void AssignRef(Abreuvoir agua, GameObject fruit, Garden jardin_)//on pourrait mettre une fonction plus detailler ssi on veut
+    public void AssignRef(Abreuvoir agua, Garden jardin_)//on pourrait mettre une fonction plus detailler ssi on veut
     {//exemple on pourrait envoyer le mesh selon le fruit ou whatever
         water_container = agua;
-        produit_reference = fruit;
-        jardin = jardin_;
-        Debug.Log(jardin);
-
-
+        Jardin = jardin_;
     }
 
-    public void CrystalCure(int strenght) {
-        //utlise un crystal pour baisser la maladie
+    public void CrystalCure(int strenght) 
+    {
+        //utlise un crystal pour baisser la maladie //en le yeetant sur la plante ou le jardin
         sicknessLvl -= strenght;
-
     }
 
     public void GrowthCheck() {//verifie que la plante peut grandir
@@ -112,6 +81,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
             {
                 water_container.RemoveWater(hydration_hour);
                 timeToGrowHour -= 1;
+                Debug.Log(timeToGrowHour + "timetogrow");
 
                 if ((sicknessLvl - 5) <= 0)
                     sicknessLvl = 0;// 0 = perfect health
@@ -120,18 +90,21 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
                 if (timeToGrowHour <= 0)
                 {
+                    Debug.Log("plant is grown");
                     IsGrown = true;
-                    Available = true;
-                    jardin.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();
-
+                    Jardin.gameObject.GetComponent<Garden_UI>().CheckPendingUpgrades();
+                    if (AlwaysAvailable)
+                    {
+                        MakeDisponible();
+                    }
                     //check if hours are correct
                     if (disponibleStart < time.Hour && disponibleEnd > time.Hour)
                     {//si exemple dispo start = 2h et end = 12h
-                        Spawn();
+                        MakeDisponible();
 
                     } else if (disponibleStart > disponibleEnd) { //si exemple dispo start = 20h et end = 5h
                         if (disponibleStart < time.Hour || disponibleEnd > time.Hour) {
-                            Spawn();
+                            MakeDisponible();
                         }
                     }
                 }
@@ -155,7 +128,7 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
     {
         sickness_resistance += 30;
         Debug.Log("SICKNESS RES "+sickness_resistance);
-        jardin.UpdateInfoPannel();
+        Jardin.UpdateInfoPannel();
     }
 
     public override void OnGHourPassed(object source)
@@ -163,11 +136,11 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
 
         if (sickness_resistance < sicknessLvl)
         { //si la plante est malade
+            Debug.Log("plant is sick");
             sicknessLvl += 5;
-            //destroy one at random ?
 
             if (sicknessLvl >=  100) {//la plante est morte big f
-                DestroyAll();
+                KillAllNode();
             }
         }
         else {
@@ -179,122 +152,57 @@ public class SpawnerAgriculture : AbstractSpawner, IFarmable
             {
 
                 //produce if time is correct
-                if (disponibleStart == time.Hour)
+                if (disponibleStart == time.Hour || AlwaysAvailable)
                 {
                     if (water_container.Qte_level >= hydration_hour)
                     {
                         //si la plante est hydratée elle produit des produits
 
                         water_container.RemoveWater(hydration_hour);
-                        Spawn();
-                        Available = true;
+                        MakeDisponible();
                     }
                     else
                     {
+                        Debug.Log("thristy plant goes to horny jail");
                         //la plante est pas hydrate so no produit for u
-                        Despawn();
+                        MakeIndisponible();
                         sicknessLvl += 5;
                     }
 
                 }
-                else if (disponibleEnd == time.Hour)
+                else if (disponibleEnd == time.Hour && !AlwaysAvailable)
                 {
-                    Despawn();
-                    Available = false;
+                    MakeIndisponible();
                 }
             }
         }
 
-        jardin.UpdateInfoPannel();
+        Jardin.UpdateInfoPannel();
 
     }
-
-
-    protected override  void Spawn() {//pour faciliter la lecture du code jai mis ça en fonction       
-        Debug.Log("Spawn Fnct");
-        
-        base.Spawn();
-
-        if (upgrade_fertilizer)
-        {
-            foreach (GameObject produit in upgrade_produit)
-            {
-                if (produit.GetComponent<RessourceNode>().GetSpawned())
-                {
-                    produit.SetActive(true);
-                }
-            }
-        }
-
-    }
-
-    protected override void Despawn()
-    {
-        base.Despawn();
-
-        if (upgrade_fertilizer)
-        {
-            foreach (GameObject produit in upgrade_produit)
-            {
-                if (produit != null) {
-                    if (produit.GetComponent<RessourceNode>().GetSpawned())
-                    {
-                        produit.SetActive(false);
-                    }
-                }
-               
-            }
-        }
 
   
-    }
-
-    public override void SpawnProduce()
-    {
-        Debug.Log("SpawnProduce()");
-        base.SpawnProduce();
-
-        if (upgrade_fertilizer) {
-            for (int a = 0; a < upgrade_produit.Length; a++)
-            {//on ne sait pas si dans le futur le nmbr de slot sur upgrade seront egal a ceux regulier so on fait une boucle separe
-                if (upgrade_produit[a] == null)
-                {
-                    upgrade_produit[a].GetComponent<RessourceNode>().SetSpawnedTrue();
-                }
-            }  
-        }
-
-        Despawn();//when you remove this, product spawn at the beguinning even tho its supposed to be growing so no fruit
-
-    }
-
-    public override void DestroyAll()
-    {
-        base.DestroyAll();
-
-        if (upgrade_fertilizer) {
-            for (int a = 0; a < upgrade_produit.Length; a++)
-            {
-                upgrade_produit[a].GetComponent<RessourceNode>().KillNode();
-            }
-        }
-
-        Debug.Log("All products on this spawner are destroyed");
-    }
-
-
     public override void SpawnSpawner(Materiaux toSpawn)
     {     
 
         base.SpawnSpawner(toSpawn);
-        Despawn();//when you remove this, product spawn at the beguinning even tho its supposed to be growing so no fruit
+        MakeIndisponible();//when you remove this, product spawn at the beguinning even tho its supposed to be growing so no fruit
 
     }
 
-    public void FarmIt()
-    {
-        //  x////x
 
+   new public void  FarmIt()
+    {
+        GameObject loot = plante.SpawnAsObject(new ItemStack(plante, 1), this.transform);
+        //Debug.Log(loot);
+        
+        //loot.GetComponent<WorldObjectMateriaux>().Qte = 1;
+        loot.GetComponent<WorldObjectMateriaux>().Interact(GameManager.gmInstance.Joueur);
+        hp--;
+        if (hp <= 0)
+        {
+            Destroy(this.gameObject);
+        }
     }
 
 

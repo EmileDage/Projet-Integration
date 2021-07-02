@@ -7,11 +7,13 @@ public class Materiaux : Item
 {
     [SerializeField] private Fonctions funct;
 
-    [SerializeField]private int speed = 10;    
+    [SerializeField]private int speed = 10;
 
+    //seulement les materiaux qui sont utiliser pour setter un spawner dans les carrés on besoin d'un spawner assigner
+    [SerializeField] private GameObject spawner;
     public Fonctions Funct { get => funct; }
     public int Speed { get => speed;}
-
+    public GameObject Spawner { get => spawner; set => spawner = value; }
 
     public override void UseThis(ItemStack stack, Player joueur)
     {
@@ -30,13 +32,13 @@ public class Materiaux : Item
         }
     }
 
-    public override void SpawnAsObject(ItemStack stack, Transform location)
+    public override GameObject SpawnAsObject(ItemStack stack, Transform location)
     {
-        base.SpawnAsObject(stack, location);
         if (itemWorldObject.GetComponent<WorldObjectMateriaux>() == null)
         {
             Debug.LogError("les matériaux doivent avoir le scripte WorldObject Materiaux");
         }
+        return base.SpawnAsObject(stack, location);
     }
 
 
