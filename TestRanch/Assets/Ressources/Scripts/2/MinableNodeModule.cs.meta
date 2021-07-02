@@ -1,5 +1,9 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:TestRanch/Assets/Ressources/Scripts/2/MinableNodeModule.cs.meta
 guid: cdd7e2371f60bea4bbd30994dbe4f449
+=======
+guid: 82e472841ad730647b0a9a9117854011
+>>>>>>> 0d06f1d68b4ae7dec2e295e39354a000346927dc:TestRanch/Assets/Ressources/Scripts/2/InteractibleNodeModule.cs.meta
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
