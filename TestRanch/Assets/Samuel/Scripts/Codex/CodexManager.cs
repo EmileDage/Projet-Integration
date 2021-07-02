@@ -65,9 +65,12 @@ public class CodexManager : MonoBehaviour
         {
             if(codexScriptable == codex.GetCodex())
             {
-                StartCoroutine(TemporaryVisual(codexScriptable));
-                codex.Discover();
-                break;
+                if (!codex.IsDiscover())
+                {
+                    StartCoroutine(TemporaryVisual(codexScriptable));
+                    codex.Discover();
+                    break;
+                }
             }
         }
     }
