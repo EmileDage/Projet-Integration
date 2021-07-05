@@ -19,7 +19,6 @@ public class RespawnModule : MonoBehaviour
     {
         currentRespawnPoint = transform;
     }
-
     public void RemoveCurrentRespawnPoint()
     {
         currentRespawnPoint = null;

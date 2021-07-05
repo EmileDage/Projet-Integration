@@ -180,14 +180,10 @@ public class Player : MonoBehaviour
         openChest = null;
     }
 
-    public void CaptureAnimal(GameObject animal) 
-    {
-
-    }
 
     public void IncreaseInventorySize(int newSize)
     {
         inventaireTaille = newSize;
-        barreInventaire.UpdateAllSlots();
+        BarreInventaire.IncreaseSize(newSize);
     }
 }

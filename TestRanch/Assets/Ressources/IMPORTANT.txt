@@ -1,6 +1,0 @@
-Pour ne pas se mélanger dans les ID et avoir des dupliques donner les ID selons ce système :
--1 testing
-0 est pour l'item vide
-Les ID de 1-9 sont pour les outils exclusivement
-Les ID des matériaux doivent avoir 2 digit
-etc. pour les autres classes d'item si on en crée

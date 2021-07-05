@@ -225,6 +225,14 @@ public class PlayerInventory : AbstractInventoryUI
 
     }
 
+
+    public void IncreaseSize(int NewSize) {
+
+        for(int i = 0; i< NewSize;i++)
+        {
+            slots[i].GetComponent<Image>().sprite = slots[i].Box;
+        }
+    }
     //ça marche de l'inventaire vers le player mais pas du player vers l'inventaire?
 
     #region test

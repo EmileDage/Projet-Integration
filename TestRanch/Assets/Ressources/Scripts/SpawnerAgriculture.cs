@@ -193,8 +193,10 @@ public class SpawnerAgriculture : WildPlantSpawner, IFarmable
 
    new public void  FarmIt()
     {
-        GameObject loot = Instantiate(plante.ItemWorldObject);
-        loot.GetComponent<WorldObjectMateriaux>().Qte = 1;
+        GameObject loot = plante.SpawnAsObject(new ItemStack(plante, 1), this.transform);
+        //Debug.Log(loot);
+        
+        //loot.GetComponent<WorldObjectMateriaux>().Qte = 1;
         loot.GetComponent<WorldObjectMateriaux>().Interact(GameManager.gmInstance.Joueur);
         hp--;
         if (hp <= 0)

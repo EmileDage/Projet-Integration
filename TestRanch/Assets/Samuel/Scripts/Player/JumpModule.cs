@@ -2,18 +2,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum JumpState {Jump, Fall, Flying, Swim }
+
 public class JumpModule : MonoBehaviour
 {
     [Header("Attributes")]
     [SerializeField] private float jumpHeight = 3f;
-    [SerializeField] private Transform groundCheck;
     [SerializeField] private LayerMask groundMask;
-    [SerializeField] private float gravity = -9.81f;
     [SerializeField] private float fallSpeed = -5;
 
-    private bool isFlying = false;
+    private bool useGravity = true;
     private float groundDistance = 1.8f;
-    private bool isGrounded;
+    private bool isGrounded = false;
     private Vector3 velocity;
     private Rigidbody rig = null;
 
@@ -21,8 +21,8 @@ public class JumpModule : MonoBehaviour
     void Start()
     {
         rig = GetComponent<Rigidbody>();
+        velocity.y = -9.81f;
     }
-
     void Update()
     {
         CheckIfGrounded();
@@ -33,13 +33,13 @@ public class JumpModule : MonoBehaviour
     {
         return isGrounded;
     }
-    public void ActivateFlying()
+    public void ActivateGravity()
     {
-        isFlying = true;
+        useGravity = true;
     }
-    public void DesactivateFlying()
+    public void DesactivateGravity()
     {
-        isFlying = false;
+        useGravity = false;
     }
     public void SetJumpVelocity()
     {
@@ -49,14 +49,14 @@ public class JumpModule : MonoBehaviour
 
     private void GravityForce()
     {
-        if (isFlying)
+        if (!useGravity)
             return;
 
         if (isGrounded && velocity.y < 0)
-            velocity.y = fallSpeed;
+            velocity.y = -9.81f;
 
         if(!isGrounded)
-        velocity.y += gravity * Time.deltaTime;
+        velocity.y += -9.81f * fallSpeed * Time.deltaTime;
 
         rig.AddForce(velocity);
     }
