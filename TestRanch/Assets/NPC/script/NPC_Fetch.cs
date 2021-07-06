@@ -2,26 +2,13 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC_Fetch : MonoBehaviour, IInteractible
+public class NPC_Fetch :  NPC_basics
 {
     //Fetchthings
     [SerializeField] private Item[] fetchThis;//exemple bannane
     [SerializeField] private int[] fetchThisQte;//exemple 2
                                                        //ainsi le npc veut 2 banane
     private List<ItemStack> list_Things_toFetch = new List<ItemStack>();
-
-    //rewards
-    [SerializeField] private Item[] rewards;
-    [SerializeField] private int[] rewardsQte;   
-    [SerializeField] private Coffre chest;//le npc va juste drop un chest avec l
-
-
-
-    //dialogue
-    [SerializeField] private DialogueManager manager;
-    private DialogueTrigger conversation;
-    private bool talked;//talked = false veut dire que le joueur doit demander la quest 
-    private bool quest_completed;
 
     private void Start()
     {
@@ -42,7 +29,7 @@ public class NPC_Fetch : MonoBehaviour, IInteractible
 
     }
 
-    public void Interact(Player joueur)//quand joueur interagit avec NPC
+    public override void Interact(Player joueur)//quand joueur interagit avec NPC
     {
         if (!talked) { //le joueur na pas parler au npc une premiere fois yet  
             conversation.TriggerDialogueStart();
@@ -71,4 +58,5 @@ public class NPC_Fetch : MonoBehaviour, IInteractible
             }
         }
     }
+
 }
