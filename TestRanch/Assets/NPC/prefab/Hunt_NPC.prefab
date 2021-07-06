@@ -109,6 +109,7 @@ GameObject:
   - component: {fileID: 1628154882}
   - component: {fileID: 1628154881}
   - component: {fileID: 6207242866322998833}
+  - component: {fileID: 1898185956}
   m_Layer: 0
   m_Name: Hunted
   m_TagString: Untagged
@@ -243,6 +244,20 @@ MonoBehaviour:
   rewardsQte: 
   chest: {fileID: 8329434164455907250}
   manager: {fileID: 757416588057925864}
+  spawn: {fileID: 6676165877876618496}
+--- !u!65 &1898185956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628154879}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 5, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &404734536693349772
 MonoBehaviour:
   m_ObjectHideFlags: 0
