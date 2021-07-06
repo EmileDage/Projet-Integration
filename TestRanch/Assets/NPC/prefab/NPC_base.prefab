@@ -39,8 +39,10 @@ GameObject:
   - component: {fileID: 6271833222663964898}
   - component: {fileID: 5583706307196528650}
   - component: {fileID: 9023844739430613927}
+  - component: {fileID: 1801840385}
+  - component: {fileID: 1801840386}
   m_Layer: 0
-  m_Name: Visual_Body
+  m_Name: Body_script
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -124,6 +126,65 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1801840385
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832430354279083683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a16b3fb19c8c7469a6a00a13af8abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue_startquest:
+    name: Hoe
+    sentences:
+    - 'Sup bitch,
+
+      I need something from ya'
+    - no...i promise it's not crack.
+    - 'I need 2 bananas.
+
+      A hoe gotta eat.'
+    - Now chop chop get me thoses bananas.
+  dialogue_waitingquest:
+    name: pissed off Hoe
+    sentences:
+    - WHERE
+    - ARE
+    - MY
+    - BANANAS
+  dialogue_endquest:
+    name: Happy Hoe
+    sentences:
+    - Thanks hun i knew i could count on you.
+    - even tho you fat ass took your sweet time.
+    - Anyway heres your rewards.
+  dialogue_idlechat:
+    name: Hoe but with bananas
+    sentences:
+    - I love bananas.
+--- !u!114 &1801840386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2832430354279083683}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b94a316fffbe8a446ae45586dacd2696, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fetchThis:
+  - {fileID: 11400000, guid: 7ea88e38f357868498b88c77bc4946c7, type: 2}
+  fetchThisQte: 02000000
+  rewards:
+  - {fileID: 11400000, guid: 3142a52af7bdf0d48b392062b2ad7941, type: 2}
+  rewardsQte: 05000000
+  chest: {fileID: 3502727034359608547}
 --- !u!1 &5560325464228827611
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,8 +289,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7198814539553572868}
-  - component: {fileID: 7224236509848503862}
-  - component: {fileID: 789163906166548093}
   m_Layer: 0
   m_Name: NPC_base
   m_TagString: Untagged
@@ -254,63 +313,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &7224236509848503862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8514926770211850482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b94a316fffbe8a446ae45586dacd2696, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fetchThis: []
-  fetchThisQte: 
-  rewards: []
-  rewardsQte: 
-  chest: {fileID: 0}
---- !u!114 &789163906166548093
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8514926770211850482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 72a16b3fb19c8c7469a6a00a13af8abd, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  dialogue_startquest:
-    name: Hoe
-    sentences:
-    - 'Sup bitch,
-
-      I need something from ya'
-    - no...i promise it's not crack.
-    - 'I need 2 bananas.
-
-      A hoe gotta eat.'
-    - Now chop chop get me thoses bananas.
-  dialogue_waitingquest:
-    name: pissed off Hoe
-    sentences:
-    - WHERE
-    - ARE
-    - MY
-    - BANANAS
-  dialogue_endquest:
-    name: Happy Hoe
-    sentences:
-    - Thanks hun i knew i could count on you.
-    - even tho you fat ass took your sweet time.
-    - Anyway heres your rewards.
-  dialogue_idlechat:
-    name: Hoe but with bananas
-    sentences:
-    - I love bananas.
 --- !u!1001 &789163906557039118
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -394,7 +396,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.08
+      value: 2.36
       objectReference: {fileID: 0}
     - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
       propertyPath: m_LocalRotation.w

@@ -26,6 +26,12 @@ public class DialogueManager : MonoBehaviour
 
     private bool fadeIn;
     private bool fadeOut;
+    public bool FadeOut{ get => fadeOut;}
+
+    //to lock cam during dialogue
+    private GameManager gm;
+    private Player joueur;
+    private GameObject cam_joueur;
 
     private void Awake()
     {
@@ -45,6 +51,11 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
         dialogueBox.SetActive(false);
         dialogueBox.GetComponent<CanvasGroup>().alpha = 0;
+
+        //to lock cam during dialogue
+        gm = GameManager.gmInstance;
+        joueur = gm.Joueur;
+        cam_joueur = gm.Joueur.playerCam;
     }
 
     private void Update()
@@ -53,7 +64,6 @@ public class DialogueManager : MonoBehaviour
             dialogueBox.GetComponent<CanvasGroup>().alpha += Time.deltaTime /2 ;
             if (dialogueBox.GetComponent<CanvasGroup>().alpha >= 1) {
                 fadeIn = false;
-
             }
         }
 
@@ -62,8 +72,12 @@ public class DialogueManager : MonoBehaviour
             dialogueBox.GetComponent<CanvasGroup>().alpha -= Time.deltaTime / 2;
             if (dialogueBox.GetComponent<CanvasGroup>().alpha <= 0)
             {
-                fadeOut = false;
+                   
+                Cursor.visible = false;
+                cam_joueur.GetComponent<CameraControl>().UnlockCamera();
+
                 dialogueBox.SetActive(false);
+                fadeOut = false;
 
             }
         }
@@ -72,6 +86,10 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
+
+        Cursor.visible = true;
+        cam_joueur.GetComponent<CameraControl>().LockCamera();
+
         dialogueBox.SetActive(true);
         fadeIn = true;
 
@@ -133,6 +151,7 @@ public class DialogueManager : MonoBehaviour
     {
         fadeOut = true;
         Debug.Log("End of convo");
+
     }
 
    
