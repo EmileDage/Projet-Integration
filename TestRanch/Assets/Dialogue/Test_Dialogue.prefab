@@ -205,7 +205,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1600268902}
         m_TargetAssemblyTypeName: DialogueTrigger, Assembly-CSharp
-        m_MethodName: TriggerDialogue
+        m_MethodName: TriggerDialogueChat
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -227,16 +227,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72a16b3fb19c8c7469a6a00a13af8abd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogue:
-    name: Eridan Ampora
-    sentences:
-    - "According to all known laws\r of aviation,\r\nthere is no way a bee\r should
-      be able to fly.\r\n"
-    - "Its wings are too small to get\r its fat little body off the ground.\r"
-    - The bee, of course, flies anyway,
-    - 'because bees don''t care
-
-      what humans think is impossible.'
+  dialogue_startquest:
+    name: 
+    sentences: []
+  dialogue_waitingquest:
+    name: 
+    sentences: []
+  dialogue_endquest:
+    name: 
+    sentences: []
+  dialogue_idlechat:
+    name: 
+    sentences: []
 --- !u!1001 &6491150317671830635
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -294,9 +296,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4860925151876862683, guid: 9c6b642532a7e6d4b9d063d396b67418, type: 3}
       propertyPath: m_Name
-      value: Dialogue
+      value: Test_Dialogue
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 4860925150311053469, guid: 9c6b642532a7e6d4b9d063d396b67418, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 9c6b642532a7e6d4b9d063d396b67418, type: 3}
 --- !u!224 &1828544432735231724 stripped
 RectTransform:
