@@ -178,13 +178,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b94a316fffbe8a446ae45586dacd2696, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  fetchThis:
-  - {fileID: 11400000, guid: 7ea88e38f357868498b88c77bc4946c7, type: 2}
-  fetchThisQte: 02000000
   rewards:
   - {fileID: 11400000, guid: 3142a52af7bdf0d48b392062b2ad7941, type: 2}
   rewardsQte: 05000000
   chest: {fileID: 3502727034359608547}
+  manager: {fileID: 5298157099004638137}
+  fetchThis:
+  - {fileID: 11400000, guid: 7ea88e38f357868498b88c77bc4946c7, type: 2}
+  fetchThisQte: 02000000
 --- !u!1 &5560325464228827611
 GameObject:
   m_ObjectHideFlags: 0
@@ -290,7 +291,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7198814539553572868}
   m_Layer: 0
-  m_Name: NPC_base
+  m_Name: NPC_Fetch_prefab
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -375,6 +376,17 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4860925151876862682, guid: 9c6b642532a7e6d4b9d063d396b67418, type: 3}
   m_PrefabInstance: {fileID: 789163906557039118}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &5298157099004638137 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4860925151476638135, guid: 9c6b642532a7e6d4b9d063d396b67418, type: 3}
+  m_PrefabInstance: {fileID: 789163906557039118}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d7aefa756ccc44f9e13ff8f911334c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &5179370264123843697
 PrefabInstance:
   m_ObjectHideFlags: 0

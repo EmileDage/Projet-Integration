@@ -109,7 +109,7 @@ public class DialogueManager : MonoBehaviour
         if (sentences.Count ==0) { //end of queue
 
             if (!check)
-            {
+            {                
                 EndOfDialog();
                 return;
             }
@@ -149,6 +149,9 @@ public class DialogueManager : MonoBehaviour
 
     private void EndOfDialog()
     {
+        if (fadeIn) {
+            fadeIn = false;
+        }
         fadeOut = true;
         Debug.Log("End of convo");
 
