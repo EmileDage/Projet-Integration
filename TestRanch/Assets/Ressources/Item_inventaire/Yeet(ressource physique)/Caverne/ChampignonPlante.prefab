@@ -1,0 +1,63 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &6283197125430769600
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 133449187229403421, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133449187229403421, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133449187229403421, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133449187229403421, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133449187229403421, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 133449187229403421, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133449187229403421, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133449187229403421, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133449187229403421, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133449187229403421, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 133449187229403421, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 850046354506614676, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: item
+      value: 
+      objectReference: {fileID: 11400000, guid: eee883a116bd42946abb3fb166b36e10, type: 2}
+    - target: {fileID: 8929102923610934513, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Name
+      value: ChampignonPlante
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}

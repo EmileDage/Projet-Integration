@@ -564,6 +564,10 @@ PrefabInstance:
       value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 1763240849284264795, guid: 762efd8d431c0c64794cb26b20a98d76, type: 3}
+      propertyPath: AlwaysAvailable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1763240849284264795, guid: 762efd8d431c0c64794cb26b20a98d76, type: 3}
       propertyPath: disponibleStart
       value: 6
       objectReference: {fileID: 0}
