@@ -5,14 +5,14 @@ using UnityEngine;
 public class HealthModule : MonoBehaviour
 {
     [SerializeField] private Regen Health = null;
+    [SerializeField] private Animator animator = null; 
+    private bool isDead = false;
 
-    // Start is called before the first frame update
     void Start()
     {
         Health.InitializeRecovery();
     }
 
-    // Update is called once per frame
     void Update()
     {
         Health.StartRecovery();
@@ -25,14 +25,29 @@ public class HealthModule : MonoBehaviour
         else
             Health.RemoveModifier(value);
     }
-
     public void DecreaseHealth(float creatureDamage)
     {
         Health.DecreaseCurrentValue(creatureDamage);
-    }
+        if (Health.GetCurrentValue() <= 0 && !isDead)
+        {
+            isDead = true;
+            StartCoroutine(Death());
+        }
 
+    }
     public Regen GetHealth()
     {
         return Health;
+    }
+
+    private IEnumerator Death()
+    {
+        animator.Play("FadeIn");
+        yield return new WaitForSeconds(1);
+        GetComponent<RespawnModule>().Respawn();
+        Health.IncreaseCurrentValue(Health.Value());
+        animator.Play("FadeOut");
+        isDead = false;
+
     }
 }

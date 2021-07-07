@@ -7,7 +7,10 @@ using UnityEngine;
 
 public class DialogueTrigger : MonoBehaviour
 {
-    public Dialogue dialogue;
+    public Dialogue dialogue_startquest;
+    public Dialogue dialogue_waitingquest;
+    public Dialogue dialogue_endquest;
+    public Dialogue dialogue_idlechat;
     private DialogueManager d_manager;
 
     private void Start()
@@ -15,7 +18,22 @@ public class DialogueTrigger : MonoBehaviour
         d_manager = DialogueManager.d_instance;
     }
 
-    public void TriggerDialogue() {
-        d_manager.StartDialogue(dialogue);
+    public void TriggerDialogueStart() {
+        d_manager.StartDialogue(dialogue_startquest);
+    }
+
+    public void TriggerDialogueWaiting()
+    {
+        d_manager.StartDialogue(dialogue_waitingquest);
+    }
+
+    public void TriggerDialogueEnd()
+    {
+        d_manager.StartDialogue(dialogue_endquest);
+    }
+
+    public void TriggerDialogueChat()
+    {
+        d_manager.StartDialogue(dialogue_idlechat);
     }
 }

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c53497acc2f6d34fa287f1b6efb55b5, type: 3}
+  m_Name: 50_Diamant
+  m_EditorClassIdentifier: 
+  nom: Diamant
+  maxStack: 5
+  icon_Inventory: {fileID: 21300000, guid: a29af8cfa2a78c643802348847a6e6bf, type: 3}
+  description: Ohhh shiny
+  valeur: 100
+  iD: 50
+  interactionBonusRange: 0
+  itemWorldObject: {fileID: 461450138241869852, guid: c0c12168c654a6e488833cc8dd99544a, type: 3}
+  funct: 1
+  speed: 10
+  spawner: {fileID: 0}

@@ -4,23 +4,28 @@ using UnityEngine;
 
 public class WorldObject : MonoBehaviour, IInteractible
 {
-    private int qte;   
+    [SerializeField]protected int qte;   
     [SerializeField]protected Item item;
+    
     public int Qte { get => qte; set => qte = value; }
     public Item Item { get => item; set => item = value; }
 
     public void Interact(Player joueur)
     {
         ItemStack temp = new ItemStack(item, Qte);
-        joueur.BarreInventaire.QuickAddItem(temp);
-        if (temp.Qte <= 0)
+        Debug.Log(temp + "temp item stack");
+        joueur.BarreInventaire.MergeOnExisting(temp);
+        Qte = temp.Qte;
+
+        if (joueur.BarreInventaire.TryAddOnEmptySlot(temp))
         {
             Destroy(this.gameObject);
         }
-        else
+        if (Qte == 0)
         {
-            Qte = temp.Qte;
+            Destroy(this.gameObject);
         }
+
     }
 
     public void RemoveQte(int amount)

@@ -1,0 +1,479 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &846625115
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 846625116}
+  - component: {fileID: 846625119}
+  - component: {fileID: 846625118}
+  - component: {fileID: 846625117}
+  m_Layer: 0
+  m_Name: Head
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &846625116
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846625115}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 1.27, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1628154880}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &846625119
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846625115}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &846625118
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846625115}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 62ac5ca3c0f743243977c8020582c01d, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!135 &846625117
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 846625115}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1628154879
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1628154880}
+  - component: {fileID: 1628154884}
+  - component: {fileID: 1628154883}
+  - component: {fileID: 1628154882}
+  - component: {fileID: 1628154881}
+  - component: {fileID: 6207242866322998833}
+  - component: {fileID: 1898185956}
+  m_Layer: 0
+  m_Name: Hunted
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1628154880
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628154879}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 21.02, y: -0.42000008, z: 5.07}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 846625116}
+  m_Father: {fileID: 2369848050510127957}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!33 &1628154884
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628154879}
+  m_Mesh: {fileID: 10208, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &1628154883
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628154879}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: e69af49f0dfa52b4f8aed3c6bf19c00f, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!136 &1628154882
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628154879}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1628154881
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628154879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 72a16b3fb19c8c7469a6a00a13af8abd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue_startquest:
+    name: BananaHOE
+    sentences:
+    - The fuck you want ?
+    - Let me guess that fucker Bob sent you ?
+    - 'I''m gonna take the silence as a yes.
+
+      I''ll just teleport next to him.
+
+      Talk
+      to the lazy fucker to get your reward.'
+  dialogue_waitingquest:
+    name: 
+    sentences: []
+  dialogue_endquest:
+    name: 
+    sentences: []
+  dialogue_idlechat:
+    name: BananaHOE
+    sentences:
+    - I L O V E bananas.
+--- !u!114 &6207242866322998833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628154879}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3decc18d811101f4ba2c5146d9f9737f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewards: []
+  rewardsQte: 
+  chest: {fileID: 8329434164455907250}
+  manager: {fileID: 757416588057925864}
+  spawn: {fileID: 6676165877876618496}
+--- !u!65 &1898185956
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1628154879}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 20, y: 5, z: 20}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &404734536693349772
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7226843596917982706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cfff8db4ba8ebcb4797d0c9c030babf0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rewards:
+  - {fileID: 11400000, guid: 3142a52af7bdf0d48b392062b2ad7941, type: 2}
+  rewardsQte: 01000000
+  chest: {fileID: 8329434164455907250}
+  manager: {fileID: 757416588057925864}
+  Hunted: {fileID: 6207242866322998833}
+--- !u!1 &8838888091034553161
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 6676165877876618496}
+  m_Layer: 0
+  m_Name: Spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &6676165877876618496
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8838888091034553161}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.11, y: -0.42, z: -3.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 2369848050510127957}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &4829045793074506577
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_endquest.name
+      value: Bob
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_idlechat.name
+      value: Bob
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.name
+      value: Bob
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_waitingquest.name
+      value: Bob
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.data[0]
+      value: "Thanks big times !  \nI knew i could count on you to do this job for
+        an unknown rewards."
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.data[1]
+      value: Enjoy!
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[0]
+      value: I love bananas too.
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[0]
+      value: 'Hi, i''m Bob
+
+        and i need a favor.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[1]
+      value: 'I''m old and lazy.
+
+        But i need to talk to BananaHOE.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[2]
+      value: Can you go find her for me ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[3]
+      value: Thanks nameless mute stranger !
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[0]
+      value: Did you find her ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[1]
+      value: ..................................
+      objectReference: {fileID: 0}
+    - target: {fileID: 1801840385, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[2]
+      value: I really wish you could talk.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2473650411719874786, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98c107ff5111a8a43a012becdb068ecd, type: 2}
+    - target: {fileID: 2832430354279083683, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_Name
+      value: Hunter
+      objectReference: {fileID: 0}
+    - target: {fileID: 5583706307196528650, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: a77e554d34607b446b6d9e7bc790d9d6, type: 2}
+    - target: {fileID: 7198814539553572868, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198814539553572868, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 297.71
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198814539553572868, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 19
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198814539553572868, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 485.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198814539553572868, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198814539553572868, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198814539553572868, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198814539553572868, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198814539553572868, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198814539553572868, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7198814539553572868, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8514926770211850482, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_Name
+      value: Hunt_NPC
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1801840386, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+--- !u!4 &2369848050510127957 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 7198814539553572868, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+  m_PrefabInstance: {fileID: 4829045793074506577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &8329434164455907250 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3502727034359608547, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+  m_PrefabInstance: {fileID: 4829045793074506577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5bd43d13b27c2f246b7cba3c85873e67, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7226843596917982706 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2832430354279083683, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+  m_PrefabInstance: {fileID: 4829045793074506577}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &757416588057925864 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5298157099004638137, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+  m_PrefabInstance: {fileID: 4829045793074506577}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07d7aefa756ccc44f9e13ff8f911334c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

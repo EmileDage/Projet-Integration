@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Jet Pack Module
   description: 'The Player can now fly. '
-  cost: 500
+  cost: 850
   icon: {fileID: 21300000, guid: 0fa772488837fb54eb13f9820c08fad7, type: 3}
   prerequisite:
   - {fileID: 11400000, guid: 47d69d18d4fba284795f7bc7af7f6971, type: 2}

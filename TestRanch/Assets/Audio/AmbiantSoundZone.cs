@@ -2,35 +2,36 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[RequireComponent(typeof(AudioSource))]
 [RequireComponent(typeof(Collider))]
 public class AmbiantSoundZone : MonoBehaviour
 {
     [SerializeField] AudioClip sonAmbiant;
-    private AudioSource source;
-    //GameManager gm;
+    [SerializeField] private AudioSource source;
+
+    [SerializeField] bool startZone;
     private void Start()
     {
-        source = GetComponent<AudioSource>();
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        if(other.tag == "Player")
-        {
+        if (startZone) {
             Debug.Log("Le joueur est dans la zone" + gameObject);
             source.clip = sonAmbiant;
             source.loop = true;
             source.Play();
         }
     }
+    //GameManager gm;
 
-    private void OnTriggerExit(Collider other)
+
+    private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            source.Stop();
+            if(source.clip != sonAmbiant) {
+            Debug.Log("Le joueur est dans la zone" + gameObject);
+            source.clip = sonAmbiant;
+            source.loop = true;
+            source.Play(); }
         }
     }
+
 
 }
