@@ -228,7 +228,7 @@ public class UpgradeManager : MonoBehaviour
         }
     }
     #endregion
-    public void UpdradeUltraLight(Upgrade upgrade)
+    public void UpgradeColdResistance(Upgrade upgrade)
     {
         foreach (UpgradeSlot upgradeSlot in upgradesList)
         {
@@ -236,6 +236,7 @@ public class UpgradeManager : MonoBehaviour
             {
                 if (upgradeSlot.TryToUpgrade())
                 {
+                    GameManager.gmInstance.Joueur.GetComponent<TemperatureModule>().UpgradeColdResistance();
                     upgradeSlot.Activate();
                 }
                 break;
