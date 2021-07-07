@@ -7,7 +7,8 @@ public class Player : MonoBehaviour
 {
     public GameObject playerCam;
 
-
+    [SerializeField] AudioSource item_AS;
+    [SerializeField] MeshFilter equiped;
     [SerializeField] GameObject lampe;
     [SerializeField]private Transform offset;
 
@@ -29,6 +30,7 @@ public class Player : MonoBehaviour
     public Coffre OpenChest { get => openChest; set => openChest = value; }
     public Transform Offset { get => offset; set => offset = value; }
     public AbstractInventoryUI OpenedNonChestInventory { get => openedNonChestInventory; set => openedNonChestInventory = value; }
+    public MeshFilter Equiped { get => equiped; set => equiped = value; }
 
     #endregion
 
@@ -45,14 +47,19 @@ public class Player : MonoBehaviour
         this.creature = null;
     }
 
+    private void UseItem()
+    {
+        selected.ItemStack.UseItem(this);
+        item_AS.clip = selected.ItemStack.Item.UseSound;
+    }
 
     private void Update()
     {
         #region inputs
         if (Input.GetButtonDown("Fire1"))
         {
-            if(!Cursor.visible)
-                selected.ItemStack.UseItem(this);
+            if (!Cursor.visible)
+                UseItem();
         }
         if (Input.GetButtonDown("Interact"))
         {

@@ -189,6 +189,7 @@ public class PlayerInventory : AbstractInventoryUI
         foreach (Slot slot in slots)
         {
             if (slot.PayInItem(price))
+                slot.UpdateSlot();
                 return true;
         }
         return false;
