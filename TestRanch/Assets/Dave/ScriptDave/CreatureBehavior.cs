@@ -60,6 +60,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	public Transform[] targets;
 	public float delay = 0;
 	public int index;
+	public Transform spawnPoint;
 
 	public IAstarAI agent;
 	public float switchTime = float.PositiveInfinity;
@@ -217,6 +218,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 
     public void Capture()
     {
+		Debug.Log("iscapturing");
 		//GM.Joueur.
 		if(state == "Pacifique")
         {

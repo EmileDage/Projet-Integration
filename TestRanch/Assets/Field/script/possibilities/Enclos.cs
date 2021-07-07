@@ -20,7 +20,7 @@ public class Enclos : MonoBehaviour
     [SerializeField] private Transform[] patrolPoints; //Assigner la creature a un enclos
     //[SerializeField] private Transform spawnPoint; // teleporter la creature Captured a l'enclos
 
-    [SerializeField] private GameObject[] animaux;
+    [SerializeField] private List<CreatureBehavior> animaux;
     //S'assurer qu'une seule espece par enclos pour food et diete
     [SerializeField][Range(1, 10)] private int max_animal; //nombre maximal d'animaux avant que le happiness soit iompacte
     private int happiness_moy_ani; //happinesss moyenne des animaux
@@ -29,9 +29,9 @@ public class Enclos : MonoBehaviour
 
     public bool Info { get => info; set => info = value; }
     public GameObject Info_pannel { get => info_pannel; set => info_pannel = value; }
-    public GameObject[] Animaux { get => animaux; set => animaux = value; }
     public bool Boosted_grass { get => boosted_grass; set => boosted_grass = value; }
     public Transform[] PatrolPoints { get => patrolPoints; set => patrolPoints = value; }
+    public List<CreatureBehavior> Animaux { get => animaux; set => animaux = value; }
 
     private void Start()
     {
@@ -54,17 +54,17 @@ public class Enclos : MonoBehaviour
 
      
 
-        if (Animaux.Length > 0)
+        if (Animaux.Count > 0)
         {
             happiness_moy_ani = 0; // reset le calcul bonheur
             //creature behavior is the script with happiness
-            foreach (GameObject animal in Animaux)
+            foreach (CreatureBehavior animal in Animaux)
             {
                 CalculateModifierAnimal(animal.gameObject.GetComponent<CreatureBehavior>());
                 happiness_moy_ani += (int)animal.gameObject.GetComponent<CreatureBehavior>().GetHappiness();
             }
 
-            happiness_moy_ani = happiness_moy_ani / Animaux.Length;
+            happiness_moy_ani = happiness_moy_ani / Animaux.Count;
             Debug.Log("Bonheur moyen = " + happiness_moy_ani);
         }
        
@@ -116,9 +116,9 @@ public class Enclos : MonoBehaviour
         }
 
         //check if enclos is overcrowded
-        if (max_animal < Animaux.Length)
+        if (max_animal < Animaux.Count)
         {//ca descend vraiment rapidement le bonheur
-            animal.ModifyHappiness((Animaux.Length - max_animal)/100);
+            animal.ModifyHappiness((Animaux.Count - max_animal)/100);
         }
     }
 
@@ -126,7 +126,7 @@ public class Enclos : MonoBehaviour
     public void InfoPannelTxt_enclos()//lorsqu'il est appeler il regarde et inscrit des informations                                     
     { //utiliser cette fonction idealement pour updater le txt
 
-        pannel_info.text = "Animals : " + Animaux.Length +
+        pannel_info.text = "Animals : " + Animaux.Count +
                            "\nHappiness : " + happiness_moy_ani +
                            "\nWater : " + eau.Qte_level +
                            "\nFood : " + bouffe.Qte_level;

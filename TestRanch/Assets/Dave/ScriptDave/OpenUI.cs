@@ -22,7 +22,7 @@ public class OpenUI : MonoBehaviour
     public void RemoveOpenUI()
     {
         addUI.SetActive(false);
-        removeUI.SetActive(false);
+        removeUI.SetActive(true);
     }
 
 }
