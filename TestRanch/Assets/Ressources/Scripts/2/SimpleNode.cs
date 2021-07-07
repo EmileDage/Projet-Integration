@@ -53,7 +53,7 @@ public class SimpleNode : MonoBehaviour
     public int Yield { get => yield; set => yield = value; }
 
     // Start is called before the first frame update
-    void Awake()
+    void Start()
     {
         //Debug.Log("Node Start");
         MyTimeManager.timeInstance.GHourPassed += OnGHourPassed;

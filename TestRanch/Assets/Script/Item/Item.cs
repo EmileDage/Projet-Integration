@@ -12,7 +12,7 @@ public class Item : ScriptableObject
     [SerializeField] private int valeur;
     [SerializeField] private int iD;
     [SerializeField] protected int interactionBonusRange = 0;
-
+    [SerializeField] private AudioClip useSound;
     [SerializeField] protected GameObject itemWorldObject;
 
     public string Nom { get => nom;}
@@ -21,22 +21,30 @@ public class Item : ScriptableObject
     public string Description { get => description;}
     public int Valeur { get => valeur;}
     public int ID { get => iD;}
-
     public  int InteractionBonusRange { get => interactionBonusRange;}
-
-
     public GameObject ItemWorldObject { get => itemWorldObject; }
+    public AudioClip UseSound { get => useSound;}
 
     public virtual void UseThis(ItemStack itemStack, Player joueur) 
     {
         Debug.Log("used " + nom);
     }
 
+    
+
     //mouse button 2 - clique droit
     public virtual void AltUse(Player joueur)
     {
 
     }
+
+    public virtual void OnSelecting(Player joueur) 
+    {
+        joueur.Equiped.mesh = itemWorldObject.GetComponent<MeshFilter>().mesh;
+    }
+
+    
+
 
     public virtual GameObject SpawnAsObject(ItemStack stack, Transform location)
     {

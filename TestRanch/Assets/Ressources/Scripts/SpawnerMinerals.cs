@@ -12,8 +12,8 @@ public class SpawnerMinerals : SimpleSpawner
 
     //je prefere creer un autre array pour q'on puisse changer plus facilement les upgrades si on chnage d'idée pour le nombre
     //ou si chaque ressources a une upgrade différente
-    [SerializeField] private bool upgrade_soil;//rich soil
-    [SerializeField] private Transform[] upgrade_slot;//si l'upgrade est acheter la roche donne plus de ressources
+    private bool upgrade_soil;//rich soil
+    
     private GameObject[] upgrade_produit;
 
     //cest pour le pannel info
@@ -24,7 +24,7 @@ public class SpawnerMinerals : SimpleSpawner
     protected override void Start()
     {
         base.Start();
-        upgrade_produit = new GameObject[upgrade_slot.Length];
+        
     }
 
     public void AssignRR_ref(GameObject RR)//pour si plus tard selon le type de roche tu obtient une variante rare quand tu assigne
