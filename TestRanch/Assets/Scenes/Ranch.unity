@@ -35524,7 +35524,7 @@ PrefabInstance:
       objectReference: {fileID: 1251647933}
     - target: {fileID: 3253494311390564842, guid: 8edfd4745627292449bb2e479cc04773, type: 3}
       propertyPath: isPokeBall
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3253494311390564842, guid: 8edfd4745627292449bb2e479cc04773, type: 3}
       propertyPath: spawnPoint
@@ -35664,7 +35664,7 @@ PrefabInstance:
       objectReference: {fileID: 1251647933}
     - target: {fileID: 3875894656577970487, guid: 8edfd4745627292449bb2e479cc04773, type: 3}
       propertyPath: isPokeBall
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3875894656577970487, guid: 8edfd4745627292449bb2e479cc04773, type: 3}
       propertyPath: spawnPoint

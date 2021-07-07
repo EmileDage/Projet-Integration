@@ -22,6 +22,11 @@ public class ShowCreatureInfo : MonoBehaviour
         {
             Debug.Log("Show Info");
             creature.creatureInPokeBall[slotPos].creatureInfoPanelExtra.SetActive(true); // n<est plus dans le state SLotCapturedState
+            for(int i =0; i < creature.creatureInPokeBall.Count; i++)
+            {
+                creature.creatureInPokeBall[i].creatureInfoPanelExtra.SetActive(false);
+            }
         }
     }
+
 }
