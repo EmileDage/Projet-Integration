@@ -6,6 +6,7 @@ public class HealthModule : MonoBehaviour
 {
     [SerializeField] private Regen Health = null;
     [SerializeField] private Animator animator = null; 
+    private bool isDead = false;
 
     void Start()
     {
@@ -27,8 +28,11 @@ public class HealthModule : MonoBehaviour
     public void DecreaseHealth(float creatureDamage)
     {
         Health.DecreaseCurrentValue(creatureDamage);
-        if (Health.GetCurrentValue() <= 0)
+        if (Health.GetCurrentValue() <= 0 && !isDead)
+        {
+            isDead = true;
             StartCoroutine(Death());
+        }
 
     }
     public Regen GetHealth()
@@ -43,5 +47,7 @@ public class HealthModule : MonoBehaviour
         GetComponent<RespawnModule>().Respawn();
         Health.IncreaseCurrentValue(Health.Value());
         animator.Play("FadeOut");
+        isDead = false;
+
     }
 }
