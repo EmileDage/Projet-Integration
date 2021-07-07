@@ -118,7 +118,7 @@ public class ItemStack//iventaire
 
     public bool CompareStack(ItemStack compared)
     {
-        if (compared.item.ID == this.item.ID && this.Qte > compared.Qte)
+        if (compared.item.ID == this.item.ID && this.Qte >= compared.Qte)
         {
             return true;
         }

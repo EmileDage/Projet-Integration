@@ -18509,10 +18509,18 @@ PrefabInstance:
       propertyPath: m_LocalPosition.y
       value: 4.68
       objectReference: {fileID: 0}
+    - target: {fileID: 5625816227110011160, guid: 392c4003fa2f8d64986106bb352a5b18, type: 3}
+      propertyPath: qte
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5929530917428040001, guid: 392c4003fa2f8d64986106bb352a5b18, type: 3}
       propertyPath: manager
       value: 
       objectReference: {fileID: 5298157099119659343}
+    - target: {fileID: 8614570547500886209, guid: 392c4003fa2f8d64986106bb352a5b18, type: 3}
+      propertyPath: qte
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 9064875412997365911, guid: 392c4003fa2f8d64986106bb352a5b18, type: 3}
       propertyPath: m_LocalPosition.y
       value: 4.680001
