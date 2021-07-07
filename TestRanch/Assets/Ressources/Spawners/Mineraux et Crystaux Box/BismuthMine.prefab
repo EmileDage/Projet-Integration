@@ -408,7 +408,7 @@ PrefabInstance:
     - target: {fileID: 7246508174401657591, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
       propertyPath: rareRock_ref
       value: 
-      objectReference: {fileID: 7899444145218079617, guid: 669e610a0afd8094ebb355accd92a9a3, type: 3}
+      objectReference: {fileID: 8403083191139618093, guid: 2657578a17da25c44a3858ae46f1dc1e, type: 3}
     - target: {fileID: 7246508174401657591, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
       propertyPath: disponibleEnd
       value: 23
