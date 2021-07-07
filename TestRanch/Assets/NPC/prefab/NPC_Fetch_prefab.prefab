@@ -1,32 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!64 &8399026658403880458
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28446492025346546}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4168771564931210727, guid: e412acb2501700e43a0cea780c6a6dc2, type: 3}
---- !u!114 &3502727034359608547
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 28446492025346546}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5bd43d13b27c2f246b7cba3c85873e67, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  size: 4
 --- !u!1 &2832430354279083683
 GameObject:
   m_ObjectHideFlags: 0
@@ -40,7 +13,7 @@ GameObject:
   - component: {fileID: 5583706307196528650}
   - component: {fileID: 9023844739430613927}
   - component: {fileID: 1801840385}
-  - component: {fileID: 1801840386}
+  - component: {fileID: 6239923017605857788}
   m_Layer: 0
   m_Name: Body_script
   m_TagString: Untagged
@@ -61,7 +34,7 @@ Transform:
   m_Children:
   - {fileID: 7414006418015971278}
   m_Father: {fileID: 7198814539553572868}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &6271833222663964898
 MeshFilter:
@@ -139,34 +112,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   dialogue_startquest:
-    name: Hoe
+    name: Mysterious dude
     sentences:
-    - 'Sup bitch,
-
-      I need something from ya'
-    - no...i promise it's not crack.
-    - 'I need 2 bananas.
-
-      A hoe gotta eat.'
-    - Now chop chop get me thoses bananas.
+    - Be ready, to hear
+    - A LEGEND
+    - 'Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+      Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
+      Blah Blah Blah Blah '
+    - im done
   dialogue_waitingquest:
-    name: pissed off Hoe
-    sentences:
-    - WHERE
-    - ARE
-    - MY
-    - BANANAS
+    name: dont put stuff here
+    sentences: []
   dialogue_endquest:
-    name: Happy Hoe
-    sentences:
-    - Thanks hun i knew i could count on you.
-    - even tho you fat ass took your sweet time.
-    - Anyway heres your rewards.
+    name: Don't put stuff here
+    sentences: []
   dialogue_idlechat:
-    name: Hoe but with bananas
+    name: Alternative dialogue 2
     sentences:
-    - I love bananas.
---- !u!114 &1801840386
+    - My wife left me.
+--- !u!114 &6239923017605857788
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -175,17 +139,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 2832430354279083683}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b94a316fffbe8a446ae45586dacd2696, type: 3}
+  m_Script: {fileID: 11500000, guid: 3b97c149b69e152478cbbd95194710df, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rewards:
-  - {fileID: 11400000, guid: 3142a52af7bdf0d48b392062b2ad7941, type: 2}
-  rewardsQte: 05000000
-  chest: {fileID: 3502727034359608547}
   manager: {fileID: 0}
-  fetchThis:
-  - {fileID: 11400000, guid: 7ea88e38f357868498b88c77bc4946c7, type: 2}
-  fetchThisQte: 02000000
 --- !u!1 &5560325464228827611
 GameObject:
   m_ObjectHideFlags: 0
@@ -308,75 +265,7 @@ Transform:
   m_LocalPosition: {x: 297.71, y: 19, z: 485.65}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 8255245358471274250}
   - {fileID: 1502164644374391378}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1001 &5179370264123843697
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 7198814539553572868}
-    m_Modifications:
-    - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.8114032
-      objectReference: {fileID: 0}
-    - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -1.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 2.36
-      objectReference: {fileID: 0}
-    - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5153769712321330563, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-      propertyPath: m_Name
-      value: cHEST
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
---- !u!1 &28446492025346546 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5153769712321330563, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-  m_PrefabInstance: {fileID: 5179370264123843697}
-  m_PrefabAsset: {fileID: 0}
---- !u!4 &8255245358471274250 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3850670289554635643, guid: 3617fafbbe76b7c438d4b67b309a5862, type: 3}
-  m_PrefabInstance: {fileID: 5179370264123843697}
-  m_PrefabAsset: {fileID: 0}
