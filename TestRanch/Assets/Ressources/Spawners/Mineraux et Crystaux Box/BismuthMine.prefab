@@ -244,6 +244,36 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3927853666921891101}
   m_Mesh: {fileID: 5576769810347150571, guid: 33b7fbbaa48fda8448f6a10728f42181, type: 3}
+--- !u!1 &8968112840676300871
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2589243437927851331}
+  m_Layer: 0
+  m_Name: spawn
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2589243437927851331
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8968112840676300871}
+  m_LocalRotation: {x: 0.32239664, y: -0.6293333, z: 0.32239664, w: 0.6293333}
+  m_LocalPosition: {x: -0.141, y: 0.177, z: 1.311}
+  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_Children: []
+  m_Father: {fileID: 4632782776427248398}
+  m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 54.251, y: -90, z: 0}
 --- !u!1001 &2655496132554301949
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -375,6 +405,30 @@ PrefabInstance:
       propertyPath: m_Name
       value: BismuthMine
       objectReference: {fileID: 0}
+    - target: {fileID: 7246508174401657591, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
+      propertyPath: rareRock_ref
+      value: 
+      objectReference: {fileID: 8403083191139618093, guid: 2657578a17da25c44a3858ae46f1dc1e, type: 3}
+    - target: {fileID: 7246508174401657591, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
+      propertyPath: disponibleEnd
+      value: 23
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246508174401657591, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
+      propertyPath: rareRockChance
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246508174401657591, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
+      propertyPath: rareRock_spawn
+      value: 
+      objectReference: {fileID: 2589243437927851331}
+    - target: {fileID: 7246508174401657591, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
+      propertyPath: AlwaysAvailable
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7246508174401657591, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
+      propertyPath: spawnedMateriaux
+      value: 
+      objectReference: {fileID: 11400000, guid: 6fda43568111ccb4eb24e64e2d2d2e7a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
 --- !u!4 &4632782776427248398 stripped

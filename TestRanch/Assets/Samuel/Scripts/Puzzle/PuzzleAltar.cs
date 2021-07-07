@@ -5,12 +5,13 @@ using UnityEngine;
 public class PuzzleAltar : MonoBehaviour, IInteractible
 {
     [SerializeField] float detectionDistance = 7;
-    [SerializeField] private GameObject player = null;
+    private Player player = null;
     [SerializeField] private ParticleSystem fire = null;
     private bool isActive = false;
 
     private void Start()
     {
+        player = GameManager.gmInstance.Joueur;
         fire.Stop();
     }
     private void Update()

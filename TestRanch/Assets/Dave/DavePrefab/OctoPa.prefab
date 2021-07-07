@@ -387,6 +387,7 @@ GameObject:
   - component: {fileID: 1373166943222338553}
   - component: {fileID: 1341006903103977134}
   - component: {fileID: 5195786470718666358}
+  - component: {fileID: 2312085917943014709}
   m_Layer: 0
   m_Name: OctoPa
   m_TagString: Creature
@@ -429,6 +430,7 @@ MonoBehaviour:
   foodFound: 0
   isCaptured: 0
   isPokeBall: 0
+  onlyOnce: 0
   player: {fileID: 0}
   creatureInfoPanel: {fileID: 0}
   creatureInfoPanelExtra: {fileID: 0}
@@ -451,6 +453,7 @@ MonoBehaviour:
   randomTarget: []
   pokeballTransform: {fileID: 0}
   enclos: {fileID: 0}
+  listCreaturePokeBall: {fileID: 0}
   targets: []
   delay: 2
   index: 0
@@ -593,6 +596,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   codex: {fileID: 11400000, guid: f5763d43b4f0445438d8762978dd8c06, type: 2}
+--- !u!65 &2312085917943014709
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1312149026987213566}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.4285793, y: 2.6819124, z: 4.4872932}
+  m_Center: {x: -0.006289482, y: 0.51433647, z: -0.08950615}
 --- !u!1 &1312149028803396837
 GameObject:
   m_ObjectHideFlags: 0

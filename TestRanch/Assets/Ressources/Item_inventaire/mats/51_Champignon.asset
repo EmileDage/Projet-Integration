@@ -19,7 +19,7 @@ MonoBehaviour:
   valeur: 1
   iD: 51
   interactionBonusRange: 0
-  itemWorldObject: {fileID: 5070715210915176898, guid: ba522a2b7c6419940817587872d4f346, type: 3}
+  itemWorldObject: {fileID: 4449173175884956175, guid: 9366669ce59bfa04cb18114a8fa21ada, type: 3}
   funct: 3
   speed: 10
-  spawner: {fileID: 0}
+  spawner: {fileID: 1382666193489601792, guid: 3a1b2ff9d3aa32747a40b46e18507abf, type: 3}

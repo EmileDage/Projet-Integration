@@ -8,7 +8,7 @@ internal class SlotCapturedState : State
         CreatureBehavior.state = "CreatureInSlot";
         CreatureBehavior.creatureInfoPanel.SetActive(false);
         CreatureBehavior.transform.position = CreatureBehavior.pokeballTransform.transform.position;
-        CreatureBehavior.targets = null;
+        //CreatureBehavior.targets = null;
         CreatureBehavior.agent.canMove = false;
         CreatureBehavior.agent.canSearch = false;
 
