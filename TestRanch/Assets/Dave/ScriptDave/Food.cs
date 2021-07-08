@@ -21,15 +21,15 @@ public class Food : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Food")
+        if(other.gameObject.tag == "produit")
         {
-            if(creature.creatureInfo.hungry == "Yes")
+            WorldObjectMateriaux food = other.GetComponent<WorldObjectMateriaux>();
+            if (Fonctions.produits_vegetaux.Equals(food.Item().Funct) && creature.creatureInfo.hungry == "Yes")
             {
                 creature.creatureInfo.hungry = "No";
                 creature.Happiness += happinessIncrease;
                 Destroy(other.gameObject);
             }
-
         }
     }
 }
