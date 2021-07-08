@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1763240849284264792}
   - component: {fileID: 1763240849284264791}
   - component: {fileID: 1763240849284264795}
+  - component: {fileID: 5778259165008966034}
+  - component: {fileID: 3511071417224093097}
   m_Layer: 0
   m_Name: SpawnerMineralBase
   m_TagString: Untagged
@@ -115,6 +117,32 @@ MonoBehaviour:
   AlwaysAvailable: 0
   disponibleStart: 0
   disponibleEnd: 0
+--- !u!114 &5778259165008966034
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763240849284264790}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a700b5e51f6de6f4999cae46c5cd5774, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  codex: {fileID: 0}
+--- !u!65 &3511071417224093097
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1763240849284264790}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 5, y: 5, z: 5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1763240849821456742
 GameObject:
   m_ObjectHideFlags: 0
