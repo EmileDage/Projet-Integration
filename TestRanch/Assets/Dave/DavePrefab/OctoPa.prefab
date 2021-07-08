@@ -129,7 +129,7 @@ MonoBehaviour:
   state: 
   hungryTimer: 15
   targetCollider: {fileID: 0}
-  dropRessources: {fileID: 11400000, guid: a2b33d799483ac647966432433db250a, type: 2}
+  dropRessources: {fileID: 11400000, guid: 5a678949447ff0f488f09b1b0ea4814d, type: 2}
   cooldownDropRessource: 10
   maxCooldownDropRessource: 10
   projectile: {fileID: 7575423351658430532, guid: 2ad159fb6fdd71944bd4cf87f07c3966, type: 3}

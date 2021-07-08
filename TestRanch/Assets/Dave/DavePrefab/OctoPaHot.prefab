@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1312149026987213564, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
+      propertyPath: dropRessources
+      value: 
+      objectReference: {fileID: 11400000, guid: 8618ef534746ef641820e8258a853d31, type: 2}
     - target: {fileID: 1312149026987213565, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: creatureName
       value: OctoPaHot
@@ -67,5 +71,13 @@ PrefabInstance:
       propertyPath: creatureBiome
       value: Volcano
       objectReference: {fileID: 0}
+    - target: {fileID: 3715384223593799063, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -1928204645961537321, guid: 61793c1ff3b8a7f4bb9268c4b7cc4fc3, type: 3}
+    - target: {fileID: 6252209842142626770, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 718e9f3d200403f4eafd7aa333952ff5, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
