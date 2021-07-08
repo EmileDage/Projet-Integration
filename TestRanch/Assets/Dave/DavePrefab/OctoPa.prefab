@@ -263,7 +263,7 @@ MonoBehaviour:
   stateTxtPanel: {fileID: 0}
   foodLikes: Apple
   foodLikesTxtPanel: {fileID: 0}
-  creaturePortrait: {fileID: 21300000, guid: 5931ef0322f3ca24abd984b55ac91958, type: 3}
+  creaturePortrait: {fileID: 21300000, guid: 92edc09d91a5de5498b78f4358a1476a, type: 3}
   creaturePortraitImage: {fileID: 0}
   creatureHappinessTxtPanel: {fileID: 0}
   creatureAttackPowerTxtPanel: {fileID: 0}
