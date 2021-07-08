@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 557904056504963286, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -1580535799172915004, guid: d1580cf44efa704468358799acd58b01, type: 3}
     - target: {fileID: 850046354506614676, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: qte
       value: 0
@@ -59,6 +63,34 @@ PrefabInstance:
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: 1f8226e85e2edf5499292c084c9d2739, type: 2}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Size.x
+      value: 0.6159229
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Size.y
+      value: 0.6766131
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Size.z
+      value: 0.43765163
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Center.x
+      value: -0.033033133
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Center.y
+      value: 0.006826088
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Center.z
+      value: 0.1850406
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893856089405799648, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 2883490072257359389, guid: 743ebc0cbd4090c448a7af2e0c4278f9, type: 3}
     - target: {fileID: 8929102923610934513, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Name
       value: BismuthPlant

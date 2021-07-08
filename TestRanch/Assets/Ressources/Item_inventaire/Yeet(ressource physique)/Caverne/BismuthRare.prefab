@@ -54,35 +54,39 @@ PrefabInstance:
     - target: {fileID: 557904056504963286, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: bc1e10bc37c8dc14b9144347c0b1ca15, type: 2}
+      objectReference: {fileID: 2100000, guid: fd6abb08d6235714193bdecfba7e6567, type: 2}
     - target: {fileID: 850046354506614676, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: 01e11f358cd988b43974f60fb523cd4a, type: 2}
     - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Size.x
-      value: 1
+      value: 0.57328045
       objectReference: {fileID: 0}
     - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Size.y
-      value: 1
+      value: 0.4638536
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Size.z
+      value: 0.44092163
       objectReference: {fileID: 0}
     - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Center.x
-      value: -0.21724705
+      value: -0.0038872957
       objectReference: {fileID: 0}
     - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Center.y
-      value: 0.2967425
+      value: 0.028669268
       objectReference: {fileID: 0}
     - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Center.z
-      value: -6.642517e-16
+      value: 0.18917523
       objectReference: {fileID: 0}
     - target: {fileID: 5893856089405799648, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 1079314065857142704, guid: 33b7fbbaa48fda8448f6a10728f42181, type: 3}
+      objectReference: {fileID: 9108022475518057025, guid: 743ebc0cbd4090c448a7af2e0c4278f9, type: 3}
     - target: {fileID: 8929102923610934513, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Name
       value: BismuthRare
