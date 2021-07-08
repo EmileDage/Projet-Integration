@@ -117,10 +117,14 @@ public class CreatureBehavior : StateMachine, ICapturable
 		{
 			playerFound = true;
 		}
-		if(other.gameObject.tag == "Food" && creatureInfo.hungry == "Yes")
+		if(other.gameObject.tag == "produit" && creatureInfo.hungry == "Yes")
         {
-			targetCollider = other;
-			foodFound = true;
+			WorldObjectMateriaux food = other.GetComponent<WorldObjectMateriaux>();
+			if(Fonctions.produits_vegetaux.Equals(food.Item().Funct))
+            {
+				targetCollider = other;
+				foodFound = true;
+			}
 		}		
 	}
 
