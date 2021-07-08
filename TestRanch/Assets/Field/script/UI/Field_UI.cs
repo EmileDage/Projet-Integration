@@ -26,6 +26,8 @@ public class Field_UI : MonoBehaviour
         //Other pannels
     [SerializeField] private GameObject pannel_delete_plot;
     [SerializeField] private GameObject pannel_not_enough;
+    [SerializeField] private GameObject pannel_too_much_Animal;
+
     //button U who need to be pressed in your area
     //button list to disable them when upgrade is purchased
     //separer en plusieurs sous categories pour clarté
@@ -50,6 +52,7 @@ public class Field_UI : MonoBehaviour
 
         pannel_delete_plot.SetActive(false);
         pannel_not_enough.SetActive(false);
+        pannel_too_much_Animal.SetActive(false);
 
         gm = GameManager.gmInstance;
         joueur = gm.Joueur;
@@ -139,8 +142,23 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_Delete_pannel()//Ask for confirmation
     {
-        Btn_DeactivatePannelUpgrade();
-        pannel_delete_plot.SetActive(true);
+        if (field_ref.F_type.Equals(field_possibilities.enclos))
+        {
+            if(field_ref.Enclos.GetComponent<Enclos>().Animaux.Count > 0)
+            {
+                pannel_too_much_Animal.SetActive(true);
+            }
+            else
+            {
+                Btn_DeactivatePannelUpgrade();
+                pannel_delete_plot.SetActive(true);
+            }
+        }
+        else
+        {
+            Btn_DeactivatePannelUpgrade();
+            pannel_delete_plot.SetActive(true);
+        }
     }
 
     public void Btn_Delete_Confirmed()//Revert back to Empty
@@ -217,6 +235,7 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_Deactivate_pannel_not_enough() {
         pannel_not_enough.SetActive(false);
+        pannel_too_much_Animal.SetActive(false);
     }
 
     public void Return_cursor_norm() {
