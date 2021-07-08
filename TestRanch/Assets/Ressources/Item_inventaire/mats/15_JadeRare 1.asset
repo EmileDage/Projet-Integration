@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c53497acc2f6d34fa287f1b6efb55b5, type: 3}
+  m_Name: 15_JadeRare 1
+  m_EditorClassIdentifier: 
+  nom: Fire Jade
+  maxStack: 10
+  icon_Inventory: {fileID: 21300000, guid: 1dc8202d2b7b2a943b7f52d077fe1517, type: 3}
+  description: A Jade made of fire.
+  valeur: 30
+  iD: 15
+  interactionBonusRange: 0
+  useSound: {fileID: 0}
+  itemWorldObject: {fileID: 5727108688872953823, guid: 4046642ae928dd946877469cc6959c53, type: 3}
+  funct: 1
+  speed: 10
+  spawner: {fileID: 8366171994190186860, guid: 74dec7c8cda8cef4d82f382bc1a55f74, type: 3}

@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7c53497acc2f6d34fa287f1b6efb55b5, type: 3}
+  m_Name: 31_CrocusASaffran
+  m_EditorClassIdentifier: 
+  nom: Crocus
+  maxStack: 2
+  icon_Inventory: {fileID: 21300000, guid: 9c7ddc272c6f3b3468b86893e4edd8e7, type: 3}
+  description: "Le pystil de cette fleure est une \xE9pice recherch\xE9"
+  valeur: 50
+  iD: 15
+  interactionBonusRange: 0
+  itemWorldObject: {fileID: 8074976575299236890, guid: 4bb6a362532ba634f9ed1bc49c873556, type: 3}
+  funct: 2
+  speed: 10
+  spawner: {fileID: 5098380544926532536, guid: 1000696c0a808be47a27ddc7e1b4ee29, type: 3}
