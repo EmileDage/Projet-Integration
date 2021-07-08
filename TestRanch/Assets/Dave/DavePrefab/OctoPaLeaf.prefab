@@ -79,9 +79,17 @@ PrefabInstance:
       propertyPath: creaturePortrait
       value: 
       objectReference: {fileID: 21300000, guid: d93e91519bbc56f4a8a69dbf6b126521, type: 3}
+    - target: {fileID: 3715384223593799063, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -4589163267066332163, guid: 73ca126c9aefefd40b79e3da6714e74b, type: 3}
     - target: {fileID: 5195786470718666358, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: codex
       value: 
       objectReference: {fileID: 11400000, guid: f6ce83d895733a44280adb0eca049d8a, type: 2}
+    - target: {fileID: 6252209842142626770, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: f222c721d7289454d94f4b64774d2928, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}

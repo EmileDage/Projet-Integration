@@ -75,9 +75,17 @@ PrefabInstance:
       propertyPath: creatureBiome
       value: Beach
       objectReference: {fileID: 0}
+    - target: {fileID: 3715384223593799063, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -780934549974881573, guid: 3ae3cd369cad6d142af5a6e6ef2c0a2b, type: 3}
     - target: {fileID: 5195786470718666358, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: codex
       value: 
       objectReference: {fileID: 11400000, guid: ce28256e196795b499dbc0635f85ae8b, type: 2}
+    - target: {fileID: 6252209842142626770, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7827518dc9918ed41a81630249fbca79, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}

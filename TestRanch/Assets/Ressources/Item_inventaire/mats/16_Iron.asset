@@ -10,16 +10,17 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7c53497acc2f6d34fa287f1b6efb55b5, type: 3}
-  m_Name: 14_Saffran
+  m_Name: 16_Iron
   m_EditorClassIdentifier: 
-  nom: Saffran
+  nom: Iron
   maxStack: 10
-  icon_Inventory: {fileID: 21300000, guid: 9c7ddc272c6f3b3468b86893e4edd8e7, type: 3}
-  description: T'en a besoin pour faire un paella. Miam!
-  valeur: 10
-  iD: 0
+  icon_Inventory: {fileID: 21300000, guid: c7c237feb73644a4892a938738237fd4, type: 3}
+  description: Basic Iron.
+  valeur: 8
+  iD: 16
   interactionBonusRange: 0
-  itemWorldObject: {fileID: 0}
-  funct: 0
+  useSound: {fileID: 0}
+  itemWorldObject: {fileID: 4870592850955593563, guid: 6e66b02a41992424faca21472845b260, type: 3}
+  funct: 5
   speed: 10
-  spawner: {fileID: 0}
+  spawner: {fileID: 8104894655438172870, guid: 1165a4995d28c0843a66432f24e6a96d, type: 3}
