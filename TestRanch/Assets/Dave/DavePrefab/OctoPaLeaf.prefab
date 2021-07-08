@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1312149026987213564, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: dropRessources
       value: 
-      objectReference: {fileID: 11400000, guid: 7ea88e38f357868498b88c77bc4946c7, type: 2}
+      objectReference: {fileID: 11400000, guid: b4f0af2957e01d343a847cf019df8058, type: 2}
     - target: {fileID: 1312149026987213565, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: creatureName
       value: OctoPaLeaf
