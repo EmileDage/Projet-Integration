@@ -1249,6 +1249,34 @@ PrefabInstance:
       propertyPath: m_Mesh
       value: 
       objectReference: {fileID: 2401994324257950250, guid: 2272190de9cf7aa4b8e8dab6e88701c5, type: 3}
+    - target: {fileID: 3511071417224093097, guid: 762efd8d431c0c64794cb26b20a98d76, type: 3}
+      propertyPath: m_Size.x
+      value: 50.117634
+      objectReference: {fileID: 0}
+    - target: {fileID: 3511071417224093097, guid: 762efd8d431c0c64794cb26b20a98d76, type: 3}
+      propertyPath: m_Size.y
+      value: 61.443775
+      objectReference: {fileID: 0}
+    - target: {fileID: 3511071417224093097, guid: 762efd8d431c0c64794cb26b20a98d76, type: 3}
+      propertyPath: m_Size.z
+      value: 21.275127
+      objectReference: {fileID: 0}
+    - target: {fileID: 3511071417224093097, guid: 762efd8d431c0c64794cb26b20a98d76, type: 3}
+      propertyPath: m_Center.x
+      value: 18.010366
+      objectReference: {fileID: 0}
+    - target: {fileID: 3511071417224093097, guid: 762efd8d431c0c64794cb26b20a98d76, type: 3}
+      propertyPath: m_Center.y
+      value: 14.877062
+      objectReference: {fileID: 0}
+    - target: {fileID: 3511071417224093097, guid: 762efd8d431c0c64794cb26b20a98d76, type: 3}
+      propertyPath: m_Center.z
+      value: 8.137568
+      objectReference: {fileID: 0}
+    - target: {fileID: 5778259165008966034, guid: 762efd8d431c0c64794cb26b20a98d76, type: 3}
+      propertyPath: codex
+      value: 
+      objectReference: {fileID: 11400000, guid: f93089bd7b940cf40a4d13fc2c688862, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 762efd8d431c0c64794cb26b20a98d76, type: 3}
 --- !u!4 &7382042941146837669 stripped

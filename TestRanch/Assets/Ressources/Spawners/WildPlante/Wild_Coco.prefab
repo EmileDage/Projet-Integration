@@ -251,6 +251,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3936563037363621005, guid: 0ff1a47d14d15ab48a7a61f998c704ba, type: 3}
+      propertyPath: codex
+      value: 
+      objectReference: {fileID: 11400000, guid: 9b4a33960f42cc84d8845d5f9c705b72, type: 2}
     - target: {fileID: -2715090864221737049, guid: 0ff1a47d14d15ab48a7a61f998c704ba, type: 3}
       propertyPath: m_Mesh
       value: 
@@ -406,6 +410,18 @@ PrefabInstance:
     - target: {fileID: 8337654751308111833, guid: 0ff1a47d14d15ab48a7a61f998c704ba, type: 3}
       propertyPath: m_Name
       value: Wild_Coco
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148696085388547589, guid: 0ff1a47d14d15ab48a7a61f998c704ba, type: 3}
+      propertyPath: m_Size.x
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148696085388547589, guid: 0ff1a47d14d15ab48a7a61f998c704ba, type: 3}
+      propertyPath: m_Size.y
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 9148696085388547589, guid: 0ff1a47d14d15ab48a7a61f998c704ba, type: 3}
+      propertyPath: m_Center.z
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ff1a47d14d15ab48a7a61f998c704ba, type: 3}
