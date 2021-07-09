@@ -10,6 +10,7 @@ public abstract class Dispenser : MonoBehaviour
     protected Vector3 temp;//this temporary variable help me change the position since i cant directly access and modify x y z
 
     public int Qte_level { get => qte_level; set => qte_level = value; }
+    public bool Upgrade { get => upgrade; set => upgrade = value; }
 
     public virtual void Start()
     {

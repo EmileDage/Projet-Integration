@@ -12,7 +12,7 @@ public class SimpleSpawner : MonoBehaviour
     [SerializeField] protected bool AlwaysAvailable = false;
     [SerializeField] [Range(0, 23)] protected int disponibleStart; //si on veut que l'objet soit collectable seulement pendant une période de la journee
     [SerializeField] [Range(0, 23)] protected int disponibleEnd;
-    
+    private bool chrono;
 
 
     protected MyTimeManager time;
@@ -44,7 +44,6 @@ public class SimpleSpawner : MonoBehaviour
         }
 
     }
-
 
     public virtual void OnGHourPassed(object source) {
         if (!AlwaysAvailable) { 
@@ -103,6 +102,7 @@ public class SimpleSpawner : MonoBehaviour
    
     public virtual void OnChronoUpgrade()
     {
+        chrono = true;
         timeToRespawn /= 2;//on peut le changer plus tard si cest pas balancer ou whatever
 
         foreach (SimpleNode node in produits)
@@ -110,6 +110,14 @@ public class SimpleSpawner : MonoBehaviour
             node.Cooldown(timeToRespawn);
         }
 
+    }
+
+    public virtual void Deactivate_Chrono() {
+        //chrono
+        if (chrono) {
+            timeToRespawn *= 2;
+            chrono = false;
+        }
     }
 
 

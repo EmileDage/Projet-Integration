@@ -137,6 +137,11 @@ public class Enclos : MonoBehaviour
     public void DestroyEnclos() {
         Info = false;
         Info_pannel.SetActive(false);
+
+        deluxe_grass = false;
+        boosted_grass = false;
+       eau.Upgrade = false;
+        bouffe.Remove_upgrade();
     }
 
     #region Upgrades

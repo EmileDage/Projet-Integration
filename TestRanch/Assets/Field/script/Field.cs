@@ -128,6 +128,7 @@ public class Field : MonoBehaviour, IBuildable
             case field_possibilities.entrepot:
                 {
                     Entrepot.SetActive(false);
+                    Entrepot.GetComponent<Entrepot>().DestroyUpgrades();
                 }
                 break;
             case field_possibilities.mine:
