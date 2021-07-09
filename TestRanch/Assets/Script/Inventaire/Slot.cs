@@ -54,6 +54,16 @@ public class Slot : MonoBehaviour, IDropHandler
     public void Select()
     {
         selected.gameObject.SetActive(true);
+        Player joueur = GameManager.gmInstance.Joueur;
+        if (!this.ItemStack.isEmpty())
+        {
+            joueur.Equiped.gameObject.SetActive(true);
+            joueur.Selected.ItemStack.Item.OnSelecting(joueur);
+        }
+        else
+        {
+            joueur.Equiped.gameObject.SetActive(false);
+        }
     }
     public void DeSelect()
     {
@@ -119,8 +129,6 @@ public class Slot : MonoBehaviour, IDropHandler
             imgDrag.gameObject.SetActive(false);
             DragItem.ResetPosition();            
         }
-
-        parentUI.UpdatePanel();
     }
 
     public void UpdateSlotWithoutPanel()

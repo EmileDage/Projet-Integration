@@ -2,6 +2,7 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Player : MonoBehaviour
     [SerializeField] MeshFilter equiped;
     [SerializeField] GameObject lampe;
     [SerializeField]private Transform offset;
+
+    [SerializeField] Text interactableMsg;
 
     [SerializeField] private int inventaireTaille = 5;
     [SerializeField] private int interactionDistance = 5;
@@ -50,11 +53,30 @@ public class Player : MonoBehaviour
     private void UseItem()
     {
         selected.ItemStack.UseItem(this);
-        item_AS.clip = selected.ItemStack.Item.UseSound;
+        item_AS.Play();
     }
 
     private void Update()
     {
+        RaycastHit hitUpdate;
+        if (Physics.Raycast(playerCam.transform.position, playerCam.transform.TransformDirection(Vector3.forward), out hitUpdate, interactionDistance))
+        {
+            Debug.Log("hey");
+            if (hitUpdate.collider.GetComponent<IInteractible>() != null)
+            {
+                Debug.Log("yep");
+                interactableMsg.gameObject.SetActive(true);
+            }
+            else
+            {
+                interactableMsg.gameObject.SetActive(false);
+            }
+        }
+        else
+        {
+            interactableMsg.gameObject.SetActive(false);
+        }
+
         #region inputs
         if (Input.GetButtonDown("Fire1"))
         {
