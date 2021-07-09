@@ -12,7 +12,6 @@ public class Item : ScriptableObject
     [SerializeField] private int valeur;
     [SerializeField] private int iD;
     [SerializeField] protected int interactionBonusRange = 0;
-    [SerializeField] private AudioClip useSound;
     [SerializeField] protected GameObject itemWorldObject;
 
     public string Nom { get => nom;}
@@ -23,7 +22,7 @@ public class Item : ScriptableObject
     public int ID { get => iD;}
     public  int InteractionBonusRange { get => interactionBonusRange;}
     public GameObject ItemWorldObject { get => itemWorldObject; }
-    public AudioClip UseSound { get => useSound;}
+
 
     public virtual void UseThis(ItemStack itemStack, Player joueur) 
     {
@@ -40,7 +39,10 @@ public class Item : ScriptableObject
 
     public virtual void OnSelecting(Player joueur) 
     {
-        joueur.Equiped.mesh = itemWorldObject.GetComponent<MeshFilter>().mesh;
+        joueur.Equiped.mesh = itemWorldObject.GetComponent<MeshFilter>().sharedMesh;
+        Transform g = joueur.Equiped.transform;
+        g.localScale = new Vector3(itemWorldObject.transform.localScale.x, itemWorldObject.transform.localScale.y * 0.66f, itemWorldObject.transform.localScale.z);
+        g.transform.rotation = itemWorldObject.transform.rotation;        
     }
 
     

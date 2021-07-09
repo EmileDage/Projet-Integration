@@ -52,7 +52,7 @@ public class Player : MonoBehaviour
     private void UseItem()
     {
         selected.ItemStack.UseItem(this);
-        item_AS.clip = selected.ItemStack.Item.UseSound;
+        item_AS.Play();
     }
 
     private void Update()
