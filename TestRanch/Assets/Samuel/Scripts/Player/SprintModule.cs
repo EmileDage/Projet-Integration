@@ -25,6 +25,7 @@ public class SprintModule : MonoBehaviour
         if (staminaModule.GetStamina().Value() >= 0 && !staminaModule.IsExhaust() && isSprinting == false)
         {
             movementModule.ModifySpeed(sprintSpeed);
+            staminaModule.GetStamina().canRegen = false;
             isSprinting = true;
         }
     }
