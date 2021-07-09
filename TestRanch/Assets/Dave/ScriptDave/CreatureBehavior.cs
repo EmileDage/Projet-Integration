@@ -29,6 +29,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	[Header("Food Stuff")]
 	public float hungryTimer;
+	public float hungryTimerCooldown;
 	public Collider targetCollider;
 	public Materiaux dropRessources;
 
@@ -160,7 +161,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 			if (hungryTimer == 0)
 			{
 				creatureInfo.hungry = "Yes";
-				hungryTimer = 15;
+				hungryTimer = hungryTimerCooldown;
 			}
 		}
     }

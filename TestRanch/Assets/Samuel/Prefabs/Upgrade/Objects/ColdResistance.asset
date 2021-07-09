@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Cold Resistance Module
   description: This Module allow the player to enter low temperature place.
-  cost: 1200
+  cost: 1500
   icon: {fileID: 21300000, guid: 985f9c101bc92d2478d183dd2288b5a2, type: 3}
   prerequisite:
   - {fileID: 11400000, guid: 30f834e3d7d23aa4ebe7299b5f55fdc3, type: 2}

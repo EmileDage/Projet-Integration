@@ -16,4 +16,4 @@ MonoBehaviour:
   description: A Angry Boi.
   icon: {fileID: 21300000, guid: 13905d04d511d7245bbf93bcfcce12ce, type: 3}
   upgradeUnlocked:
-  - {fileID: 11400000, guid: 6951a755c58543b409d742bb77da39d8, type: 2}
+  - {fileID: 11400000, guid: d9856b6a13030a946a46e260baa6de88, type: 2}

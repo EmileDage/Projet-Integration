@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Health Module III
   description: Increase your maximum health by 150.
-  cost: 250
+  cost: 300
   icon: {fileID: 21300000, guid: d69165f22bb3bf846b4fda34b966a9c9, type: 3}
   prerequisite:
   - {fileID: 11400000, guid: 88c29c5556c42bf4f8c862da9ef56291, type: 2}

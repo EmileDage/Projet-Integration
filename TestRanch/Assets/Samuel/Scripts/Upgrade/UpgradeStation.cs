@@ -18,7 +18,7 @@ public class UpgradeStation : MonoBehaviour, IInteractible
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.U))
+        if (Input.GetKeyDown(KeyCode.E))
         {
             Interact(player.GetComponent<Player>());
         }
