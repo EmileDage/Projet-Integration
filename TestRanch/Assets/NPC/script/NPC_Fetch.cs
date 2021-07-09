@@ -23,7 +23,7 @@ public class NPC_Fetch :  NPC_basics
         
         for (int a = 0; a < rewards.Length; a++)//créer la liste avec des itemstacks
         {
-            chest.Contenu.Add(new ItemStack(rewards[a], rewardsQte[a]));
+            chest.Contenu[a] = new ItemStack(rewards[a], rewardsQte[a]);
         }
 
 
