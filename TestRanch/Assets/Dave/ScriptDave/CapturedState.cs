@@ -53,7 +53,7 @@ internal class CapturedState : State
 
         #endregion
 
-        #region InteractionInfo
+      /*  #region InteractionInfo
         if (CreatureBehavior.playerFound)
 		{
 			if (CreatureBehavior.distance <= 5)
@@ -77,6 +77,6 @@ internal class CapturedState : State
 				CreatureBehavior.creatureInfoPanelExtra.SetActive(false);
 			}
 		}
-		#endregion
+		#endregion*/
 	}
 }
