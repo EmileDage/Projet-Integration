@@ -16,10 +16,11 @@ MonoBehaviour:
   maxStack: 10
   icon_Inventory: {fileID: 1745028967820487807, guid: bf9f155e68921c3479654e290200f34c, type: 3}
   description: Ohh it's blue.
-  valeur: 10
+  valeur: 20
   iD: 53
   interactionBonusRange: 0
+  useSound: {fileID: 0}
   itemWorldObject: {fileID: 8845789171408434389, guid: 0d52975e647889e4291cf30c1caa4578, type: 3}
   funct: 5
   speed: 10
-  spawner: {fileID: 4632782776427248395, guid: fa508bd9f65b56847834e45140790294, type: 3}
+  spawner: {fileID: 4176472163267713853, guid: fb0577ab1b2a4c14981995cfa386af08, type: 3}

@@ -14,6 +14,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codexName: The Coral Beach
   description: 'Sunlight and coral. '
-  icon: {fileID: 21300000, guid: 9a72f367f46c9fb419ffb87993de0333, type: 3}
+  icon: {fileID: 21300000, guid: 263f0c3bdf6a137479ad6ac4a64ae35c, type: 3}
   upgradeUnlocked:
-  - {fileID: 11400000, guid: d9856b6a13030a946a46e260baa6de88, type: 2}
+  - {fileID: 11400000, guid: 88c29c5556c42bf4f8c862da9ef56291, type: 2}

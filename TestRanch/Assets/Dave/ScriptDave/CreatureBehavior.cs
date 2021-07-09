@@ -29,6 +29,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	[Header("Food Stuff")]
 	public float hungryTimer;
+	public float hungryTimerCooldown;
 	public Collider targetCollider;
 	public Materiaux dropRessources;
 
@@ -117,10 +118,14 @@ public class CreatureBehavior : StateMachine, ICapturable
 		{
 			playerFound = true;
 		}
-		if(other.gameObject.tag == "Food" && creatureInfo.hungry == "Yes")
+		if(other.gameObject.tag == "produit" && creatureInfo.hungry == "Yes")
         {
-			targetCollider = other;
-			foodFound = true;
+			WorldObjectMateriaux food = other.GetComponent<WorldObjectMateriaux>();
+			if(Fonctions.produits_vegetaux.Equals(food.Item().Funct))
+            {
+				targetCollider = other;
+				foodFound = true;
+			}
 		}		
 	}
 
@@ -156,7 +161,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 			if (hungryTimer == 0)
 			{
 				creatureInfo.hungry = "Yes";
-				hungryTimer = 15;
+				hungryTimer = hungryTimerCooldown;
 			}
 		}
     }

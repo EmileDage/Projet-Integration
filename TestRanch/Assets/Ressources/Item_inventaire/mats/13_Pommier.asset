@@ -20,7 +20,7 @@ MonoBehaviour:
   iD: 13
   interactionBonusRange: 0
   useSound: {fileID: 0}
-  itemWorldObject: {fileID: 1369999345579812839, guid: f22ff80dc56e48240974027358fd9e97, type: 3}
+  itemWorldObject: {fileID: 1369999345579812839, guid: 5f266ad40f78e254bb772a3cf1f8d432, type: 3}
   funct: 2
   speed: 10
-  spawner: {fileID: 8265559998325149930, guid: 3d3286c5992cc6b4ba1d59d1b5d6557b, type: 3}
+  spawner: {fileID: 1331200106738356853, guid: f952167d85b637143bf8547ab446d1d9, type: 3}

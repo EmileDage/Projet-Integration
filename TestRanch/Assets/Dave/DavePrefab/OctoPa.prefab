@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creature: {fileID: 1312149026987213564}
-  happinessIncrease: 0
+  happinessIncrease: 10
 --- !u!1 &1312149026987213566
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,9 +127,10 @@ MonoBehaviour:
   creatureInfo: {fileID: 1312149026987213565}
   happiness: 50
   state: 
-  hungryTimer: 15
+  hungryTimer: 1
+  hungryTimerCooldown: 1
   targetCollider: {fileID: 0}
-  dropRessources: {fileID: 11400000, guid: a2b33d799483ac647966432433db250a, type: 2}
+  dropRessources: {fileID: 11400000, guid: 5a678949447ff0f488f09b1b0ea4814d, type: 2}
   cooldownDropRessource: 10
   maxCooldownDropRessource: 10
   projectile: {fileID: 7575423351658430532, guid: 2ad159fb6fdd71944bd4cf87f07c3966, type: 3}
@@ -263,12 +264,12 @@ MonoBehaviour:
   stateTxtPanel: {fileID: 0}
   foodLikes: Apple
   foodLikesTxtPanel: {fileID: 0}
-  creaturePortrait: {fileID: 21300000, guid: 5931ef0322f3ca24abd984b55ac91958, type: 3}
+  creaturePortrait: {fileID: 21300000, guid: 92edc09d91a5de5498b78f4358a1476a, type: 3}
   creaturePortraitImage: {fileID: 0}
   creatureHappinessTxtPanel: {fileID: 0}
   creatureAttackPowerTxtPanel: {fileID: 0}
   creatureSpeedTxtPanel: {fileID: 0}
-  creatureBiome: Forest
+  creatureBiome: Everywhere
   creatureBiomeTxtPanel: {fileID: 0}
   creatureDropRessourceTxtPanel: {fileID: 0}
 --- !u!114 &5195786470718666358
@@ -516,13 +517,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 9044742172453035257}
-  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: -0.5, y: 0.5, z: 0.5, w: 0.5}
   m_LocalPosition: {x: 0, y: 1.73, z: 0}
   m_LocalScale: {x: 100, y: 100, z: 100}
   m_Children: []
   m_Father: {fileID: 8173845567799820239}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 90, z: 0}
 --- !u!33 &3715384223593799063
 MeshFilter:
   m_ObjectHideFlags: 0

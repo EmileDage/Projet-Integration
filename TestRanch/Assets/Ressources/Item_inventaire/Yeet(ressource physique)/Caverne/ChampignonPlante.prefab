@@ -51,10 +51,42 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 557904056504963286, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: -1580535799172915004, guid: d1580cf44efa704468358799acd58b01, type: 3}
     - target: {fileID: 850046354506614676, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: item
       value: 
       objectReference: {fileID: 11400000, guid: eee883a116bd42946abb3fb166b36e10, type: 2}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Size.x
+      value: 1.7583218
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Size.y
+      value: 1.4997851
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Size.z
+      value: 1.4207926
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Center.x
+      value: -0.016454697
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Center.y
+      value: -0.008060992
+      objectReference: {fileID: 0}
+    - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Center.z
+      value: 0.66304564
+      objectReference: {fileID: 0}
+    - target: {fileID: 5893856089405799648, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3357391537540145087, guid: 743ebc0cbd4090c448a7af2e0c4278f9, type: 3}
     - target: {fileID: 8929102923610934513, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Name
       value: ChampignonPlante
