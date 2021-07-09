@@ -147,7 +147,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2883052330262301762}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0.58, z: 1.5}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6758759033437166374}
@@ -164,7 +164,6 @@ GameObject:
   - component: {fileID: 5602544491210420869}
   - component: {fileID: 4439471330390767226}
   - component: {fileID: 1914271967180663547}
-  - component: {fileID: 7194359284758322816}
   - component: {fileID: 2986631275045652871}
   m_Layer: 7
   m_Name: ItemToSee
@@ -236,19 +235,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7194359284758322816
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6012948235803598251}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &2986631275045652871
 AudioSource:
   m_ObjectHideFlags: 0
@@ -463,6 +449,8 @@ GameObject:
   - component: {fileID: 893230747876246820}
   - component: {fileID: 4397412873939129277}
   - component: {fileID: 7711106826321342472}
+  - component: {fileID: 1251647936}
+  - component: {fileID: 1251647937}
   m_Layer: 7
   m_Name: Player
   m_TagString: Player
@@ -528,11 +516,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c62a18c6fcc6a5a4ba808603e154fbfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  jumpHeight: 30
+  jumpHeight: 40
   groundMask:
     serializedVersion: 2
     m_Bits: 1
-  fallSpeed: -10
+  fallSpeed: 10
 --- !u!114 &6758759033437166373
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -609,6 +597,7 @@ MonoBehaviour:
   inventaireTaille: 3
   interactionDistance: 5
   creatureThrowSpeed: 10
+  interactableMsg: {fileID: 0}
 --- !u!54 &4397412873939129277
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -639,6 +628,37 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &1251647936
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758759033437166368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b37b8f5312ea19543871b9156d77083d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialRespawnPoint: {fileID: 0}
+--- !u!114 &1251647937
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6758759033437166368}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 660dc3c5243d5ec4fb26f21c89c0234e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Health:
+    baseValue: 100
+    regenValue:
+      baseValue: 5
+    canRegen: 1
+  animator: {fileID: 0}
 --- !u!1 &6758759035025714290
 GameObject:
   m_ObjectHideFlags: 0
