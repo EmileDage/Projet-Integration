@@ -97,13 +97,6 @@ public class PlayerInventory : AbstractInventoryUI
             slots[index].Select();
             selectedIndex = index;
             joueur.Selected = slots[index];
-            if (!slots[index].ItemStack.isEmpty()) {
-                joueur.Equiped.gameObject.SetActive(true);
-                joueur.Selected.ItemStack.Item.OnSelecting(joueur);
-            }
-            else {
-                joueur.Equiped.gameObject.SetActive(false);
-            }
         }
     }
 

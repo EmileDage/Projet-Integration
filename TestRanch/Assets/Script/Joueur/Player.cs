@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 
 public class Player : MonoBehaviour
 {
@@ -18,7 +17,6 @@ public class Player : MonoBehaviour
 
     [SerializeField] private int creatureThrowSpeed = 10;
 
-    [SerializeField] private Text interactableMsg;
     private PlayerInventory barreInventaire;
     private Coffre openChest;
     private AbstractInventoryUI openedNonChestInventory;
@@ -52,29 +50,11 @@ public class Player : MonoBehaviour
     private void UseItem()
     {
         selected.ItemStack.UseItem(this);
-        item_AS.Play();
+        item_AS.clip = selected.ItemStack.Item.UseSound;
     }
 
     private void Update()
     {
-        RaycastHit hitUpdate;
-        if(Physics.Raycast(playerCam.transform.position, playerCam.transform.TransformDirection(Vector3.forward), out hitUpdate, interactionDistance))
-        {
-            
-            if (hitUpdate.collider.GetComponent<IInteractible>() != null) {
-                interactableMsg.gameObject.SetActive(true);
-            }
-            else
-            {
-                interactableMsg.gameObject.SetActive(false);
-            }
-        }
-        else
-        {
-            interactableMsg.gameObject.SetActive(false);
-        }
-        
-
         #region inputs
         if (Input.GetButtonDown("Fire1"))
         {
