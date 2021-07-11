@@ -15,5 +15,4 @@ MonoBehaviour:
   codexName: The Frozen Tundra
   description: 'Full of tree Yeahhh.... '
   icon: {fileID: 21300000, guid: bd10425f2cc1ff3479406d9b4fe06098, type: 3}
-  upgradeUnlocked:
-  - {fileID: 11400000, guid: 2031f80812d46be428ed7c796f267a59, type: 2}
+  upgradeUnlocked: []

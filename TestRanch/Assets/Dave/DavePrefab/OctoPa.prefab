@@ -58,7 +58,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   creature: {fileID: 1312149026987213564}
-  happinessIncrease: 0
+  happinessIncrease: 10
 --- !u!1 &1312149026987213566
 GameObject:
   m_ObjectHideFlags: 0
@@ -127,7 +127,8 @@ MonoBehaviour:
   creatureInfo: {fileID: 1312149026987213565}
   happiness: 50
   state: 
-  hungryTimer: 15
+  hungryTimer: 1
+  hungryTimerCooldown: 1
   targetCollider: {fileID: 0}
   dropRessources: {fileID: 11400000, guid: 5a678949447ff0f488f09b1b0ea4814d, type: 2}
   cooldownDropRessource: 10

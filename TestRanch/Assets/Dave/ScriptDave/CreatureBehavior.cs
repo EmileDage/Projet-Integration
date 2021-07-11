@@ -18,7 +18,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	public Transform player;
 	public GameObject creatureInfoPanel;
 	public GameObject creatureInfoPanelExtra;
-	public GameObject interactionPanel;
+	//public GameObject interactionPanel;
 	public float followdistance;
 	public float distance;
 	public CreatureInfo creatureInfo;
@@ -29,6 +29,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	[Header("Food Stuff")]
 	public float hungryTimer;
+	public float hungryTimerCooldown;
 	public Collider targetCollider;
 	public Materiaux dropRessources;
 
@@ -84,7 +85,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 		timeManager = MyTimeManager.timeInstance;
 		timeManager.GHourPassed += OnGHourPassed;
 		creatureInfoPanel.SetActive(false);
-		interactionPanel.SetActive(false);
+		//interactionPanel.SetActive(false);
 		creatureInfoPanelExtra.SetActive(false);
 	}
 
@@ -160,7 +161,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 			if (hungryTimer == 0)
 			{
 				creatureInfo.hungry = "Yes";
-				hungryTimer = 15;
+				hungryTimer = hungryTimerCooldown;
 			}
 		}
     }

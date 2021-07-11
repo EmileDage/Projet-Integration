@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Stamina Module III
   description: Increase your maximum stamina by 150.
-  cost: 250
+  cost: 300
   icon: {fileID: 21300000, guid: 9188df8efadd0ab4ea507e5f4880c50c, type: 3}
   prerequisite:
   - {fileID: 11400000}

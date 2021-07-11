@@ -77,7 +77,11 @@ public class CodexManager : MonoBehaviour
     private IEnumerator TemporaryVisual(CodexScriptable codexScriptable)
     {
         codexNewDiscoveryInterface.gameObject.SetActive(true);
-        codexNewDiscoveryInterface.GetComponent<Text>().text = "Discover : " + codexScriptable.GetName() + "\n" + "Upgrade Unlocked : " + codexScriptable.GetListOfUpgrade()[0].GetName();
+
+        if (codexScriptable.GetListOfUpgrade().Count > 0)
+            codexNewDiscoveryInterface.GetComponent<Text>().text = "Discover : " + codexScriptable.GetName() + "\n" + "Upgrade Unlocked : " + codexScriptable.GetListOfUpgrade()[0].GetName();
+        else
+            codexNewDiscoveryInterface.GetComponent<Text>().text = "Discover : " + codexScriptable.GetName();
 
         yield return new WaitForSeconds(5);
         codexNewDiscoveryInterface.gameObject.SetActive(false);

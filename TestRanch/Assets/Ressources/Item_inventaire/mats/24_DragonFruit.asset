@@ -23,4 +23,4 @@ MonoBehaviour:
   itemWorldObject: {fileID: 2666282297672790090, guid: ab66df43d736fea4181e373502b7d366, type: 3}
   funct: 3
   speed: 10
-  spawner: {fileID: 0}
+  spawner: {fileID: 1600120471959470772, guid: 467e9ab0f3e0ce542a901236b559184f, type: 3}

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   upgradeName: Speed Module III
   description: Increase Sprint Speed by 10%.
-  cost: 200
+  cost: 300
   icon: {fileID: 21300000, guid: 258a237801ddde741bec3658aef1d221, type: 3}
   prerequisite:
   - {fileID: 11400000, guid: 6951a755c58543b409d742bb77da39d8, type: 2}
