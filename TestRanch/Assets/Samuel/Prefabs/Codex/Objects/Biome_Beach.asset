@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Biome_Beach
   m_EditorClassIdentifier: 
   codexName: The Coral Beach
-  description: 'Sunlight and coral. '
+  description: "Ce biome ensoleill\xE9 est parfait pour prendre une marche relaxante
+    proche de l\u2019eau! Cette plage a une beaut\xE9 in\xE9gal\xE9e avec ses coraux.
+    Or, chaque beaut\xE9 a ses  secrets.\r"
   icon: {fileID: 21300000, guid: 263f0c3bdf6a137479ad6ac4a64ae35c, type: 3}
   upgradeUnlocked:
   - {fileID: 11400000, guid: 88c29c5556c42bf4f8c862da9ef56291, type: 2}

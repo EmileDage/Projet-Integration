@@ -13,7 +13,10 @@ MonoBehaviour:
   m_Name: Res_Solarite
   m_EditorClassIdentifier: 
   codexName: Solarite
-  description: A Angry Boi.
+  description: "Des rumeurs disent que ce cristal contient un fraction du pouvoir
+    du soleil. \r\nSolarite pure(Rare): Cette variante est plus difficile \xE0 manipuler
+    d\xFB \xE0 sa chaleur interne qui peut br\xFBler si un contact direct est maintenu
+    pour trop longtemps.\r\n"
   icon: {fileID: 21300000, guid: 53c8610475a84784c9c06b95094e75b4, type: 3}
   upgradeUnlocked:
   - {fileID: 11400000, guid: 5dfaf25b00d70d648997a7eecf7234d1, type: 2}

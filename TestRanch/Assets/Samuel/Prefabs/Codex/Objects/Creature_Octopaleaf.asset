@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Creature_Octopaleaf
   m_EditorClassIdentifier: 
   codexName: OctopaLeaf
-  description: A Angry Boi.
+  description: "Cette variante occupant les plaines semble avoir d\xE9velopp\xE9
+    une symbiose avec les plantes locales. L\u2019OctopaLeaf prend grand soin de
+    la plante sur sa t\xEAte pour pouvoir plus tard attirer d\u2019autres membres
+    de son esp\xE8ce. La plante peut r\xE9pandre sa prog\xE9niture sur de plus grandes
+    distances gr\xE2ce \xE0 la cr\xE9ature."
   icon: {fileID: 21300000, guid: a74e789526b0b6e49aad9f7135cd77db, type: 3}
   upgradeUnlocked:
   - {fileID: 11400000, guid: e80bf556a13148c49a0f978226c9e3d7, type: 2}

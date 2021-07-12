@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Res_Coco
   m_EditorClassIdentifier: 
   codexName: Coco
-  description: A Angry Boi.
+  description: "La noix de coco est un fruit qui se distingue par son apparence poilue.
+    L\u2019eau de coco est une excellente source d'hydratation contrairement \xE0
+    l'eau sal\xE9e de l\u2019oc\xE9an."
   icon: {fileID: 21300000, guid: 13905d04d511d7245bbf93bcfcce12ce, type: 3}
   upgradeUnlocked:
   - {fileID: 11400000, guid: d9856b6a13030a946a46e260baa6de88, type: 2}

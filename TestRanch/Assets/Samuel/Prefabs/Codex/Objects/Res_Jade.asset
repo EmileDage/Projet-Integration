@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Res_Jade
   m_EditorClassIdentifier: 
   codexName: Jade
-  description: A Angry Boi.
+  description: "Un cristal  vert qui exhibe une certaine beaut\xE9 en sa simplicit\xE9.\r\nJade
+    de feu : Cette vari\xE9t\xE9 de Jade diff\xE8re par sa coloration. Elle donne
+    l\u2019impression qu\u2019elle contient un feu.\r\n"
   icon: {fileID: 21300000, guid: c9343d0670cfe7445a83e71f655c6ab6, type: 3}
   upgradeUnlocked:
   - {fileID: 11400000, guid: 47d69d18d4fba284795f7bc7af7f6971, type: 2}

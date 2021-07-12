@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Res_Mushroom
   m_EditorClassIdentifier: 
   codexName: Mushroom
-  description: A Angry Boi.
+  description: "Plusieurs esp\xE8ces vari\xE9es existent sur Terre qui sont comestibles
+    ou toxiques. Par chance, sur cette \xEEle ils sont comestibles."
   icon: {fileID: 21300000, guid: 08300189614bce74798acf8d237e2911, type: 3}
   upgradeUnlocked: []
