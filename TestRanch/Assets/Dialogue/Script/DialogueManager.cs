@@ -69,7 +69,7 @@ public class DialogueManager : MonoBehaviour
 
         if (fadeOut)
         {
-            dialogueBox.GetComponent<CanvasGroup>().alpha -= Time.deltaTime / 2;
+            dialogueBox.GetComponent<CanvasGroup>().alpha -= Time.deltaTime;
             if (dialogueBox.GetComponent<CanvasGroup>().alpha <= 0)
             {
                    
