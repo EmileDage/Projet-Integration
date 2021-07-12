@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Creature_OctopIce
   m_EditorClassIdentifier: 
   codexName: OctopaIce
-  description: A Angry Boi.
+  description: " Cette variante trouv\xE9e dans les montagnes semble appr\xE9cier
+    les temp\xE9ratures basses. Cette esp\xE8ce a \xE9volu\xE9 un organe ressemblant
+    \xE0 un chapeau rouge pour se prot\xE9ger des vents per\xE7ants de leur habitat."
   icon: {fileID: 21300000, guid: 8fcc50d2ab16d0b458daf4195de575fd, type: 3}
   upgradeUnlocked: []

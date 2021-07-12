@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Creature_OctopaHot
   m_EditorClassIdentifier: 
   codexName: OctopaHot
-  description: A Angry Boi.
+  description: "Cette variante, peuplant le volcan, a \xE9volu\xE9 pour tol\xE9rer
+    les temp\xE9ratures hautes. Ces simili-cornes permettent \xE0 la cr\xE9ature
+    de r\xE9guler sa temp\xE9rature interne."
   icon: {fileID: 21300000, guid: 1a0f04f234385d548af07a9d01e2608d, type: 3}
   upgradeUnlocked:
   - {fileID: 11400000, guid: af226a925f8b1c9459e3706c7ae60d92, type: 2}

@@ -13,7 +13,8 @@ MonoBehaviour:
   m_Name: Res_DragonFruit
   m_EditorClassIdentifier: 
   codexName: Dragon Fruit
-  description: A Angry Boi.
+  description: "Malgr\xE9 son apparence dure, le fruit se fait couper assez facilement.
+    Il peut se faire manger cru ou grill\xE9."
   icon: {fileID: 21300000, guid: 76b30d69816a0084bade4466b31f64ef, type: 3}
   upgradeUnlocked:
   - {fileID: 11400000, guid: 05f725ca573871648956f5d49fae4878, type: 2}

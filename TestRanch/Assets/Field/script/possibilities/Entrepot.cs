@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -36,6 +37,12 @@ public class Entrepot : MonoBehaviour
     public void Chest3_Activate()
     {
         upgrades[2].SetActive(true);
+    }
+
+    internal void DestroyUpgrades()
+    {
+        foreach (GameObject a in upgrades)
+            a.gameObject.SetActive(false);
     }
     #endregion
 

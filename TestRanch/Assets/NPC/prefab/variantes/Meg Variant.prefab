@@ -1,0 +1,213 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!64 &1783145588
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1851638539223010342}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4168771564931210727, guid: e412acb2501700e43a0cea780c6a6dc2, type: 3}
+--- !u!1001 &1716332830929972001
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2378781565474254604, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_Name
+      value: Meg
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 251.69
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 82.42
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 667.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.5788713
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.8154189
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 109.258
+      objectReference: {fileID: 0}
+    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192366124560225729, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192366124560225729, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: rewards.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 01e11f358cd988b43974f60fb523cd4a, type: 2}
+    - target: {fileID: 4192366124560225729, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: fetchThis.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 87f45736e70207b47a0ad7a8085a7ef3, type: 2}
+    - target: {fileID: 4192366124560225729, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: rewardsQte.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4192366124560225729, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: fetchThisQte.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.24
+      objectReference: {fileID: 0}
+    - target: {fileID: 5657393526990954014, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_endquest.name
+      value: Meg
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_idlechat.name
+      value: Meg
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.name
+      value: Meg
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_waitingquest.name
+      value: Meg
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.size
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.data[0]
+      value: 'You actually did it !
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.data[1]
+      value: "Thank you ! Thank you !\n Thank you !\n Thank you ! Thank you !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.data[2]
+      value: Wow they taste amazing !
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[0]
+      value: Hiking is so much fun !
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[0]
+      value: Oh hello fellow climbing stranger !
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[1]
+      value: 'The wind sure feels cold today,
+
+        I love it.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[2]
+      value: 'Don''t have to worry about regulart sweat !
+
+        Only cold sweat
+        is my worry anymore.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[3]
+      value: All that climbing makes me hungry.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[4]
+      value: 'I heard from Dwight there are delicious mushrooms in the cavern.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[5]
+      value: 'I''m tempted,
+
+        but then I remenber,
+
+        I H A T E caves.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[6]
+      value: 'Could you fetch 10 mushrooms for me ?
+
+        I''ll give you something
+        in exchange !'
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[0]
+      value: Did you find enough shrooms ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[1]
+      value: 'Don''t feel pressured buddy.
+
+        I''m not moving anytime from
+        here the view is beautiful.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977502442111230463, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.26
+      objectReference: {fileID: 0}
+    - target: {fileID: 8977502442111230463, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.23
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+--- !u!1 &1851638539223010342 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1036941639465330439, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
+  m_PrefabInstance: {fileID: 1716332830929972001}
+  m_PrefabAsset: {fileID: 0}

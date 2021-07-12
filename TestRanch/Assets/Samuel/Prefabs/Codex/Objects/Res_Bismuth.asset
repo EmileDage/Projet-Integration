@@ -13,6 +13,8 @@ MonoBehaviour:
   m_Name: Res_Bismuth
   m_EditorClassIdentifier: 
   codexName: Bismuth
-  description: A Angry Boi.
+  description: "Le bismuth est un min\xE9ral rare. Il fut identifi\xE9 et d\xE9crit
+    seulement en 1753 par Claude Geoffroy Le Jeune.\nBismuth color\xE9(Rare): Cette
+    variante du bismuth a cette coloration d\xFB \xE0 l\u2019oxydation de ces cristaux."
   icon: {fileID: 21300000, guid: 155764bfcf140ec48978df5471776ea1, type: 3}
   upgradeUnlocked: []

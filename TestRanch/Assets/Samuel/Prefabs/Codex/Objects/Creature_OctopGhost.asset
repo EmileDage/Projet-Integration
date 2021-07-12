@@ -13,6 +13,7 @@ MonoBehaviour:
   m_Name: Creature_OctopGhost
   m_EditorClassIdentifier: 
   codexName: OctopaGhost
-  description: A Angry Boi.
+  description: "Cette variante qui habite les cavernes a une coloration blanche et
+    spectrale ce qui d\xE9finit son nom. "
   icon: {fileID: 21300000, guid: 5930dcd8c2653334a9eaf776eccfb810, type: 3}
   upgradeUnlocked: []

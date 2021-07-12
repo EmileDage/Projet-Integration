@@ -36,10 +36,15 @@ public abstract class PlanterParent : MonoBehaviour
 
     }
 
-    public void Destroy_planter()
+    public virtual void Destroy_planter()
     {
         Info_Pannel.SetActive(false);
         Info = false;
+        //deactive visuel upgrades
+        foreach (GameObject go in Upgrades)
+            go.SetActive(false);
+        //deactive upgrades
+
     }
 
     public virtual void OnGHourPassed(object source)

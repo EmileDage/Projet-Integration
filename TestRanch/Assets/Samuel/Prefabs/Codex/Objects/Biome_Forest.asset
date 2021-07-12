@@ -13,7 +13,9 @@ MonoBehaviour:
   m_Name: Biome_Forest
   m_EditorClassIdentifier: 
   codexName: The Lush Forest
-  description: 'Full of tree Yeahhh.... '
+  description: "D\xE8s la d\xE9couverte de ce biome, un projet de colonie fut tout
+    de suite entam\xE9. Ce biome remplit toutes les conditions pour maintenir une
+    vie facile et sans danger."
   icon: {fileID: 21300000, guid: 290068d00f2582845b232e86c3a186c9, type: 3}
   upgradeUnlocked:
   - {fileID: 11400000, guid: 2502fb5ccb2b0c44fb6dd06bf146ec4d, type: 2}

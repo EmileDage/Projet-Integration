@@ -13,6 +13,10 @@ MonoBehaviour:
   m_Name: Creature_Octopa
   m_EditorClassIdentifier: 
   codexName: Octopa
-  description: Special Happy Boi.
+  description: "Cette adorable cr\xE9ature semble \xEAtre l\u2019anc\xEAtre commun
+    des autres variantes. Une origine marine expliquerait leur apparence similaire
+    \xE0 une pieuvre. Cependant, il est inconnu pourquoi ils ont migr\xE9 en dehors
+    de l\u2019eau. Pour l\u2019instant, les explorateurs ont re\xE7u l\u2019ordre
+    de se tenir loin de l\u2019eau."
   icon: {fileID: 21300000, guid: 92edc09d91a5de5498b78f4358a1476a, type: 3}
   upgradeUnlocked: []

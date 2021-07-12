@@ -47,6 +47,17 @@ public class SpawnerMinerals : SimpleSpawner
         
     }
 
+    public void Remove_UPGRADES() {
+        Deactivate_Chrono();
+        //rich soil
+        upgrade_soil = false;
+        foreach (SimpleNode node in produits)
+        {
+            node.Yield /= 2;
+        }
+        //rare rock
+        rareRockChance -= 25;
+    }
 
     public override void OnGHourPassed(object source)
     {

@@ -34,7 +34,28 @@ public class Mine : PlanterParent
 
     }
 
+    public override void Destroy_planter()
+    {
+        //deactive upgrades
+        if (SpawnerInstance != null)
+        {
+            SpawnerInstance.GetComponent<SpawnerMinerals>().Remove_UPGRADES();
+            Destroy(SpawnerInstance);
+        }
+        else
+        {
+            this.gameObject.GetComponent<Mine_UI>().Delete_pending_upgrades();
+        }
 
+        if (second_producer != null) { 
+            second_producer.SetActive(false);
+        }
+
+        base.Destroy_planter();
+
+        Destroy(this.gameObject.GetComponent<Mine_UI>());
+        this.gameObject.SetActive(false);
+    }
 
     protected override void AssignSpawnerRessource(Materiaux inMat)
     {

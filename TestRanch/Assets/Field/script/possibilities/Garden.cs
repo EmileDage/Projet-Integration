@@ -35,6 +35,25 @@ public class Garden : PlanterParent, IFarmable
     public Abreuvoir Water_container { get => water_container; set => water_container = value; }
 
 
+
+    public override void Destroy_planter()
+    {
+        if (SpawnerInstance != null)
+        {
+            SpawnerInstance.GetComponent<SpawnerAgriculture>().Deactivate_Upgrade();
+            Destroy(SpawnerInstance);
+        }
+        else {
+            this.gameObject.GetComponent<Garden_UI>().Delete_pending_upgrades();
+        }
+
+        water_container.Upgrade = false;
+        base.Destroy_planter();
+        Destroy(this.gameObject.GetComponent<Garden_UI>());
+        this.gameObject.SetActive(false);
+
+    }
+
     public override void OnGHourPassed(object source)
     {
         base.OnGHourPassed(source);

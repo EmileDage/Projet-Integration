@@ -13,7 +13,11 @@ MonoBehaviour:
   m_Name: Res_Coral
   m_EditorClassIdentifier: 
   codexName: Coral
-  description: A Angry Boi.
+  description: "Le corail de l\u2019\xEEle parfois se solidifie et devient une pierre
+    avec une forme unique. Cette pierre peut \xEAtre utilis\xE9e comme mat\xE9riau
+    de construction.\r\nGolden Coral Stone(Rare) : Cette variante se produit lorsqu\u2019une
+    p\xE9pite d\u2019or est int\xE9gr\xE9 lors du processus de transformation en
+    pierre du corail. Cette pierre a une apparence compl\xE8tement dor\xE9e.\r\n"
   icon: {fileID: 21300000, guid: 68ebc235537a1db43840f5b8033a83ab, type: 3}
   upgradeUnlocked:
   - {fileID: 11400000, guid: fb374d568a117724e951233dbc1ed3d2, type: 2}

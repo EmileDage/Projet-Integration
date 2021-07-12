@@ -131,6 +131,12 @@ public class SpawnerAgriculture : WildPlantSpawner, IFarmable
         Jardin.UpdateInfoPannel();
     }
 
+    public void Deactivate_Upgrade() {
+        Deactivate_Chrono();
+        Upgrade_fertilizer = false;
+        sickness_resistance -= 30;
+    }
+
     public override void OnGHourPassed(object source)
     {   
 

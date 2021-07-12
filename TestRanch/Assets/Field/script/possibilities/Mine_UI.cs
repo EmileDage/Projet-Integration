@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -44,6 +45,15 @@ public class Mine_UI : MonoBehaviour
             Stalactite_Activate();
         }
     }
+
+    internal void Delete_pending_upgrades()
+    {
+        soil = false;
+        chrono =  false;
+        rarerock = false;
+        stalactite = false;
+    }
+
 
     #region Upgrades
     //les functions se font appeler par field_ui
