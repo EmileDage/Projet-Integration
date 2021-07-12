@@ -60,7 +60,7 @@ public class Mine : PlanterParent
     {
         
         base.AssignSpawnerRessource(inMat);
-        second_producer = Instantiate(inMat.Spawner, spawn_stalactite);
+        second_producer = Instantiate(inMat.Spawner, spawn_stalactite.position, spawn_stalactite.rotation);
         second_producer.SetActive(false);
         this.gameObject.GetComponent<Mine_UI>().CheckPendingUpgrades();
         UpdateInfoPannel();      

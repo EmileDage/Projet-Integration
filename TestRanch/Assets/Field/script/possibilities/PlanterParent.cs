@@ -60,7 +60,7 @@ public abstract class PlanterParent : MonoBehaviour
 
     protected virtual void AssignSpawnerRessource(Materiaux inMat) 
     {
-        SpawnerInstance = Instantiate(inMat.Spawner, spawn); 
+        SpawnerInstance = Instantiate(inMat.Spawner, spawn.position, spawn.rotation); 
     }
 
     private void OnCollisionEnter(Collision collision)//erreur quand fruit est lancer sur mine

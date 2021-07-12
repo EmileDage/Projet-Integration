@@ -68,10 +68,12 @@ public class PlayerInventory : AbstractInventoryUI
 
     public void UpdateAllSlots()
     {
+
         for(int i = 0; i < slots.Length; i++)
         {
             slots[i].UpdateSlot();
         }
+        
     }
 
     //pour parcourir avec la roue
@@ -97,6 +99,7 @@ public class PlayerInventory : AbstractInventoryUI
             slots[index].Select();
             selectedIndex = index;
             joueur.Selected = slots[index];
+
         }
     }
 
@@ -165,6 +168,8 @@ public class PlayerInventory : AbstractInventoryUI
         }
         Debug.Log(stack.Qte);
         UpdateAllSlots();
+
+
         return stack.Qte;
     }
 

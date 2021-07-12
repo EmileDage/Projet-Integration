@@ -4,6 +4,12 @@ using UnityEngine;
 
 public class PuzzleDoor : MonoBehaviour
 {
+    private Animator animator = null;
+
+    private void Start()
+    {
+        animator = GetComponent<Animator>();
+    }
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
@@ -15,7 +21,7 @@ public class PuzzleDoor : MonoBehaviour
     public void ActivateDoor()
     {
         GameManager.gmInstance.ModifyPuzzleKey(-1);
-        gameObject.SetActive(false);
+        animator.Play("OpenDoor");
     }
     private bool CheckKeyAmount() 
     {

@@ -341,7 +341,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7246508174401657587, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
       propertyPath: m_LocalScale.z
-      value: 50
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7246508174401657587, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
       propertyPath: m_LocalPosition.x
@@ -385,7 +385,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7246508174401657590, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
       propertyPath: m_Name
-      value: Fer_Plantation
+      value: Iron_Plantation
       objectReference: {fileID: 0}
     - target: {fileID: 7246508174401657591, guid: 9dc622ea0814d5f4f9f4c6435fb3a3aa, type: 3}
       propertyPath: rareRock_ref

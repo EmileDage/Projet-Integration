@@ -18,7 +18,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	public Transform player;
 	public GameObject creatureInfoPanel;
 	public GameObject creatureInfoPanelExtra;
-	public GameObject interactionPanel;
+	//public GameObject interactionPanel;
 	public float followdistance;
 	public float distance;
 	public CreatureInfo creatureInfo;
@@ -85,7 +85,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 		timeManager = MyTimeManager.timeInstance;
 		timeManager.GHourPassed += OnGHourPassed;
 		creatureInfoPanel.SetActive(false);
-		interactionPanel.SetActive(false);
+		//interactionPanel.SetActive(false);
 		creatureInfoPanelExtra.SetActive(false);
 	}
 
