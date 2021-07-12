@@ -1,0 +1,290 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!64 &574042606
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6137657866079636675}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4168771564931210727, guid: e412acb2501700e43a0cea780c6a6dc2, type: 3}
+--- !u!1001 &4187261438978730134
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 350.6
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 79.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 661.39
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133442056536477686, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_Name
+      value: Danny_and_Dwight
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145113504012706477, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.7200012
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145113504012706477, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1.2562103
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145113504012706477, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 2.039978
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145113504012706477, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.27587926
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145113504012706477, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0.27587926
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145113504012706477, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.6510689
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145113504012706477, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0.6510688
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145113504012706477, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: -90
+      objectReference: {fileID: 0}
+    - target: {fileID: 2145113504012706477, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 134.072
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159917491998549, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: size
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.name
+      value: Dwight(talking to Danny)
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.name
+      value: Dwight
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[0]
+      value: 'The cave was amazing ! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[1]
+      value: The Bismuth, the diamonds and the shrooms were so fascinating !
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[0]
+      value: Umm, do we know each other ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[1]
+      value: .......
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[2]
+      value: Oh, Danny sent you !
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[3]
+      value: 'Time really flies when you have fun.
+
+        This cavern is amazing
+        !'
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[4]
+      value: Piece of advice,  the spikes down there hurt pretty bad so don't try
+        sticking to them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900053, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -172.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900053, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.04
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900053, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 275.67
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254214176174887385, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254214176174887385, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: rewards.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254214176174887385, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: rewards.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 01e11f358cd988b43974f60fb523cd4a, type: 2}
+    - target: {fileID: 3254214176174887385, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: rewards.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254214176174887385, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: rewardsQte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254214176174887385, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: rewardsQte.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254214176174887385, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: rewardsQte.Array.data[1]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_endquest.name
+      value: Danny
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.name
+      value: Danny(tallking to Dwight)
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.name
+      value: Danny
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_waitingquest.name
+      value: Danny
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.data[0]
+      value: "Thanks big times !  \nHopefully this reward makes it all worth it !"
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[0]
+      value: Man, i really don't understand your fascination with caves.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[0]
+      value: 'Well well,
+
+        I haven''t seen you around her.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[1]
+      value: It's nice to meet a new face.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[2]
+      value: 'I know we literally just met but....
+
+        Could you do me a favor
+        ?
+
+        Don''t worry you''ll receive a reward. I promise.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[3]
+      value: I usually hang out here with Dwight.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[4]
+      value: 'The dude recently discovered a cave not too far from here.
+
+        I''m
+        pretty sure he is still in there.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[5]
+      value: 'Would you mind telling him to come see me ?
+
+        Thanks !'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[0]
+      value: Did you find him ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[1]
+      value: Don't worry you can take your time.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9119827833420720740, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 9180684866597645654, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.18
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+--- !u!1 &6137657866079636675 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 8012312036019774549, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+  m_PrefabInstance: {fileID: 4187261438978730134}
+  m_PrefabAsset: {fileID: 0}
