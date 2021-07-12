@@ -40,6 +40,7 @@ public class Mine : PlanterParent
         if (SpawnerInstance != null)
         {
             SpawnerInstance.GetComponent<SpawnerMinerals>().Remove_UPGRADES();
+            Destroy(SpawnerInstance);
         }
         else
         {

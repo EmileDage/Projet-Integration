@@ -64,7 +64,7 @@ public class Garden_UI : MonoBehaviour
 
         planter.Upgrades[1].SetActive(true);
         planter.Water_container.OnUpgrade();
-        //maybe add a particule system to imitate water?
+
     }
 
     public void Rich_fer_Activate()//rich fertilizer

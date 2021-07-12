@@ -41,6 +41,7 @@ public class Garden : PlanterParent, IFarmable
         if (SpawnerInstance != null)
         {
             SpawnerInstance.GetComponent<SpawnerAgriculture>().Deactivate_Upgrade();
+            Destroy(SpawnerInstance);
         }
         else {
             this.gameObject.GetComponent<Garden_UI>().Delete_pending_upgrades();

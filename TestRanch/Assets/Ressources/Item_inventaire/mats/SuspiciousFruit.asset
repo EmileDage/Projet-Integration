@@ -19,7 +19,8 @@ MonoBehaviour:
   valeur: 5
   iD: 99
   interactionBonusRange: 0
-  yieldModifier: 1
+  useSound: {fileID: 0}
   itemWorldObject: {fileID: 150753865428504986, guid: c8062069f638029438d0ab4f49c8f4f7, type: 3}
-  funct: 3
+  funct: 2
   speed: 15
+  spawner: {fileID: 0}
