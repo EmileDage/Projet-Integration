@@ -35,14 +35,18 @@ public class Slot : MonoBehaviour, IDropHandler
         DeSelect();
     }
 
-    
+    private bool IsOpen()
+    {   
+        return this.GetComponent<Image>().sprite.Equals(box);
+    }
+
     public void OnDrop(PointerEventData eventData)
     {
         
        GameObject dragged= eventData.pointerDrag;
        DragItem drag = dragged.GetComponent<DragItem>();
 
-       if( dragged != imgDrag.gameObject && drag != null)
+       if( dragged != imgDrag.gameObject && drag != null && IsOpen())
 
         {
             Debug.Log("merging drag");
