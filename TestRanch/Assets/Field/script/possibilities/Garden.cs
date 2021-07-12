@@ -38,11 +38,18 @@ public class Garden : PlanterParent, IFarmable
 
     public override void Destroy_planter()
     {
-        base.Destroy_planter();
-        //deactive upgrades
-        SpawnerAgriculture ag = SpawnerInstance.GetComponent<SpawnerAgriculture>();
-        ag.Deactivate_Upgrade();
+        if (SpawnerInstance != null)
+        {
+            SpawnerInstance.GetComponent<SpawnerAgriculture>().Deactivate_Upgrade();
+        }
+        else {
+            this.gameObject.GetComponent<Garden_UI>().Delete_pending_upgrades();
+        }
+
         water_container.Upgrade = false;
+        base.Destroy_planter();
+        Destroy(this.gameObject.GetComponent<Garden_UI>());
+        this.gameObject.SetActive(false);
 
     }
 

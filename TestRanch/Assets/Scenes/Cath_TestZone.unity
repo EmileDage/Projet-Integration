@@ -63707,6 +63707,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 1.5
       objectReference: {fileID: 0}
+    - target: {fileID: 6012948235803598251, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6758759033247933000, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
       propertyPath: mouseSensitivity
       value: 500
@@ -63721,15 +63725,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758759033437166374, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 306.5
+      value: 362.4
       objectReference: {fileID: 0}
     - target: {fileID: 6758759033437166374, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 18.7
+      value: 41.25
       objectReference: {fileID: 0}
     - target: {fileID: 6758759033437166374, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 480.2
+      value: 305.4
       objectReference: {fileID: 0}
     - target: {fileID: 6758759033437166374, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
       propertyPath: m_LocalRotation.w

@@ -113,10 +113,9 @@ public class Field : MonoBehaviour, IBuildable
         switch (F_type)
         {
             case field_possibilities.agriculture:
-                {                   
-                    Destroy(jardin.GetComponent<Garden_UI>());
+                {     
                     jardin.GetComponent<Garden>().Destroy_planter();
-                   jardin.SetActive(false);
+                   
                 }
                 break;
             case field_possibilities.enclos:
@@ -127,15 +126,15 @@ public class Field : MonoBehaviour, IBuildable
                 break;
             case field_possibilities.entrepot:
                 {
-                    Entrepot.SetActive(false);
                     Entrepot.GetComponent<Entrepot>().DestroyUpgrades();
+                    Entrepot.SetActive(false);
+
                 }
                 break;
             case field_possibilities.mine:
                 {
-                    Destroy(Mine.GetComponent<Mine_UI>());
                     Mine.GetComponent<Mine>().Destroy_planter();
-                    Mine.SetActive(false);
+                    
                 }
                 break;
         }

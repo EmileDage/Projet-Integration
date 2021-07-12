@@ -15,6 +15,12 @@ public class Garden_UI : MonoBehaviour
     private bool chrono;
     private bool crystal;
 
+    public void Delete_pending_upgrades() {
+        fertilizer = false;
+        chrono = false;
+        crystal = false;
+    }
+
 
     public void Set_ref(Garden plant) {
         planter = plant;
@@ -25,23 +31,24 @@ public class Garden_UI : MonoBehaviour
         //Debug.Log("Checking pending upgrades\nChecking spawner instance");
         //Debug.Log(planter.SpawnerInstance);
 
-        if (planter.SpawnerInstance != null) { 
-        
-        }
-        if (fertilizer) {//il y a deja le check pour si cest null dans la fnct
-            Rich_fer_Activate();
-        }
+        if (planter.SpawnerInstance != null) {
+            if (fertilizer)
+            {//il y a deja le check pour si cest null dans la fnct
+                Rich_fer_Activate();
+            }
 
-        if (chrono)
-        {//il y a deja le check pour si cest null dans la fnct
-            Chrono_Activate();
-        }
+            if (chrono)
+            {//il y a deja le check pour si cest null dans la fnct
+                Chrono_Activate();
+            }
 
-        if (crystal)
-        {//il y a deja le check pour si cest null dans la fnct
-            Debug.Log("Crystal");
-            Crystal_Activate();
+            if (crystal)
+            {//il y a deja le check pour si cest null dans la fnct
+                Debug.Log("Crystal");
+                Crystal_Activate();
+            }
         }
+       
 
     }
 
