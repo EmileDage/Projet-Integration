@@ -717,6 +717,14 @@ PrefabInstance:
       propertyPath: parent
       value: 
       objectReference: {fileID: 5275746020491722061}
+    - target: {fileID: 5762144641952639651, guid: 4c2b70e6ba6b1614f8363d5e9c3ffaa0, type: 3}
+      propertyPath: m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5762144641952639651, guid: 4c2b70e6ba6b1614f8363d5e9c3ffaa0, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: -5153668059839587492, guid: ba75d2a21b927614a9db2804694167e5, type: 3}
     - target: {fileID: 8884704969351545200, guid: 4c2b70e6ba6b1614f8363d5e9c3ffaa0, type: 3}
       propertyPath: m_CellSize.x
       value: 75
