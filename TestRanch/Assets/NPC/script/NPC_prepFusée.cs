@@ -8,6 +8,7 @@ public class NPC_prepFusée : Npc_Basic
     [SerializeField] private Item[] fetchThis;//exemple bannane
     [SerializeField] private int[] fetchThisQte;//exemple 2 ainsi le npc veut 2 banane
     [SerializeField] private int ChronoCoinNeeded;
+    [SerializeField] private GameObject fUSÉE;
 
     private GameManager gm;
     private bool fusee;
@@ -16,10 +17,8 @@ public class NPC_prepFusée : Npc_Basic
     {
         gm = GameManager.gmInstance;
         conversation = this.gameObject.GetComponent<DialogueTrigger>();
+        fUSÉE.SetActive(false);
 
-        //for testing
-        talked = true;
-        gm.ModifyChronoCoin(50, false);
     }
 
     public override void Interact(Player joueur)//quand joueur interagit avec NPC
@@ -44,6 +43,8 @@ public class NPC_prepFusée : Npc_Basic
         {
             if (!manager.FadeOut)
             {
+                fUSÉE.SetActive(true);
+
                 conversation.TriggerDialogueEnd();
                 quest_completed = true;
             }
@@ -73,28 +74,28 @@ public class NPC_prepFusée : Npc_Basic
 
 
                     //check objects
-                    for (int z = 0; z <= fetchThis.Length; z++) { //Check les objects necessaire pour la fusee
-                        Debug.Log("Currently looking for" + fetchThis[z].Nom);
-
+                    for (int z = 0; z < fetchThis.Length; z++) { //Check les objects necessaire pour la fusee
 
                         if (fetchThisQte[z] != 0)//si la qte nest pas a 0 il faut check si le joeur a des objects a donner
                         {
+
                             int QTE = fetchThisQte[z];
+
                             for (int a = 0; a < QTE; a++) {//je vais check si je peux enlever au moins 1 de l'item donc on a beosin pour le fusée
+
+
                                 if (joueur.BarreInventaire.TryPayWithItemStack(new ItemStack(fetchThis[z], 1)))//est ce que le jouer a au moins 1 de cet object
                                 {
-                                    Debug.Log("One "+ fetchThis[z].Nom+ "is given");                                  
                                     fetchThisQte[z]--;
-
+     
+                                
                                     if (fetchThisQte[z] == 0)
                                     {
-                                    Debug.Log("Currently 0 of object");
-                                        z++;
                                         break;
                                     }
+
                                 }else{
-                                    Debug.Log("Player doesnt have any "+ fetchThis[z].Nom + "on them");
-                                    z++;
+                                 Debug.Log("YOU HAVE NO MOAR TO GIBE BITCH");
                                     break;
                                 }
                             }
