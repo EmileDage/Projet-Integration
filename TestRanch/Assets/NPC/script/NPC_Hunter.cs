@@ -31,7 +31,7 @@ public class NPC_Hunter : NPC_basicsRewards
             }
 
         }
-        else if (quest_completed)
+        else if (Quest_completed)
         {//la quete est faite mais le joueur for some reason veut parler au npc
             if (!manager.FadeOut)
             {
@@ -45,7 +45,7 @@ public class NPC_Hunter : NPC_basicsRewards
                
                 conversation.TriggerDialogueEnd();
                 chest.gameObject.SetActive(true);
-                quest_completed = true;
+                Quest_completed = true;
             }
 
         }

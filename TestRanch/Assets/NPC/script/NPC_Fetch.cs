@@ -37,7 +37,7 @@ public class NPC_Fetch :  NPC_basicsRewards
                 talked = true;
             }
 
-        } else if (quest_completed) {//la quete est faite mais le joueur for some reason veut parler au npc
+        } else if (Quest_completed) {//la quete est faite mais le joueur for some reason veut parler au npc
             if (!manager.FadeOut)
             {
                 conversation.TriggerDialogueIdleChat();
@@ -49,7 +49,7 @@ public class NPC_Fetch :  NPC_basicsRewards
             {
                 conversation.TriggerDialogueEnd();
                 chest.gameObject.SetActive(true);
-                quest_completed = true;
+                Quest_completed = true;
             }
            
         }
