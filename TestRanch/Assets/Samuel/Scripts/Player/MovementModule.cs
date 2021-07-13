@@ -43,12 +43,12 @@ public class MovementModule : MonoBehaviour
     }
     public void RootMovement()
     {
-        ModifySpeed(-999);
+        rig.isKinematic = true;
         isRoot = true;
     }
     public void RemoveRootMovement()
     {
-        ModifySpeed(-999,true);
+        rig.isKinematic = false;
         isRoot = false;
     }
     public bool IsRoot()

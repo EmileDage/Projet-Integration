@@ -78,6 +78,7 @@ public class DialogueManager : MonoBehaviour
                    
                 Cursor.visible = false;
                 cam_joueur.GetComponent<CameraControl>().UnlockCamera();
+                joueur.GetComponent<MovementModule>().RemoveRootMovement();
 
                 dialogueBox.SetActive(false);
                 fadeOut = false;
@@ -89,7 +90,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-
+        joueur.GetComponent<MovementModule>().RootMovement();
         Cursor.visible = true;
         cam_joueur.GetComponent<CameraControl>().LockCamera();
         someoneIsTalking = true;
