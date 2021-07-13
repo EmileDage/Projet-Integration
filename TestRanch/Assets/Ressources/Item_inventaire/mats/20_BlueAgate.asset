@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Blue Agate
   maxStack: 10
-  icon_Inventory: {fileID: 21300000, guid: 6d3c80c9caf539e42b9c2d8840d3adca, type: 3}
+  icon_Inventory: {fileID: -7356418843097211396, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: Ocean Gem
   valeur: 20
   iD: 20

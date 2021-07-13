@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Basic Ink
   maxStack: 10
-  icon_Inventory: {fileID: 21300000, guid: 85da87ae354a91442b68621a0cce9dc6, type: 3}
+  icon_Inventory: {fileID: -1289509364999904798, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: A regular ink.
   valeur: 15
   iD: 32

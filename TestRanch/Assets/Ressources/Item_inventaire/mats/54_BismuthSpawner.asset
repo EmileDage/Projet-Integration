@@ -14,11 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Bismuth(spawner)
   maxStack: 1
-  icon_Inventory: {fileID: 21300000, guid: aed204a56591827478dbfeb1f6230188, type: 3}
+  icon_Inventory: {fileID: -7106488623865113282, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: 
   valeur: 0
   iD: 54
   interactionBonusRange: 0
+  useSound: {fileID: 0}
   itemWorldObject: {fileID: 4344232487625697815, guid: bacc45bbf727b4e4db9cd61d9a184c6f, type: 3}
   funct: 5
   speed: 10

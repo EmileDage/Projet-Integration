@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Apple
   maxStack: 10
-  icon_Inventory: {fileID: 21300000, guid: dde06c6d53f56f94199e338c798ad05c, type: 3}
+  icon_Inventory: {fileID: -8548944638091459904, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: Simple fruit.
   valeur: 5
   iD: 12

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Cocotier
   maxStack: 1
-  icon_Inventory: {fileID: 21300000, guid: 9bfc804749b616f4cb1c442b01db12f8, type: 3}
+  icon_Inventory: {fileID: 7419981975834195352, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: 
   valeur: 7
   iD: 13

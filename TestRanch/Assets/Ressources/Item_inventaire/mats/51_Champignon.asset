@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Mushroom
   maxStack: 20
-  icon_Inventory: {fileID: -2082096809819643426, guid: bf9f155e68921c3479654e290200f34c, type: 3}
+  icon_Inventory: {fileID: -2200396928510970948, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: Weird looking shrooms.
   valeur: 14
   iD: 51

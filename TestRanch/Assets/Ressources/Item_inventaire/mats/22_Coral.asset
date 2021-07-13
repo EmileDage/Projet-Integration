@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Coral
   maxStack: 10
-  icon_Inventory: {fileID: 21300000, guid: 9c7ddc272c6f3b3468b86893e4edd8e7, type: 3}
+  icon_Inventory: {fileID: -1074827551985193245, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: Basic Coral.
   valeur: 11
   iD: 22

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Pure Solarite
   maxStack: 10
-  icon_Inventory: {fileID: 21300000, guid: 21435c3dc64557c42a132453529531cd, type: 3}
+  icon_Inventory: {fileID: -6581425739132673869, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: This gem can burn anything on contact.
   valeur: 90
   iD: 29

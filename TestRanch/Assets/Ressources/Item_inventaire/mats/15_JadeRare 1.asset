@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Fire Jade
   maxStack: 10
-  icon_Inventory: {fileID: 21300000, guid: 1dc8202d2b7b2a943b7f52d077fe1517, type: 3}
+  icon_Inventory: {fileID: 535370029007795361, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: A Jade made of fire.
   valeur: 30
   iD: 15

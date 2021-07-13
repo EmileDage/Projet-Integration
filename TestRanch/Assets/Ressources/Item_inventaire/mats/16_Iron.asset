@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Iron
   maxStack: 10
-  icon_Inventory: {fileID: 21300000, guid: c7c237feb73644a4892a938738237fd4, type: 3}
+  icon_Inventory: {fileID: 4336326865582390999, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: Basic Iron.
   valeur: 8
   iD: 16

@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Solarite
   maxStack: 10
-  icon_Inventory: {fileID: 21300000, guid: 21435c3dc64557c42a132453529531cd, type: 3}
+  icon_Inventory: {fileID: -1132873669430802197, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: This gem has the power of the sun.
   valeur: 30
   iD: 28

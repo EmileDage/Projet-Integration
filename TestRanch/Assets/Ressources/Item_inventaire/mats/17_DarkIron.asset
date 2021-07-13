@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Dark Iron
   maxStack: 10
-  icon_Inventory: {fileID: 21300000, guid: c7c237feb73644a4892a938738237fd4, type: 3}
+  icon_Inventory: {fileID: 4871413105511990632, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: The ultimate dark iron.
   valeur: 24
   iD: 17

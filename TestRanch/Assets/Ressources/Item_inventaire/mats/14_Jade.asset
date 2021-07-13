@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Jade
   maxStack: 10
-  icon_Inventory: {fileID: 21300000, guid: 1dc8202d2b7b2a943b7f52d077fe1517, type: 3}
+  icon_Inventory: {fileID: 3854916344505605908, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: Basic Gem.
   valeur: 10
   iD: 14

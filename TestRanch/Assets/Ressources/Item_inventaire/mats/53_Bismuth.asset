@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Bismuth
   maxStack: 10
-  icon_Inventory: {fileID: 1745028967820487807, guid: bf9f155e68921c3479654e290200f34c, type: 3}
+  icon_Inventory: {fileID: 4331504872974348968, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: Ohh it's blue.
   valeur: 20
   iD: 53

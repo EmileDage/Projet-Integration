@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Obsidian
   maxStack: 10
-  icon_Inventory: {fileID: 21300000, guid: aed204a56591827478dbfeb1f6230188, type: 3}
+  icon_Inventory: {fileID: 2637951863173635236, guid: 9628ab2beb98f644cae7ae8732c4e94d, type: 3}
   description: Basic black rock.
   valeur: 16
   iD: 26
