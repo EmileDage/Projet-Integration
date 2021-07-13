@@ -38,6 +38,7 @@ public class DragItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,IE
     public void OnEndDrag(PointerEventData eventData)
     {
         ResetPosition();
+        UIManager.Instance.ItemSound();
       //  Debug.Log("OnEndDrag");
     }
 
@@ -53,7 +54,7 @@ public class DragItem : MonoBehaviour, IPointerDownHandler, IBeginDragHandler,IE
 
     public void OnPointerDown(PointerEventData eventData)
     {
-
+        UIManager.Instance.ItemSound();
         if (Input.GetButton("QuickAdd"))
         {
            // Debug.Log("shift click");
