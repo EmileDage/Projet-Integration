@@ -196,7 +196,7 @@ MonoBehaviour:
   stateTxtPanel: {fileID: 0}
   hungry: Yes
   hungryTxtPanel: {fileID: 0}
-  foodLikes: Apple
+  foodLikes: OctoPaFood
   foodLikesTxtPanel: {fileID: 0}
 --- !u!135 &1262965789390366216
 SphereCollider:
@@ -293,7 +293,7 @@ MonoBehaviour:
   creatureName: OctoPa
   CreatureNameTxtPanel: {fileID: 0}
   stateTxtPanel: {fileID: 0}
-  foodLikes: Apple
+  foodLikes: OctoPaFood
   foodLikesTxtPanel: {fileID: 0}
   creaturePortrait: {fileID: 21300000, guid: 92edc09d91a5de5498b78f4358a1476a, type: 3}
   creaturePortraitImage: {fileID: 0}

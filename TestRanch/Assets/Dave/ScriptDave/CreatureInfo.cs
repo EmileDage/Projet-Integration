@@ -18,6 +18,8 @@ public class CreatureInfo : MonoBehaviour
     [SerializeField] private string foodLikes;
     [SerializeField] private Text foodLikesTxtPanel;
 
+    public string FoodLikes { get => foodLikes; set => foodLikes = value; }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -32,7 +34,7 @@ public class CreatureInfo : MonoBehaviour
             CreatureNameTxtPanel.text = "Name: " + creatureName;
             stateTxtPanel.text = "State: " + creature.state;
             hungryTxtPanel.text = "Hungry: " + hungry;
-            foodLikesTxtPanel.text = "Food Likes: " + foodLikes;            
+            foodLikesTxtPanel.text = "Food Likes: " + FoodLikes;            
         }
 
     }

@@ -122,7 +122,9 @@ public class CreatureBehavior : StateMachine, ICapturable
 		if(other.gameObject.tag == "produit" && creatureInfo.hungry == "Yes")
         {
 			WorldObjectMateriaux food = other.GetComponent<WorldObjectMateriaux>();
-			if(Fonctions.produits_vegetaux.Equals(food.Item().Funct))
+			Debug.Log(food.name.ToString());
+			Debug.Log(creatureInfo.FoodLikes.ToString());
+			if(Fonctions.produits_vegetaux.Equals(food.Item().Funct) && food.name.ToString() == creatureInfo.FoodLikes.ToString() + "(Clone)")
             {
 				targetCollider = other;
 				foodFound = true;
