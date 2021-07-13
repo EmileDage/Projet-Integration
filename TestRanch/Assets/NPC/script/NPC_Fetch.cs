@@ -2,12 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC_Fetch :  NPC_basics
+public class NPC_Fetch :  NPC_basicsRewards
 {
     //Fetchthings
     [SerializeField] private Item[] fetchThis;//exemple bannane
-    [SerializeField] private int[] fetchThisQte;//exemple 2
-                                                       //ainsi le npc veut 2 banane
+    [SerializeField] private int[] fetchThisQte;//exemple 2 ainsi le npc veut 2 banane
     private List<ItemStack> list_Things_toFetch = new List<ItemStack>();
 
     private void Start()
@@ -41,7 +40,7 @@ public class NPC_Fetch :  NPC_basics
         } else if (quest_completed) {//la quete est faite mais le joueur for some reason veut parler au npc
             if (!manager.FadeOut)
             {
-                conversation.TriggerDialogueChat();
+                conversation.TriggerDialogueIdleChat();
             }         
         }
         else if (joueur.BarreInventaire.TryPayWithMultipleItems(list_Things_toFetch))//Check if you have what the NPC WANTS

@@ -41,7 +41,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5330253424920150748, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
       propertyPath: m_Name
-      value: William
+      value: William(talk)
       objectReference: {fileID: 0}
     - target: {fileID: 6644100661889712682, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
       propertyPath: m_RootOrder

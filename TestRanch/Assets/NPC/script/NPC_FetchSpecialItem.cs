@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC_FetchSpecialItem : NPC_basics
+public class NPC_FetchSpecialItem : NPC_basicsRewards
 {
     //Fetch that one type of thing
     [SerializeField] private GameObject[] objectsToFetch;//exemple bannane
@@ -52,7 +52,7 @@ public class NPC_FetchSpecialItem : NPC_basics
         {//la quete est faite mais le joueur for some reason veut parler au npc
             if (!manager.FadeOut)
             {
-                conversation.TriggerDialogueChat();
+                conversation.TriggerDialogueIdleChat();
             }
         }
         else if (joueur.BarreInventaire.TryPayWithMultipleItems(list_Things_toFetch))//Check if you have what the NPC WANTS

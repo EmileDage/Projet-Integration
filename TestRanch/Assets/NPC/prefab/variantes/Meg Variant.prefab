@@ -23,7 +23,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2378781565474254604, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: m_Name
-      value: Meg
+      value: Meg(Fetch)
       objectReference: {fileID: 0}
     - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: m_RootOrder
@@ -95,7 +95,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5657393526990954014, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_endquest.name

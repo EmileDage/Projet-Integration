@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC_hunted : NPC_basics
+public class NPC_hunted : NPC_basicsRewards
 {
     [SerializeField] private Transform spawn;
     public bool Hunt { get => talked;}
@@ -28,7 +28,7 @@ public class NPC_hunted : NPC_basics
         else  {//la quete est faite mais le joueur for some reason veut parler au npc
             if (!manager.FadeOut)
             {
-                conversation.TriggerDialogueChat();
+                conversation.TriggerDialogueIdleChat();
             }
         }
        

@@ -67,7 +67,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2133442056536477686, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
       propertyPath: m_Name
-      value: Danny_and_Dwight
+      value: Danny_and_Dwight(hunt)
       objectReference: {fileID: 0}
     - target: {fileID: 2145113504012706477, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -107,7 +107,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2933159917491998549, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
       propertyPath: size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
       propertyPath: dialogue_idlechat.name

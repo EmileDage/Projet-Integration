@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class NPC_Hunter : NPC_basics
+public class NPC_Hunter : NPC_basicsRewards
 {
     [SerializeField] private NPC_hunted Hunted;
 
@@ -35,7 +35,7 @@ public class NPC_Hunter : NPC_basics
         {//la quete est faite mais le joueur for some reason veut parler au npc
             if (!manager.FadeOut)
             {
-                conversation.TriggerDialogueChat();
+                conversation.TriggerDialogueIdleChat();
             }
         }
         else if (Hunted.Hunt)//Check if you have what the NPC WANTS

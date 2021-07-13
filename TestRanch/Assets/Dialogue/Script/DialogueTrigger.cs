@@ -32,7 +32,7 @@ public class DialogueTrigger : MonoBehaviour
         d_manager.StartDialogue(dialogue_endquest);
     }
 
-    public void TriggerDialogueChat()
+    public void TriggerDialogueIdleChat()
     {
         d_manager.StartDialogue(dialogue_idlechat);
     }
