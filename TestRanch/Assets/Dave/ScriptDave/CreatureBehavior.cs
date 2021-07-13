@@ -32,6 +32,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	public float hungryTimerCooldown;
 	public Collider targetCollider;
 	public Materiaux dropRessources;
+	[SerializeField] private Transform dropPos;
 
 	[Header("Time Stuff")]
 	private MyTimeManager timeManager;
@@ -246,6 +247,6 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	public void DropRessourceAnimal()
 	{
-		dropRessources.SpawnAsObject(new ItemStack(dropRessources, 1), transform);
+		dropRessources.SpawnAsObject(new ItemStack(dropRessources, 1), dropPos);
 	}
 }
