@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -11,7 +8,10 @@ public class Player : MonoBehaviour
     [SerializeField] AudioSource item_AS;
     [SerializeField] MeshFilter equiped;
     [SerializeField] GameObject lampe;
-    [SerializeField]private Transform offset;
+    [SerializeField] private Transform offset;
+
+    private CameraControl camControl;
+
 
     [SerializeField] Text interactableMsg;
 
@@ -27,7 +27,7 @@ public class Player : MonoBehaviour
     private GameObject creature;
 
     #region getset
-    public int InventaireTaille { get => inventaireTaille;}
+    public int InventaireTaille { get => inventaireTaille; }
     public PlayerInventory BarreInventaire { get => barreInventaire; set => barreInventaire = value; }//assigné dans le script playerinventoryhub
     public Slot Selected { get => selected; set => selected = value; }
     public Coffre OpenChest { get => openChest; set => openChest = value; }
@@ -42,6 +42,12 @@ public class Player : MonoBehaviour
         this.creature = creature.gameObject;
     }
 
+    private void Start()
+    {
+        camControl = this.GetComponentInChildren<CameraControl>();
+
+    }
+
     private void ThrowCreature()
     {
         creature.transform.position = offset.position;
@@ -52,19 +58,23 @@ public class Player : MonoBehaviour
 
     private void UseItem()
     {
-        selected.ItemStack.UseItem(this);
-        item_AS.Play();
+        if (!camControl.IsCameraLocked())
+        {
+            selected.ItemStack.UseItem(this);
+            item_AS.Play();
+        }
     }
 
     private void Update()
     {
         RaycastHit hitUpdate;
+
         if (Physics.Raycast(playerCam.transform.position, playerCam.transform.TransformDirection(Vector3.forward), out hitUpdate, interactionDistance))
         {
 
-            if (hitUpdate.collider.GetComponent<IInteractible>() != null)
+            if (hitUpdate.collider.GetComponent<IInteractible>() != null && !camControl.IsCameraLocked())
             {
-                
+
                 interactableMsg.gameObject.SetActive(true);
             }
             else
@@ -80,16 +90,20 @@ public class Player : MonoBehaviour
         #region inputs
         if (Input.GetButtonDown("Fire1"))
         {
-            if (!Cursor.visible)
+            if (!camControl.IsCameraLocked())
                 UseItem();
         }
         if (Input.GetButtonDown("Interact"))
         {
             //Debug.Log("e");
-            if(HitScan(out RaycastHit hit)) { 
-                if (DistanceCheck(hit)) 
+            if (!camControl.IsCameraLocked())
+            {
+                if (HitScan(out RaycastHit hit))
                 {
-                    Interaction(hit);
+                    if (DistanceCheck(hit))
+                    {
+                        Interaction(hit);
+                    }
                 }
             }
         }
@@ -99,9 +113,9 @@ public class Player : MonoBehaviour
             Cursor.visible = !Cursor.visible;
         }
         float b = Input.GetAxis("Mouse ScrollWheel") * 10;
-       // Debug.Log(b + " B");
+        // Debug.Log(b + " B");
         int a = Mathf.RoundToInt(b);
-      //  Debug.Log(a);
+        //  Debug.Log(a);
         barreInventaire.ScrollItembar(a);
 
 
@@ -164,25 +178,27 @@ public class Player : MonoBehaviour
         {
             MapButtonAction();
         }
-       /* if (Input.GetButtonDown("Creature") && creature != null)
-        {
-            ThrowCreature();
-        }*/
+        /* if (Input.GetButtonDown("Creature") && creature != null)
+         {
+             ThrowCreature();
+         }*/
 
         #endregion
     }
+
 
     private void MapButtonAction()
     {
         UIManager.Instance.MapOpenClose();
     }
 
-    public bool DistanceCheck(RaycastHit hit) => 
+    public bool DistanceCheck(RaycastHit hit) =>
         hit.distance <= (interactionDistance + selected.ItemStack.GetInteractionRangeBonus());
 
-    private void Interaction(RaycastHit hit) {
+    private void Interaction(RaycastHit hit)
+    {
         IInteractible inter = hit.collider.GetComponent<IInteractible>();
-        if(inter != null)
+        if (inter != null)
         {
             inter.Interact(this);
         }
@@ -192,7 +208,7 @@ public class Player : MonoBehaviour
     {
         //int layerMask = 1 << 8;//à changer pour le layer qu'on va donner au joueur
         //layerMask = ~8;
-        if (Physics.Raycast(playerCam.transform.position,playerCam.transform.TransformDirection(Vector3.forward),out hit))
+        if (Physics.Raycast(playerCam.transform.position, playerCam.transform.TransformDirection(Vector3.forward), out hit))
         {
             return true;
         }

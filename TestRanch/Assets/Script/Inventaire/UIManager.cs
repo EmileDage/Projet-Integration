@@ -85,21 +85,21 @@ public class UIManager : MonoBehaviour
         coffreUI.SetUp(chest.Size, chest.Contenu, chest);
         coffreUI.OpenChest();
         ActivateMouse();
-        camJoueur.LockCamera();
+        
     }
 
     public void ActivateMouse()
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
-        //add camera stuff
+        camJoueur.LockCamera();
     }
 
     public void OpenPanel(GameObject Panel) {
         Panel.SetActive(true);
         AcceptSound();
         ActivateMouse();
-        camJoueur.LockCamera();
+        
     }
 
     public void MapOpenClose()
