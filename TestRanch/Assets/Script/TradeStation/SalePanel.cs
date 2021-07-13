@@ -71,7 +71,6 @@ public class SalePanel : AbstractInventoryUI
                 slot.UpdateSlotWithoutPanel();
             }
         }
-        UI.ExitPanel(this.gameObject);
-        
+        UI.ExitPanel(this.gameObject);  
     }
 }
