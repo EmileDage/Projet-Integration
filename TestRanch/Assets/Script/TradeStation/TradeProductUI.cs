@@ -35,12 +35,21 @@ public class TradeProductUI : MonoBehaviour
         if(gm.GetChronoCoin() >= item.Valeur ) { 
 
             Debug.Log("enough coin");
-
             ItemStack stack = new ItemStack(item, 1);
-            gm.Joueur.BarreInventaire.QuickAddItem(stack);
-            bool edbug = gm.Joueur.BarreInventaire.TryMergeOnExisting(stack);
-            Debug.Log(edbug + "merge");
-            if (edbug)
+            int temp = gm.Joueur.BarreInventaire.QuickAddItem(stack);
+            Debug.Log(temp);
+            if(temp == 0)
+            {
+                gm.ModifyChronoCoin(stack.Item.Valeur,true);
+            }
+            else
+            {
+                msg.StartCounter(inventoryFullMsg);
+            }
+            
+            //bool edbug = gm.Joueur.BarreInventaire.TryMergeOnExisting(stack);
+            //Debug.Log(edbug + "merge");
+           /* if (left == 0)
             {
                 Debug.Log("merging");
                 gm.ModifyChronoCoin(item.Valeur, true);
@@ -54,13 +63,12 @@ public class TradeProductUI : MonoBehaviour
                 {   
                     msg.StartCounter(inventoryFullMsg);
                 }
-            }
+            }*/
             
           
         }
         else
         {
-
             msg.StartCounter(notEnoughMoneyMsg);
         }
     }

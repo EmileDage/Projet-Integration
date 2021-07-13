@@ -22,6 +22,7 @@ public class SprintModule : MonoBehaviour
 
     public void ActivateSprintSpeed()
     {
+
         if (staminaModule.GetStamina().Value() >= 0 && !staminaModule.IsExhaust() && isSprinting == false)
         {
             movementModule.ModifySpeed(sprintSpeed);

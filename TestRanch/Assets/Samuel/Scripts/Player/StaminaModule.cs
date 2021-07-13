@@ -8,6 +8,7 @@ public class StaminaModule : MonoBehaviour
     [SerializeField] private float consumptionValue = 1;
     [SerializeField] private float exhaustDuration = 7;
 
+    private Rigidbody rig = null;
     private float exhaustTimer = 0;
     private float delay = 0;
 
@@ -15,6 +16,7 @@ public class StaminaModule : MonoBehaviour
     void Start()
     {
         Stamina.InitializeRecovery();
+        rig = GetComponent<Rigidbody>();
     }
 
     void Update()
@@ -31,7 +33,7 @@ public class StaminaModule : MonoBehaviour
 
     public void DecreaseStamina()
     {
-        if(delay <= 0 && Stamina.Value() > 0 && exhaustTimer <= 0)
+        if (delay <= 0 && Stamina.Value() > 0 && exhaustTimer <= 0 && rig.velocity.magnitude > 0.05f)
         {
             Stamina.DecreaseCurrentValue(consumptionValue);
             delay = 0.1f;
