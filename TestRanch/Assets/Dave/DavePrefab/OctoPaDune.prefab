@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 06830fdc3481fef44972cd220b4395a2, type: 2}
     - target: {fileID: 1312149026987213565, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: foodLikes
-      value: Chips
+      value: Coco
       objectReference: {fileID: 0}
     - target: {fileID: 1312149026987213565, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: creatureName
@@ -69,7 +69,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1341006903103977134, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: foodLikes
-      value: Chips
+      value: Coco
       objectReference: {fileID: 0}
     - target: {fileID: 1341006903103977134, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: creatureName
