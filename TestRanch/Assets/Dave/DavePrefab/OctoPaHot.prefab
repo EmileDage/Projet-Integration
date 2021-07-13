@@ -12,6 +12,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 8618ef534746ef641820e8258a853d31, type: 2}
     - target: {fileID: 1312149026987213565, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
+      propertyPath: foodLikes
+      value: Dragon Fruit
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312149026987213565, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: creatureName
       value: OctoPaHot
       objectReference: {fileID: 0}
@@ -62,6 +66,10 @@ PrefabInstance:
     - target: {fileID: 1312149026987213569, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1341006903103977134, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
+      propertyPath: foodLikes
+      value: Dragon Fruit
       objectReference: {fileID: 0}
     - target: {fileID: 1341006903103977134, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: creatureName

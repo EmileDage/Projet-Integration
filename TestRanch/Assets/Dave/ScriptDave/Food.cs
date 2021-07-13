@@ -24,7 +24,7 @@ public class Food : MonoBehaviour
         if(other.gameObject.tag == "produit")
         {
             WorldObjectMateriaux food = other.GetComponent<WorldObjectMateriaux>();
-            if (Fonctions.produits_vegetaux.Equals(food.Item().Funct) && creature.creatureInfo.hungry == "Yes")
+            if (Fonctions.produits_vegetaux.Equals(food.Item().Funct) && creature.creatureInfo.hungry == "Yes" && food.name.ToString() == creature.creatureInfo.FoodLikes.ToString() + "(Clone)")
             {
                 creature.creatureInfo.hungry = "No";
                 creature.Happiness += happinessIncrease;

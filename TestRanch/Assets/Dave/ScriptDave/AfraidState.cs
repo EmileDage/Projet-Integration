@@ -17,12 +17,14 @@ namespace Assets.Dave.ScriptDave
 			CreatureBehavior.distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.player.position);
 			if (CreatureBehavior.followdistance >= CreatureBehavior.distance)
 			{
+				CreatureBehavior.creatureInfoPanel.SetActive(true);
 				Vector3 dirToPlayer = (CreatureBehavior.transform.position - CreatureBehavior.player.transform.position) * 2;
 				Vector3 newPos = CreatureBehavior.transform.position + dirToPlayer;
 				CreatureBehavior.agent.destination = newPos;
 			}
-			else if (CreatureBehavior.distance >= 15)
+			else if (CreatureBehavior.distance >= 12)
 			{
+				CreatureBehavior.creatureInfoPanel.SetActive(false);
 				CreatureBehavior.playerFound = false;
 			}
 		}
