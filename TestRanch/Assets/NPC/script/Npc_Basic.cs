@@ -10,5 +10,7 @@ public abstract class Npc_Basic : MonoBehaviour, IInteractible
     protected bool talked;//talked = false veut dire que le joueur doit demander la quest 
     protected bool quest_completed;
 
+    public bool Quest_completed { get => quest_completed; set => quest_completed = value; }
+
     public abstract void Interact(Player joueur);
 }
