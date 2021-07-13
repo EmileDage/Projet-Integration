@@ -1,0 +1,840 @@
+fileFormatVersion: 2
+guid: 9628ab2beb98f644cae7ae8732c4e94d
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -6581425739132673869
+    second: Icons__solarite
+  - first:
+      213: -7356418843097211396
+    second: Icons__agathe_bleu
+  - first:
+      213: -8548944638091459904
+    second: Icons__pomme
+  - first:
+      213: 2637951863173635236
+    second: Icons__obsidian
+  - first:
+      213: -3790526822682420114
+    second: Icons__noixCoco
+  - first:
+      213: 3854916344505605908
+    second: Icons__Jade
+  - first:
+      213: 4871413105511990632
+    second: Icons__darkIron
+  - first:
+      213: -1074827551985193245
+    second: Icons__corail
+  - first:
+      213: -3722546379494768463
+    second: Icons__champignonSpore
+  - first:
+      213: 4331504872974348968
+    second: Icons__Bismuth
+  - first:
+      213: -1132873669430802197
+    second: Icons__solarite_Pure
+  - first:
+      213: -5256673564705607892
+    second: Icons__agathe_deep
+  - first:
+      213: -5507197393349720825
+    second: Icons__pomme_graine
+  - first:
+      213: -7418725799609505349
+    second: Icons__bloodObsidian
+  - first:
+      213: 7419981975834195352
+    second: Icons__noixcocoGrain
+  - first:
+      213: 535370029007795361
+    second: Icons__JadeFeu
+  - first:
+      213: 4336326865582390999
+    second: Icons__iron
+  - first:
+      213: 309175581416102562
+    second: Icons__goldenCorail
+  - first:
+      213: -2200396928510970948
+    second: Icons__champignon
+  - first:
+      213: -7106488623865113282
+    second: Icons__Bismuth_plant
+  - first:
+      213: 1913127101651116727
+    second: Icons__ink_green_moss
+  - first:
+      213: -4729314216494042241
+    second: Icons__ink_hot
+  - first:
+      213: -1569708618858999026
+    second: Icons__ink_ghost
+  - first:
+      213: -5331222736954742751
+    second: Icons__ink_frozen
+  - first:
+      213: -1094975307859955711
+    second: Icons__ink_dusty
+  - first:
+      213: -1289509364999904798
+    second: Icons__ink_basic
+  - first:
+      213: 8131936778968335797
+    second: Icons__dragonFruit_graine
+  - first:
+      213: -237574734885385172
+    second: Icons__dragonFruit
+  - first:
+      213: -5939042494363335964
+    second: Icons__diamant
+  - first:
+      213: 2506108986527946065
+    second: Icons__RainbowBismuth
+  externalObjects: {}
+  serializedVersion: 11
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 0
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Windows Store Apps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Icons__solarite
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 720
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3b0626ff8241aa4a0800000000000000
+      internalID: -6581425739132673869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__agathe_bleu
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 720
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cfd5336c900c8e990800000000000000
+      internalID: -7356418843097211396
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__pomme
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 720
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2041a552c0c5980800000000000000
+      internalID: -8548944638091459904
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__obsidian
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 720
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4ac5b0b3e33eb9420800000000000000
+      internalID: 2637951863173635236
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__noixCoco
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 720
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e6c9c6610f7556bc0800000000000000
+      internalID: -3790526822682420114
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__Jade
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 720
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 41f9a19bdf96f7530800000000000000
+      internalID: 3854916344505605908
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__darkIron
+      rect:
+        serializedVersion: 2
+        x: 2154
+        y: 720
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865893cd86cba9340800000000000000
+      internalID: 4871413105511990632
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__corail
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 720
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3eeae1149027511f0800000000000000
+      internalID: -1074827551985193245
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__champignonSpore
+      rect:
+        serializedVersion: 2
+        x: 2872
+        y: 720
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1b04c4e6acbd65cc0800000000000000
+      internalID: -3722546379494768463
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__Bismuth
+      rect:
+        serializedVersion: 2
+        x: 3231
+        y: 720
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8a272809bb89c1c30800000000000000
+      internalID: 4331504872974348968
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__solarite_Pure
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 361
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be80f2e56693740f0800000000000000
+      internalID: -1132873669430802197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__agathe_deep
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 361
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2f29837e3b8c07b0800000000000000
+      internalID: -5256673564705607892
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__pomme_graine
+      rect:
+        serializedVersion: 2
+        x: 720
+        y: 361
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 705ce6d26218293b0800000000000000
+      internalID: -5507197393349720825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__bloodObsidian
+      rect:
+        serializedVersion: 2
+        x: 1077
+        y: 361
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb9ef3cf0346b0990800000000000000
+      internalID: -7418725799609505349
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__noixcocoGrain
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 361
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 895f5655b4219f660800000000000000
+      internalID: 7419981975834195352
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__JadeFeu
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 361
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1a4766274340e6700800000000000000
+      internalID: 535370029007795361
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__iron
+      rect:
+        serializedVersion: 2
+        x: 2154
+        y: 361
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7de75053f4abd2c30800000000000000
+      internalID: 4336326865582390999
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__goldenCorail
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 361
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2aa188f9d896a4400800000000000000
+      internalID: 309175581416102562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__champignon
+      rect:
+        serializedVersion: 2
+        x: 2872
+        y: 361
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb33e37d6ae9671e0800000000000000
+      internalID: -2200396928510970948
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__Bismuth_plant
+      rect:
+        serializedVersion: 2
+        x: 3231
+        y: 361
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e355a269f3ea06d90800000000000000
+      internalID: -7106488623865113282
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__ink_green_moss
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 2
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b2661876facc8a10800000000000000
+      internalID: 1913127101651116727
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__ink_hot
+      rect:
+        serializedVersion: 2
+        x: 359
+        y: 2
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f73faaee6c91e5eb0800000000000000
+      internalID: -4729314216494042241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__ink_ghost
+      rect:
+        serializedVersion: 2
+        x: 718
+        y: 2
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e035a0ce356473ae0800000000000000
+      internalID: -1569708618858999026
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__ink_frozen
+      rect:
+        serializedVersion: 2
+        x: 1079
+        y: 2
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 128a351ba21b306b0800000000000000
+      internalID: -5331222736954742751
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__ink_dusty
+      rect:
+        serializedVersion: 2
+        x: 1436
+        y: 2
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 100fe2942cdddc0f0800000000000000
+      internalID: -1094975307859955711
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__ink_basic
+      rect:
+        serializedVersion: 2
+        x: 1795
+        y: 2
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2e124ac801eba1ee0800000000000000
+      internalID: -1289509364999904798
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__dragonFruit_graine
+      rect:
+        serializedVersion: 2
+        x: 2154
+        y: 2
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5b587566a617ad070800000000000000
+      internalID: 8131936778968335797
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__dragonFruit
+      rect:
+        serializedVersion: 2
+        x: 2513
+        y: 2
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c2c8c8f8907f3bcf0800000000000000
+      internalID: -237574734885385172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__diamant
+      rect:
+        serializedVersion: 2
+        x: 2872
+        y: 2
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4e206895158449da0800000000000000
+      internalID: -5939042494363335964
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Icons__RainbowBismuth
+      rect:
+        serializedVersion: 2
+        x: 3231
+        y: 2
+        width: 359
+        height: 359
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 155996668dc77c220800000000000000
+      internalID: 2506108986527946065
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
