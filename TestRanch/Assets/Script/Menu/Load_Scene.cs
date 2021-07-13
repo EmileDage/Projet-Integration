@@ -8,9 +8,9 @@ using UnityEngine.SceneManagement;
 public class Load_Scene : MonoBehaviour
 {
     private AsyncOperation async;
-
     public void BtnLoadScene(int i)
     {
+       
         if (async == null)
         {
             //charge la future scene
@@ -21,7 +21,8 @@ public class Load_Scene : MonoBehaviour
 
     public void BtnLoadScene(string s)
     {
-        if (async == null)
+
+         if (async == null)
         {
             //charge la future scene
             async = SceneManager.LoadSceneAsync(s);
