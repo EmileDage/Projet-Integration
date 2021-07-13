@@ -24,9 +24,9 @@ public class CodexObject : MonoBehaviour
             foreach (Upgrade upgrade in codexEntry.GetListOfUpgrade())
             {
                 UpgradeManager.upgradeInstance.DiscoverUpgrade(upgrade);
+            }
                 isDiscover = true;
                 UpdateVisual(codexEntry);
-            }
         }
         else
             return;
