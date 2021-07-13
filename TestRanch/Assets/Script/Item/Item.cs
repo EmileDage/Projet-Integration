@@ -40,7 +40,7 @@ public class Item : ScriptableObject
 
     public virtual void OnSelecting(Player joueur) 
     {
-        Debug.Log(ItemWorldObject);
+        
         joueur.Equiped.mesh = itemWorldObject.GetComponent<MeshFilter>().sharedMesh;
         joueur.Equiped.GetComponent<MeshRenderer>().materials = itemWorldObject.GetComponent<MeshRenderer>().sharedMaterials;
         Transform g = joueur.Equiped.transform;
