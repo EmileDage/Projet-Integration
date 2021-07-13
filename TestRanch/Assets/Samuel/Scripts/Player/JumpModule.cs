@@ -67,5 +67,4 @@ public class JumpModule : MonoBehaviour
          Vector3 down = transform.TransformDirection(Vector3.down) * groundDistance;
          Debug.DrawRay(transform.position, down, Color.red);
     }
-
 }

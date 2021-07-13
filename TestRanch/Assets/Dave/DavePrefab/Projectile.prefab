@@ -125,5 +125,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ddb814450510c204f9658a234830be5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerHealth: {fileID: 0}
+  playerHealth: {fileID: 1251647937, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
   attack: 20

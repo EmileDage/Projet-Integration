@@ -30,35 +30,43 @@ public class NPC_Fetch :  NPC_basicsRewards
 
     public override void Interact(Player joueur)//quand joueur interagit avec NPC
     {
-        if (!talked) { //le joueur na pas parler au npc une premiere fois yet  
-              if (!manager.FadeOut)
-            {
-                conversation.TriggerDialogueStart();
-                talked = true;
-            }
+        if (!manager.SomeoneIsTalking) {
 
-        } else if (Quest_completed) {//la quete est faite mais le joueur for some reason veut parler au npc
-            if (!manager.FadeOut)
-            {
-                conversation.TriggerDialogueIdleChat();
-            }         
-        }
-        else if (joueur.BarreInventaire.TryPayWithMultipleItems(list_Things_toFetch))//Check if you have what the NPC WANTS
-        {
-            if (!manager.FadeOut)
-            {
-                conversation.TriggerDialogueEnd();
-                chest.gameObject.SetActive(true);
-                Quest_completed = true;
+            if (!talked)
+            { //le joueur na pas parler au npc une premiere fois yet  
+                if (!manager.FadeOut)
+                {
+                    conversation.TriggerDialogueStart();
+                    talked = true;
+                }
+
             }
-           
-        }
-        else {//tu nas pas ce que le npc veut
-            if (!manager.FadeOut)
+            else if (Quest_completed)
+            {//la quete est faite mais le joueur for some reason veut parler au npc
+                if (!manager.FadeOut)
+                {
+                    conversation.TriggerDialogueIdleChat();
+                }
+            }
+            else if (joueur.BarreInventaire.TryPayWithMultipleItems(list_Things_toFetch))//Check if you have what the NPC WANTS
             {
-                conversation.TriggerDialogueWaiting();
+                if (!manager.FadeOut)
+                {
+                    conversation.TriggerDialogueEnd();
+                    chest.gameObject.SetActive(true);
+                    Quest_completed = true;
+                }
+
+            }
+            else
+            {//tu nas pas ce que le npc veut
+                if (!manager.FadeOut)
+                {
+                    conversation.TriggerDialogueWaiting();
+                }
             }
         }
+      
     }
 
 }

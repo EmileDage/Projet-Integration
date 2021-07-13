@@ -27,11 +27,14 @@ public class DialogueManager : MonoBehaviour
     private bool fadeIn;
     private bool fadeOut;
     public bool FadeOut{ get => fadeOut;}
+    public bool SomeoneIsTalking { get => someoneIsTalking; }
 
     //to lock cam during dialogue
     private GameManager gm;
     private Player joueur;
     private GameObject cam_joueur;
+
+    private bool someoneIsTalking;
 
     private void Awake()
     {
@@ -75,6 +78,7 @@ public class DialogueManager : MonoBehaviour
                    
                 Cursor.visible = false;
                 cam_joueur.GetComponent<CameraControl>().UnlockCamera();
+                joueur.GetComponent<MovementModule>().RemoveRootMovement();
 
                 dialogueBox.SetActive(false);
                 fadeOut = false;
@@ -86,9 +90,10 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-
+        joueur.GetComponent<MovementModule>().RootMovement();
         Cursor.visible = true;
         cam_joueur.GetComponent<CameraControl>().LockCamera();
+        someoneIsTalking = true;
 
         dialogueBox.SetActive(true);
         fadeIn = true;
@@ -155,6 +160,7 @@ public class DialogueManager : MonoBehaviour
         fadeOut = true;
         Debug.Log("End of convo");
 
+        someoneIsTalking = false;
     }
 
    

@@ -86,7 +86,6 @@ public class CreatureBehavior : StateMachine, ICapturable
 		timeManager = MyTimeManager.timeInstance;
 		timeManager.GHourPassed += OnGHourPassed;
 		creatureInfoPanel.SetActive(false);
-		//interactionPanel.SetActive(false);
 		creatureInfoPanelExtra.SetActive(false);
 	}
 
@@ -144,7 +143,7 @@ public class CreatureBehavior : StateMachine, ICapturable
                 {
 					RessourceDrop();
 					RessourceDrop();
-					Debug.Log("ressourcve double");
+					Debug.Log("ressource double");
 				}
 				else
                 {
