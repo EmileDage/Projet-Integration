@@ -36,7 +36,7 @@ public class UIManager : MonoBehaviour
         screenMsg.SetActive(false);
         minimapCamObject.SetActive(false);
         minimapUI.SetActive(false);
-        camJoueur = GameManager.gmInstance.Joueur.GetComponent<CameraControl>();
+        camJoueur = GameManager.gmInstance.Joueur.GetComponentInChildren<CameraControl>();
     }
 
 
@@ -85,6 +85,7 @@ public class UIManager : MonoBehaviour
         coffreUI.SetUp(chest.Size, chest.Contenu, chest);
         coffreUI.OpenChest();
         ActivateMouse();
+        camJoueur.LockCamera();
     }
 
     public void ActivateMouse()

@@ -16,10 +16,6 @@ public class CameraControl : MonoBehaviour
         UnlockCamera();
     }
 
-    void FixedUpdate()
-    {
-
-    }
 
     private void Update()
     {
@@ -56,6 +52,11 @@ public class CameraControl : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;
         isLocked = false;
+    }
+
+    public bool IsCameraLocked()
+    {
+        return isLocked;
     }
     
 }
