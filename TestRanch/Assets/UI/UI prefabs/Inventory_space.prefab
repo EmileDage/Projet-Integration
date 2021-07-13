@@ -214,8 +214,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 0, y: 0}
-  m_SizeDelta: {x: 70, y: 70}
+  m_AnchoredPosition: {x: -0.251, y: 0.25579834}
+  m_SizeDelta: {x: 72.698, y: 72.7084}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &1607662732564567179
 CanvasRenderer:
@@ -335,8 +335,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 3253609054811310780, guid: bf9f155e68921c3479654e290200f34c, type: 3}
-  m_Type: 1
+  m_Sprite: {fileID: -5153668059839587492, guid: ba75d2a21b927614a9db2804694167e5, type: 3}
+  m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
   m_FillMethod: 4
@@ -357,7 +357,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5e6757468d31985429d242be389f346b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  box: {fileID: 3253609054811310780, guid: bf9f155e68921c3479654e290200f34c, type: 3}
+  box: {fileID: -5153668059839587492, guid: ba75d2a21b927614a9db2804694167e5, type: 3}
   lockedBox: {fileID: 21300000, guid: 428003edd1c669145a2d42ac2e8cb9f5, type: 3}
   selected: {fileID: 4302221613937929761}
   imgDrag: {fileID: 1853256403850161168}

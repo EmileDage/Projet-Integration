@@ -248,12 +248,16 @@ public class Field_UI : MonoBehaviour
     #region Upgrade_from_empty
     public void Btn_empty_agriculture()
     {
+        if(GameManager.gmInstance.GetChronoCoin() <= btn_up_empty[0].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if(joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_empty[0].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.F_type = field_possibilities.agriculture;
             field_ref.Activate_type();
             pannel_empty.SetActive(false);
             pannel_agriculture.SetActive(true);
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_empty[0].GetComponent<ShowPrice>().ChronoCoinPrice,true);
         }
         else {
             pannel_not_enough.SetActive(true);
@@ -263,12 +267,17 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_empty_enclos()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_empty[1].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_empty[1].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.F_type = field_possibilities.enclos;
-        field_ref.Activate_type();
-        pannel_empty.SetActive(false);
-        pannel_enclos.SetActive(true);
+            field_ref.Activate_type();
+            pannel_empty.SetActive(false);
+            pannel_enclos.SetActive(true);
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_empty[1].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -278,12 +287,17 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_empty_entrepot()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_empty[3].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_empty[3].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.F_type = field_possibilities.entrepot;
-        field_ref.Activate_type();
-        pannel_empty.SetActive(false);
-        pannel_entrepot.SetActive(true);
+            field_ref.Activate_type();
+            pannel_empty.SetActive(false);
+            pannel_entrepot.SetActive(true);
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_empty[3].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else {
             pannel_not_enough.SetActive(true);
@@ -292,13 +306,19 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_empty_mine()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_empty[2].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_empty[2].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.F_type = field_possibilities.mine;
-        field_ref.Activate_type();
-        pannel_empty.SetActive(false);
-        pannel_mine.SetActive(true);
-        }else{
+            field_ref.Activate_type();
+            pannel_empty.SetActive(false);
+            pannel_mine.SetActive(true);
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_empty[2].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+        }
+        else
+        {
             pannel_not_enough.SetActive(true);
         }
     }
@@ -307,11 +327,15 @@ public class Field_UI : MonoBehaviour
 
     #region Upgrade_agriculture
     public void Btn_A_info_pannel() {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_terre[0].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
 
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[0].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.jardin.GetComponent<Garden>().InformationPannel_Activate();
             btn_up_terre[0].interactable = false;
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_empty[0].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -321,11 +345,16 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_A_irr_sys()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_terre[1].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[1].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.jardin.GetComponent<Garden_UI>().Irr_sys_Activate();
             btn_up_terre[1].interactable = false;
             btn_up_terre[3].interactable = false;//disable autre options du choix
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_empty[1].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -336,11 +365,16 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_A_rich_fert()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_terre[2].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[2].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.jardin.GetComponent<Garden_UI>().Rich_fer_Activate();
             btn_up_terre[2].interactable = false;
             btn_up_terre[4].interactable = false;//disable autre options du choix
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_terre[2].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -350,11 +384,16 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_A_chrono()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_terre[3].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[3].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.jardin.GetComponent<Garden_UI>().Chrono_Activate();
             btn_up_terre[3].interactable = false;
             btn_up_terre[1].interactable = false;//disable autre options du choix
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_terre[3].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -364,11 +403,16 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_A_crystal ()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_terre[4].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_terre[4].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.jardin.GetComponent<Garden_UI>().Crystal_Activate();
             btn_up_terre[4].interactable = false;
             btn_up_terre[2].interactable = false;//disable autre options du choix
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_terre[4].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -380,11 +424,15 @@ public class Field_UI : MonoBehaviour
     #region Upgrade_mineraux
     public void Btn_M_info_pannel()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_mine[0].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
 
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_mine[0].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.Mine.GetComponent<Mine>().InformationPannel_Activate();
             btn_up_mine[0].interactable = false;
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_mine[0].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -395,11 +443,16 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_M_stalactite()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_mine[1].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_mine[1].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.Mine.GetComponent<Mine_UI>().Stalactite_Activate();
             btn_up_mine[1].interactable = false;
             btn_up_mine[3].interactable = false;//disable l'autre option mecanique
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_mine[1].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -409,11 +462,16 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_M_rich_soil()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_mine[2].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_mine[2].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.Mine.GetComponent<Mine_UI>().Rich_soil_Activate();
             btn_up_mine[2].interactable = false;
             btn_up_mine[4].interactable = false;//disable l'autre upgrade terrain
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_mine[2].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -424,12 +482,17 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_M_chrono()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_mine[3].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_mine[3].GetComponent<ShowPrice>().Liste_prix))
         {
         
         field_ref.Mine.GetComponent<Mine_UI>().Chrono_Activate();
         btn_up_mine[3].interactable = false;
         btn_up_mine[1].interactable = false;//disable l'autre option mecanique
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_mine[3].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -440,11 +503,16 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_M_rock()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_mine[4].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_mine[4].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.Mine.GetComponent<Mine_UI>().Rare_rock_Activate();
             btn_up_mine[4].interactable = false;
             btn_up_mine[2].interactable = false;//disable l'autre upgrade terrain
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_mine[4].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -459,10 +527,15 @@ public class Field_UI : MonoBehaviour
     #region Upgrade_enclos
     public void Btn_enclos_info_pannel()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_enclos[0].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_enclos[0].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.Enclos.GetComponent<Enclos>().InfoPan_Activate();
             btn_up_enclos[0].interactable = false;
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_enclos[0].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -474,11 +547,16 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_enclos_feeder()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_enclos[1].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_enclos[1].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.Enclos.GetComponent<Enclos>().Auto_feeder_Activate();
             btn_up_enclos[1].interactable = false;
             btn_up_enclos[3].interactable = false;//disable other option
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_enclos[1].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -490,11 +568,16 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_enclos_grass_d()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_enclos[2].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_enclos[2].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.Enclos.GetComponent<Enclos>().Grass_d_Activate();
             btn_up_enclos[2].interactable = false;
             btn_up_enclos[4].interactable = false;//disable other option
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_enclos[2].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -506,12 +589,16 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_enclos_water()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_enclos[3].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
 
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_enclos[3].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.Enclos.GetComponent<Enclos>().Water_Activate();
             btn_up_enclos[3].interactable = false;
             btn_up_enclos[1].interactable = false;//disable other option
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_enclos[3].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -523,11 +610,16 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_enclos_grass_b()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_enclos[4].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_enclos[4].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.Enclos.GetComponent<Enclos>().Grass_b_Activate();
             btn_up_enclos[4].interactable = false;
             btn_up_enclos[2].interactable = false;//disable other option
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_enclos[4].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -542,10 +634,15 @@ public class Field_UI : MonoBehaviour
     #region Upgrade_entrepot
     public void Btn_storage_chest1()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_entrepot[0].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_entrepot[0].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.Entrepot.GetComponent<Entrepot>().Chest1_Activate();
             btn_up_entrepot[0].interactable = false;
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_entrepot[0].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -556,10 +653,15 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_storage_chest2()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_entrepot[1].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_entrepot[1].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.Entrepot.GetComponent<Entrepot>().Chest2_Activate();
             btn_up_entrepot[1].interactable = false;
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_entrepot[1].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {
@@ -569,10 +671,15 @@ public class Field_UI : MonoBehaviour
 
     public void Btn_storage_chest3()
     {
+        if (GameManager.gmInstance.GetChronoCoin() <= btn_up_entrepot[2].GetComponent<ShowPrice>().ChronoCoinPrice)
+            return;
+
         if (joueur.BarreInventaire.TryPayWithMultipleItems(btn_up_entrepot[2].GetComponent<ShowPrice>().Liste_prix))
         {
             field_ref.Entrepot.GetComponent<Entrepot>().Chest3_Activate();
             btn_up_entrepot[2].interactable = false;
+            GameManager.gmInstance.ModifyChronoCoin(btn_up_entrepot[2].GetComponent<ShowPrice>().ChronoCoinPrice, true);
+
         }
         else
         {

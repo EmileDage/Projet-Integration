@@ -2830,6 +2830,50 @@ PrefabInstance:
       propertyPath: patrolPoints.Array.data[5]
       value: 
       objectReference: {fileID: 5027223699307006767}
+    - target: {fileID: 3550440442611990633, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442611990633, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442611990633, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442611990633, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442611990633, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 852485a7594af8843a68bf6d8b3e796a, type: 2}
+    - target: {fileID: 3550440442634176845, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442670549156, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442670549156, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442670549156, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442670549156, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442670549156, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1aef98015285049478e840069bc859e7, type: 2}
     - target: {fileID: 3550440442700501410, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.16
@@ -2842,34 +2886,474 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 9.83
       objectReference: {fileID: 0}
+    - target: {fileID: 3550440442811898935, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442811898935, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442811898935, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442811898935, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442811898935, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1aef98015285049478e840069bc859e7, type: 2}
+    - target: {fileID: 3550440442852838368, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442930825467, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442930825467, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442930825467, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442930825467, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442930825467, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[1]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442930825467, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a31b3e7706695a64abaed5d224ecb840, type: 2}
+    - target: {fileID: 3550440442930825467, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 409471ca2e521a04a9f636d7d1ce5e44, type: 2}
+    - target: {fileID: 3550440442934562112, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440442934562113, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: pannel_too_much_Animal
       value: 
       objectReference: {fileID: 5378210820300230403}
+    - target: {fileID: 3550440443125952319, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443125952319, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443125952319, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443125952319, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443125952319, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443125952319, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ea3aaac98eb1e204db3622d792f20d3b, type: 2}
+    - target: {fileID: 3550440443125952319, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 634f8fa23f09f8746b6eb260bf781cf9, type: 2}
+    - target: {fileID: 3550440443202429916, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443253879576, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443253879576, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443253879576, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443253879576, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443253879576, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a31b3e7706695a64abaed5d224ecb840, type: 2}
+    - target: {fileID: 3550440443309652328, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443310236202, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443313670016, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443313670016, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 125
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443313670016, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443313670016, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443313670016, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 06830fdc3481fef44972cd220b4395a2, type: 2}
+    - target: {fileID: 3550440443331528685, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443331528685, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443331528685, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443331528685, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443331528685, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1aef98015285049478e840069bc859e7, type: 2}
+    - target: {fileID: 3550440443553482758, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443607800365, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443607800365, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 300
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443607800365, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443607800365, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443607800365, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6fda43568111ccb4eb24e64e2d2d2e7a, type: 2}
+    - target: {fileID: 3550440443653912333, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443723045197, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443723045197, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443723045197, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443723045197, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443723045197, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 5a678949447ff0f488f09b1b0ea4814d, type: 2}
+    - target: {fileID: 3550440443815992601, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443815992601, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443815992601, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443815992601, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443815992601, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: b4f0af2957e01d343a847cf019df8058, type: 2}
+    - target: {fileID: 3550440443827262543, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443827262543, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443827262543, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443827262543, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443827262543, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 065beaab78274214d9b06308cd15bda1, type: 2}
+    - target: {fileID: 3550440443827920444, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443827920444, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443827920444, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443827920444, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443827920444, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a31b3e7706695a64abaed5d224ecb840, type: 2}
+    - target: {fileID: 3550440443858754655, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443858754655, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443858754655, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443858754655, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443858754655, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[1]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443858754655, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: ea3aaac98eb1e204db3622d792f20d3b, type: 2}
+    - target: {fileID: 3550440443858754655, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1aef98015285049478e840069bc859e7, type: 2}
+    - target: {fileID: 3550440443876025634, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443876025634, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 30
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443876025634, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443876025634, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443876025634, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a31b3e7706695a64abaed5d224ecb840, type: 2}
+    - target: {fileID: 3550440443981498857, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443981498857, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 100
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443981498857, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443981498857, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443981498857, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a31b3e7706695a64abaed5d224ecb840, type: 2}
     - target: {fileID: 3550440444052024946, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_MatchWidthOrHeight
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3550440444505034220, guid: 9dc208acea937f742981c9384357c437, type: 3}
-      propertyPath: m_LocalRotation.w
+    - target: {fileID: 3550440444052024946, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_ReferenceResolution.x
+      value: 1920
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444052024946, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_ReferenceResolution.y
+      value: 1080
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444073057444, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3550440444505034220, guid: 9dc208acea937f742981c9384357c437, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
+    - target: {fileID: 3550440444073057444, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 200
       objectReference: {fileID: 0}
-    - target: {fileID: 3550440444505034220, guid: 9dc208acea937f742981c9384357c437, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
+    - target: {fileID: 3550440444073057444, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 3550440444505034220, guid: 9dc208acea937f742981c9384357c437, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
+    - target: {fileID: 3550440444073057444, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 3550440444505034220, guid: 9dc208acea937f742981c9384357c437, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
+    - target: {fileID: 3550440444073057444, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 8618ef534746ef641820e8258a853d31, type: 2}
+    - target: {fileID: 3550440444225063095, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3550440444225063095, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444225063095, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444225063095, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444225063095, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a31b3e7706695a64abaed5d224ecb840, type: 2}
+    - target: {fileID: 3550440444542353682, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444542353682, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 150
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444542353682, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444542353682, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444542353682, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: f23e3dafcad9338479018b076128c620, type: 2}
+    - target: {fileID: 3550440444548006872, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444548006872, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444548006872, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444548006872, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444548006872, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 634f8fa23f09f8746b6eb260bf781cf9, type: 2}
+    - target: {fileID: 3550440444598386106, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444598386106, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 200
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444598386106, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444598386106, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444598386106, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 852485a7594af8843a68bf6d8b3e796a, type: 2}
+    - target: {fileID: 3550440444616296414, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444616296414, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: chronoCoinPrice
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444616296414, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444616296414, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: qte.Array.data[0]
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440444616296414, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: price.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1aef98015285049478e840069bc859e7, type: 2}
     - target: {fileID: 6552137513733707928, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_RootOrder
       value: 0

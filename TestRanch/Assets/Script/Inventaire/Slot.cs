@@ -49,7 +49,7 @@ public class Slot : MonoBehaviour, IDropHandler
        if( dragged != imgDrag.gameObject && drag != null && IsOpen())
 
         {
-            Debug.Log("merging drag");
+            
             DraggedItemMerge(drag);
             drag.ParentSlot.UpdateSlot();
         }

@@ -61,10 +61,10 @@ public class Player : MonoBehaviour
         RaycastHit hitUpdate;
         if (Physics.Raycast(playerCam.transform.position, playerCam.transform.TransformDirection(Vector3.forward), out hitUpdate, interactionDistance))
         {
-            Debug.Log("hey");
+
             if (hitUpdate.collider.GetComponent<IInteractible>() != null)
             {
-                Debug.Log("yep");
+                
                 interactableMsg.gameObject.SetActive(true);
             }
             else

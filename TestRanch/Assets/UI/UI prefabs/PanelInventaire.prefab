@@ -188,6 +188,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4556117257126553196, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: lockedBox
+      value: 
+      objectReference: {fileID: 5114842968619137187, guid: ba75d2a21b927614a9db2804694167e5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &2307451760516151720 stripped
@@ -290,6 +294,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 4556117257126553196, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: lockedBox
+      value: 
+      objectReference: {fileID: 5114842968619137187, guid: ba75d2a21b927614a9db2804694167e5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &190202113297425623 stripped
@@ -392,6 +400,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 4556117257126553196, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: lockedBox
+      value: 
+      objectReference: {fileID: 5114842968619137187, guid: ba75d2a21b927614a9db2804694167e5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &1566676962684003499 stripped
@@ -494,6 +506,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 4556117257126553196, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: lockedBox
+      value: 
+      objectReference: {fileID: 5114842968619137187, guid: ba75d2a21b927614a9db2804694167e5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &7657858033935340188 stripped
@@ -596,6 +612,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 4556117257126553196, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: lockedBox
+      value: 
+      objectReference: {fileID: 5114842968619137187, guid: ba75d2a21b927614a9db2804694167e5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &8030139338918230278 stripped
@@ -698,6 +718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 4556117257126553196, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: lockedBox
+      value: 
+      objectReference: {fileID: 5114842968619137187, guid: ba75d2a21b927614a9db2804694167e5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &7829778228365955550 stripped
@@ -800,6 +824,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 4556117257126553196, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: lockedBox
+      value: 
+      objectReference: {fileID: 5114842968619137187, guid: ba75d2a21b927614a9db2804694167e5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &8281460253988387971 stripped
@@ -902,6 +930,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space
       objectReference: {fileID: 0}
+    - target: {fileID: 4556117257126553196, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: lockedBox
+      value: 
+      objectReference: {fileID: 5114842968619137187, guid: ba75d2a21b927614a9db2804694167e5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &8539951681868404531 stripped
@@ -1004,6 +1036,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Inventory_space (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4556117257126553196, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
+      propertyPath: lockedBox
+      value: 
+      objectReference: {fileID: 5114842968619137187, guid: ba75d2a21b927614a9db2804694167e5, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
 --- !u!224 &5889472072675581946 stripped

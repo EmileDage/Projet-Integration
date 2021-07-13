@@ -10,16 +10,16 @@ public class ShowPrice : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
     private string price_of_upgrade;//ce que l'on veut qui s'affiche comme prix
     [SerializeField] private Item[] price;
     [SerializeField] private int[] qte;
+    [SerializeField] private int chronoCoinPrice;
 
     private List<ItemStack> liste = new List<ItemStack>();
 
     public List<ItemStack> Liste_prix { get => liste; }//appeler dans field_ui
+    public int ChronoCoinPrice { get => chronoCoinPrice; }
 
     private void Start()
     {
-        
-
-        if (price.Length <= 0)
+        if (price.Length <= 0 && chronoCoinPrice <= 0)
         {
             price_of_upgrade = "Free until price is assigned";
         }
@@ -28,7 +28,6 @@ public class ShowPrice : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         }
 
         PutStuffInList();
-
     }
 
     private void PutStuffInList() {
@@ -55,8 +54,9 @@ public class ShowPrice : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
         for (int a = 0; a < price.Length; a++) {
             //price_of_upgrade += Qte[a] +" "+ price[a].Nom+",";
-            price_of_upgrade += price[a].Nom + "(" + qte[a] + "), ";
+            price_of_upgrade += price[a].Nom + " " + qte[a] + " , ";
         }
-        
+        if(chronoCoinPrice > 0)
+        price_of_upgrade += chronoCoinPrice.ToString() + "cc." ;
     }
 }
