@@ -18,6 +18,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject minimapCamObject;
     [SerializeField] private GameObject minimapUI;
 
+    private CameraControl camJoueur;
+
     private void Awake()
     {
         instance = this;
@@ -34,6 +36,7 @@ public class UIManager : MonoBehaviour
         screenMsg.SetActive(false);
         minimapCamObject.SetActive(false);
         minimapUI.SetActive(false);
+        camJoueur = GameManager.gmInstance.Joueur.GetComponent<CameraControl>();
     }
 
 
@@ -45,7 +48,7 @@ public class UIManager : MonoBehaviour
 
     public void InvalidActionSound()
     {
-        soundsUI.clip = acceptClip;
+        soundsUI.clip = invalidActionClip;
         soundsUI.Play();
     }
 
@@ -64,6 +67,7 @@ public class UIManager : MonoBehaviour
     { 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
+        camJoueur.UnlockCamera();
         panel.SetActive(false);
         Debug.Log("exit panel");
     }
@@ -94,6 +98,7 @@ public class UIManager : MonoBehaviour
         Panel.SetActive(true);
         AcceptSound();
         ActivateMouse();
+        camJoueur.LockCamera();
     }
 
     public void MapOpenClose()

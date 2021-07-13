@@ -16,6 +16,7 @@ public class Btn_Handler : MonoBehaviour
 
     public void OnPointerDown(PointerEventData eventData)
     {
+        
         if (GetComponent<Button>() != null)
         {
             GetComponent<Button>().onClick.Invoke();
@@ -25,6 +26,6 @@ public class Btn_Handler : MonoBehaviour
 
     public void OnPointerEnter(PointerEventData eventData)
     {
-        GetComponent<Selectable>().Select();
+        GetComponent<Selectable>().Select();      
     }
 }

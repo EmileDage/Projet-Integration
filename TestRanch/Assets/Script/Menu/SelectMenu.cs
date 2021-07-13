@@ -9,13 +9,12 @@ public class SelectMenu : MonoBehaviour
 {
     [SerializeField] private GameObject[] panels;
     [SerializeField] private Selectable[] defaultButtons;
-
+    [SerializeField] private AudioSource a_s;
 
 
     void Start()
     {
         Invoke("PanelToggle", 0.01f);
-
     }
 
     public void PanelToggle()
@@ -25,6 +24,7 @@ public class SelectMenu : MonoBehaviour
 
     public void PanelToggle(int position)
     {
+        a_s.Play();
         Input.ResetInputAxes();
         for (int i = 0; i < panels.Length; i++)
         {
