@@ -1,0 +1,109 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4283934311150951772
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2127931062130709196, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599237310108151087, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: dialogue_idlechat.name
+      value: Hydro The Explorer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599237310108151087, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: dialogue_startquest.name
+      value: Hydro The Explorer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599237310108151087, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: dialogue_waitingquest.name
+      value: Hydro The Explorer
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599237310108151087, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599237310108151087, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599237310108151087, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[0]
+      value: I think something moving in the water.
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599237310108151087, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[1]
+      value: Maybe it was nothing ...
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599237310108151087, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[0]
+      value: 'Hello ! '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599237310108151087, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[1]
+      value: 'Did you know that the water raises really high every day at 16h00 and
+        decreases at 4h00. What an amazing phenomena. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 4599237310108151087, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[2]
+      value: It's sad that the water is really dangerous for us. Even the creatures
+        of this planet stay away from the ocean.
+      objectReference: {fileID: 0}
+    - target: {fileID: 5330253424920150748, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_Name
+      value: Hydro the Explorer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644100661889712682, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644100661889712682, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -634.5999
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644100661889712682, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.511261
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644100661889712682, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -42.050903
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644100661889712682, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644100661889712682, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644100661889712682, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644100661889712682, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644100661889712682, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644100661889712682, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6644100661889712682, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8263694898466873892, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: eb17deeeda8ed3442a6c8d16f610b2f9, type: 3}
