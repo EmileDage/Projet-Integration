@@ -24,6 +24,7 @@ public class SalePanel : AbstractInventoryUI
 
     private void Start()
     {
+        Debug.Log("hey");
         slots = this.GetComponentsInChildren<Slot>();
         UI = UIManager.Instance;
         gm = GameManager.gmInstance;
@@ -33,7 +34,7 @@ public class SalePanel : AbstractInventoryUI
             SetSlotsParent(slot);
             slot.UpdateSlotWithoutPanel();
         }
-       
+        this.gameObject.SetActive(false);
     }
 
     public void SellAll()

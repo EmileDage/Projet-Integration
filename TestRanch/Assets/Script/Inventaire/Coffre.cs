@@ -14,6 +14,7 @@ public class Coffre : MonoBehaviour, IInteractible
     public int Size { get => size; set => size = value; }
 
 
+
     public void Awake()
     {
         

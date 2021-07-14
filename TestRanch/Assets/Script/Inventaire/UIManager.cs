@@ -32,7 +32,7 @@ public class UIManager : MonoBehaviour
     private void Start()
     {
         stationPanel.SetActive(false);
-        SellPanel.SetActive(false);
+        
         screenMsg.SetActive(false);
         minimapCamObject.SetActive(false);
         minimapUI.SetActive(false);
