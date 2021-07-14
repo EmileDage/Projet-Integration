@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: fe740203d6b69954eb24e6c66c34cb82, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -139,6 +139,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 1
+--- !u!65 &8129912390145733607
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2401444668057304021}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7, y: 1.7000006, z: 2.6372752}
+  m_Center: {x: 0, y: 0.00000011920932, z: 1.2813718}
 --- !u!1 &4498301059627149073
 GameObject:
   m_ObjectHideFlags: 0
@@ -345,7 +358,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d8af8052c7a952c44ab292224e59b089, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -432,11 +445,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e7a52acbdd9bf9a49a4cba9c232fbf4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   rewards:
   - {fileID: 11400000, guid: 3142a52af7bdf0d48b392062b2ad7941, type: 2}
   rewardsQte: 02000000
   chest: {fileID: 714709573599503294}
-  manager: {fileID: 0}
   objectsToFetch:
   - {fileID: 5607916652957525104}
   fetchThis: {fileID: 11400000, guid: f9ffb4d3bd765d74891208363e71aa5e, type: 2}

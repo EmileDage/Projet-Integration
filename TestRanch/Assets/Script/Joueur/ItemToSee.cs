@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class ItemToSee : MonoBehaviour
 {
+    [SerializeField] private Transform look;
 
-    [SerializeField] Transform playerCamera;
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        this.transform.LookAt(playerCamera);
+        transform.LookAt(look, Vector3.up);
+        transform.Rotate(-90, 0, 0);
     }
 }

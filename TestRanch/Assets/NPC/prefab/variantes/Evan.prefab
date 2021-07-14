@@ -440,20 +440,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   qte: 1
   item: {fileID: 11400000, guid: 4ca797060f76e07418d03278fd6d6208, type: 2}
---- !u!64 &832780924
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5628869078606366957}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4168771564931210727, guid: e412acb2501700e43a0cea780c6a6dc2, type: 3}
 --- !u!1001 &8020461963531055928
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -519,7 +505,7 @@ PrefabInstance:
       objectReference: {fileID: 5576769810347150571, guid: 33b7fbbaa48fda8448f6a10728f42181, type: 3}
     - target: {fileID: 4498301059627149073, guid: 392c4003fa2f8d64986106bb352a5b18, type: 3}
       propertyPath: m_Name
-      value: Evan(Special)
+      value: Evan
       objectReference: {fileID: 0}
     - target: {fileID: 5121921126380160036, guid: 392c4003fa2f8d64986106bb352a5b18, type: 3}
       propertyPath: manager
@@ -746,10 +732,5 @@ Transform:
 --- !u!1 &2494208946895263560 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5607916652957525104, guid: 392c4003fa2f8d64986106bb352a5b18, type: 3}
-  m_PrefabInstance: {fileID: 8020461963531055928}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5628869078606366957 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2401444668057304021, guid: 392c4003fa2f8d64986106bb352a5b18, type: 3}
   m_PrefabInstance: {fileID: 8020461963531055928}
   m_PrefabAsset: {fileID: 0}

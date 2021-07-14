@@ -189,7 +189,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 62ac5ca3c0f743243977c8020582c01d, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -288,7 +288,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: e69af49f0dfa52b4f8aed3c6bf19c00f, type: 2}
+  - {fileID: 0}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -369,10 +369,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3decc18d811101f4ba2c5146d9f9737f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   rewards: []
   rewardsQte: 
   chest: {fileID: 2933159917491998549}
-  manager: {fileID: 0}
   spawn: {fileID: 8363795947799107925}
 --- !u!65 &2933159919096277169
 BoxCollider:
@@ -537,11 +537,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cfff8db4ba8ebcb4797d0c9c030babf0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  manager: {fileID: 0}
   rewards:
   - {fileID: 11400000, guid: 3142a52af7bdf0d48b392062b2ad7941, type: 2}
   rewardsQte: 01000000
   chest: {fileID: 2933159917491998549}
-  manager: {fileID: 0}
   Hunted: {fileID: 9119827833420720740}
 --- !u!1 &5917347851507738396
 GameObject:
@@ -586,6 +586,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   size: 1
+--- !u!65 &2152619962946656584
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8012312036019774549}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.7, y: 1.7000006, z: 2.6372752}
+  m_Center: {x: 0, y: 0.00000011920932, z: 1.2813699}
 --- !u!1001 &2933159918936512982
 PrefabInstance:
   m_ObjectHideFlags: 0
