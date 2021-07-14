@@ -4865,7 +4865,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3986188387995331715, guid: dfcafb530ffc10f4b99e9cb1565000e9, type: 3}
+  - {fileID: 2100000, guid: 1ab5b5843bf4a8740936d632a7400758, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4900,5 +4900,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   detectionDistance: 7
-  player: {fileID: 0}
   fire: {fileID: 3306989048657730268}

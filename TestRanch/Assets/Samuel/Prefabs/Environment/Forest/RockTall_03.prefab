@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4134110996516355825}
   - component: {fileID: 4054787364715057826}
   - component: {fileID: 7367638185968551368}
-  - component: {fileID: 7325199548072205652}
+  - component: {fileID: 171820237937300976}
   m_Layer: 0
   m_Name: RockTall_03
   m_TagString: Untagged
@@ -60,7 +60,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3986188387995331715, guid: efdc2323d9a599c4ab4ee44a7221cfab, type: 3}
+  - {fileID: 2100000, guid: 1ab5b5843bf4a8740936d632a7400758, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -82,8 +82,8 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!65 &7325199548072205652
-BoxCollider:
+--- !u!64 &171820237937300976
+MeshCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -92,6 +92,7 @@ BoxCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.042900875, y: 0.038928818, z: 0.056854736}
-  m_Center: {x: -0.00024801254, y: 0.008902779, z: 0.018276677}
+  serializedVersion: 4
+  m_Convex: 1
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -4915856464246366387, guid: c82ee13930755c14fa7df824371dec7b, type: 3}

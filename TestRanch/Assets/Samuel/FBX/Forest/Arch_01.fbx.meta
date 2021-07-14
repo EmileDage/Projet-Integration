@@ -3,7 +3,12 @@ guid: 9388171ebe8ae1a48af03cfed38dbb53
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stone
+    second: {fileID: 2100000, guid: a60b464479ae4614cbe944c82e17538e, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

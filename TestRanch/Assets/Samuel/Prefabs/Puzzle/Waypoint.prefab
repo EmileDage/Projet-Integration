@@ -91,8 +91,8 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 3986188387995331715, guid: c36ee9cde170d5740a790fdf7024da91, type: 3}
-  - {fileID: 7713870208516813153, guid: c36ee9cde170d5740a790fdf7024da91, type: 3}
+  - {fileID: 2100000, guid: 1ab5b5843bf4a8740936d632a7400758, type: 2}
+  - {fileID: 2100000, guid: 204c3e94772d29940903bf3f42f616ef, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -127,6 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   spawnPosition: {fileID: 7817334647959273076}
-  isUnlocked: 0
   btn_Object: {fileID: 0}
+  UnlockedTextZone: {fileID: 0}
+  waypointText: default
   detectionDistance: 7

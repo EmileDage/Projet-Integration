@@ -3,7 +3,17 @@ guid: 5b55ccdba1bf41f43a1837195940571e
 ModelImporter:
   serializedVersion: 20200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Cucumber
+    second: {fileID: 2100000, guid: 93645e8252a75294599c5bf5ce88a1b9, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Leaf
+    second: {fileID: 2100000, guid: fa1a1460bd31de842bf2255a7d93fb38, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
