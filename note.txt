@@ -1,0 +1,28 @@
+
+
+
+
+
+**************
+Sources
+https://www.youtube.com/watch?v=BGr-7GZJNXg //drag and drop
+https://answers.unity.com/questions/1310066/exposing-a-function-to-the-inspector.html
+https://docs.unity3d.com/ScriptReference/Events.UnityEvent_1.html
+
+https://freesound.org/people/ryanconway/sounds/240801/ ->pioche
+https://freesound.org/people/DDT197/sounds/445782/ ->woodchop
+https://freesound.org/people/guyburns/sounds/558413/ ->gravel dig //non
+https://freesound.org/people/copyc4t/sounds/533257/ -> beep
+https://freesound.org/people/InspectorJ/sounds/417044/ -> spaceship zoom
+https://freesound.org/people/DWOBoyle/sounds/474178/ -> door roll
+https://freesound.org/people/Audiodegradable/sounds/567842/ -> musique menu
+https://freesound.org/people/laurent/sounds/15851/ -> nightAmbiance
+https://freesound.org/people/univ_lyon3/sounds/542198/ -> plage Ambiance 
+https://freesound.org/people/janaejean/sounds/486430/ -> prairieAmbiance(poche, fichier audio weird Non commercial license)
+https://freesound.org/people/Liancu/sounds/344730/ -> journée chaude ambiance
+https://freesound.org/people/klankbeeld/sounds/527554/ -> ambiance de foret
+https://freesound.org/people/JayHu/sounds/506103/ -> ambiance de foret v2
+https://freesound.org/people/helenacm/sounds/232989/ ->chest open
+https://freesound.org/people/TriqyStudio/sounds/467604/ -> bag
+
+https://www.youtube.com/watch?v=28JTTXqMvOU//minimap
