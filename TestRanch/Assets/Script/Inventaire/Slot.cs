@@ -133,6 +133,8 @@ public class Slot : MonoBehaviour, IDropHandler
             imgDrag.gameObject.SetActive(false);
             DragItem.ResetPosition();            
         }
+
+        parentUI.UpdatePanel();
     }
 
     public void UpdateSlotWithoutPanel()
