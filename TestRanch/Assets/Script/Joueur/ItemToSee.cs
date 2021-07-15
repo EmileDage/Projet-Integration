@@ -8,7 +8,7 @@ public class ItemToSee : MonoBehaviour
 
     private void Update()
     {
-        transform.LookAt(look, Vector3.up);
+        transform.LookAt(look);
         transform.Rotate(-90, 0, 0);
     }
 }
