@@ -8,6 +8,7 @@ public class END_Fusee : MonoBehaviour, IInteractible
     //idealement tu voit la fusee monter dans lespcae puis credits
     [SerializeField] private GameObject credits;
     [SerializeField] private GameObject pannel;
+    [SerializeField] private GameObject[] permanent_UI;
     [SerializeField] private ParticleSystem[] engine_fires;
     private Animator anime;
     private bool fadeIn;
@@ -19,7 +20,8 @@ public class END_Fusee : MonoBehaviour, IInteractible
 
     public void Interact(Player joueur)
     {
-
+        foreach (GameObject ui in permanent_UI)
+            ui.SetActive(false);
         joueur.gameObject.SetActive(false);
         cam_joueur.enabled = false;
         cam_fusee.enabled = true;
