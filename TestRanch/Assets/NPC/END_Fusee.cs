@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.Audio;
 
 public class END_Fusee : MonoBehaviour, IInteractible
 {
@@ -10,6 +10,7 @@ public class END_Fusee : MonoBehaviour, IInteractible
     [SerializeField] private GameObject pannel;
     [SerializeField] private GameObject[] permanent_UI;
     [SerializeField] private ParticleSystem[] engine_fires;
+    [SerializeField] private AudioSource audio_toMute;
     private Animator anime;
     private bool fadeIn;
     private GameManager gm;
@@ -20,6 +21,8 @@ public class END_Fusee : MonoBehaviour, IInteractible
 
     public void Interact(Player joueur)
     {
+        audio_toMute.Pause();
+
         foreach (GameObject ui in permanent_UI)
             ui.SetActive(false);
         joueur.gameObject.SetActive(false);
@@ -30,7 +33,9 @@ public class END_Fusee : MonoBehaviour, IInteractible
         foreach(ParticleSystem fire in engine_fires)
             fire.gameObject.SetActive(true);
 
-        
+        this.gameObject.GetComponent<AudioSource>().Play();
+
+
     }
 
     public void RollCredits() {
