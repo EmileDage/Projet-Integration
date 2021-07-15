@@ -8,8 +8,9 @@ public class END_Fusee : MonoBehaviour, IInteractible
     //idealement tu voit la fusee monter dans lespcae puis credits
     [SerializeField] private GameObject credits;
     [SerializeField] private GameObject pannel;
-    [SerializeField] private ParticleSystem engine_fire;
+    [SerializeField] private ParticleSystem[] engine_fires;
     private Animator anime;
+    private bool fadeIn;
     private GameManager gm;
     private Player joueur;
     private Camera cam_joueur;
@@ -23,16 +24,20 @@ public class END_Fusee : MonoBehaviour, IInteractible
         cam_joueur.enabled = false;
         cam_fusee.enabled = true;
         anime.SetBool("GoingToSpace", true);
-        engine_fire.gameObject.SetActive(true);
+
+        foreach(ParticleSystem fire in engine_fires)
+            fire.gameObject.SetActive(true);
 
         
     }
 
     public void RollCredits() {
         pannel.SetActive(true);
-        credits.SetActive(true);
-
+        fadeIn = true;
+        //we wait until complety fadeIn to actually rollcredits
     }
+
+    
 
     private void Awake()
     {
@@ -44,13 +49,25 @@ public class END_Fusee : MonoBehaviour, IInteractible
     {
         credits.SetActive(false);
         pannel.SetActive(false);
-        //pannel.GetComponent<Ima>
-        engine_fire.gameObject.SetActive(false);
+        pannel.GetComponent<CanvasGroup>().alpha = 0;
+        foreach (ParticleSystem fire in engine_fires)
+            fire.gameObject.SetActive(true);
         anime = this.gameObject.GetComponent<Animator>();
         gm = GameManager.gmInstance;
         joueur = gm.Joueur;
         cam_joueur = gm.Joueur.playerCam.GetComponent<Camera>();
     }
 
-
+    private void Update()
+    {
+        if (fadeIn)
+        {
+            pannel.GetComponent<CanvasGroup>().alpha += Time.deltaTime / 3;
+            if (pannel.GetComponent<CanvasGroup>().alpha >= 1)
+            {
+                credits.SetActive(true);
+                fadeIn = false;
+            }
+        }
+    }
 }
