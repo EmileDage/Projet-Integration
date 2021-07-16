@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+[RequireComponent(typeof(AudioSource))]
 public class PuzzleDoor : MonoBehaviour
 {
     private Animator animator = null;
-    private bool isOpen = false;
+    bool audioPlay = false;
 
     private void Start()
     {
@@ -15,15 +16,17 @@ public class PuzzleDoor : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            if (CheckKeyAmount() && !isOpen)
+            if (CheckKeyAmount())
                 ActivateDoor();
         }
     }
     public void ActivateDoor()
     {
-        isOpen = true;
         GameManager.gmInstance.ModifyPuzzleKey(-1);
         animator.Play("OpenDoor");
+        if(!audioPlay)
+            this.GetComponent<AudioSource>().Play();
+        audioPlay = true;
     }
     private bool CheckKeyAmount() 
     {
