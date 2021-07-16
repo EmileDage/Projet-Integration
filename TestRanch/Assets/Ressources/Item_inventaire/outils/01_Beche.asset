@@ -12,15 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a6e879e1d5b524c99a6e2a105c8aae, type: 3}
   m_Name: 01_Beche
   m_EditorClassIdentifier: 
-  nom: "b\xE8che"
+  nom: Hache
   maxStack: 1
-  icon_Inventory: {fileID: 21300000, guid: 668b9f28b61aa08468aacbf45daa99e4, type: 3}
-  description: "une b\xE8che"
+  icon_Inventory: {fileID: 21300000, guid: 5e466e969df2ddd44a8fb2f1694f5b43, type: 3}
+  description: Useful to cut tree down.
   valeur: 5
   iD: 1
   interactionBonusRange: 1
   useSound: {fileID: 8300000, guid: fa652c46540915c42836951079438eb8, type: 3}
-  itemWorldObject: {fileID: 7596003946293411447, guid: 724e996181f2e274ebb187ee0775156c, type: 3}
+  itemWorldObject: {fileID: 5923730967144284219, guid: 3a1ca75fa7e940f4d9c502d7a376a004, type: 3}
   toolMethod:
     m_PersistentCalls:
       m_Calls:

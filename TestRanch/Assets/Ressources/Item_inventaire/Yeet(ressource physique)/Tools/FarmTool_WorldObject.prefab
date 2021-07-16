@@ -51,9 +51,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1421844631951689518, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -8678823145569952518, guid: 1d17e5cb6c7def1478368e7342236fd4, type: 3}
     - target: {fileID: 7596003946293411447, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_Name
-      value: Builder_GameObject
+      value: FarmTool_WorldObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}

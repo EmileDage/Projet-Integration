@@ -12,10 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 88a6e879e1d5b524c99a6e2a105c8aae, type: 3}
   m_Name: 03_Builder
   m_EditorClassIdentifier: 
-  nom: Builder
+  nom: Hammer
   maxStack: 1
-  icon_Inventory: {fileID: 21300000, guid: 668b9f28b61aa08468aacbf45daa99e4, type: 3}
-  description: A building tool
+  icon_Inventory: {fileID: 21300000, guid: 16093f81af4e59845b760ff1e605188d, type: 3}
+  description: Use this to build your garden.
   valeur: 5
   iD: 3
   interactionBonusRange: 1
