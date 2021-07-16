@@ -49,7 +49,7 @@ public class CreatureInfoExtra : MonoBehaviour
             foodLikesTxtPanel.text = "Food Likes: " + foodLikes;
             creaturePortraitImage.sprite = creaturePortrait;
             creatureHappinessTxtPanel.text = "Happiness: " + creature.Happiness + " / 100";
-            creatureAttackPowerTxtPanel.text = "AttackPower: " + projectile.attack;
+            creatureAttackPowerTxtPanel.text = "AttackPower: " + projectile.Attack;
             creatureSpeedTxtPanel.text = "Speed: " + speed.maxSpeed;
             creatureBiomeTxtPanel.text = "Biome: " + creatureBiome;
             creatureDropRessourceTxtPanel.text = "Ressource Drop: " + creature.dropRessources.name;

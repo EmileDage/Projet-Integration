@@ -105,7 +105,7 @@ GameObject:
   - component: {fileID: 1373166943222338553}
   - component: {fileID: 1341006903103977134}
   - component: {fileID: 5195786470718666358}
-  - component: {fileID: 2312085917943014709}
+  - component: {fileID: 6370902288410532747}
   m_Layer: 0
   m_Name: OctoPa
   m_TagString: Creature
@@ -152,7 +152,7 @@ MonoBehaviour:
   player: {fileID: 0}
   creatureInfoPanel: {fileID: 0}
   creatureInfoPanelExtra: {fileID: 0}
-  followdistance: 9
+  followdistance: 12
   distance: 0
   creatureInfo: {fileID: 1312149026987213565}
   happiness: 50
@@ -164,7 +164,7 @@ MonoBehaviour:
   dropPos: {fileID: 3801487225264319463}
   cooldownDropRessource: 10
   maxCooldownDropRessource: 10
-  projectile: {fileID: 7575423351658430532, guid: 2ad159fb6fdd71944bd4cf87f07c3966, type: 3}
+  projectile: {fileID: 6213765252112388922, guid: 2ad159fb6fdd71944bd4cf87f07c3966, type: 3}
   creatureFace: {fileID: 3609884621916762709}
   constant: 1
   NextFire: 0
@@ -209,7 +209,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 5
+  m_Radius: 8.45
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!114 &8478741813778631540
 MonoBehaviour:
@@ -316,7 +316,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   codex: {fileID: 11400000, guid: f5763d43b4f0445438d8762978dd8c06, type: 2}
---- !u!65 &2312085917943014709
+--- !u!65 &6370902288410532747
 BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -327,8 +327,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 4.4285793, y: 2.6819124, z: 4.4872932}
-  m_Center: {x: -0.006289482, y: 0.51433647, z: -0.08950615}
+  m_Size: {x: 3.1442356, y: 2.2347739, z: 3.1579247}
+  m_Center: {x: -0.014115334, y: 0.8385228, z: -0.15691566}
 --- !u!1 &1312149028803396837
 GameObject:
   m_ObjectHideFlags: 0
@@ -344,7 +344,7 @@ GameObject:
   - component: {fileID: 9051796613419642746}
   m_Layer: 0
   m_Name: Mesh
-  m_TagString: Untagged
+  m_TagString: Creature
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -466,7 +466,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5460115430878916958}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1.69, z: 0.825}
+  m_LocalPosition: {x: -0.06, y: 0.852, z: 1.196}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1312149026987213569}

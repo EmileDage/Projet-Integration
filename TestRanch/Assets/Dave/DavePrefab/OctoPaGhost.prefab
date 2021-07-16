@@ -8,6 +8,14 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 1312149026987213564, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
+      propertyPath: FireRate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1312149026987213564, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 8406636179510669791, guid: 31982f98ace40a6478f99244f9c4b47b, type: 3}
+    - target: {fileID: 1312149026987213564, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: dropRessources
       value: 
       objectReference: {fileID: 11400000, guid: ff30671af76ddb44da259fe1791bca5c, type: 2}
