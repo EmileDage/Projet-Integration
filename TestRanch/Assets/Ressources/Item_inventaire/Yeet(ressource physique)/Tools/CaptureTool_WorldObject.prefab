@@ -25,11 +25,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 362946589993582845, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 362946589993582845, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 362946589993582845, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_LocalRotation.y
@@ -41,7 +41,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 362946589993582845, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 362946589993582845, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -51,9 +51,25 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1421844631951689518, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: 3613567641014311022, guid: 1d17e5cb6c7def1478368e7342236fd4, type: 3}
+    - target: {fileID: 1986429335412673363, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 75503c8db33e6524aa432610ef215e3b, type: 2}
+    - target: {fileID: 1986429335412673363, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 204c3e94772d29940903bf3f42f616ef, type: 2}
+    - target: {fileID: 1986429335412673363, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: e97225948fc589a42b9c9cee36e0bfd9, type: 2}
     - target: {fileID: 7596003946293411447, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_Name
-      value: Builder_GameObject
+      value: CaptureTool_WorldObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}

@@ -14,13 +14,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: Watering Can
   maxStack: 1
-  icon_Inventory: {fileID: 21300000, guid: 668b9f28b61aa08468aacbf45daa99e4, type: 3}
+  icon_Inventory: {fileID: 21300000, guid: dfeb9904b265dba4987634de69b2f418, type: 3}
   description: 
   valeur: 5
   iD: 4
   interactionBonusRange: 1
   useSound: {fileID: 8300000, guid: 144de18f93377a8428e827ce797d4f79, type: 3}
-  itemWorldObject: {fileID: 7596003946293411447, guid: 724e996181f2e274ebb187ee0775156c, type: 3}
+  itemWorldObject: {fileID: 5923730967144284219, guid: 08a0b30765c487e4aa1422c1585ef534, type: 3}
   toolMethod:
     m_PersistentCalls:
       m_Calls:

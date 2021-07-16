@@ -7,6 +7,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 65044952340459326, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -7387706064836869012, guid: 1d17e5cb6c7def1478368e7342236fd4, type: 3}
+    - target: {fileID: 65044952340459326, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
+      propertyPath: m_Convex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 362946589993582845, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -25,11 +33,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 362946589993582845, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 1
+      value: 0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 362946589993582845, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0.7071068
       objectReference: {fileID: 0}
     - target: {fileID: 362946589993582845, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_LocalRotation.y
@@ -41,7 +49,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 362946589993582845, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
+      value: -90
       objectReference: {fileID: 0}
     - target: {fileID: 362946589993582845, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
@@ -51,9 +59,29 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 1421844631951689518, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -7387706064836869012, guid: 1d17e5cb6c7def1478368e7342236fd4, type: 3}
+    - target: {fileID: 1986429335412673363, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986429335412673363, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 75503c8db33e6524aa432610ef215e3b, type: 2}
+    - target: {fileID: 1986429335412673363, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 1986429335412673363, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 7596003946293411447, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
       propertyPath: m_Name
-      value: Builder_GameObject
+      value: WateringCan_WorldObject
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e3977a5a1cbda9458771d4aac9be4cc, type: 3}
