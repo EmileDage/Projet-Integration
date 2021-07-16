@@ -12,7 +12,7 @@ public class Item : ScriptableObject
     [SerializeField] private int valeur;
     [SerializeField] private int iD;
     [SerializeField] protected int interactionBonusRange = 0;
-    [SerializeField] private AudioClip useSound;
+    [SerializeField] protected AudioClip useSound;
     [SerializeField] protected GameObject itemWorldObject;
 
     public string Nom { get => nom;}
