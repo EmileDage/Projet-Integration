@@ -10,6 +10,9 @@ public class HealthModule : MonoBehaviour
 
     void Start()
     {
+        GameEvents.SaveInitiated += Save;
+        Load();
+
         Health.InitializeRecovery();
     }
 
@@ -50,4 +53,18 @@ public class HealthModule : MonoBehaviour
         isDead = false;
 
     }
+
+    #region Save
+    void Save()
+    {
+        SaveSystem.Save(Health, "PlayerHealth");
+    }
+    void Load()
+    {
+        if (SaveSystem.SaveExists("PlayerHealth"))
+        {
+            Health = SaveSystem.Load<Regen>("PlayerHealth");
+        }
+    }
+    #endregion
 }

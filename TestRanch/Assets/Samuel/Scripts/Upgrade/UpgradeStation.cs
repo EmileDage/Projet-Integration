@@ -18,20 +18,13 @@ public class UpgradeStation : MonoBehaviour, IInteractible
     }
     private void Update()
     {
-        if (Input.GetButtonDown("Interact"))
-            Interact(player.GetComponent<Player>());
-
-        if (Input.GetButtonDown("Cancel"))
+       if (Input.GetButtonDown("Cancel"))
             ClosePanel();
     }
     public void Interact(Player joueur)
     {
-        float distance = Vector3.Distance(transform.position, joueur.transform.position);
-        if(distance <= detectionDistance)
-        {
             if (!isOpen)
                 OpenPanel();
-        }
     }
     public void OpenPanel()
     {

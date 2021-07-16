@@ -17,6 +17,7 @@ public class MovementModule : MonoBehaviour
     {
         GameEvents.SaveInitiated += Save;
         Load();
+
         rig = GetComponent<Rigidbody>();
     }
     private void FixedUpdate()
@@ -64,13 +65,16 @@ public class MovementModule : MonoBehaviour
     void Save()
     {
         SaveSystem.Save(transform.position, "PlayerPosition");
+        SaveSystem.Save(speed, "PlayerSpeed");
+
     }
     void Load()
     {
         if (SaveSystem.SaveExists("PlayerPosition"))
-        {
             transform.position = SaveSystem.Load<Vector3>("PlayerPosition");
-        }
+
+        if (SaveSystem.SaveExists("PlayerSpeed"))
+            speed = SaveSystem.Load<Stats>("PlayerSpeed");
     }
     #endregion
 }

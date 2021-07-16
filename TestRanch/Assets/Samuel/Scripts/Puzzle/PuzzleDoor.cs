@@ -5,6 +5,7 @@ using UnityEngine;
 public class PuzzleDoor : MonoBehaviour
 {
     private Animator animator = null;
+    private bool isOpen = false;
 
     private void Start()
     {
@@ -14,12 +15,13 @@ public class PuzzleDoor : MonoBehaviour
     {
         if(other.tag == "Player")
         {
-            if (CheckKeyAmount())
+            if (CheckKeyAmount() && !isOpen)
                 ActivateDoor();
         }
     }
     public void ActivateDoor()
     {
+        isOpen = true;
         GameManager.gmInstance.ModifyPuzzleKey(-1);
         animator.Play("OpenDoor");
     }

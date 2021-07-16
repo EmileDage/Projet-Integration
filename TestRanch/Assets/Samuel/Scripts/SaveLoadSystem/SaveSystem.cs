@@ -70,7 +70,7 @@ public class SaveSystem : MonoBehaviour
     {
         string path = Application.persistentDataPath + "/Save/";
         DirectoryInfo directory = new DirectoryInfo(path);
-        directory.Delete();
+        directory.Delete(true);
         Directory.CreateDirectory(path);
 
     }

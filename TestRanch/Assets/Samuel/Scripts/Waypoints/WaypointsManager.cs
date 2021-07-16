@@ -29,7 +29,6 @@ public class WaypointsManager : MonoBehaviour
         else
             Debug.Log("You need the warpstone to teleport.");
     }
-
     public void UnlockWarpStone()
     {
         warpStoneUnlocked = true;

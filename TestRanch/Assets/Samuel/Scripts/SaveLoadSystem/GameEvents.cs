@@ -13,4 +13,11 @@ public class GameEvents : MonoBehaviour
             SaveInitiated.Invoke();
     }
 
+    public static void OnLoadInitiated()
+    {
+        if (LoadInitiated != null)
+            LoadInitiated.Invoke();
+    }
+
+
 }
