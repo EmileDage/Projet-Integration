@@ -44,7 +44,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	// variable pour le projectile de la creature state Agressif
 	[Header("Variable pour la creature Agressive")]
-	public Rigidbody projectile;
+	public GameObject projectile;
 	public Transform creatureFace;
 	public float constant;
 	public float NextFire;
@@ -205,9 +205,12 @@ public class CreatureBehavior : StateMachine, ICapturable
 		// spawn projectile
 		if(Time.time > NextFire)
         {
-			Rigidbody clone;
-			clone = (Rigidbody)Instantiate(projectile, creatureFace.position, creatureFace.rotation);
-			clone.velocity = creatureFace.TransformDirection(Vector3.forward * 10);
+			var relativePos = player.position - transform.position;
+			var rotation = Quaternion.LookRotation(relativePos);
+			relativePos.x = 0f;
+			relativePos.z = 0f;
+			transform.rotation = rotation;
+			Instantiate(projectile, creatureFace.position, creatureFace.rotation);			
 			NextFire = Time.time + FireRate;			
 		}
 		

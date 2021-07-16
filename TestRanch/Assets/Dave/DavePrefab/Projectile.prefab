@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5802795844130062330}
   - component: {fileID: 3348574694449982586}
   - component: {fileID: 254297849649696489}
-  - component: {fileID: 7575423351658430532}
   - component: {fileID: 8439944144794469962}
+  - component: {fileID: 6195617080340398378}
   m_Layer: 0
   m_Name: Projectile
   m_TagString: Untagged
@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 6213765252112388922}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 45.98, y: 2.04, z: 79.19}
-  m_LocalScale: {x: 0.599, y: 0.599, z: 0.599}
+  m_LocalScale: {x: 0.9843367, y: 0.9843367, z: 0.9843367}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -97,7 +97,21 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!54 &7575423351658430532
+--- !u!114 &8439944144794469962
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6213765252112388922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ddb814450510c204f9658a234830be5b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attack: 45
+  speedPro: 15
+--- !u!54 &6195617080340398378
 Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -112,18 +126,4 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
---- !u!114 &8439944144794469962
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6213765252112388922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ddb814450510c204f9658a234830be5b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerHealth: {fileID: 1251647937, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
-  attack: 20
+  m_CollisionDetection: 1

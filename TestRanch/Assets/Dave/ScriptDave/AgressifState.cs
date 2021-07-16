@@ -11,10 +11,10 @@ namespace Assets.Dave.ScriptDave
 			CreatureBehavior.state = "Agressif";
 
 
-			Vector3 lookVector = CreatureBehavior.player.transform.position - CreatureBehavior.transform.position;
+			/*Vector3 lookVector = CreatureBehavior.player.transform.position - CreatureBehavior.transform.position;
 			lookVector.y = CreatureBehavior.transform.position.y;
 			Quaternion rot = Quaternion.LookRotation(lookVector);
-			CreatureBehavior.transform.rotation = Quaternion.Slerp(CreatureBehavior.transform.rotation, rot, 1);
+			CreatureBehavior.transform.rotation = Quaternion.Slerp(CreatureBehavior.transform.rotation, rot, 1);*/
 
 			CreatureBehavior.Shoot();
 
@@ -31,7 +31,7 @@ namespace Assets.Dave.ScriptDave
 				CreatureBehavior.agent.isStopped = false;
 				CreatureBehavior.creatureInfoPanel.SetActive(false);
 			}
-			if (CreatureBehavior.distance >= 15)
+			if (CreatureBehavior.distance >= 17)
 			{
 				CreatureBehavior.playerFound = false;
 			}
