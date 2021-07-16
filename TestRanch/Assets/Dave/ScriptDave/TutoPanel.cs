@@ -22,7 +22,6 @@ public class TutoPanel : MonoBehaviour
 
     private IEnumerator RemovePanel1()
     {
-
         yield return new WaitForSeconds(10f);
         panel1.SetActive(false);
         panel2.SetActive(true);
