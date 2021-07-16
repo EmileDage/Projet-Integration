@@ -19,7 +19,7 @@ MonoBehaviour:
   valeur: 0
   iD: -2
   interactionBonusRange: 0
-  useSound: {fileID: 0}
+  useSound: {fileID: 8300000, guid: c5aceab3b939c4a4480da8af77ef5911, type: 3}
   itemWorldObject: {fileID: 7596003946293411447, guid: 724e996181f2e274ebb187ee0775156c, type: 3}
   toolMethod:
     m_PersistentCalls:

@@ -7,11 +7,7 @@ using UnityEngine.Events;
 public class Outils : Item
 {
 
-    //private delegate void toolMethod();
-    //public GameObjUnityEvent toolMethod;
     public UnityEvent toolMethod;
-
-   // private int tier = 1;
     Player player;
 
     public override void UseThis(ItemStack itemStack, Player joueur)
@@ -32,6 +28,7 @@ public class Outils : Item
                 if (minable != null)
                 {
                     minable.Mine(player);
+                    player.Item_AS.PlayOneShot(useSound);
                 }
             }
         }
@@ -48,6 +45,8 @@ public class Outils : Item
                 if (farmable != null)
                 {
                     farmable.FarmIt();
+                    player.Item_AS.PlayOneShot(useSound);
+                    
                 }
             }
         }
@@ -65,6 +64,7 @@ public class Outils : Item
                 if (buildable != null)
                 {
                     buildable.Build();
+                    player.Item_AS.PlayOneShot(useSound);
                 }
             }
         }
@@ -99,6 +99,7 @@ public class Outils : Item
                 if (capture != null)
                 {
                     capture.Capture();
+                    player.Item_AS.PlayOneShot(useSound);
                 }
             }
         }

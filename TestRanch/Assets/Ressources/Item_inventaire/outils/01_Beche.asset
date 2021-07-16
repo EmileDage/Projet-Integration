@@ -19,7 +19,7 @@ MonoBehaviour:
   valeur: 5
   iD: 1
   interactionBonusRange: 1
-  yieldModifier: 1
+  useSound: {fileID: 8300000, guid: fa652c46540915c42836951079438eb8, type: 3}
   itemWorldObject: {fileID: 7596003946293411447, guid: 724e996181f2e274ebb187ee0775156c, type: 3}
   toolMethod:
     m_PersistentCalls:
