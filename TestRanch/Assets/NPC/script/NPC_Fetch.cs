@@ -24,8 +24,6 @@ public class NPC_Fetch :  NPC_basicsRewards
         {
             chest.Contenu[a] = new ItemStack(rewards[a], rewardsQte[a]);
         }
-
-
     }
 
     public override void Interact(Player joueur)//quand joueur interagit avec NPC

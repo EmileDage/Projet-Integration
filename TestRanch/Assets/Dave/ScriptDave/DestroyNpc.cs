@@ -4,11 +4,11 @@ using UnityEngine;
 
 public class DestroyNpc : MonoBehaviour
 {
-
+    [SerializeField] private GameObject nextNPC;
     // Start is called before the first frame update
     void Start()
     {
-
+        nextNPC.SetActive(false);
     }
 
     // Update is called once per frame
@@ -22,7 +22,8 @@ public class DestroyNpc : MonoBehaviour
 
     private IEnumerator WaitForAnswer()
     {
+        nextNPC.SetActive(true);
         yield return new WaitForSeconds(10f);
-        Destroy(gameObject);
+        gameObject.SetActive(false);
     }
 }
