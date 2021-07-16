@@ -6,6 +6,7 @@ using UnityEngine;
 public class PuzzleDoor : MonoBehaviour
 {
     private Animator animator = null;
+    private bool isOpen = false;
     bool audioPlay = false;
 
     private void Start()
@@ -22,6 +23,9 @@ public class PuzzleDoor : MonoBehaviour
     }
     public void ActivateDoor()
     {
+        if (isOpen)
+            return;
+
         GameManager.gmInstance.ModifyPuzzleKey(-1);
         animator.Play("OpenDoor");
         if(!audioPlay)

@@ -53,7 +53,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2133442056536477686, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
       propertyPath: m_Name
-      value: Hunt_NPC
+      value: Ashe_Bob_Hunt
       objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900054, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 75503c8db33e6524aa432610ef215e3b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}

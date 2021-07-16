@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 1897553380317368308, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 2100000, guid: 98bda0ed28064fb40909eaa1ed0a5706, type: 2}
     - target: {fileID: 2378781565474254604, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: m_Name
       value: Sol The Weirdo
