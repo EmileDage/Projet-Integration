@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2133442056536477686, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
       propertyPath: m_Name
-      value: Julia/Sven
+      value: Julia Sven
       objectReference: {fileID: 0}
     - target: {fileID: 2933159917977589003, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -101,7 +101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2933159919362900053, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -5.04
+      value: -5.35
       objectReference: {fileID: 0}
     - target: {fileID: 2933159919362900053, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
       propertyPath: m_LocalPosition.z

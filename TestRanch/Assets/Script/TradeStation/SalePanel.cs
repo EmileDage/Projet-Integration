@@ -24,7 +24,7 @@ public class SalePanel : AbstractInventoryUI
 
     private void Start()
     {
-        Debug.Log("hey");
+        //Debug.Log("hey");
         slots = this.GetComponentsInChildren<Slot>();
         UI = UIManager.Instance;
         gm = GameManager.gmInstance;
