@@ -11,8 +11,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1.8962288, y: 6.0284715, z: 10.624559}
-  m_Center: {x: 0.3407135, y: -8.512512e-15, z: -4.599014}
+  m_Size: {x: 1.8712618, y: 1.2809924, z: 3.129799}
+  m_Center: {x: 0.01718399, y: 1.7216885e-15, z: 0.371153}
 --- !u!1001 &3786449601732232507
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -23,19 +23,19 @@ PrefabInstance:
     - target: {fileID: 9472300954876838, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: -3256613600669077404, guid: 186c27abcdd9f5942a9f5221d5c71ef5, type: 3}
+      objectReference: {fileID: 3912801466955421534, guid: 27fcc7a87e132924c8c9ec5d1cd1f5ac, type: 3}
     - target: {fileID: 1873953309326631583, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1897967465098468174, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_Materials.Array.size
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1897967465098468174, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
-      objectReference: {fileID: 2100000, guid: 9b1f7a2abac347940b4caa1b3616786c, type: 2}
+      objectReference: {fileID: 2100000, guid: 75503c8db33e6524aa432610ef215e3b, type: 2}
     - target: {fileID: 1897967465098468174, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
@@ -66,15 +66,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -211.45084
       objectReference: {fileID: 0}
     - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: 1.4397392
       objectReference: {fileID: 0}
     - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -193.25778
       objectReference: {fileID: 0}
     - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -106,15 +106,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4896365929613089046, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_LocalScale.x
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4896365929613089046, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_LocalScale.y
-      value: 0.3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4896365929613089046, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_LocalScale.z
-      value: 0.3
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896365929613089046, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -3.74
+      objectReference: {fileID: 0}
+    - target: {fileID: 4896365929613089046, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.1
       objectReference: {fileID: 0}
     - target: {fileID: 4896365929613089046, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -154,15 +162,65 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.size
-      value: 2
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.data[0]
+      value: You seem to be worthy to proceed forward, but be careful the beach can
+        be a dangerous place at night.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[0]
+      value: . . .
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.size
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.data[0]
-      value: 'Halt ! You can''t proceed to the next coral beach. '
+      value: 'Halt ! You can''t proceed through the door. '
       objectReference: {fileID: 0}
     - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.data[1]
-      value: Fetch me this pls
+      value: Door like this are ancient and need a special key.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[2]
+      value: Bring me 10 pieces of iron and 5 jades and i'll give you one key.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[0]
+      value: The door will stay close until you bring me what i want. Remember 10
+        irons and 5 jades.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[1]
+      value: where
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099003137931173350, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: fetchThis.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099003137931173350, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: fetchThis.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: a31b3e7706695a64abaed5d224ecb840, type: 2}
+    - target: {fileID: 8099003137931173350, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: fetchThis.Array.data[1]
+      value: 
+      objectReference: {fileID: 11400000, guid: 1aef98015285049478e840069bc859e7, type: 2}
+    - target: {fileID: 8099003137931173350, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: fetchThisQte.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099003137931173350, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: fetchThisQte.Array.data[0]
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099003137931173350, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: fetchThisQte.Array.data[1]
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 8466639646517898150, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
       propertyPath: m_Materials.Array.data[0]

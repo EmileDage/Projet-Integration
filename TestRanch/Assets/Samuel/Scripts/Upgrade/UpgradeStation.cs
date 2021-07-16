@@ -18,38 +18,26 @@ public class UpgradeStation : MonoBehaviour, IInteractible
     }
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Interact(player.GetComponent<Player>());
-        }
+       if (Input.GetButtonDown("Cancel"))
+            ClosePanel();
     }
     public void Interact(Player joueur)
     {
-        float distance = Vector3.Distance(transform.position, joueur.transform.position);
-        if(distance <= detectionDistance)
-        {
-            if (isOpen)
-            {
-                ClosePanel();
-                player.GetComponent<MovementModule>().ModifySpeed(-999,true);
-            }
-            else
-            {
+            if (!isOpen)
                 OpenPanel();
-                player.GetComponent<MovementModule>().ModifySpeed(-999);
-            }
-        }
     }
     public void OpenPanel()
     {
         upgradePanel.gameObject.SetActive(true);
         cameraControl.LockCamera();
+        player.GetComponent<MovementModule>().RootMovement();
         isOpen = true;
     }
     public void ClosePanel()
     {
         upgradePanel.gameObject.SetActive(false);
         cameraControl.UnlockCamera();
+        player.GetComponent<MovementModule>().RemoveRootMovement();
         isOpen = false;
     }
 

@@ -1,0 +1,128 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &5337937202444113249
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 2378103872780434358, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_Name
+      value: Vulcan The Farmer
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3804683762071894848, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_endquest.name
+      value: Vulcan The Farmer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_idlechat.name
+      value: Vulcan The Farmer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_startquest.name
+      value: Vulcan The Farmer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_waitingquest.name
+      value: Vulcan The Farmer
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.data[0]
+      value: Finally, thanks you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.data[1]
+      value: 'I''m going to give you the access to my others farming ground. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[0]
+      value: Hello there.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[1]
+      value: By any chance , did you find any golden coral when walking through the
+        beach ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[2]
+      value: I will be grateful for your help.
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[0]
+      value: 'My plants need this corals. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 6281290128519992389, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099003137931173350, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: rewards.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8099003137931173350, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: fetchThis.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 6c286d353faab6841b431365f660e7dc, type: 2}
+    - target: {fileID: 8099003137931173350, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}
+      propertyPath: fetchThisQte.Array.data[0]
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 08985a91f9cd193468a5ab99773ccdf8, type: 3}

@@ -1,19 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!64 &574042606
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6137657866079636675}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -4168771564931210727, guid: e412acb2501700e43a0cea780c6a6dc2, type: 3}
 --- !u!1001 &4187261438978730134
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -67,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2133442056536477686, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
       propertyPath: m_Name
-      value: Danny_and_Dwight(hunt)
+      value: Danny_Dwight
       objectReference: {fileID: 0}
     - target: {fileID: 2145113504012706477, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
       propertyPath: m_LocalPosition.x
@@ -283,8 +269,3 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
---- !u!1 &6137657866079636675 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8012312036019774549, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
-  m_PrefabInstance: {fileID: 4187261438978730134}
-  m_PrefabAsset: {fileID: 0}

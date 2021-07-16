@@ -17,14 +17,6 @@ public class Waypoint : MonoBehaviour, IInteractible
         btn_Object.SetActive(false);
     }
 
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            Interact(GameManager.gmInstance.Joueur);
-        }
-    }
-
     public void TryTeleportThePlayer(Player player)
     {
         if(isUnlocked)
@@ -33,7 +25,7 @@ public class Waypoint : MonoBehaviour, IInteractible
     public void Interact(Player joueur)
     {
         float distance = Vector3.Distance(transform.position, joueur.transform.position);
-        if (distance <= detectionDistance)
+        if (distance <= detectionDistance && !isUnlocked)
             UnlockWaypoint();
     }
     private void UnlockWaypoint()

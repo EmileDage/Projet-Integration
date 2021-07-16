@@ -1,0 +1,191 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &7275091257463045219
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -617.1908
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 11.378738
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -215.87778
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 601170460982333184, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2133442056536477686, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_Name
+      value: Julia Sven
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159917977589003, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.name
+      value: Sven The Miner
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.name
+      value: Sven The Miner
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[0]
+      value: What if...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[1]
+      value: Oh Hey there...
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[2]
+      value: What I was thinking? None of your business.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[0]
+      value: Howdy !
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[1]
+      value: Did you see all those jades and irons, i'm going to be rich.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900052, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[2]
+      value: I need to get back to work.
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900053, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 387.54
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900053, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.35
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900053, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 208.86
+      objectReference: {fileID: 0}
+    - target: {fileID: 2933159919362900054, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3254214176174887385, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: rewards.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9a0d7186004d54647af630e003b06b12, type: 2}
+    - target: {fileID: 3254214176174887385, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: rewardsQte.Array.data[0]
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_endquest.name
+      value: Julia The Miner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.name
+      value: Julia The Miner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.name
+      value: Julia The Miner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_waitingquest.name
+      value: Julia The Miner
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.data[0]
+      value: Hey !
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.data[1]
+      value: 'So what did he tell you ?  '
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_endquest.sentences.Array.data[2]
+      value: ... Anyways, this is for you. Thanks you for your help.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[0]
+      value: Hey it's you, thanks you again for your help.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[0]
+      value: 'Hi .
+
+        Nice to meet you.
+
+'
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[1]
+      value: I was wondering, did you talk with someone called Sven ?
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[2]
+      value: Well, if you see him, can you tell him that i found something for him.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[0]
+      value: Hey , it's you.
+      objectReference: {fileID: 0}
+    - target: {fileID: 7759872546847629317, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
+      propertyPath: dialogue_waitingquest.sentences.Array.data[1]
+      value: Did you find Sven ?
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: c27b8746d30b7cf43961f87895bf2c1d, type: 3}
