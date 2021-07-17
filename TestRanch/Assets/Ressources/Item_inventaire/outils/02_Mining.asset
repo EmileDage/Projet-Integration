@@ -16,7 +16,7 @@ MonoBehaviour:
   maxStack: 1
   icon_Inventory: {fileID: 21300000, guid: aab58fc561b86fe4786b285a3647cc72, type: 3}
   description: Hard enough to destroy any crystals or rocks.
-  valeur: 0
+  valeur: 5
   iD: 2
   interactionBonusRange: 1
   useSound: {fileID: 8300000, guid: 3f7f4610947db2a4684e72f7fe723246, type: 3}

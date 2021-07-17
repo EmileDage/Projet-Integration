@@ -39,9 +39,9 @@ public class Item : ScriptableObject
     }
 
     public virtual void OnSelecting(Player joueur) 
-    {
-        
+    {       
         Transform g = joueur.Equiped.transform;
+        g.GetComponent<ItemToSee>().ItemRotation = itemWorldObject.transform.rotation.eulerAngles;
         g.localScale = itemWorldObject.transform.localScale;
         g.transform.rotation = itemWorldObject.transform.rotation;
         joueur.Equiped.GetComponent<MeshRenderer>().materials = itemWorldObject.GetComponent<MeshRenderer>().sharedMaterials;

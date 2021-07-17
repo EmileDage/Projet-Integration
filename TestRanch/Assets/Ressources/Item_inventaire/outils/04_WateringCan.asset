@@ -15,7 +15,7 @@ MonoBehaviour:
   nom: Watering Can
   maxStack: 1
   icon_Inventory: {fileID: 21300000, guid: dfeb9904b265dba4987634de69b2f418, type: 3}
-  description: 
+  description: Its water Can, not water can't. You should try to remember that
   valeur: 5
   iD: 4
   interactionBonusRange: 1

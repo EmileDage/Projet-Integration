@@ -61,27 +61,27 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 6fda43568111ccb4eb24e64e2d2d2e7a, type: 2}
     - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Size.x
-      value: 0.49921736
+      value: 0.44500005
       objectReference: {fileID: 0}
     - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Size.y
-      value: 0.5295975
+      value: 0.44500005
       objectReference: {fileID: 0}
     - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Size.z
-      value: 0.40902063
+      value: 0.34500003
       objectReference: {fileID: 0}
     - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Center.x
-      value: -0.009259447
+      value: -0.0075000003
       objectReference: {fileID: 0}
     - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Center.y
-      value: 0.008977845
+      value: 0.0075000003
       objectReference: {fileID: 0}
     - target: {fileID: 4276398676190853919, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Center.z
-      value: 0.17518969
+      value: 0.17250001
       objectReference: {fileID: 0}
     - target: {fileID: 5893856089405799648, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Mesh

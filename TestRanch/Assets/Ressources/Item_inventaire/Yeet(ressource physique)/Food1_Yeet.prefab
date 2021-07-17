@@ -51,6 +51,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 557904056504963286, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 98bda0ed28064fb40909eaa1ed0a5706, type: 2}
     - target: {fileID: 850046354506614676, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: item
       value: 
@@ -66,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 5893856089405799648, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
     - target: {fileID: 8929102923610934513, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Name
       value: Food1_Yeet
