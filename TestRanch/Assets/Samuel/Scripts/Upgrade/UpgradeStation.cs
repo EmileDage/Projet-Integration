@@ -29,14 +29,14 @@ public class UpgradeStation : MonoBehaviour, IInteractible
     public void OpenPanel()
     {
         upgradePanel.gameObject.SetActive(true);
-        cameraControl.LockCamera();
+        cameraControl.UnlockCursor();
         player.GetComponent<MovementModule>().RootMovement();
         isOpen = true;
     }
     public void ClosePanel()
     {
         upgradePanel.gameObject.SetActive(false);
-        cameraControl.UnlockCamera();
+        cameraControl.LockCursor();
         player.GetComponent<MovementModule>().RemoveRootMovement();
         isOpen = false;
     }

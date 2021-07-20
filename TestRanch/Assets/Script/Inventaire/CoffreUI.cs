@@ -52,7 +52,7 @@ public class CoffreUI : AbstractInventoryUI
     public void OpenChest()
     {
         parent.SetActive(true);
-        GM.Joueur.CamControl.LockCamera();
+        GM.Joueur.CamControl.UnlockCursor();
         GM.RootPlayer();
     }
 
@@ -68,7 +68,7 @@ public class CoffreUI : AbstractInventoryUI
     public void CloseChest()
     {
         GM.Joueur.CloseChest();//desassigne
-        GM.Joueur.CamControl.UnlockCamera();
+        GM.Joueur.CamControl.LockCursor();
         GM.UnRootPlayer();
         UpdateAllSlots();
         foreach (Slot slot in slots)
