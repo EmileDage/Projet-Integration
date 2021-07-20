@@ -1777,7 +1777,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &5312625723037100616
 RectTransform:
   m_ObjectHideFlags: 0
@@ -3596,6 +3596,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: fd6abb08d6235714193bdecfba7e6567, type: 2}
+    - target: {fileID: 3550440442611990627, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (stalactite)
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440442611990633, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
       value: 1
@@ -3619,6 +3623,10 @@ PrefabInstance:
     - target: {fileID: 3550440442634176845, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440442670549150, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (info)
       objectReference: {fileID: 0}
     - target: {fileID: 3550440442670549156, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
@@ -3656,6 +3664,10 @@ PrefabInstance:
       propertyPath: m_LocalPosition.z
       value: 9.83
       objectReference: {fileID: 0}
+    - target: {fileID: 3550440442811898929, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (crystal)
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440442811898935, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
       value: 1
@@ -3678,23 +3690,23 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1aef98015285049478e840069bc859e7, type: 2}
     - target: {fileID: 3550440442852838368, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3550440442930825462, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440442930825462, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440442930825462, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 362.59766
       objectReference: {fileID: 0}
     - target: {fileID: 3550440442930825462, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -185.46243
       objectReference: {fileID: 0}
     - target: {fileID: 3550440442930825467, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
@@ -3848,6 +3860,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.y
       value: 90
       objectReference: {fileID: 0}
+    - target: {fileID: 3550440443125952313, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (irrigation)
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440443125952319, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
       value: 2
@@ -3878,23 +3894,23 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 634f8fa23f09f8746b6eb260bf781cf9, type: 2}
     - target: {fileID: 3550440443202429916, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443253879571, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443253879571, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443253879571, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 362.59766
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443253879571, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -275.77072
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443253879576, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
@@ -3918,11 +3934,11 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a31b3e7706695a64abaed5d224ecb840, type: 2}
     - target: {fileID: 3550440443309652328, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443310236202, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443313670016, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
@@ -3944,6 +3960,14 @@ PrefabInstance:
       propertyPath: price.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 06830fdc3481fef44972cd220b4395a2, type: 2}
+    - target: {fileID: 3550440443313670138, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (water)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443331528679, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (info)
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440443331528685, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
       value: 1
@@ -3966,7 +3990,7 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1aef98015285049478e840069bc859e7, type: 2}
     - target: {fileID: 3550440443553482758, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443565759024, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3974,19 +3998,19 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 0396b373e58cee2459ac0ed7ff6e1b28, type: 2}
     - target: {fileID: 3550440443607800360, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443607800360, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443607800360, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 362.59766
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443607800360, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -317.6944
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443607800365, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
@@ -4010,7 +4034,11 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 6fda43568111ccb4eb24e64e2d2d2e7a, type: 2}
     - target: {fileID: 3550440443653912333, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3550440443723045191, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (deluxe)
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443723045197, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
@@ -4092,6 +4120,10 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 0772cd73cfcc97947838da58ed1d82ed, type: 2}
+    - target: {fileID: 3550440443815992595, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (richfer)
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440443815992601, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
       value: 1
@@ -4112,6 +4144,10 @@ PrefabInstance:
       propertyPath: price.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: b4f0af2957e01d343a847cf019df8058, type: 2}
+    - target: {fileID: 3550440443827262537, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (chrono)
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440443827262543, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
       value: 1
@@ -4132,6 +4168,10 @@ PrefabInstance:
       propertyPath: price.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 065beaab78274214d9b06308cd15bda1, type: 2}
+    - target: {fileID: 3550440443827920438, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (rr)
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440443827920444, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
       value: 1
@@ -4152,6 +4192,10 @@ PrefabInstance:
       propertyPath: price.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: a31b3e7706695a64abaed5d224ecb840, type: 2}
+    - target: {fileID: 3550440443858754649, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (rich soil)
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440443858754655, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
       value: 2
@@ -4182,19 +4226,19 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 1aef98015285049478e840069bc859e7, type: 2}
     - target: {fileID: 3550440443876025629, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443876025629, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443876025629, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 362.59766
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443876025629, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -366.079
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443876025634, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
@@ -4218,19 +4262,19 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: a31b3e7706695a64abaed5d224ecb840, type: 2}
     - target: {fileID: 3550440443981498852, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443981498852, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443981498852, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 362.59766
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443981498852, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -143.53888
       objectReference: {fileID: 0}
     - target: {fileID: 3550440443981498857, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
@@ -4264,6 +4308,10 @@ PrefabInstance:
       propertyPath: m_ReferenceResolution.y
       value: 1080
       objectReference: {fileID: 0}
+    - target: {fileID: 3550440444073057438, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (boosted)
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440444073057444, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
       value: 1
@@ -4286,19 +4334,19 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 8618ef534746ef641820e8258a853d31, type: 2}
     - target: {fileID: 3550440444225063090, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440444225063090, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440444225063090, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 362.59766
       objectReference: {fileID: 0}
     - target: {fileID: 3550440444225063090, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -95.154144
       objectReference: {fileID: 0}
     - target: {fileID: 3550440444225063095, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
@@ -4344,6 +4392,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3550440444542353676, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (chrono)
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440444542353682, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
       value: 1
@@ -4364,6 +4416,10 @@ PrefabInstance:
       propertyPath: price.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: f23e3dafcad9338479018b076128c620, type: 2}
+    - target: {fileID: 3550440444548006866, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (feed)
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440444548006872, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
       value: 1
@@ -4386,19 +4442,19 @@ PrefabInstance:
       objectReference: {fileID: 11400000, guid: 634f8fa23f09f8746b6eb260bf781cf9, type: 2}
     - target: {fileID: 3550440444598386101, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMax.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440444598386101, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchorMin.y
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3550440444598386101, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.x
-      value: 0
+      value: 362.59766
       objectReference: {fileID: 0}
     - target: {fileID: 3550440444598386101, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_AnchoredPosition.y
-      value: 0
+      value: -230.61664
       objectReference: {fileID: 0}
     - target: {fileID: 3550440444598386106, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
@@ -4420,6 +4476,10 @@ PrefabInstance:
       propertyPath: price.Array.data[0]
       value: 
       objectReference: {fileID: 11400000, guid: 852485a7594af8843a68bf6d8b3e796a, type: 2}
+    - target: {fileID: 3550440444616296408, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Name
+      value: Btn_upgrade (info)
+      objectReference: {fileID: 0}
     - target: {fileID: 3550440444616296414, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: qte.Array.size
       value: 1
