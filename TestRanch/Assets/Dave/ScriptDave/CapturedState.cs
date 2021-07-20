@@ -6,9 +6,10 @@ internal class CapturedState : State
     public CapturedState(CreatureBehavior creatureBehavior) : base(creatureBehavior)
 	{
 		CreatureBehavior.Agent.canMove = true;
+		CreatureBehavior.Agent.isStopped = false;
 		CreatureBehavior.Agent.canSearch = true;
 		CreatureBehavior.IsCaptured = true;
-		CreatureBehavior.State1 = "Captured";
+		CreatureBehavior.State = "Captured";
 		CreatureBehavior.Distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.Player.position);
 
 		// Comportement d'interaction avec l'enclos a cath

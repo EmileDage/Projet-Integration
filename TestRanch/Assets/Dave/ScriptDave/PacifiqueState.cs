@@ -11,7 +11,7 @@ namespace Assets.Dave.ScriptDave
     {
         public PacifiqueState(CreatureBehavior creatureBehavior) : base(creatureBehavior)
         {
-			CreatureBehavior.State1 = "Pacifique";
+			CreatureBehavior.State = "Pacifique";
 			CreatureBehavior.Agent.destination = CreatureBehavior.Player.position;
 			CreatureBehavior.Distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.Player.position);
 
@@ -19,6 +19,7 @@ namespace Assets.Dave.ScriptDave
 			{
 				CreatureBehavior.Agent.isStopped = true;
 				CreatureBehavior.CreatureInfoPanel.SetActive(true);
+				CreatureBehavior.CreatureInfo.ShowInfo();
 			}
 			else
 			{

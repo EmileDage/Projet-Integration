@@ -50,13 +50,14 @@ namespace Assets.Dave.ScriptDave
                 {
 					if (CreatureBehavior.Happiness >= 30 && CreatureBehavior.Happiness <= 70) // Creature est chill donc en state Neutre
 					{
-						CreatureBehavior.State1 = "Neutre";
+						CreatureBehavior.State = "Neutre";
 						CreatureBehavior.Agent.isStopped = true;
 						CreatureBehavior.Distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.Player.position);
 
 						if (CreatureBehavior.Followdistance >= CreatureBehavior.Distance)
 						{
 							CreatureBehavior.CreatureInfoPanel.SetActive(true);
+							CreatureBehavior.CreatureInfo.ShowInfo();
 						}
 
 						if (CreatureBehavior.Followdistance + 2f <= CreatureBehavior.Distance)

@@ -12,7 +12,7 @@ namespace Assets.Dave.ScriptDave
     {
         public AfraidState(CreatureBehavior creatureBehavior) : base(creatureBehavior)
         {
-			CreatureBehavior.State1 = "Afraid";
+			CreatureBehavior.State = "Afraid";
 
 			CreatureBehavior.Distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.Player.position);
 			if (CreatureBehavior.Followdistance >= CreatureBehavior.Distance)

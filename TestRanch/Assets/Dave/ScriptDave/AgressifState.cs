@@ -8,7 +8,7 @@ namespace Assets.Dave.ScriptDave
     {
         public AgressifState(CreatureBehavior creatureBehavior) : base(creatureBehavior)
         {
-			CreatureBehavior.State1 = "Agressif";
+			CreatureBehavior.State = "Agressif";
 
 			CreatureBehavior.Shoot();
 
@@ -19,6 +19,7 @@ namespace Assets.Dave.ScriptDave
 			{
 				CreatureBehavior.Agent.isStopped = true;
 				CreatureBehavior.CreatureInfoPanel.SetActive(true);
+				CreatureBehavior.CreatureInfo.ShowInfo();
 			}
 			else
 			{
