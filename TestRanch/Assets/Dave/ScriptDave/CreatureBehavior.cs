@@ -21,6 +21,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 	[SerializeField] private float followdistance;
 	[SerializeField] private float distance;
 	[SerializeField] private CreatureInfo creatureInfo;
+	[SerializeField] private CreatureInfoExtra creatureInfoExtra;
 
 	[SerializeField] private double happiness;
 
@@ -84,7 +85,7 @@ public class CreatureBehavior : StateMachine, ICapturable
     public GameObject Projectile { get => projectile; set => projectile = value; }
     public Transform CreatureFace { get => creatureFace; set => creatureFace = value; }
     public Collider TargetCollider { get => targetCollider; set => targetCollider = value; }
-    public string State1 { get => state; set => state = value; }
+    public string State { get => state; set => state = value; }
     public CreatureInfo CreatureInfo { get => creatureInfo; set => creatureInfo = value; }
     public float Distance { get => distance; set => distance = value; }
     public float Followdistance { get => followdistance; set => followdistance = value; }
@@ -98,6 +99,7 @@ public class CreatureBehavior : StateMachine, ICapturable
     public int Index { get => index; set => index = value; }
     public float Delay { get => delay; set => delay = value; }
     public Materiaux DropRessources { get => dropRessources; set => dropRessources = value; }
+    public CreatureInfoExtra CreatureInfoExtra { get => creatureInfoExtra; set => creatureInfoExtra = value; }
 
     #endregion
 
@@ -151,9 +153,9 @@ public class CreatureBehavior : StateMachine, ICapturable
 		if(other.gameObject.tag == "produit" && CreatureInfo.hungry == "Yes")
         {
 			WorldObjectMateriaux food = other.GetComponent<WorldObjectMateriaux>();
-			Debug.Log(food.name.ToString());
-			Debug.Log(CreatureInfo.FoodLikes.ToString());
-			if(Fonctions.produits_vegetaux.Equals(food.Item().Funct) && food.name.ToString() == CreatureInfo.FoodLikes.ToString() + "(Clone)")
+			Debug.Log(food.Item().Nom);
+			Debug.Log(CreatureInfo.FoodLikes);
+			if(Fonctions.produits_vegetaux.Equals(food.Item().Funct) && food.Item().Nom.Equals(CreatureInfo.FoodLikes))
             {
 				TargetCollider = other;
 				FoodFound = true;
@@ -259,7 +261,7 @@ public class CreatureBehavior : StateMachine, ICapturable
     public void Capture()
     {
 		Debug.Log("iscapturing");
-		if(State1 == "Pacifique")
+		if(State == "Pacifique")
         {
 			if(ListCreaturePokeBall.creature.Count == 4)
             {

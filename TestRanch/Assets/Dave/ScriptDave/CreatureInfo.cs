@@ -20,22 +20,12 @@ public class CreatureInfo : MonoBehaviour
 
     public string FoodLikes { get => foodLikes; set => foodLikes = value; }
 
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
-    void Update()
+    public void ShowInfo()
     {
-        if(creature.Agent.isStopped)
-        {
-            CreatureNameTxtPanel.text = "Name: " + creatureName;
-            stateTxtPanel.text = "State: " + creature.State1;
-            hungryTxtPanel.text = "Hungry: " + hungry;
-            foodLikesTxtPanel.text = "Food Likes: " + FoodLikes;            
-        }
-
+        CreatureNameTxtPanel.text = "Name: " + creatureName;
+        stateTxtPanel.text = "State: " + creature.State;
+        hungryTxtPanel.text = "Hungry: " + hungry;
+        foodLikesTxtPanel.text = "Food Likes: " + FoodLikes;
     }
 }

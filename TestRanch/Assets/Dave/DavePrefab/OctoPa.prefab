@@ -155,6 +155,7 @@ MonoBehaviour:
   followdistance: 12
   distance: 0
   creatureInfo: {fileID: 1312149026987213565}
+  creatureInfoExtra: {fileID: 1341006903103977134}
   happiness: 50
   state: 
   hungryTimer: 2
@@ -173,6 +174,8 @@ MonoBehaviour:
   pokeballTransform: {fileID: 0}
   enclos: {fileID: 0}
   listCreaturePokeBall: {fileID: 0}
+  PeacefulMoodMes: {fileID: 0}
+  TooManyCreatureMes: {fileID: 0}
   targets: []
   delay: 2
   index: 0

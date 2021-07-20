@@ -32,29 +32,16 @@ public class CreatureInfoExtra : MonoBehaviour
 
     [SerializeField] private Text creatureDropRessourceTxtPanel;
 
-
-    // Start is called before the first frame update
-    void Start()
+    public void ShowExtraInfo()
     {
-
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        if (creature.Agent.isStopped)
-        {
-            CreatureNameTxtPanel.text = "Name: " + creatureName;
-            stateTxtPanel.text = "State: " + creature.State1;
-            foodLikesTxtPanel.text = "Food Likes: " + foodLikes;
-            creaturePortraitImage.sprite = creaturePortrait;
-            creatureHappinessTxtPanel.text = "Happiness: " + creature.Happiness + " / 100";
-            creatureAttackPowerTxtPanel.text = "AttackPower: " + projectile.Attack;
-            creatureSpeedTxtPanel.text = "Speed: " + speed.maxSpeed;
-            creatureBiomeTxtPanel.text = "Biome: " + creatureBiome;
-            creatureDropRessourceTxtPanel.text = "Ressource Drop: " + creature.DropRessources.name;
-
-        }
-
+        CreatureNameTxtPanel.text = "Name: " + creatureName;
+        stateTxtPanel.text = "State: " + creature.State;
+        foodLikesTxtPanel.text = "Food Likes: " + foodLikes;
+        creaturePortraitImage.sprite = creaturePortrait;
+        creatureHappinessTxtPanel.text = "Happiness: " + creature.Happiness + " / 100";
+        creatureAttackPowerTxtPanel.text = "AttackPower: " + projectile.Attack;
+        creatureSpeedTxtPanel.text = "Speed: " + speed.maxSpeed;
+        creatureBiomeTxtPanel.text = "Biome: " + creatureBiome;
+        creatureDropRessourceTxtPanel.text = "Ressource Drop: " + creature.DropRessources.Nom;
     }
 }
