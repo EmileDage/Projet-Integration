@@ -18,6 +18,8 @@ public class UIManager : MonoBehaviour
     [SerializeField] private GameObject minimapCamObject;
     [SerializeField] private GameObject minimapUI;
 
+
+    Button exit;
     private CameraControl camJoueur;
 
     private void Awake()

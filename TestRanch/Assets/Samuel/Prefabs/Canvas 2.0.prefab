@@ -5527,6 +5527,7 @@ MonoBehaviour:
   slotPrefab: {fileID: 4024571401480564962, guid: 91417cdbec5ef3b499fc73dfbd233fe2, type: 3}
   canvas: {fileID: 0}
   parent: {fileID: 271713918395526764}
+  panel: {fileID: 271713918395526764}
 --- !u!114 &7971377580733047377
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20446,7 +20447,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 9068695626109768407}
   m_HandleRect: {fileID: 1685566969443440056}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:

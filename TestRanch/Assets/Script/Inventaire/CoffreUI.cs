@@ -11,6 +11,7 @@ public class CoffreUI : AbstractInventoryUI
     [SerializeField] private GameObject slotPrefab;
     [SerializeField] private Canvas canvas;
     [SerializeField] private GameObject parent;
+    [SerializeField] private GameObject panel;
 
 
     GameManager GM;
@@ -25,6 +26,16 @@ public class CoffreUI : AbstractInventoryUI
         slots = new List<Slot>();
         parent.SetActive(false);
         GM = GameManager.gmInstance;
+    }
+
+    private void Update()
+    {
+        if (Input.GetButtonDown("Cancel"))
+        {
+            Debug.Log("cancel");
+            UIManager.Instance.CloseChest(panel);
+             
+        }
     }
 
     public void SetUp(int size, List<ItemStack> content, Coffre chest)
