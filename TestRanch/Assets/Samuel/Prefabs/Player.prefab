@@ -28,7 +28,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1001488033}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.31600952, y: -0.064998664, z: 0.91900635}
+  m_LocalPosition: {x: 0.31600952, y: -0.26, z: 0.91900635}
   m_LocalScale: {x: 0.43021, y: 0.6168333, z: 0.53472}
   m_Children: []
   m_Father: {fileID: 6758759033247933003}
@@ -192,6 +192,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   look: {fileID: 6758759033247933003}
+  ItemRotation: {x: 0, y: 0, z: 0}
 --- !u!1 &1394192457
 GameObject:
   m_ObjectHideFlags: 0
@@ -505,7 +506,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed:
-    baseValue: 150
+    baseValue: 60
   dragForce: 6
 --- !u!114 &6758759033437166372
 MonoBehaviour:
@@ -590,7 +591,7 @@ MonoBehaviour:
     regenValue:
       baseValue: 20
     canRegen: 1
-  consumptionValue: 2.5
+  consumptionValue: 1.5
   exhaustDuration: 4
 --- !u!114 &893230747876246820
 MonoBehaviour:

@@ -124,5 +124,14 @@ public class ItemStack//iventaire
         }
         return false;
     }
+
+    public bool CompareStackItem (ItemStack compared){
+
+        if(compared.item.ID == this.item.ID)
+        {
+            return true;
+        }
+        return false;
+    }
 }
 

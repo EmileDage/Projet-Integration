@@ -190,14 +190,47 @@ public class PlayerInventory : AbstractInventoryUI
         return false;
     }
    
+
+
     public bool TryPayWithItemStack(ItemStack price)
     {
+        List<ItemStack> temp = new List<ItemStack>();
+        int work = 0;
+        int work2 = work;
         foreach (Slot slot in slots)
         {
-            if (slot.PayInItem(price)) {
+            if (slot.ItemStack.CompareStackItem(price))
+            {
+                temp.Add(slot.ItemStack);
+                /*STACK [ITEM, Qte]		Inventaire
+
+stackIN-001 [FER, 6]		stackOut[Fer,4]
+				StackOut-002[whatev,whatev]
+				stackOut-003[Fer, 4]
+
+
+list<ItemStack> temp
+int work
+foreach(item in inventaire)
+if(stackIn.Item == item)
+	temp.add(item)
+	int work += item.qte
+end foreach
+
+foreach(item in temp)
+if(work >= stackIN.qte){
+	work2 = stackIn.qte
+	work = item.qte;
+	item.qte -= work2;
+	work2 -= work;
+	mathf.clamp(item, 0)
+		
+}*/
+            }
+            /*if (slot.PayInItem(price)) {
                 slot.UpdateSlot();
                 return true;
-            }
+            }*/
         }
         return false;
     }
