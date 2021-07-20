@@ -4,17 +4,16 @@ internal class SlotCapturedState : State
 {
     public SlotCapturedState(CreatureBehavior creatureBehavior) : base(creatureBehavior)
     {
-        
-        CreatureBehavior.state = "CreatureInSlot";
-        CreatureBehavior.creatureInfoPanel.SetActive(false);
-        CreatureBehavior.transform.position = CreatureBehavior.pokeballTransform.transform.position;
-        //CreatureBehavior.targets = null;
-        CreatureBehavior.agent.canMove = false;
-        CreatureBehavior.agent.canSearch = false;
-
-        if(!CreatureBehavior.onlyOnce)
+        if (!CreatureBehavior.OnlyOnce)
         {
-            CreatureBehavior.listCreaturePokeBall.AddToList(CreatureBehavior);
+            CreatureBehavior.State1 = "CreatureInSlot";
+            CreatureBehavior.CreatureInfoPanel.SetActive(false);
+            CreatureBehavior.transform.position = CreatureBehavior.PokeballTransform.transform.position;
+            CreatureBehavior.PlayerFound = false;
+            //CreatureBehavior.targets = null;
+            CreatureBehavior.Agent.canMove = false;
+            CreatureBehavior.Agent.canSearch = false;
+            CreatureBehavior.ListCreaturePokeBall.AddToList(CreatureBehavior);
         }
 
     }

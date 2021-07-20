@@ -9,6 +9,6 @@ public class CreatureCapturedStation : MonoBehaviour
     public void AddToList(CreatureBehavior pokeball)
     {
         creature.Add(pokeball);
-        pokeball.onlyOnce = true;
+        pokeball.OnlyOnce = true;
     }
 }

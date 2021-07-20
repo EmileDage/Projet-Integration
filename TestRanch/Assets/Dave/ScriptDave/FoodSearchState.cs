@@ -6,20 +6,20 @@ internal class FoodSearchState : State
 {
     public FoodSearchState(CreatureBehavior creatureBehavior) : base(creatureBehavior)
     {
-        if (CreatureBehavior.agent.isStopped)
+        if (CreatureBehavior.Agent.isStopped)
         {
-            CreatureBehavior.agent.isStopped = false;
+            CreatureBehavior.Agent.isStopped = false;
         }
-        if (CreatureBehavior.targetCollider != null)
+        if (CreatureBehavior.TargetCollider != null)
         {
-            CreatureBehavior.agent.destination = CreatureBehavior.targetCollider.transform.position;
+            CreatureBehavior.Agent.destination = CreatureBehavior.TargetCollider.transform.position;
         }
 
-        if (CreatureBehavior.creatureInfo.hungry == "No")
+        if (CreatureBehavior.CreatureInfo.hungry == "No")
         {
             //Drop Ressources
             CreatureBehavior.DropRessourceAnimal();
-            CreatureBehavior.foodFound = false;
+            CreatureBehavior.FoodFound = false;
         }
 
     }

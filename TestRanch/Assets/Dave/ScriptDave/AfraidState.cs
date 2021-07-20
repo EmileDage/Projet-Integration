@@ -12,18 +12,18 @@ namespace Assets.Dave.ScriptDave
     {
         public AfraidState(CreatureBehavior creatureBehavior) : base(creatureBehavior)
         {
-			CreatureBehavior.state = "Afraid";
+			CreatureBehavior.State1 = "Afraid";
 
-			CreatureBehavior.distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.player.position);
-			if (CreatureBehavior.followdistance >= CreatureBehavior.distance)
+			CreatureBehavior.Distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.Player.position);
+			if (CreatureBehavior.Followdistance >= CreatureBehavior.Distance)
 			{
-				Vector3 dirToPlayer = (CreatureBehavior.transform.position - CreatureBehavior.player.transform.position) * 2;
+				Vector3 dirToPlayer = (CreatureBehavior.transform.position - CreatureBehavior.Player.transform.position) * 2;
 				Vector3 newPos = CreatureBehavior.transform.position + dirToPlayer;
-				CreatureBehavior.agent.destination = newPos;
+				CreatureBehavior.Agent.destination = newPos;
 			}
-			else if (CreatureBehavior.distance >= 12)
+			else if (CreatureBehavior.Distance >= 12)
 			{
-				CreatureBehavior.playerFound = false;
+				CreatureBehavior.PlayerFound = false;
 			}
 		}
     }

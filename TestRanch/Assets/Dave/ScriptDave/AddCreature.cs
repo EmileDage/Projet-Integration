@@ -27,7 +27,7 @@ public class AddCreature : MonoBehaviour
 
             creature.creatureInPokeBall[slotPos].transform.position = spawnPos.position; // nouvelle position est dans l'enclos
 
-            creature.creatureInPokeBall[slotPos].enclos = enclos; // assigne l'enclos a la creature
+            creature.creatureInPokeBall[slotPos].Enclos = enclos; // assigne l'enclos a la creature
 
             enclos.Animaux.Add(creature.creatureInPokeBall[slotPos]); // ajoute la creature dans la liste du script enclos
 

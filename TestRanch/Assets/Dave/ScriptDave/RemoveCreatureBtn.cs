@@ -25,17 +25,17 @@ public class RemoveCreatureBtn : MonoBehaviour
             Debug.Log("remove creature");
             removeCreature.CreatureInEnclos[slotPos].IsCaptured = false;
 
-            removeCreature.CreatureInEnclos[slotPos].randomTarget = null;
+            removeCreature.CreatureInEnclos[slotPos].RandomTarget = null;
 
-            removeCreature.CreatureInEnclos[slotPos].transform.position = enclos.Animaux[slotPos].spawnPoint.position;
+            removeCreature.CreatureInEnclos[slotPos].transform.position = enclos.Animaux[slotPos].SpawnPoint.position;
 
             Debug.Log("Works");
 
             enclos.Animaux.RemoveAt(slotPos);
 
-            removeCreature.CreatureInEnclos[slotPos].enclos = null;
+            removeCreature.CreatureInEnclos[slotPos].Enclos = null;
 
-            removeCreature.CreatureInEnclos[slotPos].onlyOnce = false;
+            removeCreature.CreatureInEnclos[slotPos].OnlyOnce = false;
 
             Debug.Log("Works 2");
 

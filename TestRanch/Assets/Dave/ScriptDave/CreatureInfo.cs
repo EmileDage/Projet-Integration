@@ -29,10 +29,10 @@ public class CreatureInfo : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(creature.agent.isStopped)
+        if(creature.Agent.isStopped)
         {
             CreatureNameTxtPanel.text = "Name: " + creatureName;
-            stateTxtPanel.text = "State: " + creature.state;
+            stateTxtPanel.text = "State: " + creature.State1;
             hungryTxtPanel.text = "Hungry: " + hungry;
             foodLikesTxtPanel.text = "Food Likes: " + FoodLikes;            
         }

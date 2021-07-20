@@ -8,32 +8,26 @@ namespace Assets.Dave.ScriptDave
     {
         public AgressifState(CreatureBehavior creatureBehavior) : base(creatureBehavior)
         {
-			CreatureBehavior.state = "Agressif";
-
-
-			/*Vector3 lookVector = CreatureBehavior.player.transform.position - CreatureBehavior.transform.position;
-			lookVector.y = CreatureBehavior.transform.position.y;
-			Quaternion rot = Quaternion.LookRotation(lookVector);
-			CreatureBehavior.transform.rotation = Quaternion.Slerp(CreatureBehavior.transform.rotation, rot, 1);*/
+			CreatureBehavior.State1 = "Agressif";
 
 			CreatureBehavior.Shoot();
 
-			CreatureBehavior.agent.destination = CreatureBehavior.player.position;
-			CreatureBehavior.distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.player.position);
+			CreatureBehavior.Agent.destination = CreatureBehavior.Player.position;
+			CreatureBehavior.Distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.Player.position);
 
-			if (CreatureBehavior.followdistance >= CreatureBehavior.distance)
+			if (CreatureBehavior.Followdistance >= CreatureBehavior.Distance)
 			{
-				CreatureBehavior.agent.isStopped = true;
-				CreatureBehavior.creatureInfoPanel.SetActive(true);
+				CreatureBehavior.Agent.isStopped = true;
+				CreatureBehavior.CreatureInfoPanel.SetActive(true);
 			}
 			else
 			{
-				CreatureBehavior.agent.isStopped = false;
-				CreatureBehavior.creatureInfoPanel.SetActive(false);
+				CreatureBehavior.Agent.isStopped = false;
+				CreatureBehavior.CreatureInfoPanel.SetActive(false);
 			}
-			if (CreatureBehavior.distance >= 17)
+			if (CreatureBehavior.Distance >= 17)
 			{
-				CreatureBehavior.playerFound = false;
+				CreatureBehavior.PlayerFound = false;
 			}
 		}
         

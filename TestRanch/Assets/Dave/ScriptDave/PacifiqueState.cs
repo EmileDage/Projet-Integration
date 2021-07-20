@@ -11,23 +11,23 @@ namespace Assets.Dave.ScriptDave
     {
         public PacifiqueState(CreatureBehavior creatureBehavior) : base(creatureBehavior)
         {
-			CreatureBehavior.state = "Pacifique";
-			CreatureBehavior.agent.destination = CreatureBehavior.player.position;
-			CreatureBehavior.distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.player.position);
+			CreatureBehavior.State1 = "Pacifique";
+			CreatureBehavior.Agent.destination = CreatureBehavior.Player.position;
+			CreatureBehavior.Distance = Vector3.Distance(CreatureBehavior.transform.position, CreatureBehavior.Player.position);
 
-			if (CreatureBehavior.followdistance >= CreatureBehavior.distance)
+			if (CreatureBehavior.Followdistance >= CreatureBehavior.Distance)
 			{
-				CreatureBehavior.agent.isStopped = true;
-				CreatureBehavior.creatureInfoPanel.SetActive(true);
+				CreatureBehavior.Agent.isStopped = true;
+				CreatureBehavior.CreatureInfoPanel.SetActive(true);
 			}
 			else
 			{
-				CreatureBehavior.agent.isStopped = false;
-				CreatureBehavior.creatureInfoPanel.SetActive(false);
+				CreatureBehavior.Agent.isStopped = false;
+				CreatureBehavior.CreatureInfoPanel.SetActive(false);
 			}
-			if (CreatureBehavior.distance >= 15)
+			if (CreatureBehavior.Distance >= 15)
 			{
-				CreatureBehavior.playerFound = false;
+				CreatureBehavior.PlayerFound = false;
 			}
 		}
     }
