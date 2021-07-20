@@ -5,6 +5,7 @@ using UnityEngine;
 public class NPC_hunted : NPC_basicsRewards
 {
     [SerializeField] private Transform spawn;
+    private bool finished;
     public bool Hunt { get => talked;}
 
     private void Start()
@@ -16,6 +17,8 @@ public class NPC_hunted : NPC_basicsRewards
 
     public override void Interact(Player joueur)
     {
+
+
         if (!talked)
         { //le joueur na pas parler au npc une premiere fois yet 
             if (!manager.FadeOut)
@@ -34,22 +37,24 @@ public class NPC_hunted : NPC_basicsRewards
        
     }
 
+
     private void OnTriggerExit(Collider other)
     {
-
-        if (talked)
+        if (!manager.SomeoneIsTalking)
         {
-            if (!manager.SomeoneIsTalking)
+            if (talked)
             {
                 if (other.tag == "Player")
                 {
                     this.gameObject.transform.localPosition = spawn.localPosition;
                     Destroy(this.gameObject.GetComponent<BoxCollider>());
                 }
-                
+
             }
         }
-       
+
+
+
     }
 
 }

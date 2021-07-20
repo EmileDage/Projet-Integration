@@ -90,7 +90,7 @@ public class DialogueManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        joueur.GetComponent<MovementModule>().RootMovement();
+        //joueur.GetComponent<MovementModule>().RootMovement();
         Cursor.visible = true;
         cam_joueur.GetComponent<CameraControl>().LockCamera();
         someoneIsTalking = true;
