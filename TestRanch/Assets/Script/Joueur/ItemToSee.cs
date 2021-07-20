@@ -6,9 +6,11 @@ public class ItemToSee : MonoBehaviour
 {
     [SerializeField] private Transform look;
 
+    public Vector3 ItemRotation;
+
     private void Update()
     {
         transform.LookAt(look);
-        transform.Rotate(-90, 0, 0);
+        transform.Rotate(ItemRotation);
     }
 }

@@ -16,7 +16,7 @@ MonoBehaviour:
   maxStack: 1
   icon_Inventory: {fileID: 21300000, guid: 51e292773da612c4d8a71a670281a225, type: 3}
   description: 'Useful to grab octopa. '
-  valeur: 0
+  valeur: 5
   iD: 5
   interactionBonusRange: 1
   useSound: {fileID: 8300000, guid: 144de18f93377a8428e827ce797d4f79, type: 3}
