@@ -9,12 +9,11 @@ public class Food_dispenser : Dispenser
     private Coffre chest;
 
 
-    //discute avec david si
-    //captured animal accepte fuud
 
     public override void Start()
     {
         base.Start();
+        qteToConsume = 3;
 
         chest = container.GetComponent<Coffre>();
        
@@ -41,6 +40,11 @@ public class Food_dispenser : Dispenser
             }
         }
 
+        if (enclos_ref.Info == true)
+        { // pour veirifer que l'enclos est actif
+          //sinon cette fonction s'active alors que exemple la mine est active
+            enclos_ref.InfoPannelTxt_enclos();
+        }
 
     }
 
@@ -48,7 +52,6 @@ public class Food_dispenser : Dispenser
     public override void Empty()
     {
         moving_visual.SetActive(false);
-
     }
 
     public override void SetLevel(int pourcentage_desirer)
@@ -63,6 +66,8 @@ public class Food_dispenser : Dispenser
             //calcule selon le pourcentage desire d'eau dans le bucket et met le visuel a la bonne hauteur
             temp.z = (float)((0.35f * pourcentage_desirer) / 100 - 1.15f);
             moving_visual.transform.localPosition = temp;
+            moving_visual.SetActive(true);
+
         }
         else
         {
@@ -82,7 +87,7 @@ public class Food_dispenser : Dispenser
 
     public override void Consumme()//Drink/eat
     {
-        Qte_level -= 10;
+        Qte_level -= qteToConsume;
         SetLevel(Qte_level);
         FetchFromChest();
     }

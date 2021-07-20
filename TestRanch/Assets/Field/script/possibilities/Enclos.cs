@@ -84,7 +84,7 @@ public class Enclos : MonoBehaviour
 
         //Check water
 
-        if (eau.Qte_level >= 10)//sil y a au moins assez d'eau pour 1 animal
+        if (eau.Qte_level >= eau.QteToConsume)//sil y a au moins assez d'eau pour 1 animal
         { //chaque animal a beosin de 10% d'eau
             eau.Consumme();
             Debug.Log(eau.Qte_level);
@@ -98,7 +98,7 @@ public class Enclos : MonoBehaviour
 
 
         //check food
-        if (bouffe.Qte_level >= 10)//sil y a au moins assez d'eau pour 1 animal
+        if (bouffe.Qte_level >= bouffe.QteToConsume)//sil y a au moins assez d'eau pour 1 animal
         { //chaque animal a beosin de 10% de bouffe
             bouffe.Consumme();
             Debug.Log(bouffe.Qte_level);
