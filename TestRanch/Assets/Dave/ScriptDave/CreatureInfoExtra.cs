@@ -6,9 +6,9 @@ using UnityEngine.UI;
 
 public class CreatureInfoExtra : MonoBehaviour
 {
-    public CreatureBehavior creature;
-    public Projectile projectile;
-    public AIPath speed;
+    [SerializeField] private CreatureBehavior creature;
+    [SerializeField] private Projectile projectile;
+    [SerializeField] private AIPath speed;
 
     [SerializeField] private string creatureName;
     [SerializeField] private Text CreatureNameTxtPanel;
@@ -42,17 +42,17 @@ public class CreatureInfoExtra : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (creature.agent.isStopped)
+        if (creature.Agent.isStopped)
         {
             CreatureNameTxtPanel.text = "Name: " + creatureName;
-            stateTxtPanel.text = "State: " + creature.state;
+            stateTxtPanel.text = "State: " + creature.State1;
             foodLikesTxtPanel.text = "Food Likes: " + foodLikes;
             creaturePortraitImage.sprite = creaturePortrait;
             creatureHappinessTxtPanel.text = "Happiness: " + creature.Happiness + " / 100";
             creatureAttackPowerTxtPanel.text = "AttackPower: " + projectile.Attack;
             creatureSpeedTxtPanel.text = "Speed: " + speed.maxSpeed;
             creatureBiomeTxtPanel.text = "Biome: " + creatureBiome;
-            creatureDropRessourceTxtPanel.text = "Ressource Drop: " + creature.dropRessources.name;
+            creatureDropRessourceTxtPanel.text = "Ressource Drop: " + creature.DropRessources.name;
 
         }
 

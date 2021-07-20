@@ -9,29 +9,28 @@ public class CreatureBehavior : StateMachine, ICapturable
 	#region Variable
 
 	[Header("bool Variable")]
-	public bool playerFound = false;
-	public bool foodFound = false;
+	[SerializeField] private bool playerFound = false;
+	[SerializeField] private bool foodFound = false;
 	[SerializeField] private bool isCaptured = false;
 	[SerializeField] private bool isPokeBall = false;
-	public bool onlyOnce = false;
+	[SerializeField] private bool onlyOnce = false;
 
-	public Transform player;
-	public GameObject creatureInfoPanel;
-	public GameObject creatureInfoPanelExtra;
-	//public GameObject interactionPanel;
-	public float followdistance;
-	public float distance;
-	public CreatureInfo creatureInfo;
+	[SerializeField] private Transform player;
+	[SerializeField] private GameObject creatureInfoPanel;
+	[SerializeField] private GameObject creatureInfoPanelExtra;
+	[SerializeField] private float followdistance;
+	[SerializeField] private float distance;
+	[SerializeField] private CreatureInfo creatureInfo;
 
 	[SerializeField] private double happiness;
 
-	public string state = null;
+	[SerializeField] private string state = null;
 
 	[Header("Food Stuff")]
-	public float hungryTimer;
-	public float hungryTimerCooldown;
-	public Collider targetCollider;
-	public Materiaux dropRessources;
+	[SerializeField] private float hungryTimer;
+	[SerializeField] private float hungryTimerCooldown;
+	[SerializeField] private Collider targetCollider;
+	[SerializeField] private Materiaux dropRessources;
 	[SerializeField] private Transform dropPos;
 
 	[Header("Time Stuff")]
@@ -44,39 +43,70 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	// variable pour le projectile de la creature state Agressif
 	[Header("Variable pour la creature Agressive")]
-	public GameObject projectile;
-	public Transform creatureFace;
-	public float constant;
-	public float NextFire;
-	public float FireRate = 1.0f;
+	[SerializeField] private GameObject projectile;
+	[SerializeField] private Transform creatureFace;
+	[SerializeField] private float constant;
+	[SerializeField] private float NextFire;
+	[SerializeField] private float FireRate = 1.0f;
 
 	// Variable pour Deplacement de la creature Captured
 
 	[Header("Captured Creature")]
-	public List <Transform> randomTarget;
-	public Transform pokeballTransform;
-	public Enclos enclos;
-	public CreatureCapturedStation listCreaturePokeBall;
+	[SerializeField] private List <Transform> randomTarget;
+	[SerializeField] private Transform pokeballTransform;
+	[SerializeField] private Enclos enclos;
+	[SerializeField] private CreatureCapturedStation listCreaturePokeBall;
+	[SerializeField] private GameObject PeacefulMoodMes;
+	[SerializeField] private GameObject TooManyCreatureMes;
 
 	[Header("Variable pour le patrol")]
-	public Transform[] targets;
-	public float delay = 0;
-	public int index;
-	public Transform spawnPoint;
+	[SerializeField] private Transform[] targets;
+	[SerializeField] private float delay = 0;
+	[SerializeField] private int index;
+	[SerializeField] private Transform spawnPoint;
 
-	public IAstarAI agent;
-	public float switchTime = float.PositiveInfinity;
+	[SerializeField] private IAstarAI agent;
+	[SerializeField] private float switchTime = float.PositiveInfinity;
 
-	public double Happiness { get => happiness; set => happiness = value; }
+    #region public ref
+    public double Happiness { get => happiness; set => happiness = value; }
 	public bool IsCaptured { get => isCaptured; set => isCaptured = value; }
     public bool IsPokeBall { get => isPokeBall; set => isPokeBall = value; }
+    public List<Transform> RandomTarget { get => randomTarget; set => randomTarget = value; }
+    public Transform PokeballTransform { get => pokeballTransform; set => pokeballTransform = value; }
+    public Enclos Enclos { get => enclos; set => enclos = value; }
+    public CreatureCapturedStation ListCreaturePokeBall { get => listCreaturePokeBall; set => listCreaturePokeBall = value; }
+    public GameObject PeacefulMoodMes1 { get => PeacefulMoodMes; set => PeacefulMoodMes = value; }
+    public GameObject TooManyCreatureMes1 { get => TooManyCreatureMes; set => TooManyCreatureMes = value; }
+    public Transform[] Targets { get => targets; set => targets = value; }
+    public Transform SpawnPoint { get => spawnPoint; set => spawnPoint = value; }
+    public IAstarAI Agent { get => agent; set => agent = value; }
+    public GameObject Projectile { get => projectile; set => projectile = value; }
+    public Transform CreatureFace { get => creatureFace; set => creatureFace = value; }
+    public Collider TargetCollider { get => targetCollider; set => targetCollider = value; }
+    public string State1 { get => state; set => state = value; }
+    public CreatureInfo CreatureInfo { get => creatureInfo; set => creatureInfo = value; }
+    public float Distance { get => distance; set => distance = value; }
+    public float Followdistance { get => followdistance; set => followdistance = value; }
+    public GameObject CreatureInfoPanelExtra { get => creatureInfoPanelExtra; set => creatureInfoPanelExtra = value; }
+    public GameObject CreatureInfoPanel { get => creatureInfoPanel; set => creatureInfoPanel = value; }
+    public Transform Player { get => player; set => player = value; }
+    public bool OnlyOnce { get => onlyOnce; set => onlyOnce = value; }
+    public bool FoodFound { get => foodFound; set => foodFound = value; }
+    public bool PlayerFound { get => playerFound; set => playerFound = value; }
+    public float SwitchTime { get => switchTime; set => switchTime = value; }
+    public int Index { get => index; set => index = value; }
+    public float Delay { get => delay; set => delay = value; }
+    public Materiaux DropRessources { get => dropRessources; set => dropRessources = value; }
+
+    #endregion
 
     #endregion
 
     protected override void Awake()
 	{
 		base.Awake();
-		agent = GetComponent<IAstarAI>();
+		Agent = GetComponent<IAstarAI>();
 	}
 
 
@@ -85,8 +115,8 @@ public class CreatureBehavior : StateMachine, ICapturable
 		GM = GameManager.gmInstance;
 		timeManager = MyTimeManager.timeInstance;
 		timeManager.GHourPassed += OnGHourPassed;
-		creatureInfoPanel.SetActive(false);
-		creatureInfoPanelExtra.SetActive(false);
+		CreatureInfoPanel.SetActive(false);
+		CreatureInfoPanelExtra.SetActive(false);
 	}
 
     void Update()
@@ -116,17 +146,17 @@ public class CreatureBehavior : StateMachine, ICapturable
 	{
 		if (other.gameObject.tag == "Player")
 		{
-			playerFound = true;
+			PlayerFound = true;
 		}
-		if(other.gameObject.tag == "produit" && creatureInfo.hungry == "Yes")
+		if(other.gameObject.tag == "produit" && CreatureInfo.hungry == "Yes")
         {
 			WorldObjectMateriaux food = other.GetComponent<WorldObjectMateriaux>();
 			Debug.Log(food.name.ToString());
-			Debug.Log(creatureInfo.FoodLikes.ToString());
-			if(Fonctions.produits_vegetaux.Equals(food.Item().Funct) && food.name.ToString() == creatureInfo.FoodLikes.ToString() + "(Clone)")
+			Debug.Log(CreatureInfo.FoodLikes.ToString());
+			if(Fonctions.produits_vegetaux.Equals(food.Item().Funct) && food.name.ToString() == CreatureInfo.FoodLikes.ToString() + "(Clone)")
             {
-				targetCollider = other;
-				foodFound = true;
+				TargetCollider = other;
+				FoodFound = true;
 			}
 		}		
 	}
@@ -139,7 +169,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 			if (cooldownDropRessource == 0)
 			{
 				cooldownDropRessource = maxCooldownDropRessource;
-                if ( isCaptured && enclos.Boosted_grass)
+                if ( isCaptured && Enclos.Boosted_grass)
                 {
 					RessourceDrop();
 					RessourceDrop();
@@ -157,12 +187,12 @@ public class CreatureBehavior : StateMachine, ICapturable
 
 	private void HourPassedHunger()
     {
-		if(creatureInfo.hungry == "No")
+		if(CreatureInfo.hungry == "No")
         {
 			hungryTimer--;
 			if (hungryTimer == 0)
 			{
-				creatureInfo.hungry = "Yes";
+				CreatureInfo.hungry = "Yes";
 				hungryTimer = hungryTimerCooldown;
 			}
 		}
@@ -205,12 +235,12 @@ public class CreatureBehavior : StateMachine, ICapturable
 		// spawn projectile
 		if(Time.time > NextFire)
         {
-			var relativePos = player.position - transform.position;
+			var relativePos = Player.position - transform.position;
 			var rotation = Quaternion.LookRotation(relativePos);
 			relativePos.x = 0f;
 			relativePos.z = 0f;
 			transform.rotation = rotation;
-			Instantiate(projectile, creatureFace.position, creatureFace.rotation);			
+			Instantiate(Projectile, CreatureFace.position, CreatureFace.rotation);			
 			NextFire = Time.time + FireRate;			
 		}
 		
@@ -229,28 +259,26 @@ public class CreatureBehavior : StateMachine, ICapturable
     public void Capture()
     {
 		Debug.Log("iscapturing");
-		//GM.Joueur.
-		if(state == "Pacifique")
+		if(State1 == "Pacifique")
         {
-			if(listCreaturePokeBall.creature.Count == 4)
+			if(ListCreaturePokeBall.creature.Count == 4)
             {
-				Debug.Log("show message qu'il y deja trop de creature capturer pour l'instant, il est suggerer d'aller les placer dans un enclos ou de les relacher dans la nature a partir du menu creature");
+				TooManyCreatureMes1.SetActive(true);
             }
 			else
             {
 				IsPokeBall = true;
-				SetState(new SlotCapturedState(this));
 			}
 		}
 		else
         {
-			Debug.Log("show message que la creature doit etre dans le state pacifique pour etre capturer");
+			PeacefulMoodMes1.SetActive(true);
         }
 
 	}
 
 	public void DropRessourceAnimal()
 	{
-		dropRessources.SpawnAsObject(new ItemStack(dropRessources, 1), dropPos);
+		DropRessources.SpawnAsObject(new ItemStack(DropRessources, 1), dropPos);
 	}
 }
