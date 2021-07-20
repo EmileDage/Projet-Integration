@@ -35,6 +35,7 @@ public class Player : MonoBehaviour
     public AbstractInventoryUI OpenedNonChestInventory { get => openedNonChestInventory; set => openedNonChestInventory = value; }
     public MeshFilter Equiped { get => equiped; set => equiped = value; }
     public AudioSource Item_AS { get => item_AS; set => item_AS = value; }
+    public CameraControl CamControl { get => camControl;}
 
     #endregion
 
