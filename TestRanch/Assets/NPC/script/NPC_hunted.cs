@@ -36,14 +36,20 @@ public class NPC_hunted : NPC_basicsRewards
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.tag == "Player")
+
+        if (talked)
         {
-            if (talked)
+            if (!manager.SomeoneIsTalking)
             {
-                this.gameObject.transform.localPosition = spawn.localPosition;
-                Destroy(this.gameObject.GetComponent<BoxCollider>());
+                if (other.tag == "Player")
+                {
+                    this.gameObject.transform.localPosition = spawn.localPosition;
+                    Destroy(this.gameObject.GetComponent<BoxCollider>());
+                }
+                
             }
         }
+       
     }
 
 }
