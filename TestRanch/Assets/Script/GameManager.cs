@@ -59,4 +59,14 @@ public class GameManager : MonoBehaviour
     {
         return puzzleKey;
     }
+
+    public void RootPlayer()
+    {
+        joueur.GetComponent<MovementModule>().RootMovement();
+    }
+
+    public void UnRootPlayer()
+    {
+        joueur.GetComponent<MovementModule>().RemoveRootMovement();
+    }
 }
