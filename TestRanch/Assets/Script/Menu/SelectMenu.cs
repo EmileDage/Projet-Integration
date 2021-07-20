@@ -10,11 +10,13 @@ public class SelectMenu : MonoBehaviour
     [SerializeField] private GameObject[] panels;
     [SerializeField] private Selectable[] defaultButtons;
     [SerializeField] private AudioSource a_s;
+    [SerializeField] private Canvas credits;
 
 
     void Start()
     {
         Invoke("PanelToggle", 0.01f);
+        credits.gameObject.SetActive(false);
     }
 
     public void PanelToggle()
@@ -52,5 +54,15 @@ public class SelectMenu : MonoBehaviour
     public void SavePrefs()
     {
         PlayerPrefs.Save();
+    }
+
+
+    public void Credits_play() { 
+        credits.gameObject.SetActive(true);
+    }
+
+    public void Credits_cancel()
+    {
+        credits.gameObject.SetActive(false);
     }
 }
