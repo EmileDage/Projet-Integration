@@ -18,9 +18,13 @@ public class UpgradeSlot : MonoBehaviour
     [SerializeField] private Text txtPrerequisites = null;
     [SerializeField] private Image icon = null;
 
+    public bool IsUnlockedSave { get => isUnlocked; set => isUnlocked = value; }
+    public bool IsActivatedSave { get => isActivated; set => isActivated = value; }
 
     private void Start()
     {
+
+
         txtName.text = upgrade.GetName();
         txtDescription.text = upgrade.GetDescription();
         txtCost.text = upgrade.GetCost().ToString() + " $ ";
@@ -93,7 +97,7 @@ public class UpgradeSlot : MonoBehaviour
         {
             foreach (Upgrade upgrade in upgrade.GetPrerequisiteList())
             {
-                foreach (UpgradeSlot upgradeSlot in UpgradeManager.upgradeInstance.upgradesList)
+                foreach (UpgradeSlot upgradeSlot in UpgradeManager.upgradeInstance.GetUpgradeList())
                 {
                     if(upgrade == upgradeSlot.GetUpgrade())
                     {
@@ -106,4 +110,6 @@ public class UpgradeSlot : MonoBehaviour
         }
         return true;
     }
+
+
 }

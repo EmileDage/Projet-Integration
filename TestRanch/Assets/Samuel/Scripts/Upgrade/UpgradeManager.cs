@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class UpgradeManager : MonoBehaviour
 {
-    public List<UpgradeSlot> upgradesList = new List<UpgradeSlot>();
+    [SerializeField] private List<UpgradeSlot> upgradesList = new List<UpgradeSlot>();
     private GameObject player = null;
 
     public static UpgradeManager upgradeInstance;
@@ -24,7 +24,14 @@ public class UpgradeManager : MonoBehaviour
 
     private void Start()
     {
+        GameEvents.SaveInitiated += Save;
+        Load();
+
         player = GameObject.Find("Player");
+    }
+    public List<UpgradeSlot> GetUpgradeList()
+    {
+        return upgradesList;
     }
 
     public void DiscoverUpgrade(Upgrade upgrade)
@@ -274,4 +281,18 @@ public class UpgradeManager : MonoBehaviour
             }
         }
     }
+
+    #region Save
+    void Save()
+    {
+        SaveSystem.Save<List<UpgradeSlot>>(upgradesList, "UpgradeList");
+    }
+    void Load()
+    {
+        if (SaveSystem.SaveExists("UpgradeList"))
+        {
+
+        }
+    }
+    #endregion
 }

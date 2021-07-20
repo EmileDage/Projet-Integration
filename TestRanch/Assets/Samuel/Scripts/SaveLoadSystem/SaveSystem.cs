@@ -21,7 +21,9 @@ public class SaveSystem : MonoBehaviour
         SurrogateSelector selector = new SurrogateSelector();
         Vector3SerializationSurrogate vector3Surrogate = new Vector3SerializationSurrogate();
         QuaternionSerializationSurrogate quaternionSurrogate = new QuaternionSerializationSurrogate();
+        UpgradeSerializationSurrogate upgradeSerializationSurrogate = new UpgradeSerializationSurrogate();
 
+        selector.AddSurrogate(typeof(List<UpgradeSlot>), new StreamingContext(StreamingContextStates.All), upgradeSerializationSurrogate);
         selector.AddSurrogate(typeof(Vector3), new StreamingContext(StreamingContextStates.All), vector3Surrogate);
         selector.AddSurrogate(typeof(Quaternion), new StreamingContext(StreamingContextStates.All), quaternionSurrogate);
 
@@ -43,7 +45,9 @@ public class SaveSystem : MonoBehaviour
         SurrogateSelector selector = new SurrogateSelector();
         Vector3SerializationSurrogate vector3Surrogate = new Vector3SerializationSurrogate();
         QuaternionSerializationSurrogate quaternionSurrogate = new QuaternionSerializationSurrogate();
+        UpgradeSerializationSurrogate upgradeSerializationSurrogate = new UpgradeSerializationSurrogate();
 
+        selector.AddSurrogate(typeof(List<UpgradeSlot>), new StreamingContext(StreamingContextStates.All), upgradeSerializationSurrogate);
         selector.AddSurrogate(typeof(Vector3), new StreamingContext(StreamingContextStates.All), vector3Surrogate);
         selector.AddSurrogate(typeof(Quaternion), new StreamingContext(StreamingContextStates.All), quaternionSurrogate);
 
