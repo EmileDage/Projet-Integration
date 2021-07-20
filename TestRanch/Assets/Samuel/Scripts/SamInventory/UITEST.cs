@@ -5,6 +5,12 @@ using UnityEngine.UI;
 
 public class UITEST : MonoBehaviour
 {
+    [Header("UI")]
+    public GameObject codexPanel = null;
+    public GameObject creaturesPanel = null;
+
+
+    [Header("Player")]
     public Image staminaBar = null;
     public Image healthBar = null;
     public Text txt_ChronoCoin = null;
@@ -28,6 +34,39 @@ public class UITEST : MonoBehaviour
         txt_ChronoCoin.text = GameManager.gmInstance.GetChronoCoin() + "Cc";
         txt_Keys.text = GameManager.gmInstance.GetPuzzleKey() + " Keys";
 
+        if (Input.GetKeyDown(KeyCode.C))
+        {
+            player.GetComponentInChildren<CameraControl>().UnlockCursor();
+            OpenCodex();
+        }
+
+        if (Input.GetButtonDown("Cancel"))
+        {
+            player.GetComponentInChildren<CameraControl>().LockCursor();
+            ClosePanel();
+        }
+
+    }
+
+    public void OpenCodex()
+    {
+        if (creaturesPanel.activeSelf)
+            creaturesPanel.SetActive(false);
+        
+            codexPanel.SetActive(true);
+    }
+    public void OpenCreatures()
+    {
+        if (codexPanel.activeSelf)
+            codexPanel.SetActive(false);
+        
+            creaturesPanel.SetActive(true);
+    }
+
+    public void ClosePanel()
+    {
+        codexPanel.SetActive(false);
+        creaturesPanel.SetActive(false);
     }
 
 }
