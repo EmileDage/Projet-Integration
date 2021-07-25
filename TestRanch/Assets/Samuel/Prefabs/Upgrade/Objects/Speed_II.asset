@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Speed_II
   m_EditorClassIdentifier: 
   upgradeName: Speed Module II
-  description: Increase Sprint Speed by 10%.
+  description: Increase basic movement speed by 20.
   cost: 200
   icon: {fileID: 21300000, guid: 258a237801ddde741bec3658aef1d221, type: 3}
   prerequisite:

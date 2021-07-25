@@ -6,8 +6,9 @@ using UnityEngine.UI;
 public class UITEST : MonoBehaviour
 {
     [Header("UI")]
-    public GameObject codexPanel = null;
-    public GameObject creaturesPanel = null;
+    [SerializeField] private GameObject codexPanel = null;
+    [SerializeField] private GameObject creaturesPanel = null;
+    [SerializeField] private GameObject pauseMenu = null;
 
 
     [Header("Player")]
@@ -40,6 +41,11 @@ public class UITEST : MonoBehaviour
             OpenCodex();
         }
 
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            TriggerPauseMenu();
+        }
+
         if (Input.GetButtonDown("Cancel"))
         {
             player.GetComponentInChildren<CameraControl>().LockCursor();
@@ -63,10 +69,25 @@ public class UITEST : MonoBehaviour
             creaturesPanel.SetActive(true);
     }
 
+    public void TriggerPauseMenu()
+    {
+        if (pauseMenu.activeSelf)
+        {
+            pauseMenu.SetActive(false);
+            player.GetComponentInChildren<CameraControl>().LockCursor();
+        }
+        else
+        {
+            pauseMenu.SetActive(true);
+            player.GetComponentInChildren<CameraControl>().UnlockCursor();
+        }
+    }
     public void ClosePanel()
     {
         codexPanel.SetActive(false);
         creaturesPanel.SetActive(false);
+        player.GetComponentInChildren<CameraControl>().LockCursor();
+
     }
 
 }

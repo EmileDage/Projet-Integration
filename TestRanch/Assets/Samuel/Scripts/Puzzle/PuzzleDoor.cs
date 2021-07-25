@@ -18,7 +18,10 @@ public class PuzzleDoor : MonoBehaviour
         if(other.tag == "Player")
         {
             if (CheckKeyAmount())
+            {
+                isOpen = true;
                 ActivateDoor();
+            }
         }
     }
     public void ActivateDoor()

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class JetPackModule : MonoBehaviour
 {
-    [SerializeField] private float jumpHeight = 0.10f;
+    [SerializeField] private float jumpHeight = 0.30f;
     private JumpModule jumpModule;
     private Rigidbody rig = null;
     private StaminaModule staminaModule;

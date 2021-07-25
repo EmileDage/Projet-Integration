@@ -150,7 +150,7 @@ public class UpgradeManager : MonoBehaviour
             {
                 if (upgradeSlot.TryToUpgrade())
                 {
-                    player.GetComponent<StaminaModule>().ModifyStamina(50);
+                    player.GetComponent<HealthModule>().ModifyHealth(50);
                     upgradeSlot.Activate();
                 }
                 break;
@@ -165,7 +165,7 @@ public class UpgradeManager : MonoBehaviour
             {
                 if (upgradeSlot.TryToUpgrade())
                 {
-                    player.GetComponent<StaminaModule>().ModifyStamina(100);
+                    player.GetComponent<HealthModule>().ModifyHealth(50);
                     upgradeSlot.Activate();
                 }
                 break;
@@ -180,7 +180,7 @@ public class UpgradeManager : MonoBehaviour
             {
                 if (upgradeSlot.TryToUpgrade())
                 {
-                    player.GetComponent<StaminaModule>().ModifyStamina(150);
+                    player.GetComponent<HealthModule>().ModifyHealth(50);
                     upgradeSlot.Activate();
                 }
                 break;
