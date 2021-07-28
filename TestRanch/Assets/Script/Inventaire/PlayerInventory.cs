@@ -196,37 +196,28 @@ public class PlayerInventory : AbstractInventoryUI
     {
         List<ItemStack> temp = new List<ItemStack>();
         int work = 0;
-        int work2 = work;
+        int cost = price.Qte;
         foreach (Slot slot in slots)
         {
             if (slot.ItemStack.CompareStackItem(price))
             {
                 temp.Add(slot.ItemStack);
-                /*STACK [ITEM, Qte]		Inventaire
-
-stackIN-001 [FER, 6]		stackOut[Fer,4]
-				StackOut-002[whatev,whatev]
-				stackOut-003[Fer, 4]
-
-
-list<ItemStack> temp
-int work
-foreach(item in inventaire)
-if(stackIn.Item == item)
-	temp.add(item)
-	int work += item.qte
-end foreach
-
-foreach(item in temp)
-if(work >= stackIN.qte){
-	work2 = stackIn.qte
-	work = item.qte;
-	item.qte -= work2;
-	work2 -= work;
-	mathf.clamp(item, 0)
-		
-}*/
+                work += slot.ItemStack.Qte;
             }
+            if (work >= price.Qte)
+            {
+                
+                foreach(ItemStack item in temp)
+                {
+                    int t = item.Qte;
+                    item.Qte -= cost;
+                    cost -= t;
+                    Mathf.Clamp(cost, 0, 999);
+                }
+                UpdateAllSlots();
+                return true;
+            }
+            //vieux code
             /*if (slot.PayInItem(price)) {
                 slot.UpdateSlot();
                 return true;
