@@ -71,15 +71,18 @@ public class UITEST : MonoBehaviour
 
     public void TriggerPauseMenu()
     {
-        if (pauseMenu.activeSelf)
+        if(pauseMenu != null)
         {
-            pauseMenu.SetActive(false);
-            player.GetComponentInChildren<CameraControl>().LockCursor();
-        }
-        else
-        {
-            pauseMenu.SetActive(true);
-            player.GetComponentInChildren<CameraControl>().UnlockCursor();
+            if (pauseMenu.activeSelf)
+            {
+                pauseMenu.SetActive(false);
+                player.GetComponentInChildren<CameraControl>().LockCursor();
+            }
+            else
+            {
+                pauseMenu.SetActive(true);
+                player.GetComponentInChildren<CameraControl>().UnlockCursor();
+            }
         }
     }
     public void ClosePanel()

@@ -9,12 +9,11 @@ public class ShowNextNPC : MonoBehaviour
     void Start()
     {
         nextNPC.SetActive(false);
-        gameObject.SetActive(false);
     }
 
     void Update()
     {
-        if (this.gameObject.GetComponent<NPC_talking>().Talked == false)
+        if (this.gameObject.GetComponent<NPC_talking>().Talked == true)
         {
             StartCoroutine(WaitForAnswer());
         }

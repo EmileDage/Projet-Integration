@@ -260,12 +260,12 @@ public class CreatureBehavior : StateMachine, ICapturable
 
     public void Capture()
     {
-		Debug.Log("iscapturing");
+
 		if(State == "Pacifique")
         {
 			if(ListCreaturePokeBall.creature.Count == 4)
             {
-				TooManyCreatureMes1.SetActive(true);
+				TooManyCreatureMes1.GetComponent<OnScreenMessage>().StartCounter("You can't have more then 4 creatures captured, you should place them in an animal pen");
             }
 			else
             {
@@ -274,7 +274,7 @@ public class CreatureBehavior : StateMachine, ICapturable
 		}
 		else
         {
-			PeacefulMoodMes1.SetActive(true);
+			PeacefulMoodMes1.GetComponent<OnScreenMessage>().StartCounter("The Creature must be in the mood Peaceful to be captured");
         }
 
 	}
