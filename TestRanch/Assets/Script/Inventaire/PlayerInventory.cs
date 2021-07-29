@@ -264,16 +264,7 @@ public class PlayerInventory : AbstractInventoryUI
             slots[i].GetComponent<Image>().sprite = slots[i].Box;
         }
     }
-    //ça marche de l'inventaire vers le player mais pas du player vers l'inventaire?
+    
 
-    #region test
-    private void Update()
-    {
-        if (Input.GetButtonDown("DebugAddRessource"))
-        {
-            QuickAddItem(new ItemStack(this.testItem, 6));         
-        }
-    }
-    #endregion
 
 }
