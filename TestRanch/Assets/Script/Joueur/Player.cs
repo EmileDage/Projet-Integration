@@ -115,10 +115,8 @@ public class Player : MonoBehaviour
             Cursor.visible = !Cursor.visible;
         }
         float b = Input.GetAxis("Mouse ScrollWheel") * 10;
-        // Debug.Log(b + " B");
         int a = Mathf.RoundToInt(b);
-        //  Debug.Log(a);
-        barreInventaire.ScrollItembar(a);
+        barreInventaire.ScrollItembar(-a);
 
 
         if (Input.GetKeyDown(KeyCode.Alpha1))
@@ -208,8 +206,7 @@ public class Player : MonoBehaviour
 
     public bool HitScan(out RaycastHit hit)
     {
-        //int layerMask = 1 << 8;//à changer pour le layer qu'on va donner au joueur
-        //layerMask = ~8;
+
         if (Physics.Raycast(playerCam.transform.position, playerCam.transform.TransformDirection(Vector3.forward), out hit))
         {
             return true;
