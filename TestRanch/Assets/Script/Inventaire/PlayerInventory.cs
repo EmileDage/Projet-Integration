@@ -166,8 +166,7 @@ public class PlayerInventory : AbstractInventoryUI
         r = stack.Qte;
         if (stack.Qte> 0) {
             if (TryAddOnEmptySlot(stack))
-                r= 0;
-            
+                r= 0;           
         }
         Debug.Log(stack.Qte);
         UpdateAllSlots();
