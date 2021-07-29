@@ -21,12 +21,12 @@ public class NPC_Hunter : NPC_basicsRewards
 
     public override void Interact(Player joueur)
     {
-        if (!talked) { //le joueur na pas parler au npc une premiere fois yet  
+        if (!Talked) { //le joueur na pas parler au npc une premiere fois yet  
             if (!manager.FadeOut)
             {
                 conversation.TriggerDialogueStart();
                 Hunted.gameObject.SetActive(true);
-                talked = true;
+                Talked = true;
 
             }
 

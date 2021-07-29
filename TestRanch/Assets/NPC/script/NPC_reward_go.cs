@@ -26,12 +26,12 @@ public class NPC_reward_go : Npc_Basic
 
     public override void Interact(Player joueur)//quand joueur interagit avec NPC
     {
-        if (!talked)
+        if (!Talked)
         { //le joueur na pas parler au npc une premiere fois yet  
             if (!manager.FadeOut)
             {
                 conversation.TriggerDialogueStart();
-                talked = true;
+                Talked = true;
             }
 
         }

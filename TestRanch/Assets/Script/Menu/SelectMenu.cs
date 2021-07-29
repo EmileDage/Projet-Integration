@@ -16,6 +16,7 @@ public class SelectMenu : MonoBehaviour
     void Start()
     {
         Invoke("PanelToggle", 0.01f);
+        if(credits != null)
         credits.gameObject.SetActive(false);
     }
 

@@ -6,7 +6,7 @@ public class NPC_hunted : NPC_basicsRewards
 {
     [SerializeField] private Transform spawn;
     private bool finished;
-    public bool Hunt { get => talked;}
+    public bool Hunt { get => Talked;}
 
     private void Start()
     {
@@ -19,12 +19,12 @@ public class NPC_hunted : NPC_basicsRewards
     {
 
 
-        if (!talked)
+        if (!Talked)
         { //le joueur na pas parler au npc une premiere fois yet 
             if (!manager.FadeOut)
             {
                 conversation.TriggerDialogueStart();
-                talked = true;              
+                Talked = true;              
             }
 
         }
@@ -42,7 +42,7 @@ public class NPC_hunted : NPC_basicsRewards
     {
         if (!manager.SomeoneIsTalking)
         {
-            if (talked)
+            if (Talked)
             {
                 if (other.tag == "Player")
                 {

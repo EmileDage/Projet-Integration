@@ -399,7 +399,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8915870786420367810, guid: 47b514a06b792104fbf59fd582b7584e, type: 3}
       propertyPath: m_RootOrder
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 8915870786420367810, guid: 47b514a06b792104fbf59fd582b7584e, type: 3}
       propertyPath: m_LocalPosition.x
@@ -798,7 +798,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3866365
+      value: -0.54
       objectReference: {fileID: 0}
     - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1026,6 +1026,202 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.019582948, y: 0.012141831, z: 0.030117119}
   m_Center: {x: 2.0868197e-10, y: -0.00045713212, z: 0.0035183728}
+--- !u!1001 &280285521
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 497707979}
+    m_Modifications:
+    - target: {fileID: 599975211855197196, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_Name
+      value: Bob The Scientist
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_RootOrder
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -33.58
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 47.33
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9984551
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.055564545
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 6.371
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945418352513023234, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1449036026}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.name
+      value: Bob The Scientist
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.name
+      value: Bob The Scientist
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.size
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[0]
+      value: To open the Gate you will need a key. There should be one right now
+        next to the Gate. Good Luck on your Adventure and have fun!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[1]
+      value: 'The Farm represent the brown squares on the ground. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[2]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[3]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[4]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[5]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[0]
+      value: When you discover a new element of this world you will gain informtaion
+        about new Upgrades on your character.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[1]
+      value: The information will also be stored in your codex! To access the codex
+        press "I" when you have the chance. It will open the player menu, there you
+        can find the codex and the info about the creatures that are currently in
+        your inventory (creatures you have captured but not place in the Animal Fence).
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[2]
+      value: To buy these upgrades you have found, press "E" next to the Research
+        Station.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[3]
+      value: The tutorial is over! The last step you need to make is travel to Space
+        Rock through the Red Gate.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[4]
+      value: To open the Gate you will need a key. There should be one right now
+        next to the Gate. Good Luck on your Adventure and have fun!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[5]
+      value: To Capture an animal you will have to feed them in the wild and their
+        mood need to be Peaceful to be able to capture them. Also you will need to
+        select the Capture Gun (you can find one in the chest) in your inventory
+        and click on the creature when you are close to them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[6]
+      value: '2. The Mine: you can cultivate minerals on your Farm. When you choose
+        this option you will need the mineral ressource that you want to cultivate
+        and throw it in the container place on the side of the land.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[7]
+      value: '3. The Garden: you can cultivate Fruit Ressources and the process to
+        cultivate them is similar to the mine but you will need to throw the seed
+        of the tree in the container.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[8]
+      value: To Acquire the seed, take the Axe tool and click on a tree.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[9]
+      value: 4. Finally you can build a Storage Room that will help you stock your
+        ressources.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[10]
+      value: For each construction there is different upgrade that will help you
+        manage them or cultivate more ressources.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[11]
+      value: If you can't test all the possibilities right now don't worry it means
+        you don't have the ressources needed to do it and that's why you will need
+        to find them in the world of Space Rock.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[12]
+      value: To Continue the tutorial go find Bob the Scientist right next to the
+        Research Station. This station is located next to the house.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+--- !u!1 &302422793 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6428399083115549277, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+  m_PrefabInstance: {fileID: 1488815939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &302422800
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 302422793}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2142d77351114e4e9b4b2899a8a03e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextNPC: {fileID: 1265811817}
+--- !u!1 &306021255 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 3903287621504452255, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+  m_PrefabInstance: {fileID: 414416630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &307677412
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1033,6 +1229,30 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1963030770}
     m_Modifications:
+    - target: {fileID: 686018022457743236, guid: f5bc67b16a1b9654b8f1e85499144c94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 686018022457743236, guid: f5bc67b16a1b9654b8f1e85499144c94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 686018022457743236, guid: f5bc67b16a1b9654b8f1e85499144c94, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.07
+      objectReference: {fileID: 0}
+    - target: {fileID: 971928828117777196, guid: f5bc67b16a1b9654b8f1e85499144c94, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 971928828117777196, guid: f5bc67b16a1b9654b8f1e85499144c94, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.73
+      objectReference: {fileID: 0}
+    - target: {fileID: 971928828117777196, guid: f5bc67b16a1b9654b8f1e85499144c94, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -0
+      objectReference: {fileID: 0}
     - target: {fileID: 7037378545601219706, guid: f5bc67b16a1b9654b8f1e85499144c94, type: 3}
       propertyPath: m_Name
       value: Door
@@ -1287,6 +1507,63 @@ Transform:
   m_Father: {fileID: 1752264094}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &343703177
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 7180624005134213898, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+      propertyPath: m_Name
+      value: PuzzleKey
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560809096192637360, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560809096192637360, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 20.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560809096192637360, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.22
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560809096192637360, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 88.25
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560809096192637360, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.755165
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560809096192637360, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0.07499819
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560809096192637360, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.06435952
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560809096192637360, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0.6480424
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560809096192637360, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 1.711
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560809096192637360, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -11.215
+      objectReference: {fileID: 0}
+    - target: {fileID: 7560809096192637360, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -81.437
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
 --- !u!224 &355340991 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8161881911128171013, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
@@ -1301,7 +1578,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 492498529706787709, guid: ed85932c9e1a9f645847975a6f9d4d86, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 492498529706787709, guid: ed85932c9e1a9f645847975a6f9d4d86, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1486,6 +1763,22 @@ PrefabInstance:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: CloseChest
       objectReference: {fileID: 0}
+    - target: {fileID: 281602405106724014, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 281602405106724014, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 281602405106724014, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 1518.8088
+      objectReference: {fileID: 0}
+    - target: {fileID: 281602405106724014, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -78.1122
+      objectReference: {fileID: 0}
     - target: {fileID: 309050139236541313, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -1588,7 +1881,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 710080524280920255, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 710080524280920255, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1629,6 +1922,10 @@ PrefabInstance:
     - target: {fileID: 710080524280920255, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 710080524777087056, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 710080526113113973, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: m_IsActive
@@ -2042,6 +2339,22 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 3164392213209964479, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3164392213209964479, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3164392213209964479, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 821.28534
+      objectReference: {fileID: 0}
+    - target: {fileID: 3164392213209964479, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -103.1122
+      objectReference: {fileID: 0}
     - target: {fileID: 3366957244560297000, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -2086,6 +2399,22 @@ PrefabInstance:
       propertyPath: canvas
       value: 
       objectReference: {fileID: 414416635}
+    - target: {fileID: 3829139283225593439, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3829139283225593439, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3829139283225593439, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2066.3325
+      objectReference: {fileID: 0}
+    - target: {fileID: 3829139283225593439, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -78.1122
+      objectReference: {fileID: 0}
     - target: {fileID: 3837089189190605338, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2322,7 +2651,27 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4714751053135820004, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714751053135820004, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714751053135820004, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 273.76178
+      objectReference: {fileID: 0}
+    - target: {fileID: 4714751053135820004, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -103.1122
+      objectReference: {fileID: 0}
     - target: {fileID: 4960454504012768519, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5007149381150200607, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
@@ -2454,6 +2803,22 @@ PrefabInstance:
       propertyPath: m_AnchoredPosition.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5838437992198555767, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838437992198555767, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838437992198555767, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 2463.856
+      objectReference: {fileID: 0}
+    - target: {fileID: 5838437992198555767, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -103.1122
+      objectReference: {fileID: 0}
     - target: {fileID: 5840519789475063865, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2525,7 +2890,7 @@ PrefabInstance:
     - target: {fileID: 6527935745093971758, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: a_s
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 414416659}
     - target: {fileID: 6671196768853247338, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: m_SizeDelta.y
       value: 0
@@ -3129,6 +3494,10 @@ PrefabInstance:
     - target: {fileID: 7501403034525185772, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: UpdradeSpeedII
+      objectReference: {fileID: 0}
+    - target: {fileID: 7527810813436952861, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+      propertyPath: m_IsActive
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7531121753945916216, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3735,6 +4104,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0a80e4ca4bb0b554ca5842f40ef2f1e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  codexPanel: {fileID: 1830823338}
+  creaturesPanel: {fileID: 306021255}
+  pauseMenu: {fileID: 1087462443}
   staminaBar: {fileID: 414416640}
   healthBar: {fileID: 414416642}
   txt_ChronoCoin: {fileID: 414416639}
@@ -4261,23 +4633,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1188907073237347028, guid: fc30299a8bcda244e944f9fa4e6a8de8, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 1188907073237347028, guid: fc30299a8bcda244e944f9fa4e6a8de8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 117.14
+      value: 139.11
       objectReference: {fileID: 0}
     - target: {fileID: 1188907073237347028, guid: fc30299a8bcda244e944f9fa4e6a8de8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5400007
+      value: 0.98
       objectReference: {fileID: 0}
     - target: {fileID: 1188907073237347028, guid: fc30299a8bcda244e944f9fa4e6a8de8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 109.65
+      value: 94.24
       objectReference: {fileID: 0}
     - target: {fileID: 1188907073237347028, guid: fc30299a8bcda244e944f9fa4e6a8de8, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.85877645
+      value: 0.99742144
       objectReference: {fileID: 0}
     - target: {fileID: 1188907073237347028, guid: fc30299a8bcda244e944f9fa4e6a8de8, type: 3}
       propertyPath: m_LocalRotation.x
@@ -4285,7 +4657,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1188907073237347028, guid: fc30299a8bcda244e944f9fa4e6a8de8, type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0.51235056
+      value: -0.071767725
       objectReference: {fileID: 0}
     - target: {fileID: 1188907073237347028, guid: fc30299a8bcda244e944f9fa4e6a8de8, type: 3}
       propertyPath: m_LocalRotation.z
@@ -4297,7 +4669,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1188907073237347028, guid: fc30299a8bcda244e944f9fa4e6a8de8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: -61.641
+      value: -8.231
       objectReference: {fileID: 0}
     - target: {fileID: 1188907073237347028, guid: fc30299a8bcda244e944f9fa4e6a8de8, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -4398,9 +4770,11 @@ Transform:
   - {fileID: 270941306}
   - {fileID: 1153696072}
   - {fileID: 1990322447}
-  - {fileID: 1061384874}
+  - {fileID: 1332511497}
+  - {fileID: 1265811818}
+  - {fileID: 618880530}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &536395097
 GameObject:
@@ -4634,6 +5008,16 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 5211030103697128472, guid: a677593897e509940958741032ac352c, type: 3}
   m_PrefabInstance: {fileID: 566414203}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &618880529 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 599975211855197196, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+  m_PrefabInstance: {fileID: 280285521}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &618880530 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+  m_PrefabInstance: {fileID: 280285521}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &629063087
 GameObject:
   m_ObjectHideFlags: 0
@@ -4701,7 +5085,7 @@ Transform:
   - {fileID: 1825544758}
   - {fileID: 629063088}
   m_Father: {fileID: 0}
-  m_RootOrder: 15
+  m_RootOrder: 16
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &638617857
 GameObject:
@@ -4733,6 +5117,114 @@ Transform:
   m_Father: {fileID: 1752264094}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &682404489
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 682404490}
+  - component: {fileID: 682404494}
+  - component: {fileID: 682404493}
+  - component: {fileID: 682404492}
+  - component: {fileID: 682404491}
+  m_Layer: 0
+  m_Name: Cube
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &682404490
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682404489}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0.01, y: -0.39, z: -0.61}
+  m_LocalScale: {x: 3.872171, y: 3.2617664, z: 0.357493}
+  m_Children: []
+  m_Father: {fileID: 307677413}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &682404491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682404489}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1286e5c1005d064b8da1ff16720013b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &682404492
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682404489}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &682404493
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682404489}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: 4351e660cfa3d184c825d6db87b420cf, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &682404494
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 682404489}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &755464783
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -4813,7 +5305,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2481739204283777716, guid: e86e8a3f3ad020048803ed602ca6667f, type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 2481739204283777716, guid: e86e8a3f3ad020048803ed602ca6667f, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4857,6 +5349,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e86e8a3f3ad020048803ed602ca6667f, type: 3}
+--- !u!1 &776336230 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7180624005134213898, guid: 051564282fd94ac4e9275a26f3ca0614, type: 3}
+  m_PrefabInstance: {fileID: 343703177}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &829376261
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -5067,7 +5564,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 20
+  m_RootOrder: 21
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1059502205
 PrefabInstance:
@@ -5126,272 +5623,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1dce2846dc915b44ea1a12401fe517e1, type: 3}
---- !u!1001 &1061384873
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 497707979}
-    m_Modifications:
-    - target: {fileID: 9639304855236380, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_Mesh
-      value: 
-      objectReference: {fileID: 3912801466955421534, guid: 27fcc7a87e132924c8c9ec5d1cd1f5ac, type: 3}
-    - target: {fileID: 1874068638329026085, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1897553380317368308, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_Materials.Array.data[0]
-      value: 
-      objectReference: {fileID: 2100000, guid: e890ccc7b8aeaa84087eb882d3d1c526, type: 2}
-    - target: {fileID: 2378781565474254604, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_Name
-      value: NPC_Fetch_prefab (3)
-      objectReference: {fileID: 0}
-    - target: {fileID: 2378781565474254604, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_RootOrder
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -60.17
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.43
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 51.73
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7343818
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.67873657
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 85.49
-      objectReference: {fileID: 0}
-    - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4192366124560225729, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: manager
-      value: 
-      objectReference: {fileID: 1449036026}
-    - target: {fileID: 4192366124560225729, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: rewards.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4192366124560225729, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: fetchThis.Array.size
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 4192366124560225729, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: rewards.Array.data[0]
-      value: 
-      objectReference: {fileID: 11400000, guid: 409471ca2e521a04a9f636d7d1ce5e44, type: 2}
-    - target: {fileID: 4192366124560225729, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: rewardsQte.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4192366124560225729, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: rewardsQte.Array.data[0]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4192366124560225729, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: fetchThisQte.Array.data[0]
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.22
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0.58
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -0.65
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: -0.48746687
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0.5233753
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0.4752848
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.512405
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: -85.814
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: -89.713
-      objectReference: {fileID: 0}
-    - target: {fileID: 4895689023972969900, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: -181.614
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_endquest.name
-      value: Tutorial Guide
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_idlechat.name
-      value: Tutorial Guide
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_startquest.name
-      value: Tutorial Guide
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_waitingquest.name
-      value: Tutorial Guide
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_endquest.sentences.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_startquest.sentences.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_endquest.sentences.Array.data[0]
-      value: Perfect, now I will show you other ways to find more ressources!
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_endquest.sentences.Array.data[1]
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_idlechat.sentences.Array.data[0]
-      value: Go find me close to the creatures!
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_startquest.sentences.Array.data[0]
-      value: As you can see there is different type of creature in this world.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_startquest.sentences.Array.data[1]
-      value: They all eat different kind of food, to find out what they like go close
-        to a creature to see his information.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_startquest.sentences.Array.data[2]
-      value: If the creature likes Apple you can throw the food at him by selecting
-        your inventory with 1,2,3 etc. or scroll down the wheel of your mouse.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_startquest.sentences.Array.data[3]
-      value: After feeding them they usually drop some ressources depending on their
-        type.
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_startquest.sentences.Array.data[4]
-      value: Come back when you have acquire one ressource from the creature!
-      objectReference: {fileID: 0}
-    - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: dialogue_waitingquest.sentences.Array.data[0]
-      value: Come back when you have acquire one ressource from the creature!
-      objectReference: {fileID: 0}
-    - target: {fileID: 8977502442111230463, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: -0.79
-      objectReference: {fileID: 0}
-    - target: {fileID: 9073728923016206426, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-      propertyPath: m_Enabled
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 3031796701643678809, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-  m_SourcePrefab: {fileID: 100100000, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
---- !u!4 &1061384874 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-  m_PrefabInstance: {fileID: 1061384873}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1061384875 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8099417810048944477, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-  m_PrefabInstance: {fileID: 1061384873}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1061384876 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2378781565474254604, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
-  m_PrefabInstance: {fileID: 1061384873}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &1061384877
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061384875}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 66c6f54973e1ef848ad68c618f199659, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  nextNPC: {fileID: 0}
---- !u!65 &1061384878
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1061384875}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.019582959, y: 0.012141837, z: 0.030117122}
-  m_Center: {x: 0.00000005984429, y: -0.0004570727, z: 0.0035183935}
 --- !u!1 &1081696769
 GameObject:
   m_ObjectHideFlags: 0
@@ -5469,6 +5700,11 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1081696769}
   m_CullTransparentMesh: 1
+--- !u!1 &1087462443 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5007149381150200607, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+  m_PrefabInstance: {fileID: 414416630}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1095531643
 GameObject:
   m_ObjectHideFlags: 0
@@ -5613,7 +5849,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.32
+      value: 0.14
       objectReference: {fileID: 0}
     - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -5749,11 +5985,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_endquest.sentences.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_idlechat.sentences.Array.size
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.size
@@ -5761,7 +5997,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_endquest.sentences.Array.data[0]
-      value: Perfect, now I will show you how to sell or buy ressources.
+      value: Perfect, now go see Bob the Merchant, he will show you how to sell or
+        buy ressources.
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_endquest.sentences.Array.data[1]
@@ -5773,11 +6010,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_idlechat.sentences.Array.data[0]
-      value: I will be next to the buy and sell Station!
+      value: Perfect, now go see Bob the Merchant, he will show you how to sell or
+        buy ressources.
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_idlechat.sentences.Array.data[1]
-      value: I will be next to the buy and sell Station!
+      value: Don't forget your iron in the box again.
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_waitingquest.sentences.Array.size
@@ -5785,7 +6023,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.data[0]
-      value: Congrats you are doing very well adventurer!
+      value: Congrats you are doing very well!
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.data[1]
@@ -5804,7 +6042,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.data[4]
-      value: Now, try to get 10 irons from the rocks and then come back to me.
+      value: Now, try to get 10 irons(brown ressources) from the rocks and then come
+        back to me.
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.data[5]
@@ -5879,7 +6118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66c6f54973e1ef848ad68c618f199659, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nextNPC: {fileID: 1061384876}
+  nextNPC: {fileID: 1332511496}
 --- !u!65 &1153696078
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5962,7 +6201,7 @@ PrefabInstance:
       objectReference: {fileID: 414416653}
     - target: {fileID: 5363588573770137446, guid: ba8f769fb0118ea4dba5704303149d6a, type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 5363588573770137446, guid: ba8f769fb0118ea4dba5704303149d6a, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6079,7 +6318,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.3866365
+      value: -0.56
       objectReference: {fileID: 0}
     - target: {fileID: 3805377159303016442, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: m_LocalPosition.z
@@ -6295,7 +6534,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9093486008869562687, guid: be7de757714982b479e95c3b01a7213c, type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 9093486008869562687, guid: be7de757714982b479e95c3b01a7213c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6401,6 +6640,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4298936249397220772, guid: e97f26e8f22d66e4d86b12af7527fe79, type: 3}
   m_PrefabInstance: {fileID: 1262182106}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1265811817 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 599975211855197196, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+  m_PrefabInstance: {fileID: 1577454220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1265811818 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+  m_PrefabInstance: {fileID: 1577454220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1268178115 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6428399083115549277, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+  m_PrefabInstance: {fileID: 1577454220}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1268178122
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1268178115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2142d77351114e4e9b4b2899a8a03e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextNPC: {fileID: 618880529}
 --- !u!1001 &1281309690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6480,6 +6747,34 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1726885974071463858, guid: 23bcca087f811314f99f484457608ab5, type: 3}
   m_PrefabInstance: {fileID: 1857559703}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1332511496 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 599975211855197196, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+  m_PrefabInstance: {fileID: 1488815939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &1332511497 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+  m_PrefabInstance: {fileID: 1488815939}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1362654148 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 6428399083115549277, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+  m_PrefabInstance: {fileID: 280285521}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1362654150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1362654148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a2142d77351114e4e9b4b2899a8a03e7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  nextNPC: {fileID: 776336230}
 --- !u!1001 &1362708731
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6880,7 +7175,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1312149026987213569, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 1312149026987213569, guid: 6b85a83723a0e7740b2361cebd2c689b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -7034,7 +7329,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1449036026 stripped
 MonoBehaviour:
@@ -7153,7 +7448,7 @@ Transform:
   m_LocalScale: {x: 2.722, y: 2.722, z: 2.722}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 16
+  m_RootOrder: 17
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1471792978
 GameObject:
@@ -7291,8 +7586,138 @@ Transform:
   m_LocalScale: {x: 2.722, y: 2.722, z: 2.722}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 17
+  m_RootOrder: 18
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1488815939
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 497707979}
+    m_Modifications:
+    - target: {fileID: 599975211855197196, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_Name
+      value: Bob The Merchant
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -57.647377
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.096636534
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 52.117905
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945418352513023234, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1449036026}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.name
+      value: Bob The Merchant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.name
+      value: Bob The Merchant
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[0]
+      value: You should go talk to the tutorial Guide next to the Farm to continue.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[1]
+      value: 'The Farm represent the brown squares on the ground. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[2]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[3]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[4]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[5]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[0]
+      value: Right next to me is the Buying and Selling Station.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[1]
+      value: To Access them click on "E" when you are close. These Station are where
+        you can buy and sell the ressources you find with the ChronoCoins you have.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[2]
+      value: The ChronoCoins are the currency existing in Space Rock. To see how
+        many you have check on the top left of your screen right next to your health
+        and stamina bar.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[3]
+      value: Selling the ressources that you find is really important, because you
+        need a certain amount of chronocoins to buy upgrades in the Research Station.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[4]
+      value: Also, you will need ChronoCoins to buy upgrades in the Land of your
+        Farm.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[5]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
 --- !u!1 &1538870593 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 1036941639465330439, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
@@ -7400,6 +7825,175 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 2933381969061843971, guid: 0a4dc2f926d0e354aa0af875ff375180, type: 3}
   m_PrefabInstance: {fileID: 1571402038}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1577454220
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 497707979}
+    m_Modifications:
+    - target: {fileID: 599975211855197196, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_Name
+      value: Bob The Farmer
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_RootOrder
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 10.18
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 19.92
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.88691527
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.46193224
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 55.024
+      objectReference: {fileID: 0}
+    - target: {fileID: 2134637094135936250, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945418352513023234, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: manager
+      value: 
+      objectReference: {fileID: 1449036026}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.name
+      value: Bob The Farmer
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.name
+      value: Bob The Farmer
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.size
+      value: 13
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[0]
+      value: To Continue the tutorial go find Bob the Scientist right next to the
+        Research Station. This station is located next to the house.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[1]
+      value: 'The Farm represent the brown squares on the ground. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[2]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[3]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[4]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_idlechat.sentences.Array.data[5]
+      value: Come Back here if you need ressources or ChronoCoins!
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[0]
+      value: Here you can have access to your Farm.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[1]
+      value: To Use it and see the different options that you can build  on it, you
+        will need the Builder tool which is in the chest right next to me. After
+        that click on the table while selecting the builder tool in your inventory.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[2]
+      value: You will need different type of ressources or ChronoCoins to build something.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[3]
+      value: 'There is 4 different things you can build on your Farm. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[4]
+      value: '1. The Animal Fence: the animals that you have captured can be place
+        there and they will drop ressources every hour depending on their Happiness.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[5]
+      value: To Capture an animal you will have to feed them in the wild and their
+        mood need to be Peaceful to be able to capture them. Also you will need to
+        select the Capture Gun (you can find one in the chest) in your inventory
+        and click on the creature when you are close to them.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[6]
+      value: '2. The Mine: you can cultivate minerals on your Farm. When you choose
+        this option you will need the mineral ressource that you want to cultivate
+        and throw it in the container place on the side of the land.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[7]
+      value: '3. The Garden: you can cultivate Fruit Ressources and the process to
+        cultivate them is similar to the mine but you will need to throw the seed
+        of the tree in the container.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[8]
+      value: To Acquire the seed, take the Axe tool and click on a tree.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[9]
+      value: 4. Finally you can build a Storage Room that will help you stock your
+        ressources.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[10]
+      value: For each construction there is different upgrade that will help you
+        manage them or cultivate more ressources.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[11]
+      value: If you can't test all the possibilities right now don't worry it means
+        you don't have the ressources needed to do it and that's why you will need
+        to find them in the world of Space Rock.
+      objectReference: {fileID: 0}
+    - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
+      propertyPath: dialogue_startquest.sentences.Array.data[12]
+      value: To Continue the tutorial go find Bob the Scientist right next to the
+        Research Station. This station is located next to the house.
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
 --- !u!1001 &1580181896
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7425,7 +8019,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8817836870221023811, guid: a7efcee7e09e1b04db3bb2bc1a53f750, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 8817836870221023811, guid: a7efcee7e09e1b04db3bb2bc1a53f750, type: 3}
       propertyPath: m_LocalScale.y
@@ -7701,7 +8295,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1661328869
 GameObject:
@@ -7949,7 +8543,7 @@ Transform:
   - {fileID: 1471792979}
   - {fileID: 1097846574}
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1758656845
 GameObject:
@@ -8163,6 +8757,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 2988140385850731839, guid: 0b373269f7d49b646baae8841d6b270e, type: 3}
   m_PrefabInstance: {fileID: 1829930907}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1830823338 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7752279981783161492, guid: a9aea345dbb656345bdb80ddc3947089, type: 3}
+  m_PrefabInstance: {fileID: 414416630}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1834008783
 PrefabInstance:
@@ -8577,7 +9176,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6758759033437166374, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6758759033437166374, guid: 33df4d9ed07a18e4293ddc385fe5bf63, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8753,7 +9352,7 @@ Transform:
   - {fileID: 1834008784}
   - {fileID: 2046532533}
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &1990322447 stripped
 Transform:
@@ -8879,7 +9478,7 @@ Transform:
   - {fileID: 1596211751}
   - {fileID: 73936918}
   m_Father: {fileID: 0}
-  m_RootOrder: 19
+  m_RootOrder: 20
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2046532532
 PrefabInstance:

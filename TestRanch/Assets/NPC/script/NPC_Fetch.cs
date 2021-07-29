@@ -30,12 +30,12 @@ public class NPC_Fetch :  NPC_basicsRewards
     {
         if (!manager.SomeoneIsTalking) {
 
-            if (!talked)
+            if (!Talked)
             { //le joueur na pas parler au npc une premiere fois yet  
                 if (!manager.FadeOut)
                 {
                     conversation.TriggerDialogueStart();
-                    talked = true;
+                    Talked = true;
                 }
 
             }

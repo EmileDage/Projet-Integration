@@ -11,6 +11,7 @@ public abstract class Npc_Basic : MonoBehaviour, IInteractible
     protected bool quest_completed;
 
     public bool Quest_completed { get => quest_completed; set => quest_completed = value; }
+    public bool Talked { get => talked; set => talked = value; }
 
     public abstract void Interact(Player joueur);
 }
