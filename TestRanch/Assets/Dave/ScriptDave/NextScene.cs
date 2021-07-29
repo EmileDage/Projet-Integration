@@ -5,11 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class NextScene : MonoBehaviour
 {
+    [SerializeField] private int sceneToLoad;
+
     private void OnTriggerEnter(Collider other)
     {
         if(other.tag == "Player")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
+            SceneManager.LoadScene(sceneToLoad);
         }
     }
 }

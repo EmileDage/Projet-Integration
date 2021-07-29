@@ -14,4 +14,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Ranch.unity
     guid: 80e427a551a616f498ca15ccfa4ce581
+  - enabled: 1
+    path: Assets/Scenes/Menu/Menu_loading_TUTO.unity
+    guid: b721917a214915a4a922faf35c7f11e1
+  - enabled: 1
+    path: Assets/Dave/SceneDave/Tutorial.unity
+    guid: b6f8ba6cc42e61740b517c5261661b42
   m_configObjects: {}
