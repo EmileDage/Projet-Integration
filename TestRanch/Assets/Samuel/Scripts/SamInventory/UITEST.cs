@@ -37,7 +37,7 @@ public class UITEST : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.C))
         {
-            player.GetComponentInChildren<CameraControl>().UnlockCursor();
+            player.GetComponentInChildren<CameraControl>().LockCamera();
             OpenCodex();
         }
 
@@ -48,7 +48,7 @@ public class UITEST : MonoBehaviour
 
         if (Input.GetButtonDown("Cancel"))
         {
-            player.GetComponentInChildren<CameraControl>().LockCursor();
+            player.GetComponentInChildren<CameraControl>().UnLockCamera();
             ClosePanel();
         }
 
@@ -76,12 +76,12 @@ public class UITEST : MonoBehaviour
             if (pauseMenu.activeSelf)
             {
                 pauseMenu.SetActive(false);
-                player.GetComponentInChildren<CameraControl>().LockCursor();
+                player.GetComponentInChildren<CameraControl>().UnLockCamera();
             }
             else
             {
                 pauseMenu.SetActive(true);
-                player.GetComponentInChildren<CameraControl>().UnlockCursor();
+                player.GetComponentInChildren<CameraControl>().LockCamera();
             }
         }
     }
@@ -89,7 +89,7 @@ public class UITEST : MonoBehaviour
     {
         codexPanel.SetActive(false);
         creaturesPanel.SetActive(false);
-        player.GetComponentInChildren<CameraControl>().LockCursor();
+        player.GetComponentInChildren<CameraControl>().UnLockCamera();
 
     }
 

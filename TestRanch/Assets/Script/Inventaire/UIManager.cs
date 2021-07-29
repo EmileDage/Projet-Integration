@@ -69,7 +69,7 @@ public class UIManager : MonoBehaviour
     { 
         Cursor.visible = false;
         Cursor.lockState = CursorLockMode.Locked;
-        camJoueur.LockCursor();
+        camJoueur.UnLockCamera();
         panel.SetActive(false);
         Debug.Log("exit panel");
     }
@@ -94,7 +94,7 @@ public class UIManager : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.Confined;
-        camJoueur.UnlockCursor();
+        camJoueur.LockCamera();
     }
 
     public void OpenPanel(GameObject Panel) {
@@ -108,6 +108,15 @@ public class UIManager : MonoBehaviour
     {
         minimapUI.SetActive(!minimapUI.activeSelf);
         minimapCamObject.SetActive(!minimapCamObject.activeSelf);
+
+        if (minimapUI.activeSelf)
+        {
+            camJoueur.LockCamera();
+        }
+        else
+        {
+            camJoueur.UnLockCamera();
+        }
     }
 
     

@@ -50,13 +50,13 @@ public class CodexManager : MonoBehaviour
     public void OpenPanel()
     {
         codexInterface.gameObject.SetActive(true);
-        player.GetComponentInChildren<CameraControl>().UnlockCursor();
+        player.GetComponentInChildren<CameraControl>().LockCamera();
         isOpen = true;
     }
     public void ClosePanel()
     {
         codexInterface.gameObject.SetActive(false);
-        player.GetComponentInChildren<CameraControl>().LockCursor();
+        player.GetComponentInChildren<CameraControl>().UnLockCamera();
         isOpen = false;
     }
     public void DiscoverCodex(CodexScriptable codexScriptable)

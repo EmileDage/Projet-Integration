@@ -70,7 +70,7 @@ public class Field_UI : MonoBehaviour
     //cette fonction est aussi appeler par field
     public void Interact() {
         Cursor.visible = true;
-        cam_joueur.GetComponent<CameraControl>().UnlockCursor();
+        cam_joueur.GetComponent<CameraControl>().LockCamera();
         switch (field_ref.F_type) {
             case field_possibilities.empty: {
                     pannel_empty.SetActive(true);
@@ -240,7 +240,7 @@ public class Field_UI : MonoBehaviour
 
     public void Return_cursor_norm() {
         Cursor.visible = false;
-        cam_joueur.GetComponent<CameraControl>().LockCursor();
+        cam_joueur.GetComponent<CameraControl>().UnLockCamera();
     }
 
     #endregion

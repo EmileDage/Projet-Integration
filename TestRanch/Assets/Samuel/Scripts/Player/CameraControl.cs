@@ -13,7 +13,7 @@ public class CameraControl : MonoBehaviour
 
     void Start()
     {
-        LockCursor();
+        UnLockCamera();
     }
 
 
@@ -43,13 +43,13 @@ public class CameraControl : MonoBehaviour
         player.Rotate(Vector3.up * mouseX);
     }
 
-    public void UnlockCursor()
+    public void LockCamera()
     {
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
         isLocked = true;
     }
-    public void LockCursor()
+    public void UnLockCamera()
     {
         Cursor.lockState = CursorLockMode.Locked;
         Cursor.visible = false;
