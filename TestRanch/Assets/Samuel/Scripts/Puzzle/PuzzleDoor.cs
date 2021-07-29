@@ -19,7 +19,6 @@ public class PuzzleDoor : MonoBehaviour
         {
             if (CheckKeyAmount())
             {
-                isOpen = true;
                 ActivateDoor();
             }
         }
@@ -34,6 +33,8 @@ public class PuzzleDoor : MonoBehaviour
         if(!audioPlay)
             this.GetComponent<AudioSource>().Play();
         audioPlay = true;
+        isOpen = true;
+
     }
     private bool CheckKeyAmount() 
     {

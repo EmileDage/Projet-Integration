@@ -43,7 +43,10 @@ public class UpgradeSlot : MonoBehaviour
     public bool TryToUpgrade()
     {
         if (!CheckChronoCoin(upgrade.GetCost()))
+        {
+            GetComponent<Image>().color = Color.red;
             return false;
+        }
 
         if (!PrerequisiteComplete())
         {
