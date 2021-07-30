@@ -3046,7 +3046,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.size
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
       propertyPath: dialogue_idlechat.sentences.Array.data[0]
@@ -3102,10 +3102,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.data[5]
-      value: To Capture an animal you will have to feed them in the wild and their
-        mood need to be Peaceful to be able to capture them. Also you will need to
-        select the Capture Gun (you can find one in the chest) in your inventory
-        and click on the creature when you are close to them.
+      value: Last thing to not forget if you want to access the In-Game Menu press
+        "P".
       objectReference: {fileID: 0}
     - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.data[6]
@@ -11927,7 +11925,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.data[1]
-      value: In Space Rock, there is also Minerals Ressources and to get them you
+      value: In Space Ranch, there is also Minerals Ressources and to get them you
         will need a PickAxe.
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
@@ -12622,7 +12620,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.data[0]
-      value: Welcome to Space Rock, a myterious world full of different ressources,
+      value: Welcome to Space Ranch, a myterious world full of different ressources,
         creatures and others...
       objectReference: {fileID: 0}
     - target: {fileID: 6280333400398348543, guid: b44f19e8046965043b9e2aee14bbdbe3, type: 3}
@@ -15922,8 +15920,8 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.data[4]
-      value: '1. The Animal Fence: the animals that you have captured can be place
-        there and they will drop ressources every hour depending on their Happiness.'
+      value: '1. The Enclos: the animals that you have captured can be place there
+        and they will drop ressources every hour depending on their Happiness.'
       objectReference: {fileID: 0}
     - target: {fileID: 9113194985527696383, guid: 1728d719ee599764391f6f69254d82b5, type: 3}
       propertyPath: dialogue_startquest.sentences.Array.data[5]
