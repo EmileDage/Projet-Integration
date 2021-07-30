@@ -17,14 +17,14 @@ public class Slot : MonoBehaviour, IDropHandler
     private AbstractInventoryUI parentUI;
     private DragItem dragItem;
     private Image slotImg;
-
+    #region getset
     public Sprite Box { get => box;}
     public Sprite LockedBox { get => lockedBox;}
     public ItemStack ItemStack { get => itemStack; set => itemStack = value; }
     public DragItem DragItem { get => dragItem; set => dragItem = value; }
     public AbstractInventoryUI ParentUI { get => parentUI; set => parentUI = value; }
     public Item GetItemType() => this.itemStack.Item;
-
+    #endregion
     private void Awake()
     {
         DragItem = imgDrag.GetComponent<DragItem>();
@@ -104,7 +104,6 @@ public class Slot : MonoBehaviour, IDropHandler
         this.itemStack = stack;
         UpdateSlot();
     }
-
     public bool TryMerge(ItemStack stack)
     {
 
@@ -136,7 +135,6 @@ public class Slot : MonoBehaviour, IDropHandler
 
         parentUI.UpdatePanel();
     }
-
     public void UpdateSlotWithoutPanel()
     {
         if (ItemStack.Qte > 0)
@@ -156,7 +154,6 @@ public class Slot : MonoBehaviour, IDropHandler
 
         
     }
-
     public void QuickTransfer(DragItem drag)
     {
        // Debug.Log("QuickTransfer");
@@ -168,15 +165,6 @@ public class Slot : MonoBehaviour, IDropHandler
         this.itemStack = new ItemStack(emptyItem);
 
     }
-    public bool PayInItem(ItemStack price)
-    {
-        if (this.itemStack.CompareStack(price))
-        {
-            this.itemStack.RemoveAmount(price.Qte);
-            return true;
-        }
 
-        return false;
-    }
 
 }

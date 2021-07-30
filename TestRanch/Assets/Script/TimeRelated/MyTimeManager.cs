@@ -15,16 +15,8 @@ public class MyTimeManager : MonoBehaviour
     [SerializeField]float gameDayLenght;//en minutes
 
     public static MyTimeManager timeInstance;
-
     public int Second { get => second;}
     public int Hour { get => hour;}
-
-    
-
-    public int GetNbHourDay()
-    {
-        return nbHourinDay;
-    }
 
     #region time events
     public delegate void SecondPassedEventHandler(object source);
@@ -93,8 +85,6 @@ public class MyTimeManager : MonoBehaviour
         }
     }
     #endregion
-
-
     void Awake()
     {
         if(timeInstance != null && timeInstance != this)

@@ -33,11 +33,10 @@ public class WorldObjectMateriaux : WorldObject, IInteractible
     {
         return materiaux;
     }
-    new public void Interact(Player joueur)
-    {
 
-        // Debug.Log("mat interact " + Qte);
-       
+
+    new public void Interact(Player joueur)
+    {      
         ItemStack temp = new ItemStack(SetItem(), Qte);
         Debug.Log(temp + "temp item stack");
         joueur.BarreInventaire.MergeOnExisting(temp);    

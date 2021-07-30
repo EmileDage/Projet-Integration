@@ -2,13 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-[System.Serializable]
 public class ItemStack//iventaire
 {
     private readonly Item item;
     int qte;
     private int ID;
-    private List<Modifier> mods;
+
 
     #region constructeurs
     public ItemStack(Item item, int qte)
@@ -23,17 +22,10 @@ public class ItemStack//iventaire
         this.qte = 0;
         ID = item.ID;
     }
-    public ItemStack(ItemStack stack)
-    {
-        this.item = stack.item;
-        this.qte = stack.qte;
-        ID = item.ID;
-    }
     #endregion
 
     public int Qte { get => qte; set => qte = value; }
     public Item Item { get => item;}
-
     public bool isEmpty()
     {
         if(qte <= 0)
@@ -45,7 +37,6 @@ public class ItemStack//iventaire
             return false;
         }
     }
-
     public bool isFull()
     {
         if (this.qte >= this.item.MaxStack)
@@ -54,20 +45,17 @@ public class ItemStack//iventaire
         }
         return false;
     }
-
     public void UseItem(Player joueur)
     {
         item.UseThis(this, joueur);
     }
-
     public void RemoveAmount(int amount)
     {
         if(amount<= qte)
         {
             qte -= amount;
         }
-    }
-    
+    } 
     //appelé lors d'un drag and drop //le update du slot est fait après
     public bool TryMergeItemStack(ItemStack stackAdd)
     {
@@ -88,7 +76,6 @@ public class ItemStack//iventaire
         }
         return false;
     }
-
     public ItemStack AddAmount(int qte)
     {
         ItemStack retour = null;
@@ -98,24 +85,18 @@ public class ItemStack//iventaire
         this.qte += qte;
         return retour;
     }
-
     public int GetValue()
     {
         return (item.Valeur * Qte);
     }
-
-
-
     public int GetInteractionRangeBonus()
     {
         return item.InteractionBonusRange;
     }
-
     public void InstantiateRessourceObject(Transform location)
     {
         item.SpawnAsObject(this, location);
     }
-
     public bool CompareStack(ItemStack compared)
     {
         if (compared.item.ID == this.item.ID && this.Qte >= compared.Qte)
@@ -124,7 +105,6 @@ public class ItemStack//iventaire
         }
         return false;
     }
-
     public bool CompareStackItem (ItemStack compared){
 
         if(compared.item.ID == this.item.ID)

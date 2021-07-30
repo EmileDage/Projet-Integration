@@ -15,6 +15,7 @@ public class Item : ScriptableObject
     [SerializeField] protected AudioClip useSound;
     [SerializeField] protected GameObject itemWorldObject;
 
+    #region getset
     public string Nom { get => nom;}
     public int MaxStack { get => maxStack;}
     public  Sprite Icon_Inventory { get => icon_Inventory;}
@@ -24,18 +25,10 @@ public class Item : ScriptableObject
     public  int InteractionBonusRange { get => interactionBonusRange;}
     public GameObject ItemWorldObject { get => itemWorldObject; }
     public AudioClip UseSound { get => useSound;}
-
+    #endregion
     public virtual void UseThis(ItemStack itemStack, Player joueur) 
     {
         Debug.Log("used " + nom);
-    }
-
-    
-
-    //mouse button 2 - clique droit
-    public virtual void AltUse(Player joueur)
-    {
-
     }
 
     public virtual void OnSelecting(Player joueur) 
@@ -47,9 +40,6 @@ public class Item : ScriptableObject
         joueur.Equiped.GetComponent<MeshRenderer>().materials = itemWorldObject.GetComponent<MeshRenderer>().sharedMaterials;
         joueur.Equiped.mesh = itemWorldObject.GetComponent<MeshFilter>().sharedMesh;
     }
-
-    
-
 
     public virtual GameObject SpawnAsObject(ItemStack stack, Transform location)
     {

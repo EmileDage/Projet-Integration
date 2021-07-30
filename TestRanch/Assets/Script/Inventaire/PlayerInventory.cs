@@ -41,29 +41,6 @@ public class PlayerInventory : AbstractInventoryUI
 
         SelectItem(0);
     }
-    #region removed
-    /* private void OnItemRemoved(Inventaire source, ItemStack item)
-     {
-         foreach (var stack in slots)
-         {
-             if (stack.ItemStack.Equals(item))
-             {
-                 stack.UpdateSlot();
-                 break;
-             }
-         }
-     }
-
-     public void OnItemsChanged(Inventaire source)
-     {
-         UpdateAllSlots();
-     }
-    */
-    #endregion
-
-
-
-
     public void UpdateAllSlots()
     {
 
@@ -73,7 +50,6 @@ public class PlayerInventory : AbstractInventoryUI
         }
         
     }
-
     //pour parcourir avec la roue
     public void ScrollItembar(int difference)
     {
@@ -88,7 +64,6 @@ public class PlayerInventory : AbstractInventoryUI
         slots[selectedIndex].Select();
         joueur.Selected = slots[selectedIndex];
     }
-
     //pour parcourir avec 12345...
     public void SelectItem(int index)
     {
@@ -100,7 +75,6 @@ public class PlayerInventory : AbstractInventoryUI
 
         }
     }
-
     public void MergeOnExisting(ItemStack stack)
     {
  //       Debug.Log("TryMergeOnExisting");   
@@ -110,8 +84,6 @@ public class PlayerInventory : AbstractInventoryUI
         }
         //Debug.Log(stack.Qte);
     }
-
-
     public int GetFirstEmptySlotIndex()
     {
         for (int i = 0; i < joueur.InventaireTaille; i++)
@@ -123,7 +95,6 @@ public class PlayerInventory : AbstractInventoryUI
         }
         return -1;
     }
-
     public Slot GetFirstEmptySlot()
     {
         int ret = GetFirstEmptySlotIndex();
@@ -136,7 +107,6 @@ public class PlayerInventory : AbstractInventoryUI
             return null;
         }
     }
-
     public void AddOnFirstEmptySlot(ItemStack stack)
     {
         int work = GetFirstEmptySlotIndex();
@@ -147,7 +117,6 @@ public class PlayerInventory : AbstractInventoryUI
         }
         
     }
-
     public bool TryAddOnEmptySlot(ItemStack stack)
     {
         int work = GetFirstEmptySlotIndex();
@@ -158,7 +127,6 @@ public class PlayerInventory : AbstractInventoryUI
         }
         return false;
     }
-
     public int QuickAddItem(ItemStack stack)
     {
         int r;
@@ -172,7 +140,6 @@ public class PlayerInventory : AbstractInventoryUI
         UpdateAllSlots();
         return r;
     }
-
     public bool TryMergeOnExisting(ItemStack stack)
     {
         bool ret;
@@ -188,9 +155,6 @@ public class PlayerInventory : AbstractInventoryUI
         Debug.Log(stack.Qte);
         return false;
     }
-   
-
-
     public bool TryPayWithItemStack(ItemStack price)
     {
         List<ItemStack> temp = new List<ItemStack>();
@@ -216,15 +180,9 @@ public class PlayerInventory : AbstractInventoryUI
                 UpdateAllSlots();
                 return true;
             }
-            //vieux code
-            /*if (slot.PayInItem(price)) {
-                slot.UpdateSlot();
-                return true;
-            }*/
         }
         return false;
     }
-
     public bool TryPayWithMultipleItems(List<ItemStack> list)
     {
         foreach (ItemStack item in list)
@@ -255,8 +213,6 @@ public class PlayerInventory : AbstractInventoryUI
         }
 
     }
-
-
     public void IncreaseSize(int NewSize) {
 
         for(int i = 0; i< NewSize;i++)
