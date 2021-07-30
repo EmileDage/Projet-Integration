@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: OctoPaFood
   maxStack: 10
-  icon_Inventory: {fileID: 1745028967820487807, guid: bf9f155e68921c3479654e290200f34c, type: 3}
+  icon_Inventory: {fileID: 21300000, guid: 9c7ddc272c6f3b3468b86893e4edd8e7, type: 3}
   description: Bouffe a animaux
   valeur: 1
   iD: 11

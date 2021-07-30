@@ -70,7 +70,7 @@ PrefabInstance:
     - target: {fileID: 5893856089405799648, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Mesh
       value: 
-      objectReference: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+      objectReference: {fileID: 4970989848755135003, guid: fd1198151d9d09543be234380b2aac94, type: 3}
     - target: {fileID: 8929102923610934513, guid: e6305336e0534a14d87eb179dcc2de62, type: 3}
       propertyPath: m_Name
       value: Food1_Yeet

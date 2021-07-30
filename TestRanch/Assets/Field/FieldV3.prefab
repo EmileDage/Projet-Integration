@@ -3548,6 +3548,10 @@ PrefabInstance:
       propertyPath: garden_ref
       value: 
       objectReference: {fileID: 8260465086668028035}
+    - target: {fileID: 2169653694034422080, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_Mesh
+      value: 
+      objectReference: {fileID: -6023287844889463419, guid: e412acb2501700e43a0cea780c6a6dc2, type: 3}
     - target: {fileID: 2491144786420571651, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_IsActive
       value: 0
@@ -4508,6 +4512,18 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: c65acc79735b8694988d1a7caacad4be, type: 2}
+    - target: {fileID: 4385667417798600237, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385667417798600237, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4385667417798600237, guid: 9dc208acea937f742981c9384357c437, type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4902171811069937179, guid: 9dc208acea937f742981c9384357c437, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 

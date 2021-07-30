@@ -46,11 +46,11 @@ public class UITEST : MonoBehaviour
             TriggerPauseMenu();
         }
 
-        if (Input.GetButtonDown("Cancel"))
+       /* if (Input.GetButtonDown("Cancel"))
         {
             player.GetComponentInChildren<CameraControl>().UnLockCamera();
             ClosePanel();
-        }
+        }*/
 
     }
 
